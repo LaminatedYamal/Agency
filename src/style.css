@@ -26,25 +26,6 @@
   font-display: swap;
 }
 
-/* Numbered Indicators & Accents: CS Rosha */
-@font-face {
-  font-family: 'CS Rosha';
-  src: url('/fonts/cs-rosha/cs-rosha-numerals.woff2') format('woff2');
-  unicode-range: U+0020-0040, U+005B-0060, U+007B-007E, U+2022, U+2190-2199;
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'CS Rosha';
-  src: url('/fonts/cs-rosha/cs-rosha.woff2') format('woff2'),
-       url('/fonts/cs-rosha/cs-rosha.otf') format('opentype');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-
 :root {
   --color-bg: #040507;
   --color-surface: #0a0c10;
@@ -62,10 +43,11 @@
   --color-border: rgba(255, 255, 255, 0.08);
   --color-border-subtle: rgba(255, 255, 255, 0.04);
   
-  --font-serif: 'Avenor', 'AT Avenor', 'Playfair Display', Georgia, serif;
-  --font-sans: 'Syne', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-mono: 'Space Mono', monospace;
-  --font-num: 'CS Rosha', var(--font-mono);
+  /* Unified Typography: Avenor across all elements with refined, thinner weight */
+  --font-serif: 'Avenor', 'AT Avenor', sans-serif;
+  --font-sans: 'Avenor', 'AT Avenor', sans-serif;
+  --font-mono: 'Avenor', 'AT Avenor', monospace;
+  --font-num: 'Avenor', 'AT Avenor', sans-serif;
   
   --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -80,15 +62,20 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 body {
   background-color: var(--color-bg);
   color: var(--color-marble);
   font-family: var(--font-sans);
+  font-weight: 300;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   overflow-x: hidden;
 }
 
@@ -124,19 +111,19 @@ body.bg-studio {
 
 .brand-logo {
   font-family: var(--font-serif);
-  font-size: 1.45rem;
-  font-weight: 900;
+  font-size: 1.35rem;
+  font-weight: 400;
   color: #ffffff;
   text-decoration: none;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.08em;
 }
 
 .brand-tag {
   font-family: var(--font-num);
-  font-size: 0.78rem;
+  font-size: 0.7rem;
   color: var(--color-dijon);
-  letter-spacing: 0.15em;
-  font-weight: 600;
+  letter-spacing: 0.16em;
+  font-weight: 300;
 }
 
 .header-nav {
@@ -148,8 +135,8 @@ body.bg-studio {
 .header-link {
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
+  font-weight: 300;
+  letter-spacing: 0.14em;
   color: var(--color-slate);
   text-decoration: none;
   transition: color 0.2s ease;
@@ -160,7 +147,8 @@ body.bg-studio {
 
 .header-link span {
   font-family: var(--font-num);
-  font-size: 0.72rem;
+  font-size: 0.68rem;
+  font-weight: 300;
   color: var(--color-dijon-dim);
 }
 
@@ -202,9 +190,9 @@ body.bg-studio {
 
 .inquire-btn {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.16em;
   color: #040507;
   background: var(--color-dijon-bright);
   padding: 8px 18px;
@@ -239,8 +227,8 @@ body.bg-studio {
 .section-num {
   display: block;
   font-family: var(--font-num);
-  font-size: 0.88rem;
-  font-weight: 600;
+  font-size: 0.78rem;
+  font-weight: 300;
   letter-spacing: 0.22em;
   color: var(--color-dijon);
   margin-bottom: 0.8rem;
@@ -249,7 +237,8 @@ body.bg-studio {
 .section-title {
   font-family: var(--font-serif);
   font-size: 2.8rem;
-  font-weight: 700;
+  font-weight: 400;
+  letter-spacing: 0.03em;
   line-height: 1.2;
   color: #ffffff;
   max-width: 850px;
@@ -438,7 +427,8 @@ body.bg-studio {
 
 .meta-val {
   font-family: var(--font-num);
-  font-size: 0.76rem;
+  font-size: 0.72rem;
+  font-weight: 300;
   letter-spacing: 0.12em;
   color: #a0aec0;
 }
@@ -461,8 +451,8 @@ body.bg-studio {
 .hero-monolith-title {
   font-family: var(--font-serif);
   font-size: clamp(84px, 15vw, 240px);
-  font-weight: 900;
-  letter-spacing: 0.04em;
+  font-weight: 400;
+  letter-spacing: 0.06em;
   line-height: 0.95;
   color: #ffffff;
   text-transform: uppercase;
@@ -498,9 +488,9 @@ body.bg-studio {
 
 .hero-monolith-subtitle {
   font-family: var(--font-num);
-  font-size: clamp(0.85rem, 1.25vw, 1.08rem);
-  font-weight: 600;
-  letter-spacing: 0.28em;
+  font-size: clamp(0.74rem, 1.05vw, 0.92rem);
+  font-weight: 300;
+  letter-spacing: 0.25em;
   color: var(--color-dijon-bright);
   margin-top: 1.4rem;
   display: flex;
@@ -710,9 +700,9 @@ body.bg-studio {
 
 .pillar-num {
   font-family: var(--font-num);
-  font-size: 1.15rem;
+  font-size: 1rem;
   color: var(--color-dijon);
-  font-weight: 600;
+  font-weight: 300;
   margin-bottom: 0.6rem;
   letter-spacing: 0.05em;
 }
@@ -720,14 +710,15 @@ body.bg-studio {
 .pillar-title {
   font-family: var(--font-sans);
   font-size: 1.15rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
+  font-weight: 400;
+  letter-spacing: 0.06em;
   color: #ffffff;
   margin-bottom: 0.6rem;
 }
 
 .pillar-desc {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
+  font-weight: 300;
   color: var(--color-slate);
   line-height: 1.6;
 }
@@ -970,8 +961,8 @@ body.bg-studio {
 
 .service-icon {
   font-family: var(--font-num);
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1.05rem;
+  font-weight: 300;
   color: var(--color-dijon);
   margin-bottom: 1.5rem;
   letter-spacing: 0.05em;
@@ -979,14 +970,16 @@ body.bg-studio {
 
 .service-name {
   font-family: var(--font-sans);
-  font-size: 1.2rem;
-  font-weight: 800;
+  font-size: 1.15rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
   color: #ffffff;
   margin-bottom: 0.8rem;
 }
 
 .service-desc {
-  font-size: 0.88rem;
+  font-size: 0.86rem;
+  font-weight: 300;
   line-height: 1.6;
   color: var(--color-slate);
   margin-bottom: 2rem;
@@ -995,9 +988,9 @@ body.bg-studio {
 
 .service-badge {
   font-family: var(--font-num);
-  font-size: 0.74rem;
-  font-weight: 600;
-  letter-spacing: 0.16em;
+  font-size: 0.68rem;
+  font-weight: 300;
+  letter-spacing: 0.14em;
   color: var(--color-dijon);
   border: 1px solid var(--color-dijon-dim);
   padding: 3px 8px;
@@ -1036,29 +1029,32 @@ body.bg-studio {
   border-bottom-color: var(--color-dijon);
 }
 
-.arc-client {
+.arc-client.arc-title {
   font-family: var(--font-sans);
-  font-size: 1.15rem;
-  font-weight: 800;
+  font-size: 1.12rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
   color: #ffffff;
 }
 
 .arc-scope {
-  font-size: 0.92rem;
+  font-size: 0.9rem;
+  font-weight: 300;
   color: var(--color-slate);
 }
 
 .arc-cat {
   font-family: var(--font-num);
-  font-size: 0.82rem;
-  font-weight: 600;
+  font-size: 0.72rem;
+  font-weight: 300;
   color: var(--color-dijon);
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
 }
 
 .arc-year {
   font-family: var(--font-mono);
   font-size: 0.72rem;
+  font-weight: 300;
   color: var(--color-slate);
   text-align: right;
 }
@@ -1085,14 +1081,16 @@ body.bg-studio {
 .contact-headline {
   font-family: var(--font-serif);
   font-size: 2.3rem;
-  font-weight: 700;
+  font-weight: 400;
+  letter-spacing: 0.02em;
   line-height: 1.25;
   color: #ffffff;
   margin-bottom: 1.2rem;
 }
 
 .contact-sub {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
+  font-weight: 300;
   color: var(--color-slate);
   margin-bottom: 2.8rem;
 }
@@ -1106,6 +1104,7 @@ body.bg-studio {
 .detail-label {
   font-family: var(--font-mono);
   font-size: 0.62rem;
+  font-weight: 300;
   letter-spacing: 0.16em;
   color: var(--color-slate);
   display: block;
@@ -1113,8 +1112,9 @@ body.bg-studio {
 
 .detail-val {
   font-family: var(--font-num);
-  font-size: 0.96rem;
-  font-weight: 600;
+  font-size: 0.88rem;
+  font-weight: 300;
+  letter-spacing: 0.08em;
   color: var(--color-dijon-bright);
 }
 
@@ -1203,8 +1203,9 @@ body.bg-studio {
 
 .footer-brand {
   font-family: var(--font-serif);
-  font-size: 1.1rem;
-  font-weight: 800;
+  font-size: 1.05rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
   color: #ffffff;
   margin-right: 1.5rem;
 }
@@ -1212,17 +1213,18 @@ body.bg-studio {
 .footer-copy {
   font-family: var(--font-mono);
   font-size: 0.65rem;
+  font-weight: 300;
   color: var(--color-slate-dark);
   letter-spacing: 0.1em;
 }
 
 .back-to-top {
   font-family: var(--font-num);
-  font-size: 0.82rem;
+  font-size: 0.74rem;
   color: var(--color-dijon);
   text-decoration: none;
-  letter-spacing: 0.15em;
-  font-weight: 600;
+  letter-spacing: 0.14em;
+  font-weight: 300;
   transition: color 0.2s ease;
 }
 
@@ -1298,6 +1300,84 @@ body.bg-studio {
   }
   .hero-monolith-title {
     font-size: clamp(120px, 13vw, 280px);
+  }
+}
+
+/* ==========================================================================
+   Standard 1920x1080 (16:9 Full HD Desktop) Display Optimization
+   Fine-tuned proportions, balanced viewport fold, and luxury spacing for 1080p
+   ========================================================================== */
+@media (min-width: 1441px) and (max-width: 2559px) {
+  html {
+    font-size: 16px;
+  }
+
+  .site-header {
+    padding: 1.4rem 4rem;
+  }
+
+  .hero-section {
+    max-width: 1720px;
+    padding: 1.2rem 3rem 2.5rem;
+  }
+
+  .hero-stage {
+    height: 74vh;
+    min-height: 540px;
+    max-height: 760px;
+    border-radius: 28px;
+  }
+
+  .hero-foreground-content {
+    padding: 2.2rem 3.5rem 2rem;
+  }
+
+  .hero-monolith-title {
+    font-size: clamp(88px, 9.2vw, 155px);
+  }
+
+  .hero-monolith-subtitle {
+    font-size: 0.88rem;
+    letter-spacing: 0.28em;
+    gap: 1.4rem;
+  }
+
+  .content-container {
+    max-width: 1540px;
+    padding: 0 3rem;
+  }
+
+  .section-header {
+    margin-bottom: 3.5rem;
+  }
+
+  .section-title {
+    font-size: 3rem;
+    max-width: 1000px;
+  }
+
+  .pillars-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.8rem;
+  }
+
+  .service-item {
+    padding: 2.5rem 2rem;
+  }
+
+  .contact-card {
+    padding: 3.8rem;
+    gap: 4rem;
+    grid-template-columns: 1.1fr 1fr;
+  }
+
+  .contact-headline {
+    font-size: 2.5rem;
   }
 }
 
