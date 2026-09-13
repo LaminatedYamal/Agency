@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BRUTO STUDIOS — Heavy-Duty Digital. Typefoundry. Complex Systems.</title>
+  
+  <!-- Primary Font: Avenor (Self-Hosted WOFF2) -->
+  <link rel="preload" href="./fonts/avenor/at-avenor.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- Premium Typography: Syne, Space Mono, Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body class="bg-studio">
+  <!-- Minimalist Header -->
+  <header class="site-header">
+    <div class="header-brand">
+      <a href="#hero" class="brand-logo">BRUTO</a>
+      <span class="brand-tag">STUDIOS — EST. 2026</span>
+    </div>
+
+    <nav class="header-nav">
+      <a href="#manifesto" class="header-link"><span>01</span> PROCESS</a>
+      <a href="#typefoundry" class="header-link"><span>02</span> TYPEFOUNDRY</a>
+      <a href="#systems" class="header-link"><span>03</span> SYSTEMS</a>
+      <a href="#archives" class="header-link"><span>04</span> ARCHIVES</a>
+      <a href="#contact" class="header-link"><span>05</span> CONTACT</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="live-clock">
+        <span class="clock-dot"></span>
+        <span id="header-time">16:49</span>
+        <span class="clock-tz">PORTUGAL</span>
+      </div>
+      <a href="#contact" class="inquire-btn">INITIATE</a>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main class="page-main">
+    
+    <!-- ==========================================
+         HERO SECTION: MONUMENTAL CINEMATIC VIDEO STAGE
+         "BRUTO" in Avenor Typography layered in front of user video.
+         Optimized for Standard 1080p, 4K, and 3440x1440p (21:9 Ultra-Wide)
+         ========================================== -->
+    <section id="hero" class="hero-section">
+      <div class="hero-stage hero-video-stage" id="hero-stage-container">
+        
+        <!-- Video Viewport & Background Layers -->
+        <div class="video-viewport">
+          <video 
+            id="hero-bg-video" 
+            class="hero-video-element" 
+            autoplay 
+            loop 
+            muted 
+            playsinline
+            preload="auto"
+          >
+            <!-- Auto-detects video files placed in project root or public/ -->
+            <source src="hero.mp4" type="video/mp4">
+            <source src="16338759_1280_720_30fps.mp4" type="video/mp4">
+            <source src="video.mp4" type="video/mp4">
+            <source src="hero-video.mp4" type="video/mp4">
+            <source src="bruto.mp4" type="video/mp4">
+            <source src="hero.webm" type="video/webm">
+          </video>
+          
+          <!-- Cinematic Luxury Scrim & Vignette Overlays -->
+          <div class="video-overlay-gradient"></div>
+          <div class="video-vignette"></div>
+          <div class="video-grid-overlay"></div>
+
+          <!-- Pending Video Drop Beacon (Auto-hides once video plays or can be dragged & dropped) -->
+          <div class="video-status-indicator" id="video-status-badge">
+            <span class="pulse-beacon"></span>
+            <span class="status-msg">VIDEO ENGINE READY // DROP VIDEO FILE HERE OR PLACE IN FOLDER</span>
+          </div>
+        </div>
+
+        <!-- Foreground Content: Positioned Proudly In Front of Video -->
+        <div class="hero-foreground-content">
+          
+          <!-- Top Architectural Meta Bar -->
+          <div class="hero-meta-top">
+            <div class="meta-item">
+              <span class="meta-label">INDEX</span>
+              <span class="meta-val">00 // MONOLITH CINEMA</span>
+            </div>
+            <div class="meta-item meta-center">
+              <span class="meta-label">FORMAT</span>
+              <span class="meta-val">21:9 ULTRA-WIDE MASTERED</span>
+            </div>
+            <div class="meta-item meta-right">
+              <span class="meta-label">COORDINATES</span>
+              <span class="meta-val">38°43'N 9°08'W // PORTUGAL</span>
+            </div>
+          </div>
+
+          <!-- Monumental Centerpiece: "BRUTO" in Avenor Font -->
+          <div class="hero-center-monolith">
+            <div class="hero-title-container">
+              <h1 class="hero-monolith-title" data-text="BRUTO">BRUTO</h1>
+              <div class="hero-title-glow"></div>
+            </div>
+            <p class="hero-monolith-subtitle">
+              <span>HEAVY-DUTY DIGITAL</span>
+              <span class="sub-sep">•</span>
+              <span>BESPOKE TYPEFOUNDRY</span>
+              <span class="sub-sep">•</span>
+              <span>COMPLEX SYSTEMS</span>
+            </p>
+          </div>
+
+          <!-- Bottom Architectural Bar: Floating In-Hero Controls & Navigation -->
+          <div class="hero-meta-bottom">
+            <div class="hero-bottom-left">
+              <a href="#manifesto" class="hero-scroll-btn">
+                <span class="scroll-arrow">↓</span>
+                <span class="scroll-label">EXPLORE ARCHITECTURE</span>
+              </a>
+            </div>
+
+            <div class="hero-bottom-center">
+              <nav class="inhero-nav">
+                <a href="#hero" class="inhero-link">HOME</a>
+                <span class="inhero-sep">/</span>
+                <a href="#manifesto" class="inhero-link">PROCESS</a>
+                <span class="inhero-sep">/</span>
+                <a href="#typefoundry" class="inhero-link">TYPEFOUNDRY</a>
+                <span class="inhero-sep">/</span>
+                <a href="#systems" class="inhero-link">SYSTEMS</a>
+                <span class="inhero-sep">/</span>
+                <a href="#contact" class="inhero-link">CONTACT</a>
+              </nav>
+            </div>
+
+            <!-- Video Interaction Controls -->
+            <div class="hero-bottom-right">
+              <button class="video-ctrl-btn" id="btn-video-sound" title="Toggle Sound">
+                <span class="ctrl-icon" id="sound-icon">UNMUTE</span>
+              </button>
+              <button class="video-ctrl-btn" id="btn-video-play" title="Play / Pause Video">
+                <span class="ctrl-icon" id="play-icon">PAUSE</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Editorial Meta Strip under Hero -->
+      <div class="hero-editorial-bar">
+        <div class="editorial-item">
+          <span class="ed-label">ARCHITECTURE</span>
+          <span class="ed-val">Brutalist Monolith &amp; Screen Type</span>
+        </div>
+        <div class="editorial-item">
+          <span class="ed-label">PRIMARY TYPEFACE</span>
+          <span class="ed-val">Avenor Wide Display // Opentype</span>
+        </div>
+        <div class="editorial-item">
+          <span class="ed-label">PALETTE</span>
+          <span class="ed-val">Obsidian, Studio Slate, Dijon Canvas</span>
+        </div>
+        <div class="editorial-item">
+          <span class="ed-label">LOCATION</span>
+          <span class="ed-val">Lisbon / Porto, Portugal (GMT+0)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 01: MANIFESTO / PROCESS
+         ========================================== -->
+    <section id="manifesto" class="section-manifesto">
+      <div class="content-container">
+        <div class="section-header">
+          <span class="section-num">01 // PHILOSOPHY &amp; PROCESS</span>
+          <h2 class="section-title">Severe and high-end, with a calculated touch of physical grit.</h2>
+        </div>
+
+        <div class="manifesto-grid">
+          <div class="manifesto-lead">
+            <p class="lead-text">
+              We design and construct monumental digital infrastructure, custom typefoundry systems, and severe brand architecture for enterprises that demand unyielding authority.
+            </p>
+            <p class="body-text">
+              From our architectural studio overlooking the Portuguese coastal ranges, our work bridges brutalist material weight with the microscopic precision of modern computational typography.
+            </p>
+          </div>
+
+          <div class="pillars-list">
+            <div class="pillar-card">
+              <div class="pillar-num">01</div>
+              <h3 class="pillar-title">MONOLITHIC DIGITAL</h3>
+              <p class="pillar-desc">
+                High-resilience web applications, custom CMS engines, and low-latency infrastructure built with zero superfluous fluff. Engineered to endure.
+              </p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-num">02</div>
+              <h3 class="pillar-title">BESPOKE TYPEFOUNDRY</h3>
+              <p class="pillar-desc">
+                Proprietary display serifs, heavy architectural grotesks, and monospaced typesetting crafted specifically for modern screen rendering and physical signage.
+              </p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-num">03</div>
+              <h3 class="pillar-title">COMPLEX SYSTEMS</h3>
+              <p class="pillar-desc">
+                Multimodal design systems, component architecture, and mathematical layout geometry that scale across international multi-brand ecosystems.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 02: INTERACTIVE TYPEFOUNDRY
+         ========================================== -->
+    <section id="typefoundry" class="section-typefoundry">
+      <div class="content-container">
+        <div class="section-header flex-header">
+          <div>
+            <span class="section-num">02 // PROPRIETARY TYPEFOUNDRY</span>
+            <h2 class="section-title">Avenor Display — Specimen 01</h2>
+          </div>
+          <div class="foundry-controls">
+            <div class="control-group">
+              <label for="font-size-slider">SIZE: <span id="font-size-val">76px</span></label>
+              <input type="range" id="font-size-slider" min="28" max="120" value="76">
+            </div>
+            <div class="control-group">
+              <label for="font-spacing-slider">TRACKING: <span id="font-spacing-val">0.02em</span></label>
+              <input type="range" id="font-spacing-slider" min="-0.05" max="0.25" step="0.01" value="0.02">
+            </div>
+            <div class="theme-toggles">
+              <button class="theme-btn active" data-mode="dijon">DIJON</button>
+              <button class="theme-btn" data-mode="marble">MARBLE</button>
+              <button class="theme-btn" data-mode="obsidian">OBSIDIAN</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Type Tester Area -->
+        <div class="type-tester-box" id="tester-box">
+          <div class="type-tester-header">
+            <span class="specimen-tag">CLICK BELOW TO TEST PROPRIETARY GLYPHS IN REAL TIME</span>
+            <span class="specimen-meta">VARIABLE OPENTYPE // LATIN EXTENDED // FIGURES</span>
+          </div>
+          
+          <div 
+            class="type-preview-content" 
+            id="type-preview-input" 
+            contenteditable="true" 
+            spellcheck="false"
+          >Outcome matters.</div>
+
+          <div class="glyph-matrix">
+            <div class="glyph-row">
+              <span class="glyph">Aa</span>
+              <span class="glyph">Bb</span>
+              <span class="glyph">Cc</span>
+              <span class="glyph">Dd</span>
+              <span class="glyph">Ee</span>
+              <span class="glyph">Ff</span>
+              <span class="glyph">Gg</span>
+              <span class="glyph">Hh</span>
+              <span class="glyph">Ii</span>
+              <span class="glyph">Jj</span>
+              <span class="glyph">Kk</span>
+              <span class="glyph">Ll</span>
+              <span class="glyph">Mm</span>
+              <span class="glyph">Nn</span>
+              <span class="glyph">Oo</span>
+              <span class="glyph">Pp</span>
+              <span class="glyph">Qq</span>
+              <span class="glyph">Rr</span>
+              <span class="glyph">Ss</span>
+            </div>
+            <div class="glyph-row">
+              <span class="glyph">Tt</span>
+              <span class="glyph">Uu</span>
+              <span class="glyph">Vv</span>
+              <span class="glyph">Ww</span>
+              <span class="glyph">Xx</span>
+              <span class="glyph">Yy</span>
+              <span class="glyph">Zz</span>
+              <span class="glyph glyph-accent">0123456789</span>
+              <span class="glyph glyph-accent">&amp;%#@!$*</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 03: SERVICES & COMPLEX SYSTEMS
+         ========================================== -->
+    <section id="systems" class="section-systems">
+      <div class="content-container">
+        <div class="section-header">
+          <span class="section-num">03 // CAPABILITIES</span>
+          <h2 class="section-title">Engineered for uncompromising authority.</h2>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-item">
+            <div class="service-icon">01</div>
+            <h4 class="service-name">Bespoke Type Systems</h4>
+            <p class="service-desc">Custom letterforms, hinting for retina and ultra-wide displays, international character sets, and variable font pipelines.</p>
+            <span class="service-badge">TYPEFOUNDRY</span>
+          </div>
+
+          <div class="service-item">
+            <div class="service-icon">02</div>
+            <h4 class="service-name">Flagship Web Platforms</h4>
+            <p class="service-desc">Clean, robust web engineering prioritizing blistering speed, accessible typography, and bulletproof architecture.</p>
+            <span class="service-badge">ENGINEERING</span>
+          </div>
+
+          <div class="service-item">
+            <div class="service-icon">03</div>
+            <h4 class="service-name">Enterprise Design Systems</h4>
+            <p class="service-desc">Tokenized multi-brand systems, architectural Figma-to-code pipelines, and complete documentation governance.</p>
+            <span class="service-badge">SYSTEMS</span>
+          </div>
+
+          <div class="service-item">
+            <div class="service-icon">04</div>
+            <h4 class="service-name">Tactile Brand Identity</h4>
+            <p class="service-desc">Oiled-leather tactile stationery, chiseled architectural signage, luxury packaging, and monumental spatial design.</p>
+            <span class="service-badge">IDENTITY</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 04: ARCHIVES / SELECTED WORKS
+         ========================================== -->
+    <section id="archives" class="section-archives">
+      <div class="content-container">
+        <div class="section-header">
+          <span class="section-num">04 // SELECTED ARCHIVES</span>
+          <h2 class="section-title">Recent Commissioned Works</h2>
+        </div>
+
+        <div class="archive-list">
+          <article class="archive-row">
+            <span class="arc-client">MONOLITH CAPITAL</span>
+            <span class="arc-scope">Institutional Fintech Infrastructure &amp; Type System</span>
+            <span class="arc-cat">DIGITAL / TYPE</span>
+            <span class="arc-year">2026</span>
+          </article>
+
+          <article class="archive-row">
+            <span class="arc-client">QUARRY SPATIAL</span>
+            <span class="arc-scope">Architectural Hardware &amp; Luxury E-Commerce Platform</span>
+            <span class="arc-cat">SYSTEMS</span>
+            <span class="arc-year">2026</span>
+          </article>
+
+          <article class="archive-row">
+            <span class="arc-client">VERVE COUTURE FOUNDRY</span>
+            <span class="arc-scope">Bespoke High-Contrast Editorial Serif for Haute Horlogerie</span>
+            <span class="arc-cat">TYPEFOUNDRY</span>
+            <span class="arc-year">2025</span>
+          </article>
+
+          <article class="archive-row">
+            <span class="arc-client">KINETIC BASALT</span>
+            <span class="arc-scope">Automotive Spatial Sound Interface &amp; Digital Dashboard</span>
+            <span class="arc-cat">COMPLEX SYSTEMS</span>
+            <span class="arc-year">2025</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 05: CONTACT / INITIATE
+         ========================================== -->
+    <section id="contact" class="section-contact">
+      <div class="content-container">
+        <div class="contact-card">
+          <div class="contact-info">
+            <span class="section-num">05 // INITIATE DIALOGUE</span>
+            <h2 class="contact-headline">Commission an engagement with Bruto Studios.</h2>
+            <p class="contact-sub">
+              We take on a limited roster of 6 commissioned partnerships per calendar year.
+            </p>
+
+            <div class="contact-details">
+              <div class="detail-item">
+                <span class="detail-label">STUDIO LOCATION</span>
+                <span class="detail-val">Rua da Boavista, Porto / Lisbon, Portugal</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">LOCAL STUDIO TIME</span>
+                <span id="footer-time" class="detail-val">16:49 PORTUGAL (GMT+0)</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">DIRECT INQUIRIES</span>
+                <span class="detail-val">studio@bruto.pt</span>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" id="inquiry-form">
+            <div class="form-group">
+              <label for="name-input">PRINCIPAL / ORGANIZATION</label>
+              <input type="text" id="name-input" required placeholder="e.g. Elena Rostova / Apex Systems">
+            </div>
+
+            <div class="form-group">
+              <label for="email-input">COMMUNICATION CHANNEL</label>
+              <input type="email" id="email-input" required placeholder="principal@organization.com">
+            </div>
+
+            <div class="form-group">
+              <label for="scope-input">PROJECT SCOPE</label>
+              <select id="scope-input">
+                <option value="typefoundry">Bespoke Typefoundry &amp; Font System</option>
+                <option value="digital">Heavy-Duty Digital Platform</option>
+                <option value="complex">Complete Multi-Disciplinary System</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message-input">BRIEF SYNOPSIS</label>
+              <textarea id="message-input" rows="3" placeholder="Outline architectural requirements, timeline, and parameters..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              <span>TRANSMIT INQUIRY</span>
+            </button>
+            <div id="form-feedback" class="form-feedback"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Studio Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <span class="footer-brand">BRUTO STUDIOS</span>
+        <span class="footer-copy">© 2026 BRUTO STUDIOS LDA. HEAVY-DUTY DIGITAL. ALL RIGHTS RESERVED.</span>
+      </div>
+      <div class="footer-right">
+        <a href="#hero" class="back-to-top">RETURN TO TOP ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
