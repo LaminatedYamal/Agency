@@ -26,6 +26,25 @@
   font-display: swap;
 }
 
+/* Numbered Indicators & Accents: CS Rosha */
+@font-face {
+  font-family: 'CS Rosha';
+  src: url('/fonts/cs-rosha/cs-rosha-numerals.woff2') format('woff2');
+  unicode-range: U+0030-0039, U+002F, U+002E, U+003A, U+002D, U+0023, U+002B;
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CS Rosha';
+  src: url('/fonts/cs-rosha/cs-rosha.woff2') format('woff2'),
+       url('/fonts/cs-rosha/cs-rosha.otf') format('opentype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --color-bg: #040507;
   --color-surface: #0a0c10;
@@ -46,6 +65,7 @@
   --font-serif: 'Avenor', 'AT Avenor', 'Playfair Display', Georgia, serif;
   --font-sans: 'Syne', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'Space Mono', monospace;
+  --font-num: 'CS Rosha', var(--font-mono);
   
   --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -139,7 +159,8 @@ body.bg-studio {
 }
 
 .header-link span {
-  font-size: 0.6rem;
+  font-family: var(--font-num);
+  font-size: 0.72rem;
   color: var(--color-dijon-dim);
 }
 
@@ -217,9 +238,9 @@ body.bg-studio {
 
 .section-num {
   display: block;
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  font-weight: 700;
+  font-family: var(--font-num);
+  font-size: 0.88rem;
+  font-weight: 600;
   letter-spacing: 0.22em;
   color: var(--color-dijon);
   margin-bottom: 0.8rem;
@@ -416,8 +437,8 @@ body.bg-studio {
 }
 
 .meta-val {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-family: var(--font-num);
+  font-size: 0.76rem;
   letter-spacing: 0.12em;
   color: #a0aec0;
 }
@@ -688,11 +709,12 @@ body.bg-studio {
 }
 
 .pillar-num {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-family: var(--font-num);
+  font-size: 1.15rem;
   color: var(--color-dijon);
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 0.6rem;
+  letter-spacing: 0.05em;
 }
 
 .pillar-title {
@@ -945,11 +967,12 @@ body.bg-studio {
 }
 
 .service-icon {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 700;
+  font-family: var(--font-num);
+  font-size: 1.25rem;
+  font-weight: 600;
   color: var(--color-dijon);
   margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
 }
 
 .service-name {
