@@ -1,0 +1,13 @@
+
+"event_logs:source:initial_scan_started": {"key":"source:initial_scan_started","ct":1,"first_at":1789384023994,"last_at":1789384023994,"class_name":"EventLog","event_sources":{"init_items":1}},
+"event_logs:source:initial_scan_completed": {"key":"source:initial_scan_completed","ct":1,"first_at":1789384023996,"last_at":1789384023996,"class_name":"EventLog","event_sources":{"init_items":1}},
+"event_logs:settings:changed": {"key":"settings:changed","ct":12,"first_at":1789384023996,"last_at":1789384027229,"class_name":"EventLog"},
+"event_logs:collection:load_started": {"key":"collection:load_started","ct":6,"first_at":1789384027196,"last_at":1789384027246,"class_name":"EventLog"},
+"event_logs:collection:load_halted": {"key":"collection:load_halted","ct":4,"first_at":1789384027198,"last_at":1789384027225,"class_name":"EventLog"},
+"event_logs:model:changed": {"key":"model:changed","ct":1,"first_at":1789384027228,"last_at":1789384027228,"class_name":"EventLog"},
+"event_logs:collection:load_completed": {"key":"collection:load_completed","ct":2,"first_at":1789384027234,"last_at":1789384027246,"class_name":"EventLog"},
+"event_logs:sources:import_started": {"key":"sources:import_started","ct":1,"first_at":1789384027235,"last_at":1789384027235,"class_name":"EventLog","event_sources":{"process_source_import_queue":1}},
+"event_logs:sources:imported": {"key":"sources:imported","ct":1,"first_at":1789384027237,"last_at":1789384027237,"class_name":"EventLog"},
+"event_logs:sources:import_progress": {"key":"sources:import_progress","ct":1,"first_at":1789384027237,"last_at":1789384027237,"class_name":"EventLog","event_sources":{"process_source_import_queue":1}},
+"event_logs:sources:import_completed": {"key":"sources:import_completed","ct":1,"first_at":1789384027245,"last_at":1789384027245,"class_name":"EventLog","event_sources":{"process_source_import_queue":1}},
+"event_logs:milestones:first_achieved": {"key":"milestones:first_achieved","ct":1,"first_at":1789384027245,"last_at":1789384027245,"class_name":"EventLog","event_sources":{"onboarding_events":1}},
