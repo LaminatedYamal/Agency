@@ -6,7 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initLiveClock();
   initHeroVideo();
-  initTypeTester();
+  initExpertiseCarousel();
   initInquiryForm();
 });
 
@@ -66,61 +66,89 @@ function initLiveClock() {
 }
 
 /**
- * 2. Interactive Typefoundry Tester
+ * 2. Areas of Expertise Carousel
  */
-function initTypeTester() {
-  const preview = document.getElementById('type-preview-input');
-  const sizeSlider = document.getElementById('font-size-slider');
-  const sizeVal = document.getElementById('font-size-val');
-  const trackingSlider = document.getElementById('font-spacing-slider');
-  const trackingVal = document.getElementById('font-spacing-val');
-  const themeBtns = document.querySelectorAll('.theme-btn');
-  const testerBox = document.getElementById('tester-box');
+function initExpertiseCarousel() {
+  const viewport = document.getElementById('expertise-viewport');
+  const prevBtn = document.getElementById('carousel-prev');
+  const nextBtn = document.getElementById('carousel-next');
+  const counterEl = document.getElementById('carousel-counter');
+  const dotBtns = document.querySelectorAll('.dot-btn');
+  const cards = document.querySelectorAll('.expertise-card');
 
-  if (!preview) return;
+  if (!viewport || !cards.length) return;
 
-  // Font Size Slider
-  if (sizeSlider && sizeVal) {
-    sizeSlider.addEventListener('input', (e) => {
-      const size = e.target.value;
-      preview.style.fontSize = `${size}px`;
-      sizeVal.textContent = `${size}px`;
+  const totalCards = cards.length;
+  let currentIndex = 0;
+
+  function updateActiveState(index) {
+    currentIndex = Math.max(0, Math.min(index, totalCards - 1));
+    if (counterEl) {
+      const currentPad = String(currentIndex + 1).padStart(2, '0');
+      const totalPad = String(totalCards).padStart(2, '0');
+      counterEl.textContent = `${currentPad} / ${totalPad}`;
+    }
+    dotBtns.forEach((dot, idx) => {
+      dot.classList.toggle('active', idx === currentIndex);
     });
   }
 
-  // Tracking / Letter-Spacing Slider
-  if (trackingSlider && trackingVal) {
-    trackingSlider.addEventListener('input', (e) => {
-      const tracking = e.target.value;
-      preview.style.letterSpacing = `${tracking}em`;
-      trackingVal.textContent = `${tracking}em`;
-    });
+  function scrollToIndex(index) {
+    if (cards[index]) {
+      const card = cards[index];
+      viewport.scrollTo({
+        left: card.offsetLeft - viewport.offsetLeft,
+        behavior: 'smooth'
+      });
+      updateActiveState(index);
+    }
   }
 
-  // Theme Toggles (Dijon / Marble / Obsidian)
-  themeBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      themeBtns.forEach((b) => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const mode = btn.getAttribute('data-mode');
-      testerBox.className = 'type-tester-box';
-
-      if (mode === 'marble') {
-        testerBox.classList.add('theme-marble');
-      } else if (mode === 'obsidian') {
-        testerBox.classList.add('theme-obsidian');
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        scrollToIndex(currentIndex - 1);
+      } else {
+        scrollToIndex(totalCards - 1);
       }
     });
-  });
+  }
 
-  // Clicking on glyph chips adds them to preview
-  const glyphs = document.querySelectorAll('.glyph');
-  glyphs.forEach((glyph) => {
-    glyph.addEventListener('click', () => {
-      preview.textContent += ` ${glyph.textContent}`;
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      if (currentIndex < totalCards - 1) {
+        scrollToIndex(currentIndex + 1);
+      } else {
+        scrollToIndex(0);
+      }
+    });
+  }
+
+  dotBtns.forEach((dot) => {
+    dot.addEventListener('click', () => {
+      const idx = parseInt(dot.getAttribute('data-index') || '0', 10);
+      scrollToIndex(idx);
     });
   });
+
+  // Track scroll position via scroll listener with debounce
+  let scrollTimeout;
+  viewport.addEventListener('scroll', () => {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      const scrollLeft = viewport.scrollLeft;
+      let closestIdx = 0;
+      let minDiff = Infinity;
+      cards.forEach((card, idx) => {
+        const diff = Math.abs((card.offsetLeft - viewport.offsetLeft) - scrollLeft);
+        if (diff < minDiff) {
+          minDiff = diff;
+          closestIdx = idx;
+        }
+      });
+      updateActiveState(closestIdx);
+    }, 50);
+  }, { passive: true });
 }
 
 /**
@@ -269,7 +297,7 @@ function initHeroVideo() {
 }
 
 console.log(
-  '%c BRUTO STUDIOS %c Heavy-Duty Digital. Typefoundry. Complex Systems. ',
+  '%c BRUTO %c Heavy-Duty Digital. Capabilities. Areas of Expertise. ',
   'background: #111; color: #fff; font-weight: 700; padding: 4px 8px; border-radius: 2px 0 0 2px;',
   'background: #c4892c; color: #111; font-weight: 700; padding: 4px 8px; border-radius: 0 2px 2px 0;'
 );
