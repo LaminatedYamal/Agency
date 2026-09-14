@@ -81,23 +81,48 @@ function initExpertiseCarousel() {
   const totalCards = cards.length;
   let currentIndex = 0;
 
+  function getMaxScrollLeft() {
+    return Math.max(0, viewport.scrollWidth - viewport.clientWidth);
+  }
+
   function updateActiveState(index) {
-    currentIndex = Math.max(0, Math.min(index, totalCards - 1));
+    const maxScroll = getMaxScrollLeft();
+    const isAtEnd = maxScroll > 0 && viewport.scrollLeft >= maxScroll - 15;
+
+    if (isAtEnd) {
+      currentIndex = totalCards - 1;
+    } else {
+      currentIndex = Math.max(0, Math.min(index, totalCards - 1));
+    }
+
     if (counterEl) {
       const currentPad = String(currentIndex + 1).padStart(2, '0');
       const totalPad = String(totalCards).padStart(2, '0');
       counterEl.textContent = `${currentPad} / ${totalPad}`;
     }
+
     dotBtns.forEach((dot, idx) => {
       dot.classList.toggle('active', idx === currentIndex);
     });
   }
 
   function scrollToIndex(index) {
+    const maxScroll = getMaxScrollLeft();
+    if (index >= totalCards - 1) {
+      viewport.scrollTo({ left: maxScroll, behavior: 'smooth' });
+      updateActiveState(totalCards - 1);
+      return;
+    }
+    if (index <= 0) {
+      viewport.scrollTo({ left: 0, behavior: 'smooth' });
+      updateActiveState(0);
+      return;
+    }
+
     if (cards[index]) {
-      const card = cards[index];
+      const targetLeft = Math.min(cards[index].offsetLeft - viewport.offsetLeft, maxScroll);
       viewport.scrollTo({
-        left: card.offsetLeft - viewport.offsetLeft,
+        left: targetLeft,
         behavior: 'smooth'
       });
       updateActiveState(index);
@@ -106,20 +131,22 @@ function initExpertiseCarousel() {
 
   if (prevBtn) {
     prevBtn.addEventListener('click', () => {
-      if (currentIndex > 0) {
-        scrollToIndex(currentIndex - 1);
+      const maxScroll = getMaxScrollLeft();
+      if (viewport.scrollLeft <= 15) {
+        viewport.scrollTo({ left: maxScroll, behavior: 'smooth' });
       } else {
-        scrollToIndex(totalCards - 1);
+        scrollToIndex(Math.max(0, currentIndex - 1));
       }
     });
   }
 
   if (nextBtn) {
     nextBtn.addEventListener('click', () => {
-      if (currentIndex < totalCards - 1) {
-        scrollToIndex(currentIndex + 1);
-      } else {
+      const maxScroll = getMaxScrollLeft();
+      if (viewport.scrollLeft >= maxScroll - 15) {
         scrollToIndex(0);
+      } else {
+        scrollToIndex(currentIndex + 1);
       }
     });
   }
@@ -137,6 +164,13 @@ function initExpertiseCarousel() {
     clearTimeout(scrollTimeout);
     scrollTimeout = setTimeout(() => {
       const scrollLeft = viewport.scrollLeft;
+      const maxScroll = getMaxScrollLeft();
+
+      if (maxScroll > 0 && scrollLeft >= maxScroll - 15) {
+        updateActiveState(totalCards - 1);
+        return;
+      }
+
       let closestIdx = 0;
       let minDiff = Infinity;
       cards.forEach((card, idx) => {
