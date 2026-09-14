@@ -92,7 +92,9 @@ body.bg-studio {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1.4rem 3.5rem;
+  height: 72px;
+  padding: 0 3.5rem;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -109,18 +111,18 @@ body.bg-studio {
   gap: 0.8rem;
 }
 
-.brand-logo {
+.header-brand .brand-logo {
   font-family: var(--font-serif);
-  font-size: 1.35rem;
+  font-size: 1.95rem;
   font-weight: 400;
   color: #ffffff;
   text-decoration: none;
   letter-spacing: 0.08em;
 }
 
-.brand-tag {
+.header-brand .brand-tag {
   font-family: var(--font-num);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: var(--color-dijon);
   letter-spacing: 0.16em;
   font-weight: 300;
@@ -1292,7 +1294,8 @@ body.bg-studio {
    ========================================================================== */
 @media (max-width: 1024px) {
   .site-header {
-    padding: 1.2rem 2rem;
+    height: 72px;
+    padding: 0 2rem;
   }
   .header-nav {
     display: none;
@@ -1375,7 +1378,8 @@ body.bg-studio {
   }
 
   .site-header {
-    padding: 1.4rem 4rem;
+    height: 72px;
+    padding: 0 4rem;
   }
 
   .hero-section {
@@ -1510,7 +1514,8 @@ body.bg-studio {
   }
   
   .site-header {
-    padding: 1.8rem 5rem;
+    height: 80px;
+    padding: 0 5rem;
   }
 
   .content-container,
