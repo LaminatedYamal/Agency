@@ -72,7 +72,6 @@ function initExpertiseCarousel() {
   const viewport = document.getElementById('expertise-viewport');
   const prevBtn = document.getElementById('carousel-prev');
   const nextBtn = document.getElementById('carousel-next');
-  const dotBtns = document.querySelectorAll('.dot-btn');
   const cards = document.querySelectorAll('.expertise-card');
 
   if (!viewport || !cards.length) return;
@@ -93,10 +92,6 @@ function initExpertiseCarousel() {
     } else {
       currentIndex = Math.max(0, Math.min(index, totalCards - 1));
     }
-
-    dotBtns.forEach((dot, idx) => {
-      dot.classList.toggle('active', idx === currentIndex);
-    });
   }
 
   function scrollToIndex(index) {
@@ -143,13 +138,6 @@ function initExpertiseCarousel() {
       }
     });
   }
-
-  dotBtns.forEach((dot) => {
-    dot.addEventListener('click', () => {
-      const idx = parseInt(dot.getAttribute('data-index') || '0', 10);
-      scrollToIndex(idx);
-    });
-  });
 
   // Track scroll position via scroll listener with debounce
   let scrollTimeout;

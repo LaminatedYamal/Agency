@@ -215,8 +215,10 @@ body.bg-studio {
 
 .content-container {
   max-width: 1540px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 2rem;
+  box-sizing: border-box;
 }
 
 /* Section Common Headers */
@@ -607,7 +609,13 @@ body.bg-studio {
    SECTION 01: MANIFESTO & PHILOSOPHY
    ========================================================================== */
 .section-manifesto {
-  padding: 7rem 0;
+  min-height: calc(100vh - 80px);
+  scroll-margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 0;
+  box-sizing: border-box;
   background-color: var(--color-bg);
 }
 
@@ -709,7 +717,13 @@ body.bg-studio {
    ========================================================================== */
 .section-capabilities,
 .section-systems {
-  padding: 7rem 0;
+  min-height: calc(100vh - 80px);
+  scroll-margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 0;
+  box-sizing: border-box;
   background-color: var(--color-bg);
 }
 
@@ -778,7 +792,13 @@ body.bg-studio {
    SECTION 03: AREAS OF EXPERTISE (PLATFORM CAROUSEL)
    ========================================================================== */
 .section-expertise {
-  padding: 7rem 0;
+  min-height: calc(100vh - 80px);
+  scroll-margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 0;
+  box-sizing: border-box;
   background-color: var(--color-bg);
   position: relative;
 }
@@ -967,8 +987,7 @@ body.bg-studio {
   gap: 0.65rem;
   margin-bottom: 2rem;
   flex-grow: 1;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  padding-top: 1.2rem;
+  padding-top: 0.8rem;
 }
 
 .feature-item {
@@ -989,8 +1008,7 @@ body.bg-studio {
 
 .card-footer {
   margin-top: auto;
-  padding-top: 1.2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 1rem;
 }
 
 .card-action {
@@ -1010,40 +1028,18 @@ body.bg-studio {
   transform: translateX(4px);
 }
 
-/* Pagination Dots */
-.carousel-dots {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.6rem;
-  margin-top: 1.5rem;
-}
-
-.dot-btn {
-  width: 28px;
-  height: 3px;
-  background: rgba(255, 255, 255, 0.15);
-  border: none;
-  border-radius: 2px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.dot-btn.active {
-  background: var(--color-dijon-bright);
-  width: 50px;
-  box-shadow: 0 0 10px rgba(229, 168, 59, 0.5);
-}
-
-.dot-btn:hover {
-  background: rgba(229, 168, 59, 0.6);
-}
 
 /* ==========================================================================
    SECTION 04: ARCHIVES / SELECTED WORKS
    ========================================================================== */
 .section-archives {
-  padding: 7rem 0;
+  min-height: calc(100vh - 80px);
+  scroll-margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 0;
+  box-sizing: border-box;
   background-color: var(--color-bg);
 }
 
@@ -1103,7 +1099,13 @@ body.bg-studio {
    SECTION 05: CONTACT / INITIATE
    ========================================================================== */
 .section-contact {
-  padding: 7rem 0 9rem;
+  min-height: calc(100vh - 80px);
+  scroll-margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 0 6rem;
+  box-sizing: border-box;
   background-color: var(--color-bg);
 }
 
