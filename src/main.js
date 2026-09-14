@@ -72,7 +72,6 @@ function initExpertiseCarousel() {
   const viewport = document.getElementById('expertise-viewport');
   const prevBtn = document.getElementById('carousel-prev');
   const nextBtn = document.getElementById('carousel-next');
-  const counterEl = document.getElementById('carousel-counter');
   const dotBtns = document.querySelectorAll('.dot-btn');
   const cards = document.querySelectorAll('.expertise-card');
 
@@ -93,12 +92,6 @@ function initExpertiseCarousel() {
       currentIndex = totalCards - 1;
     } else {
       currentIndex = Math.max(0, Math.min(index, totalCards - 1));
-    }
-
-    if (counterEl) {
-      const currentPad = String(currentIndex + 1).padStart(2, '0');
-      const totalPad = String(totalCards).padStart(2, '0');
-      counterEl.textContent = `${currentPad} / ${totalPad}`;
     }
 
     dotBtns.forEach((dot, idx) => {
