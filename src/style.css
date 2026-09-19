@@ -969,18 +969,14 @@ body.bg-studio {
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--color-dijon-bright), transparent);
+  background: transparent;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .expertise-card:hover {
-  border-color: rgba(229, 168, 59, 0.4);
   transform: translateY(-5px);
   background: var(--color-surface-hover);
-  box-shadow: 
-    0 20px 45px rgba(0, 0, 0, 0.7),
-    0 0 25px rgba(229, 168, 59, 0.1);
 }
 
 .expertise-card:hover::before {
@@ -1067,27 +1063,281 @@ body.bg-studio {
 
 .card-footer {
   margin-top: auto;
-  padding-top: 1rem;
-  padding-bottom: 0.4rem;
+  padding-top: 1.2rem;
+  padding-bottom: 0.2rem;
 }
 
 .card-action {
   display: inline-flex;
   align-items: center;
-  font-family: var(--font-num);
-  font-size: 0.72rem;
-  font-weight: 400;
-  letter-spacing: 0.16em;
+  gap: 0.85rem;
+  width: auto;
+  box-sizing: border-box;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
   color: var(--color-dijon-bright);
   text-decoration: none;
-  padding: 0.3rem 0;
-  transition: all 0.2s ease;
+  padding: 0.75rem 1.35rem;
+  background: rgba(229, 168, 59, 0.05);
+  border: 1px solid rgba(229, 168, 59, 0.35);
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease, transform 0.25s ease;
+}
+
+.card-action::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: var(--color-dijon-bright);
+  transition: width 0.35s ease-out;
+  z-index: -1;
+}
+
+.card-action:hover::before {
+  width: 100%;
+  transition: width 3.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .card-action:hover {
-  color: #ffffff;
-  transform: translateX(4px);
+  color: #0c0d0e;
+  border-color: var(--color-dijon-bright);
+  box-shadow: 0 0 20px rgba(229, 168, 59, 0.35);
+  transform: translateY(-2px);
 }
+
+.card-action:active {
+  transform: scale(0.98);
+}
+
+/* ==========================================================================
+   CARD WATERMARK LOGO FILL SYSTEM (Liquid Wipe Rise with Brand Colors)
+   ========================================================================== */
+.expertise-card > *:not(.card-bg-watermark) {
+  position: relative;
+  z-index: 2;
+}
+
+.card-bg-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 270px;
+  width: auto;
+  transform: translate(-50%, -50%) scale(1.1);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.16;
+  clip-path: inset(100% 0 0 0);
+  transition: clip-path 0.4s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-bg-watermark svg {
+  height: 270px;
+  width: auto;
+  filter: drop-shadow(0 0 25px rgba(0, 0, 0, 0.5));
+}
+
+.expertise-card:hover .card-bg-watermark-wipe {
+  clip-path: inset(0 0 0 0);
+  transition: clip-path 2.0s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base Expertise Card Action Button System (Brand Color LTR Fill + Cropped Watermark SVG) */
+.expertise-card .card-action {
+  position: relative;
+  overflow: hidden;
+}
+.expertise-card .card-action::before {
+  display: none;
+}
+.expertise-card .card-action-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+  transition: width 0.35s ease-out;
+  pointer-events: none;
+}
+.expertise-card .card-action:hover .card-action-fill {
+  width: 100%;
+  transition: width 2.0s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.expertise-card .card-action-bg-svg {
+  position: absolute;
+  right: -14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 78px;
+  height: 78px;
+  opacity: 0.32;
+  pointer-events: none;
+}
+.expertise-card .card-action-text {
+  position: relative;
+  z-index: 2;
+  transition: color 0.4s ease;
+}
+.expertise-card .card-action:hover .card-action-text {
+  color: #ffffff;
+}
+
+/* Card 01: WordPress & VIP (#21759B) */
+.expertise-card[data-index="0"]::before {
+  background: linear-gradient(90deg, transparent, #21759B, transparent);
+}
+.expertise-card[data-index="0"]:hover {
+  background: radial-gradient(circle at 50% 50%, rgba(33, 117, 155, 0.14) 0%, var(--color-surface-hover) 75%);
+  border-color: rgba(33, 117, 155, 0.45);
+  box-shadow: 
+    0 20px 45px rgba(0, 0, 0, 0.7),
+    0 0 30px rgba(33, 117, 155, 0.22);
+}
+.expertise-card[data-index="0"] .card-action {
+  color: #38a0d4;
+  border-color: rgba(33, 117, 155, 0.45);
+  background: rgba(33, 117, 155, 0.08);
+}
+.expertise-card[data-index="0"] .card-action-fill {
+  background: #21759B;
+}
+.expertise-card[data-index="0"] .wp-bg-circle {
+  fill: #ffffff;
+}
+.expertise-card[data-index="0"] .wp-bg-glyph {
+  fill: #21759B;
+}
+.expertise-card[data-index="0"] .card-action:hover {
+  color: #ffffff;
+  border-color: #21759B;
+  box-shadow: 0 0 25px rgba(33, 117, 155, 0.6), 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Card 02: Shopify Plus & Stores (#7AB55C) */
+.expertise-card[data-index="1"]::before {
+  background: linear-gradient(90deg, transparent, #7AB55C, transparent);
+}
+.expertise-card[data-index="1"]:hover {
+  background: radial-gradient(circle at 50% 50%, rgba(122, 181, 92, 0.14) 0%, var(--color-surface-hover) 75%);
+  border-color: rgba(122, 181, 92, 0.45);
+  box-shadow: 
+    0 20px 45px rgba(0, 0, 0, 0.7),
+    0 0 30px rgba(122, 181, 92, 0.22);
+}
+.expertise-card[data-index="1"] .card-action {
+  color: #8ece6e;
+  border-color: rgba(122, 181, 92, 0.45);
+  background: rgba(122, 181, 92, 0.08);
+}
+.expertise-card[data-index="1"] .card-action-fill {
+  background: #7AB55C;
+}
+.expertise-card[data-index="1"] .card-action-bg-svg path {
+  fill: #ffffff;
+}
+.expertise-card[data-index="1"] .card-action:hover {
+  color: #ffffff;
+  border-color: #7AB55C;
+  box-shadow: 0 0 25px rgba(122, 181, 92, 0.6), 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Card 03: n8n Automation Engine (#EA4B71) */
+.expertise-card[data-index="2"]::before {
+  background: linear-gradient(90deg, transparent, #EA4B71, transparent);
+}
+.expertise-card[data-index="2"]:hover {
+  background: radial-gradient(circle at 50% 50%, rgba(234, 75, 113, 0.14) 0%, var(--color-surface-hover) 75%);
+  border-color: rgba(234, 75, 113, 0.45);
+  box-shadow: 
+    0 20px 45px rgba(0, 0, 0, 0.7),
+    0 0 30px rgba(234, 75, 113, 0.22);
+}
+.expertise-card[data-index="2"] .card-action {
+  color: #f06a8a;
+  border-color: rgba(234, 75, 113, 0.45);
+  background: rgba(234, 75, 113, 0.08);
+}
+.expertise-card[data-index="2"] .card-action-fill {
+  background: #EA4B71;
+}
+.expertise-card[data-index="2"] .card-action-bg-svg path {
+  fill: #ffffff;
+}
+.expertise-card[data-index="2"] .card-action:hover {
+  color: #ffffff;
+  border-color: #EA4B71;
+  box-shadow: 0 0 25px rgba(234, 75, 113, 0.6), 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Card 04: Google Ads Search & Intent (Multi-Color / #4285F4) */
+.expertise-card[data-index="3"]::before {
+  background: linear-gradient(90deg, transparent, #4285F4, #FBBC04, #34A853, transparent);
+}
+.expertise-card[data-index="3"]:hover {
+  background: radial-gradient(circle at 50% 50%, rgba(66, 133, 244, 0.14) 0%, var(--color-surface-hover) 75%);
+  border-color: rgba(66, 133, 244, 0.45);
+  box-shadow: 
+    0 20px 45px rgba(0, 0, 0, 0.7),
+    0 0 30px rgba(66, 133, 244, 0.22);
+}
+.expertise-card[data-index="3"] .card-action {
+  color: #6ba4f8;
+  border-color: rgba(66, 133, 244, 0.45);
+  background: rgba(66, 133, 244, 0.08);
+}
+.expertise-card[data-index="3"] .card-action-fill {
+  background: #4285F4;
+}
+.expertise-card[data-index="3"] .card-action-bg-svg path {
+  fill: #ffffff;
+}
+.expertise-card[data-index="3"] .card-action:hover {
+  color: #ffffff;
+  border-color: #4285F4;
+  box-shadow: 0 0 25px rgba(66, 133, 244, 0.6), 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Card 05: Meta Ads Paid Social (#0467DF) */
+.expertise-card[data-index="4"]::before {
+  background: linear-gradient(90deg, transparent, #0467DF, transparent);
+}
+.expertise-card[data-index="4"]:hover {
+  background: radial-gradient(circle at 50% 50%, rgba(4, 103, 223, 0.14) 0%, var(--color-surface-hover) 75%);
+  border-color: rgba(4, 103, 223, 0.45);
+  box-shadow: 
+    0 20px 45px rgba(0, 0, 0, 0.7),
+    0 0 30px rgba(4, 103, 223, 0.22);
+}
+.expertise-card[data-index="4"] .card-action {
+  color: #3b8ff7;
+  border-color: rgba(4, 103, 223, 0.45);
+  background: rgba(4, 103, 223, 0.08);
+}
+.expertise-card[data-index="4"] .card-action-fill {
+  background: #0467DF;
+}
+.expertise-card[data-index="4"] .card-action-bg-svg path {
+  fill: #ffffff;
+}
+.expertise-card[data-index="4"] .card-action:hover {
+  color: #ffffff;
+  border-color: #0467DF;
+  box-shadow: 0 0 25px rgba(4, 103, 223, 0.6), 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
 
 
 /* ==========================================================================
@@ -2737,4 +2987,135 @@ body.bg-studio {
   .doctrine-title {
     font-size: 1.25rem;
   }
+}
+
+/* ==========================================================================
+   Official Brand SVGs Styling & Ambient Glow
+   ========================================================================== */
+.tech-icon {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), filter 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Editorial bar icons */
+.hero-editorial-bar .tech-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  vertical-align: -2px;
+}
+
+/* Capabilities section icons */
+.services-grid .service-item .service-name .tech-icon {
+  width: 22px;
+  height: 22px;
+  margin-right: 8px;
+  vertical-align: -3px;
+}
+
+/* Areas of Expertise cards */
+.expertise-card .card-title .tech-icon {
+  width: 26px;
+  height: 26px;
+  margin-right: 10px;
+  vertical-align: -4px;
+}
+
+/* Subpage Hero title icon */
+.subpage-title .tech-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 14px;
+  vertical-align: -7px;
+}
+
+/* Subpage Deliverables items */
+.subpage-deliverables-grid .service-item .service-name .tech-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  vertical-align: -3px;
+}
+
+@media (max-width: 767px) {
+  .subpage-title .tech-icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+    vertical-align: -4px;
+  }
+}
+
+/* Ambient Brand-Colored Drop-Shadow Hover Glow */
+.expertise-card:hover .tech-icon-wordpress,
+.subpage-hero:hover .tech-icon-wordpress,
+.service-item:hover .tech-icon-wordpress {
+  filter: drop-shadow(0 0 10px rgba(33, 117, 155, 0.85));
+}
+
+.expertise-card:hover .tech-icon-shopify,
+.subpage-hero:hover .tech-icon-shopify,
+.service-item:hover .tech-icon-shopify {
+  filter: drop-shadow(0 0 10px rgba(122, 181, 92, 0.85));
+}
+
+.expertise-card:hover .tech-icon-n8n,
+.subpage-hero:hover .tech-icon-n8n,
+.service-item:hover .tech-icon-n8n {
+  filter: drop-shadow(0 0 10px rgba(234, 75, 113, 0.85));
+}
+
+.expertise-card:hover .tech-icon-googleads,
+.subpage-hero:hover .tech-icon-googleads,
+.service-item:hover .tech-icon-googleads {
+  filter: drop-shadow(0 0 10px rgba(66, 133, 244, 0.85));
+}
+
+.expertise-card:hover .tech-icon-meta,
+.subpage-hero:hover .tech-icon-meta,
+.service-item:hover .tech-icon-meta {
+  filter: drop-shadow(0 0 10px rgba(4, 103, 223, 0.85));
+}
+
+/* Ecosystem tech hover glow */
+.service-item:hover .tech-icon-php {
+  filter: drop-shadow(0 0 8px rgba(119, 123, 180, 0.8));
+}
+.service-item:hover .tech-icon-graphql {
+  filter: drop-shadow(0 0 8px rgba(225, 0, 152, 0.8));
+}
+.service-item:hover .tech-icon-redis {
+  filter: drop-shadow(0 0 8px rgba(216, 44, 32, 0.8));
+}
+.service-item:hover .tech-icon-react {
+  filter: drop-shadow(0 0 8px rgba(97, 218, 251, 0.8));
+}
+.service-item:hover .tech-icon-whatsapp {
+  filter: drop-shadow(0 0 8px rgba(37, 211, 102, 0.8));
+}
+.service-item:hover .tech-icon-telegram {
+  filter: drop-shadow(0 0 8px rgba(34, 158, 217, 0.8));
+}
+.service-item:hover .tech-icon-slack {
+  filter: drop-shadow(0 0 8px rgba(224, 30, 90, 0.8));
+}
+.service-item:hover .tech-icon-googlesheets {
+  filter: drop-shadow(0 0 8px rgba(15, 157, 88, 0.8));
+}
+.service-item:hover .tech-icon-notion {
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.7));
+}
+.service-item:hover .tech-icon-googletagmanager {
+  filter: drop-shadow(0 0 8px rgba(36, 111, 219, 0.8));
+}
+.service-item:hover .tech-icon-googleanalytics {
+  filter: drop-shadow(0 0 8px rgba(249, 171, 0, 0.8));
+}
+.service-item:hover .tech-icon-instagram {
+  filter: drop-shadow(0 0 8px rgba(200, 55, 171, 0.8));
+}
+.service-item:hover .tech-icon-facebook {
+  filter: drop-shadow(0 0 8px rgba(24, 119, 242, 0.8));
 }
