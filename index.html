@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BRUTO — Heavy-Duty Digital. Capabilities. Areas of Expertise.</title>
+  <meta name="robots" content="noindex, nofollow">
+  <title>BRUTO — Heavy-Duty Digital • Websites • Automations • Growth</title>
   
   <!-- Primary Font: Avenor (Self-Hosted WOFF2) -->
   <link rel="preload" href="./fonts/avenor/at-avenor.woff2" as="font" type="font/woff2" crossorigin>
@@ -19,24 +20,31 @@
   <!-- Minimalist Header -->
   <header class="site-header">
     <div class="header-brand">
-      <a href="#hero" class="brand-logo">BRUTO</a>
-      <span class="brand-tag">EST. 2026</span>
+      <span class="brand-logo">BRUTO</span>
+      <span class="brand-tag" data-i18n="header_est">EST. 2026</span>
     </div>
 
     <nav class="header-nav">
-      <a href="#manifesto" class="header-link"><span>01</span> PROCESS</a>
-      <a href="#capabilities" class="header-link"><span>02</span> CAPABILITIES</a>
-      <a href="#expertise" class="header-link"><span>03</span> EXPERTISE</a>
-      <a href="#archives" class="header-link"><span>04</span> ARCHIVES</a>
+      <a href="#manifesto" class="header-link" data-i18n="nav_process"><span>01</span> PROCESS</a>
+      <a href="#capabilities" class="header-link" data-i18n="nav_capabilities"><span>02</span> CAPABILITIES</a>
+      <a href="#expertise" class="header-link" data-i18n="nav_expertise"><span>03</span> EXPERTISE</a>
+      <a href="#about" class="header-link" data-i18n="nav_about"><span>04</span> ABOUT</a>
     </nav>
 
     <div class="header-actions">
+      <!-- Language Switcher: EN | PT -->
+      <div class="lang-switch" id="lang-switch" role="group" aria-label="Language selection">
+        <button type="button" class="lang-btn active" data-lang="en">EN</button>
+        <span class="lang-sep">/</span>
+        <button type="button" class="lang-btn" data-lang="pt">PT</button>
+      </div>
+
       <div class="live-clock">
         <span class="clock-dot"></span>
         <span id="header-time">16:49</span>
         <span class="clock-tz">PORTUGAL</span>
       </div>
-      <a href="#contact" class="inquire-btn">INITIATE</a>
+      <a href="#contact" class="inquire-btn" data-i18n="nav_initiate">INITIATE</a>
     </div>
   </header>
 
@@ -45,8 +53,6 @@
     
     <!-- ==========================================
          HERO SECTION: MONUMENTAL CINEMATIC VIDEO STAGE
-         "BRUTO" in Avenor Typography layered in front of user video.
-         Optimized for Standard 1080p, 4K, and 3440x1440p (21:9 Ultra-Wide)
          ========================================== -->
     <section id="hero" class="hero-section">
       <div class="hero-stage hero-video-stage" id="hero-stage-container">
@@ -62,7 +68,6 @@
             playsinline
             preload="auto"
           >
-            <!-- Auto-detects video files placed in project root or public/ -->
             <source src="hero.mp4" type="video/mp4">
             <source src="16338759_1280_720_30fps.mp4" type="video/mp4">
             <source src="video.mp4" type="video/mp4">
@@ -76,44 +81,28 @@
           <div class="video-vignette"></div>
           <div class="video-grid-overlay"></div>
 
-          <!-- Pending Video Drop Beacon (Auto-hides once video plays or can be dragged & dropped) -->
+          <!-- Pending Video Drop Beacon -->
           <div class="video-status-indicator" id="video-status-badge">
             <span class="pulse-beacon"></span>
-            <span class="status-msg">VIDEO ENGINE READY // DROP VIDEO FILE HERE OR PLACE IN FOLDER</span>
+            <span class="status-msg" data-i18n="hero_status_beacon">VIDEO ENGINE READY // DROP VIDEO FILE HERE OR PLACE IN FOLDER</span>
           </div>
         </div>
 
-        <!-- Foreground Content: Positioned Proudly In Front of Video -->
+        <!-- Foreground Content -->
         <div class="hero-foreground-content">
-          
-          <!-- Monumental Centerpiece: "BRUTO" in Avenor Font -->
           <div class="hero-center-monolith">
             <div class="hero-title-container">
               <h1 class="hero-monolith-title" data-text="BRUTO">BRUTO</h1>
               <div class="hero-title-glow"></div>
             </div>
-            <p class="hero-monolith-subtitle">
-              <span>HEAVY-DUTY DIGITAL</span>
+            <p class="hero-monolith-subtitle" data-i18n="hero_subtitle">
+              <span>HEAVY-DUTY WEBSITES</span>
               <span class="sub-sep">•</span>
-              <span>BESPOKE TYPEFOUNDRY</span>
+              <span>WORKFLOW AUTOMATION</span>
               <span class="sub-sep">•</span>
-              <span>COMPLEX SYSTEMS</span>
+              <span>PRECISION GROWTH</span>
             </p>
           </div>
-
-          <!-- Bottom Architectural Bar: Floating In-Hero Controls -->
-          <div class="hero-meta-bottom hero-meta-controls-only">
-            <!-- Video Interaction Controls -->
-            <div class="hero-bottom-right">
-              <button class="video-ctrl-btn" id="btn-video-sound" title="Toggle Sound">
-                <span class="ctrl-icon" id="sound-icon">UNMUTE</span>
-              </button>
-              <button class="video-ctrl-btn" id="btn-video-play" title="Play / Pause Video">
-                <span class="ctrl-icon" id="play-icon">PAUSE</span>
-              </button>
-            </div>
-          </div>
-
         </div>
 
       </div>
@@ -121,20 +110,20 @@
       <!-- Editorial Meta Strip under Hero -->
       <div class="hero-editorial-bar">
         <div class="editorial-item">
-          <span class="ed-label">ARCHITECTURE</span>
-          <span class="ed-val">Brutalist Monolith &amp; Screen Type</span>
+          <span class="ed-label" data-i18n="ed_infra_label">INFRASTRUCTURE</span>
+          <span class="ed-val" data-i18n="ed_infra_val">WordPress, Shopify &amp; Custom Front-End</span>
         </div>
         <div class="editorial-item">
-          <span class="ed-label">PRIMARY TYPEFACE</span>
-          <span class="ed-val">Avenor Wide Display // Opentype</span>
+          <span class="ed-label" data-i18n="ed_auto_label">AUTOMATIONS</span>
+          <span class="ed-val" data-i18n="ed_auto_val">n8n Workflow Engines &amp; Webhooks</span>
         </div>
         <div class="editorial-item">
-          <span class="ed-label">PALETTE</span>
-          <span class="ed-val">Obsidian, Studio Slate, Dijon Canvas</span>
+          <span class="ed-label" data-i18n="ed_growth_label">GROWTH</span>
+          <span class="ed-val" data-i18n="ed_growth_val">Technical SEO &amp; Paid Acquisition</span>
         </div>
         <div class="editorial-item">
-          <span class="ed-label">LOCATION</span>
-          <span class="ed-val">Lisbon / Porto, Portugal (GMT+0)</span>
+          <span class="ed-label" data-i18n="ed_origin_label">LOCATION</span>
+          <span class="ed-val" data-i18n="ed_origin_val">Lisbon / Porto, Portugal (GMT+0)</span>
         </div>
       </div>
     </section>
@@ -145,45 +134,58 @@
     <section id="manifesto" class="section-manifesto">
       <div class="content-container">
         <div class="section-header">
-          <span class="section-num">01 // PHILOSOPHY &amp; PROCESS</span>
-          <h2 class="section-title">Severe and high-end, with a calculated touch of physical grit.</h2>
+          <span class="section-num" data-i18n="sec1_num">01 // MANIFESTO &amp; PROCESS</span>
+          <h2 class="section-title" data-i18n="sec1_title">Architectural Rigor Over Commercial Fluff.</h2>
         </div>
 
         <div class="manifesto-grid">
           <div class="manifesto-lead">
-            <p class="lead-text">
-              We design and construct monumental digital infrastructure, custom typefoundry systems, and severe brand architecture for enterprises that demand unyielding authority.
+            <p class="lead-text" data-i18n="sec1_lead">
+              Most digital agencies sell fragile templates, bloated retainers, and vanity metrics that evaporate in months. At BRUTO, we solve problems definitively: engineered directly around your business, built with clean performance, and delivered with zero fluff.
             </p>
-            <p class="body-text">
-              From our architectural studio overlooking the Portuguese coastal ranges, our work bridges brutalist material weight with the microscopic precision of modern computational typography.
+            <p class="body-text" data-i18n="sec1_body">
+              From our base in Portugal, we work as dedicated technical partners directly with business owners. No middlemen, no junior account managers—just heavy-duty digital execution tailored to your commercial reality.
             </p>
           </div>
 
           <div class="pillars-list">
             <div class="pillar-card">
               <div class="pillar-num">01</div>
-              <h3 class="pillar-title">MONOLITHIC DIGITAL</h3>
-              <p class="pillar-desc">
-                High-resilience web applications, custom CMS engines, and low-latency infrastructure built with zero superfluous fluff. Engineered to endure.
+              <h3 class="pillar-title" data-i18n="pillar1_title">SOLVE DEFINITIVELY</h3>
+              <p class="pillar-desc" data-i18n="pillar1_desc">
+                No temporary band-aids or fragile plugin stacks. We diagnose root operational bottlenecks and engineer solid, permanent digital solutions built to last.
               </p>
             </div>
 
             <div class="pillar-card">
               <div class="pillar-num">02</div>
-              <h3 class="pillar-title">BESPOKE TYPEFOUNDRY</h3>
-              <p class="pillar-desc">
-                Proprietary display serifs, heavy architectural grotesks, and monospaced typesetting crafted specifically for modern screen rendering and physical signage.
+              <h3 class="pillar-title" data-i18n="pillar2_title">TAILORED TO THE BUSINESS</h3>
+              <p class="pillar-desc" data-i18n="pillar2_desc">
+                No generic copy-paste templates. Whether it is a custom WordPress setup, a Shopify store, or n8n workflow automations, everything is built specifically around your operations.
               </p>
             </div>
 
             <div class="pillar-card">
               <div class="pillar-num">03</div>
-              <h3 class="pillar-title">COMPLEX SYSTEMS</h3>
-              <p class="pillar-desc">
-                Multimodal design systems, component architecture, and mathematical layout geometry that scale across international multi-brand ecosystems.
+              <h3 class="pillar-title" data-i18n="pillar3_title">ZERO COMMERCIAL FLUFF</h3>
+              <p class="pillar-desc" data-i18n="pillar3_desc">
+                We do not sell vanity redesigns or empty marketing buzzwords. We build fast, high-converting digital platforms and targeted acquisition engines that drive measurable commercial revenue.
               </p>
             </div>
           </div>
+        </div>
+        <!-- The AI Doctrine: Human Authority & Tool Distinction -->
+        <div class="ai-doctrine-banner">
+          <div class="doctrine-header">
+            <span class="doctrine-tag" data-i18n="ai_doctrine_tag">OPERATIONAL DOCTRINE // AI GOVERNANCE</span>
+            <span class="doctrine-badge" data-i18n="ai_doctrine_badge">HUMAN ACCOUNTABILITY</span>
+          </div>
+          <h3 class="doctrine-title" data-i18n="ai_doctrine_title">
+            We use AI to help, never to do the job. AI is a tool — we won't make the client a fool.
+          </h3>
+          <p class="doctrine-desc" data-i18n="ai_doctrine_desc">
+            If an agency simply copy-pastes AI outputs, clients could save that money and do it themselves. We use AI to accelerate research and speed up execution, but we never copy-paste results in or let software do the thinking for us. Every architecture, layout, line of code, and automation workflow is engineered, audited, and held accountable by senior human hands — zero generic prompts, zero client deception.
+          </p>
         </div>
       </div>
     </section>
@@ -194,37 +196,45 @@
     <section id="capabilities" class="section-capabilities">
       <div class="content-container">
         <div class="section-header">
-          <span class="section-num">02 // CAPABILITIES</span>
-          <h2 class="section-title">Engineered for uncompromising authority.</h2>
+          <span class="section-num" data-i18n="sec2_num">02 // CAPABILITIES</span>
+          <h2 class="section-title" data-i18n="sec2_title">Engineered for uncompromising authority.</h2>
         </div>
 
         <div class="services-grid">
           <div class="service-item">
             <div class="service-icon">01</div>
-            <h4 class="service-name">Flagship Web Platforms</h4>
-            <p class="service-desc">Clean, robust web engineering prioritizing blistering speed, accessible typography, and bulletproof architecture.</p>
-            <span class="service-badge">ENGINEERING</span>
+            <h4 class="service-name" data-i18n="serv1_title">Custom Web Creation</h4>
+            <p class="service-desc" data-i18n="serv1_desc">
+              Clean, robust websites and e-commerce platforms. From bespoke corporate front-ends to high-conversion WordPress and Shopify stores built for blistering speed and mobile responsiveness.
+            </p>
+            <span class="service-badge" data-i18n="serv1_badge">ENGINEERING</span>
           </div>
 
           <div class="service-item">
             <div class="service-icon">02</div>
-            <h4 class="service-name">Enterprise Design Systems</h4>
-            <p class="service-desc">Tokenized multi-brand systems, architectural Figma-to-code pipelines, and complete documentation governance.</p>
-            <span class="service-badge">SYSTEMS</span>
+            <h4 class="service-name" data-i18n="serv2_title">Practical Business Automations</h4>
+            <p class="service-desc" data-i18n="serv2_desc">
+              Eliminating manual data entry, missed leads, and slow response times. Using n8n to connect your website forms, customer pipelines, CRMs, and internal team alerts.
+            </p>
+            <span class="service-badge" data-i18n="serv2_badge">AUTOMATION</span>
           </div>
 
           <div class="service-item">
             <div class="service-icon">03</div>
-            <h4 class="service-name">Computational Architecture</h4>
-            <p class="service-desc">High-concurrency infrastructure, headless decoupled stacks, custom databases, and low-latency API networks.</p>
-            <span class="service-badge">INFRASTRUCTURE</span>
+            <h4 class="service-name" data-i18n="serv3_title">Search &amp; Paid Acquisition</h4>
+            <p class="service-desc" data-i18n="serv3_desc">
+              Capturing real buyers through targeted Google Search ads and high-converting Meta campaigns, anchored by clean technical SEO architecture and conversion tracking.
+            </p>
+            <span class="service-badge" data-i18n="serv3_badge">GROWTH</span>
           </div>
 
           <div class="service-item">
             <div class="service-icon">04</div>
-            <h4 class="service-name">Brand Identity &amp; Typography</h4>
-            <p class="service-desc">Bespoke letterforms, tactile corporate identities, luxury digital packaging, and monumental design systems.</p>
-            <span class="service-badge">IDENTITY</span>
+            <h4 class="service-name" data-i18n="serv4_title">Brand Posture &amp; Social Media</h4>
+            <p class="service-desc" data-i18n="serv4_desc">
+              Authoritative visual presence, consistent brand guidelines, editorial calendar planning, and creative asset production tailored to your preferred level of involvement.
+            </p>
+            <span class="service-badge" data-i18n="serv4_badge">DISTRIBUTION</span>
           </div>
         </div>
       </div>
@@ -237,9 +247,9 @@
       <div class="content-container">
         <div class="section-header flex-header">
           <div>
-            <span class="section-num">03 // AREAS OF EXPERTISE</span>
-            <h2 class="section-title">Platforms &amp; Technologies We Command</h2>
-            <p class="section-subtitle">From enterprise content management to high-conversion global commerce, here is what you can commission from BRUTO.</p>
+            <span class="section-num" data-i18n="sec3_num">03 // AREAS OF EXPERTISE</span>
+            <h2 class="section-title" data-i18n="sec3_title">Platforms &amp; Technologies We Command</h2>
+            <p class="section-subtitle" data-i18n="sec3_subtitle">From fast custom front-ends and e-commerce stores to pragmatic n8n automations and data-driven acquisition, here is the machinery we deploy.</p>
           </div>
           <div class="carousel-nav-controls">
             <div class="carousel-btn-group">
@@ -252,139 +262,115 @@
         <!-- Carousel Viewport & Cards Track -->
         <div class="expertise-carousel-viewport" id="expertise-viewport">
           <div class="expertise-track" id="expertise-track">
-            
-            <!-- Card 01: WordPress -->
+            <!-- Card 01: WordPress & VIP -->
             <article class="expertise-card" data-index="0">
               <div class="card-top">
                 <span class="card-num">01</span>
-                <span class="card-badge">CMS / ENTERPRISE</span>
+                <span class="card-badge" data-i18n="card1_badge">CMS / ENTERPRISE</span>
               </div>
-              <h3 class="card-title">WordPress &amp; VIP</h3>
-              <p class="card-tagline">Enterprise publishing with architectural performance.</p>
-              <p class="card-desc">
-                Custom Gutenberg block architectures, headless REST/GraphQL configurations, high-security enterprise hosting, and Core Web Vitals tuned to 100/100.
+              <h3 class="card-title" data-i18n="card1_title">WordPress &amp; VIP</h3>
+              <p class="card-tagline" data-i18n="card1_tagline">Enterprise publishing with architectural performance &amp; zero bloat.</p>
+              <p class="card-desc" data-i18n="card1_desc">
+                Clean front-end engineering, bespoke Gutenberg block suites, headless architecture, and Core Web Vitals tuned for sub-second speed.
               </p>
               <div class="card-features">
-                <div class="feature-item"><span>+</span> Custom Block Suites &amp; FSE</div>
-                <div class="feature-item"><span>+</span> Decoupled Headless Backends</div>
-                <div class="feature-item"><span>+</span> VIP / High-Traffic Resilience</div>
-                <div class="feature-item"><span>+</span> Sub-second Load Times</div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card1_f1">Custom Block Suites &amp; FSE Themes</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card1_f2">Headless &amp; Decoupled Backends</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card1_f3">VIP &amp; High-Traffic Architecture</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card1_f4">Sub-second Speed &amp; Zero Bloat</span></div>
               </div>
               <div class="card-footer">
-                <a href="#contact" class="card-action">COMMISSION ARCHITECTURE →</a>
+                <a href="/wordpress/" class="card-action" data-i18n="card_dossier_btn">DEEP DIVE DOSSIER →</a>
               </div>
             </article>
 
-            <!-- Card 02: Shopify Plus -->
+            <!-- Card 02: Shopify Plus & Stores -->
             <article class="expertise-card" data-index="1">
               <div class="card-top">
                 <span class="card-num">02</span>
-                <span class="card-badge">COMMERCE / FLAGSHIP</span>
+                <span class="card-badge" data-i18n="card2_badge">COMMERCE / FLAGSHIP</span>
               </div>
-              <h3 class="card-title">Shopify Plus</h3>
-              <p class="card-tagline">High-conversion luxury commerce &amp; custom checkout.</p>
-              <p class="card-desc">
-                Bespoke Liquid themes, custom Checkout Extensibility UI components, Hydrogen headless storefronts, and multi-currency global B2B/B2C stores.
+              <h3 class="card-title" data-i18n="card2_title">Shopify Plus &amp; Stores</h3>
+              <p class="card-tagline" data-i18n="card2_tagline">High-conversion luxury commerce &amp; bespoke store architecture.</p>
+              <p class="card-desc" data-i18n="card2_desc">
+                Custom Liquid sections, native checkout extensibility, high-impact product presentation, fast mobile checkout, and ERP/CRM integrations.
               </p>
               <div class="card-features">
-                <div class="feature-item"><span>+</span> Bespoke Liquid &amp; Modern Sections</div>
-                <div class="feature-item"><span>+</span> Checkout Extensibility Apps</div>
-                <div class="feature-item"><span>+</span> Hydrogen &amp; Oxygen Headless</div>
-                <div class="feature-item"><span>+</span> ERP, CRM &amp; 3PL Integrations</div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card2_f1">Bespoke Liquid Theme Architecture</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card2_f2">Custom Checkout Extensibility UI</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card2_f3">Headless Hydrogen &amp; Global Edge</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card2_f4">ERP, CRM &amp; 3PL Logistics Sync</span></div>
               </div>
               <div class="card-footer">
-                <a href="#contact" class="card-action">COMMISSION STOREFRONT →</a>
+                <a href="/shopify/" class="card-action" data-i18n="card_dossier_btn">DEEP DIVE DOSSIER →</a>
               </div>
             </article>
 
-            <!-- Card 03: Next.js & React -->
+            <!-- Card 03: n8n Automation Engine -->
             <article class="expertise-card" data-index="2">
               <div class="card-top">
                 <span class="card-num">03</span>
-                <span class="card-badge">APPLICATION / REACT</span>
+                <span class="card-badge" data-i18n="card3_badge">WORKFLOWS / AUTOMATION</span>
               </div>
-              <h3 class="card-title">Next.js &amp; React</h3>
-              <p class="card-tagline">Bespoke web applications with edge computational speed.</p>
-              <p class="card-desc">
-                Server components, edge rendering, complex SaaS client portals, real-time interactive interfaces, and robust TypeScript engineering.
+              <h3 class="card-title" data-i18n="card3_title">n8n Automation Engine</h3>
+              <p class="card-tagline" data-i18n="card3_tagline">Eliminating manual friction, lost leads, and slow response times.</p>
+              <p class="card-desc" data-i18n="card3_desc">
+                Pragmatic workflow pipelines: instant web form routing to WhatsApp/Slack, automatic spreadsheet and CRM synchronization, and automated customer notifications.
               </p>
               <div class="card-features">
-                <div class="feature-item"><span>+</span> App Router &amp; Server Actions</div>
-                <div class="feature-item"><span>+</span> TypeScript Strict Architectures</div>
-                <div class="feature-item"><span>+</span> Edge &amp; Streaming Rendering</div>
-                <div class="feature-item"><span>+</span> Interactive Micro-interactions</div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card3_f1">Instant Lead Capture &amp; Team Alerts</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card3_f2">Spreadsheet &amp; CRM Synchronization</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card3_f3">E-Commerce &amp; Order Fulfillment Pipelines</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card3_f4">Zero Monthly Per-Task Platform Fees</span></div>
               </div>
               <div class="card-footer">
-                <a href="#contact" class="card-action">COMMISSION WEB APP →</a>
+                <a href="/n8n/" class="card-action" data-i18n="card_dossier_btn">DEEP DIVE DOSSIER →</a>
               </div>
             </article>
 
-            <!-- Card 04: Webflow Enterprise -->
+            <!-- Card 04: Google Ads (Search & Intent) -->
             <article class="expertise-card" data-index="3">
               <div class="card-top">
                 <span class="card-num">04</span>
-                <span class="card-badge">MARKETING / NO-CODE</span>
+                <span class="card-badge" data-i18n="card4_badge">SEARCH / ACQUISITION</span>
               </div>
-              <h3 class="card-title">Webflow Enterprise</h3>
-              <p class="card-tagline">Editorial autonomy paired with cinematic motion.</p>
-              <p class="card-desc">
-                Client-First and Relume methodology systems, custom JavaScript logic integrations, GSAP scroll animations, and total marketing autonomy for team editors.
+              <h3 class="card-title" data-i18n="card4_title">Google Ads (Search &amp; Intent)</h3>
+              <p class="card-tagline" data-i18n="card4_tagline">High-intent commercial search funnels capturing active buyers.</p>
+              <p class="card-desc" data-i18n="card4_desc">
+                Targeted advertising engineered to solve business revenue needs: Google Search ads capturing active buyer demand with negative keyword moats and conversion tracking.
               </p>
               <div class="card-features">
-                <div class="feature-item"><span>+</span> Client-First Modular Systems</div>
-                <div class="feature-item"><span>+</span> GSAP &amp; Canvas Motion Upgrades</div>
-                <div class="feature-item"><span>+</span> Complex Dynamic CMS Structures</div>
-                <div class="feature-item"><span>+</span> Zero-Code Team Empowerment</div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card4_f1">Commercial Keyword Harvesting</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card4_f2">Negative Keyword Protection Moats</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card4_f3">Landing Page Alignment &amp; Message Match</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card4_f4">Conversion Tracking &amp; Real ROAS</span></div>
               </div>
               <div class="card-footer">
-                <a href="#contact" class="card-action">COMMISSION WEBFLOW →</a>
+                <a href="/google-ads/" class="card-action" data-i18n="card_dossier_btn">DEEP DIVE DOSSIER →</a>
               </div>
             </article>
 
-            <!-- Card 05: WooCommerce -->
+            <!-- Card 05: Meta Ads (Paid Social) -->
             <article class="expertise-card" data-index="4">
               <div class="card-top">
                 <span class="card-num">05</span>
-                <span class="card-badge">COMMERCE / OPEN-SOURCE</span>
+                <span class="card-badge" data-i18n="card5_badge">PAID SOCIAL / CREATIVE</span>
               </div>
-              <h3 class="card-title">WooCommerce</h3>
-              <p class="card-tagline">Tailored transactional engines without platform lock-in.</p>
-              <p class="card-desc">
-                High-scale catalog engineering, custom payment gateway orchestrations, automated multi-warehouse logistics sync, and complex wholesale B2B quoting.
+              <h3 class="card-title" data-i18n="card5_title">Meta Ads (Paid Social)</h3>
+              <p class="card-tagline" data-i18n="card5_tagline">Direct-response creative architecture that stops scrolling and converts.</p>
+              <p class="card-desc" data-i18n="card5_desc">
+                Paid social campaigns designed to generate warm customer inquiries: thumb-stopping creative visuals, persuasive problem-solving copy, and server-side Conversions API.
               </p>
               <div class="card-features">
-                <div class="feature-item"><span>+</span> Custom Checkout Funnels</div>
-                <div class="feature-item"><span>+</span> Multi-Warehouse &amp; ERP Sync</div>
-                <div class="feature-item"><span>+</span> High-Concurrency DB Tuning</div>
-                <div class="feature-item"><span>+</span> Zero Transaction Commission</div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card5_f1">Thumb-Stopping Creative Architecture</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card5_f2">Direct-Response Persuasive Copy</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card5_f3">Conversions API (CAPI) Server Tracking</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card5_f4">Retargeting &amp; Audience Moats</span></div>
               </div>
               <div class="card-footer">
-                <a href="#contact" class="card-action">COMMISSION COMMERCE →</a>
+                <a href="/meta-ads/" class="card-action" data-i18n="card_dossier_btn">DEEP DIVE DOSSIER →</a>
               </div>
             </article>
-
-            <!-- Card 06: Custom APIs & Headless -->
-            <article class="expertise-card" data-index="5">
-              <div class="card-top">
-                <span class="card-num">06</span>
-                <span class="card-badge">INTEGRATION / BACKEND</span>
-              </div>
-              <h3 class="card-title">Headless &amp; Custom APIs</h3>
-              <p class="card-tagline">Bespoke backend ecosystems and microservice glue.</p>
-              <p class="card-desc">
-                Decoupled Sanity and Strapi CMS integrations, custom Node.js/Python microservices, webhook pipelines, and seamless CRM synchronizations.
-              </p>
-              <div class="card-features">
-                <div class="feature-item"><span>+</span> Sanity, Strapi &amp; Contentful</div>
-                <div class="feature-item"><span>+</span> Event-Driven Webhook Pipelines</div>
-                <div class="feature-item"><span>+</span> HubSpot, Salesforce &amp; Stripe</div>
-                <div class="feature-item"><span>+</span> High-Security Authentication</div>
-              </div>
-              <div class="card-footer">
-                <a href="#contact" class="card-action">COMMISSION BACKEND →</a>
-              </div>
-            </article>
-
           </div>
         </div>
 
@@ -392,43 +378,49 @@
     </section>
 
     <!-- ==========================================
-         SECTION 04: ARCHIVES / SELECTED WORKS
+         SECTION 04: ABOUT BRUTO
          ========================================== -->
-    <section id="archives" class="section-archives">
+    <section id="about" class="section-about">
       <div class="content-container">
         <div class="section-header">
-          <span class="section-num">04 // SELECTED ARCHIVES</span>
-          <h2 class="section-title">Recent Commissioned Works</h2>
+          <span class="section-num" data-i18n="sec4_num">04 // ABOUT BRUTO</span>
+          <h2 class="section-title" data-i18n="sec4_title">Not an agency. Not a studio. Simply BRUTO.</h2>
+          <p class="section-subtitle" data-i18n="sec4_subtitle">
+            We are a dedicated digital unit based in Portugal, built on a simple conviction: businesses deserve definitive solutions, not agency fluff.
+          </p>
         </div>
 
-        <div class="archive-list">
-          <article class="archive-row">
-            <span class="arc-client">MONOLITH CAPITAL</span>
-            <span class="arc-scope">Institutional Fintech Infrastructure &amp; Type System</span>
-            <span class="arc-cat">DIGITAL / TYPE</span>
-            <span class="arc-year">2026</span>
-          </article>
+        <div class="about-grid">
+          <div class="about-column">
+            <div class="about-badge" data-i18n="about_col1_badge">THE PROBLEM WE REJECT</div>
+            <h3 class="about-col-title" data-i18n="about_col1_title">Bureaucracy, Bloated Retainers &amp; Broken Promises</h3>
+            <p class="about-col-text" data-i18n="about_col1_text">
+              Most agencies operate like bureaucratic assembly lines. You pay inflated monthly retainers to speak with junior account managers while your website is built on slow, bloated templates and your marketing burns budget on vanity metrics. When something breaks, nobody takes responsibility.
+            </p>
+          </div>
 
-          <article class="archive-row">
-            <span class="arc-client">QUARRY SPATIAL</span>
-            <span class="arc-scope">Architectural Hardware &amp; Luxury E-Commerce Platform</span>
-            <span class="arc-cat">SYSTEMS</span>
-            <span class="arc-year">2026</span>
-          </article>
+          <div class="about-column">
+            <div class="about-badge" data-i18n="about_col2_badge">HOW BRUTO OPERATES</div>
+            <h3 class="about-col-title" data-i18n="about_col2_title">Direct Access, Clean Code &amp; Definitive Solutions</h3>
+            <p class="about-col-text" data-i18n="about_col2_text">
+              BRUTO was formed to do the exact opposite. We work directly with business owners as unmediated technical partners. We build clean, fast front-ends that convert, implement practical n8n automations that eliminate daily manual friction, and run targeted campaigns that actually move the needle. No fluff, no excuses, just heavy-duty execution.
+            </p>
+          </div>
+        </div>
 
-          <article class="archive-row">
-            <span class="arc-client">VERVE COUTURE FOUNDRY</span>
-            <span class="arc-scope">Bespoke High-Contrast Editorial Serif for Haute Horlogerie</span>
-            <span class="arc-cat">TYPEFOUNDRY</span>
-            <span class="arc-year">2025</span>
-          </article>
-
-          <article class="archive-row">
-            <span class="arc-client">KINETIC BASALT</span>
-            <span class="arc-scope">Automotive Spatial Sound Interface &amp; Digital Dashboard</span>
-            <span class="arc-cat">COMPLEX SYSTEMS</span>
-            <span class="arc-year">2025</span>
-          </article>
+        <div class="about-footer-bar">
+          <div class="about-meta-item">
+            <span class="about-meta-label" data-i18n="about_meta_base_label">BASE LOCATION</span>
+            <span class="about-meta-val" data-i18n="about_meta_base_val">PORTUGAL (GMT+0) • SERVING CLIENTS GLOBALLY</span>
+          </div>
+          <div class="about-meta-item">
+            <span class="about-meta-label" data-i18n="about_meta_comm_label">COMMISSIONS</span>
+            <span class="about-meta-val" data-i18n="about_meta_comm_val">LIMITED CLIENT INTAKE PER QUARTER</span>
+          </div>
+          <div class="about-meta-item">
+            <span class="about-meta-label" data-i18n="about_meta_ai_label">AI DOCTRINE</span>
+            <span class="about-meta-val" data-i18n="about_meta_ai_val">AI IS A TOOL • WE WON'T MAKE THE CLIENT A FOOL</span>
+          </div>
         </div>
       </div>
     </section>
@@ -440,23 +432,23 @@
       <div class="content-container">
         <div class="contact-card">
           <div class="contact-info">
-            <span class="section-num">INITIATE DIALOGUE</span>
-            <h2 class="contact-headline">Commission an engagement with Bruto.</h2>
-            <p class="contact-sub">
-              We take on a limited roster of 6 commissioned partnerships per calendar year.
+            <span class="section-num" data-i18n="sec5_num">05 // INITIATE</span>
+            <h2 class="contact-headline" data-i18n="sec5_title">Let us solve your problem definitively.</h2>
+            <p class="contact-sub" data-i18n="sec5_subtitle">
+              Tell us what is broken, slow, or manual in your business. We will analyze your case and propose a tailored, no-fluff solution.
             </p>
 
             <div class="contact-details">
               <div class="detail-item">
-                <span class="detail-label">STUDIO LOCATION</span>
-                <span class="detail-val">Rua da Boavista, Porto / Lisbon, Portugal</span>
+                <span class="detail-label" data-i18n="contact_loc_label">LOCATION</span>
+                <span class="detail-val" data-i18n="contact_loc_val">Lisbon / Porto, Portugal</span>
               </div>
               <div class="detail-item">
-                <span class="detail-label">LOCAL STUDIO TIME</span>
+                <span class="detail-label" data-i18n="contact_time_label">LOCAL TIME</span>
                 <span id="footer-time" class="detail-val">16:49 PORTUGAL (GMT+0)</span>
               </div>
               <div class="detail-item">
-                <span class="detail-label">DIRECT INQUIRIES</span>
+                <span class="detail-label" data-i18n="contact_email_label">DIRECT INQUIRIES</span>
                 <span class="detail-val">studio@bruto.pt</span>
               </div>
             </div>
@@ -464,35 +456,34 @@
 
           <form class="contact-form" id="inquiry-form">
             <div class="form-group">
-              <label for="name-input">PRINCIPAL / ORGANIZATION</label>
-              <input type="text" id="name-input" required placeholder="e.g. Elena Rostova / Apex Systems">
+              <label for="name-input" data-i18n="form_name_label">FULL NAME OR ORGANIZATION</label>
+              <input type="text" id="name-input" required placeholder="e.g. David Daniel / Vanguard Ltd" data-i18n-ph="form_name_ph">
             </div>
 
             <div class="form-group">
-              <label for="email-input">COMMUNICATION CHANNEL</label>
-              <input type="email" id="email-input" required placeholder="principal@organization.com">
+              <label for="email-input" data-i18n="form_contact_label">EMAIL OR WHATSAPP NUMBER</label>
+              <input type="text" id="email-input" required placeholder="contact@domain.com or +351 912 345 678" data-i18n-ph="form_contact_ph">
             </div>
 
             <div class="form-group">
-              <label for="scope-input">PROJECT SCOPE</label>
+              <label for="scope-input" data-i18n="form_service_label">SERVICE NEEDED</label>
               <select id="scope-input">
-                <option value="wordpress">WordPress &amp; VIP Enterprise Publishing</option>
-                <option value="shopify">Shopify Plus Luxury Commerce</option>
-                <option value="nextjs">Next.js &amp; React Web Application</option>
-                <option value="webflow">Webflow Enterprise Platform</option>
-                <option value="woocommerce">WooCommerce Custom Commerce</option>
-                <option value="headless">Headless CMS &amp; Custom API Ecosystem</option>
-                <option value="design-system">Enterprise Design System &amp; Typography</option>
+                <option value="website" data-i18n="form_opt_web">Custom Website or Online Store (WordPress / Shopify)</option>
+                <option value="automation" data-i18n="form_opt_auto">Workflow Automations (n8n / Integrations)</option>
+                <option value="growth" data-i18n="form_opt_growth">Search &amp; Paid Acquisition (SEO / Google &amp; Meta Ads)</option>
+                <option value="social" data-i18n="form_opt_social">Brand Presence &amp; Social Media</option>
+                <option value="full-system" data-i18n="form_opt_full">Full Digital Overhaul (Web + Automations + Growth)</option>
+                <option value="other" data-i18n="form_opt_other">Other / Unsure (Let us discuss the problem)</option>
               </select>
             </div>
 
             <div class="form-group">
-              <label for="message-input">BRIEF SYNOPSIS</label>
-              <textarea id="message-input" rows="3" placeholder="Outline architectural requirements, timeline, and parameters..."></textarea>
+              <label for="message-input" data-i18n="form_msg_label">THE PROBLEM TO SOLVE</label>
+              <textarea id="message-input" rows="3" placeholder="Describe your current situation, what is causing friction, or what you want to achieve..." data-i18n-ph="form_msg_ph"></textarea>
             </div>
 
             <button type="submit" class="submit-btn">
-              <span>TRANSMIT INQUIRY</span>
+              <span data-i18n="form_submit">INITIATE TRANSMISSION →</span>
             </button>
             <div id="form-feedback" class="form-feedback"></div>
           </form>
@@ -502,21 +493,46 @@
 
   </main>
 
-  <!-- Studio Footer -->
+  <!-- Industrial Monolith Footer -->
   <footer class="site-footer">
     <div class="footer-container">
       <div class="footer-left">
         <div class="footer-brand">
-          <a href="#hero" class="brand-logo">BRUTO</a>
+          <span class="brand-logo">BRUTO</span>
           <span class="brand-tag">EST. 2026</span>
         </div>
-        <span class="footer-copy">© 2026 BRUTO. ALL RIGHTS RESERVED.</span>
+        <span class="footer-copy" data-i18n="footer_copy">© 2026 BRUTO. HEAVY-DUTY DIGITAL. BASED IN PORTUGAL. ALL RIGHTS RESERVED.</span>
       </div>
       <div class="footer-right">
-        <a href="#hero" class="back-to-top">RETURN TO TOP ↑</a>
+        <a href="#hero" class="back-to-top" data-i18n="back_to_top">RETURN TO TOP ↑</a>
       </div>
     </div>
   </footer>
+
+  <!-- Floating Bottom Navigation Pill (Mobile & Tablet) -->
+  <nav class="mobile-nav-pill" id="mobile-nav-pill" aria-label="Quick section navigation">
+    <div class="pill-track">
+      <a href="#manifesto" class="pill-link" data-section="manifesto" data-num="1" data-label="PROCESS">
+        <span class="pill-num">1</span>
+        <span class="pill-label" data-i18n="pill_process">PROCESS</span>
+      </a>
+      <span class="pill-sep">//</span>
+      <a href="#capabilities" class="pill-link" data-section="capabilities" data-num="2" data-label="CAPABILITIES">
+        <span class="pill-num">2</span>
+        <span class="pill-label" data-i18n="pill_capabilities">CAPABILITIES</span>
+      </a>
+      <span class="pill-sep">//</span>
+      <a href="#expertise" class="pill-link" data-section="expertise" data-num="3" data-label="EXPERTISE">
+        <span class="pill-num">3</span>
+        <span class="pill-label" data-i18n="pill_expertise">EXPERTISE</span>
+      </a>
+      <span class="pill-sep">//</span>
+      <a href="#about" class="pill-link" data-section="about" data-num="4" data-label="ABOUT">
+        <span class="pill-num">4</span>
+        <span class="pill-label" data-i18n="pill_about">ABOUT</span>
+      </a>
+    </div>
+  </nav>
 
   <script type="module" src="/src/main.js"></script>
 </body>

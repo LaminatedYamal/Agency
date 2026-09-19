@@ -62,6 +62,16 @@ export default defineConfig({
     }
   ],
   build: {
-    target: 'esnext'
+    target: 'esnext',
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'index.html'),
+        wordpress: path.resolve(__dirname, 'wordpress/index.html'),
+        shopify: path.resolve(__dirname, 'shopify/index.html'),
+        n8n: path.resolve(__dirname, 'n8n/index.html'),
+        googleAds: path.resolve(__dirname, 'google-ads/index.html'),
+        metaAds: path.resolve(__dirname, 'meta-ads/index.html'),
+      }
+    }
   }
 });
