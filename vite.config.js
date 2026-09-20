@@ -71,6 +71,9 @@ export default defineConfig({
         n8n: path.resolve(__dirname, 'n8n/index.html'),
         googleAds: path.resolve(__dirname, 'google-ads/index.html'),
         metaAds: path.resolve(__dirname, 'meta-ads/index.html'),
+        linkedinAds: path.resolve(__dirname, 'linkedin-ads/index.html'),
+        tiktokAds: path.resolve(__dirname, 'tiktok-ads/index.html'),
+        redditAds: path.resolve(__dirname, 'reddit-ads/index.html'),
       }
     }
   }

@@ -52,6 +52,27 @@
   --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* Wide Gamut Display-P3 / HDR Color Enhancement */
+@supports (color: color(display-p3 1 1 1)) {
+  :root {
+    --color-dijon: color(display-p3 0.77 0.54 0.17);
+    --color-dijon-bright: color(display-p3 0.92 0.67 0.22);
+    --color-dijon-glow: color(display-p3 0.92 0.67 0.22 / 0.35);
+  }
+}
+
+@media (dynamic-range: high) {
+  .hero-video-element {
+    filter: contrast(1.18) saturate(1.24) brightness(1.04);
+  }
+  .hero-monolith-title {
+    text-shadow: 0 0 35px rgba(255, 255, 255, 0.4), 0 0 90px rgba(229, 168, 59, 0.25);
+  }
+  .inquire-btn {
+    box-shadow: 0 0 24px rgba(229, 168, 59, 0.45);
+  }
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -354,7 +375,8 @@ body.bg-studio {
   object-position: center;
   z-index: 2;
   opacity: 0;
-  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  filter: contrast(1.14) saturate(1.18) brightness(1.02);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
 }
 
 .hero-video-element.is-playing {
@@ -3276,6 +3298,24 @@ body.bg-studio {
 .subpage-hero:hover .tech-icon-meta,
 .service-item:hover .tech-icon-meta {
   filter: drop-shadow(0 0 10px rgba(4, 103, 223, 0.85));
+}
+
+.expertise-card:hover .tech-icon-linkedin,
+.subpage-hero:hover .tech-icon-linkedin,
+.service-item:hover .tech-icon-linkedin {
+  filter: drop-shadow(0 0 10px rgba(10, 102, 194, 0.85));
+}
+
+.expertise-card:hover .tech-icon-tiktok,
+.subpage-hero:hover .tech-icon-tiktok,
+.service-item:hover .tech-icon-tiktok {
+  filter: drop-shadow(0 0 10px rgba(254, 44, 85, 0.85));
+}
+
+.expertise-card:hover .tech-icon-reddit,
+.subpage-hero:hover .tech-icon-reddit,
+.service-item:hover .tech-icon-reddit {
+  filter: drop-shadow(0 0 10px rgba(255, 69, 0, 0.85));
 }
 
 /* Ecosystem tech hover glow */
