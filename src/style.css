@@ -873,7 +873,6 @@ body.bg-studio {
 /* Interactive tech icons with underneath tooltips inside the card */
 .service-tech-icons-interactive {
   position: relative;
-  padding-bottom: 1.6rem;
 }
 
 .tech-icon-wrapper {
@@ -890,11 +889,12 @@ body.bg-studio {
 
 .tech-icon-tooltip {
   position: absolute;
-  top: calc(100% + 6px);
+  top: calc(100% + 3px);
   left: 50%;
-  transform: translateX(-50%) translateY(4px);
+  transform: translateX(-50%) translateY(3px);
   font-family: var(--font-mono);
-  font-size: 0.58rem;
+  font-size: 0.54rem;
+  line-height: 1.2;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -902,7 +902,7 @@ body.bg-studio {
   background: #080a0f;
   border: 1px solid var(--color-border);
   border-radius: 0;
-  padding: 3px 6px;
+  padding: 2px 5px;
   white-space: nowrap;
   pointer-events: none;
   opacity: 0;
@@ -921,7 +921,7 @@ body.bg-studio {
 /* Edge safety so tooltip doesn't overflow card borders */
 .service-tech-icons-interactive .tech-icon-wrapper:first-child .tech-icon-tooltip {
   left: 0;
-  transform: translateY(4px);
+  transform: translateY(3px);
 }
 
 .service-tech-icons-interactive .tech-icon-wrapper:first-child:hover .tech-icon-tooltip {
@@ -931,7 +931,7 @@ body.bg-studio {
 .service-tech-icons-interactive .tech-icon-wrapper:last-child .tech-icon-tooltip {
   left: auto;
   right: 0;
-  transform: translateY(4px);
+  transform: translateY(3px);
 }
 
 .service-tech-icons-interactive .tech-icon-wrapper:last-child:hover .tech-icon-tooltip {
