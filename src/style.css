@@ -371,12 +371,12 @@ body.bg-studio {
   object-position: center;
   z-index: 2;
   opacity: 0;
-  filter: brightness(0.48) contrast(1.28) saturate(0.45);
+  filter: brightness(0.78) contrast(1.15) saturate(0.8);
   transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
 }
 
 .hero-video-element.is-playing {
-  opacity: 0.38;
+  opacity: 0.72;
 }
 
 /* Luxury Cinematic Scrim & Vignette Overlays */
@@ -385,8 +385,8 @@ body.bg-studio {
   inset: 0;
   z-index: 3;
   background: 
-    linear-gradient(180deg, rgba(4, 5, 7, 0.88) 0%, rgba(4, 5, 7, 0.62) 45%, rgba(4, 5, 7, 0.96) 100%),
-    radial-gradient(ellipse at 50% 50%, rgba(4, 5, 7, 0.55) 0%, rgba(4, 5, 7, 0.92) 100%);
+    linear-gradient(180deg, rgba(4, 5, 7, 0.65) 0%, rgba(4, 5, 7, 0.25) 45%, rgba(4, 5, 7, 0.8) 100%),
+    radial-gradient(ellipse at 50% 50%, rgba(4, 5, 7, 0.15) 0%, rgba(4, 5, 7, 0.65) 100%);
   pointer-events: none;
 }
 
@@ -394,7 +394,7 @@ body.bg-studio {
   position: absolute;
   inset: 0;
   z-index: 4;
-  box-shadow: inset 0 0 120px rgba(0, 0, 0, 0.85);
+  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.5);
   pointer-events: none;
 }
 
@@ -1224,7 +1224,7 @@ body.bg-studio {
 
 .card-action:hover::before {
   width: 100%;
-  transition: width 3.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: width 1.0s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .card-action:hover {
@@ -1257,7 +1257,7 @@ body.bg-studio {
   z-index: 1;
   opacity: 0.16;
   clip-path: inset(100% 0 0 0);
-  transition: clip-path 0.4s ease-out;
+  transition: clip-path 0.25s ease-out;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1271,7 +1271,7 @@ body.bg-studio {
 
 .expertise-card:hover .card-bg-watermark-wipe {
   clip-path: inset(0 0 0 0);
-  transition: clip-path 2.0s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: clip-path 1.0s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Base Expertise Card Action Button System (Brand Color LTR Fill + Cropped Watermark SVG) */
@@ -1290,12 +1290,12 @@ body.bg-studio {
   height: 100%;
   overflow: hidden;
   z-index: 1;
-  transition: width 0.35s ease-out;
+  transition: width 0.2s ease-out;
   pointer-events: none;
 }
 .expertise-card .card-action:hover .card-action-fill {
   width: 100%;
-  transition: width 2.0s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: width 1.0s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .expertise-card .card-action-bg-svg {
   position: absolute;
@@ -1457,6 +1457,108 @@ body.bg-studio {
   color: #ffffff;
   border-color: #0467DF;
   box-shadow: 0 0 25px rgba(4, 103, 223, 0.6), 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Card 06: LinkedIn Ads (#0A66C2) */
+.expertise-card[data-index="5"]::before,
+#card-linkedin::before {
+  background: linear-gradient(90deg, transparent, #0A66C2, transparent);
+}
+.expertise-card[data-index="5"]:hover,
+#card-linkedin:hover {
+  background: radial-gradient(circle at 50% 50%, rgba(10, 102, 194, 0.14) 0%, var(--color-surface-hover) 75%);
+  border-color: rgba(10, 102, 194, 0.45);
+  box-shadow: 
+    0 20px 45px rgba(0, 0, 0, 0.7),
+    0 0 30px rgba(10, 102, 194, 0.22);
+}
+.expertise-card[data-index="5"] .card-action,
+#card-linkedin .card-action {
+  color: #3b96f5;
+  border-color: rgba(10, 102, 194, 0.45);
+  background: rgba(10, 102, 194, 0.08);
+}
+.expertise-card[data-index="5"] .card-action-fill,
+#card-linkedin .card-action-fill {
+  background: #0A66C2;
+}
+.expertise-card[data-index="5"] .card-action-bg-svg path,
+#card-linkedin .card-action-bg-svg path {
+  fill: #ffffff;
+}
+.expertise-card[data-index="5"] .card-action:hover,
+#card-linkedin .card-action:hover {
+  color: #ffffff;
+  border-color: #0A66C2;
+  box-shadow: 0 0 25px rgba(10, 102, 194, 0.6), 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Card 07: TikTok Ads (#FE2C55) */
+.expertise-card[data-index="6"]::before,
+#card-tiktok::before {
+  background: linear-gradient(90deg, transparent, #FE2C55, transparent);
+}
+.expertise-card[data-index="6"]:hover,
+#card-tiktok:hover {
+  background: radial-gradient(circle at 50% 50%, rgba(254, 44, 85, 0.14) 0%, var(--color-surface-hover) 75%);
+  border-color: rgba(254, 44, 85, 0.45);
+  box-shadow: 
+    0 20px 45px rgba(0, 0, 0, 0.7),
+    0 0 30px rgba(254, 44, 85, 0.22);
+}
+.expertise-card[data-index="6"] .card-action,
+#card-tiktok .card-action {
+  color: #ff5e7e;
+  border-color: rgba(254, 44, 85, 0.45);
+  background: rgba(254, 44, 85, 0.08);
+}
+.expertise-card[data-index="6"] .card-action-fill,
+#card-tiktok .card-action-fill {
+  background: #FE2C55;
+}
+.expertise-card[data-index="6"] .card-action-bg-svg path,
+#card-tiktok .card-action-bg-svg path {
+  fill: #ffffff;
+}
+.expertise-card[data-index="6"] .card-action:hover,
+#card-tiktok .card-action:hover {
+  color: #ffffff;
+  border-color: #FE2C55;
+  box-shadow: 0 0 25px rgba(254, 44, 85, 0.6), 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Card 08: Reddit Ads (#FF4500) */
+.expertise-card[data-index="7"]::before,
+#card-reddit::before {
+  background: linear-gradient(90deg, transparent, #FF4500, transparent);
+}
+.expertise-card[data-index="7"]:hover,
+#card-reddit:hover {
+  background: radial-gradient(circle at 50% 50%, rgba(255, 69, 0, 0.14) 0%, var(--color-surface-hover) 75%);
+  border-color: rgba(255, 69, 0, 0.45);
+  box-shadow: 
+    0 20px 45px rgba(0, 0, 0, 0.7),
+    0 0 30px rgba(255, 69, 0, 0.22);
+}
+.expertise-card[data-index="7"] .card-action,
+#card-reddit .card-action {
+  color: #ff6a33;
+  border-color: rgba(255, 69, 0, 0.45);
+  background: rgba(255, 69, 0, 0.08);
+}
+.expertise-card[data-index="7"] .card-action-fill,
+#card-reddit .card-action-fill {
+  background: #FF4500;
+}
+.expertise-card[data-index="7"] .card-action-bg-svg path,
+#card-reddit .card-action-bg-svg path {
+  fill: #ffffff;
+}
+.expertise-card[data-index="7"] .card-action:hover,
+#card-reddit .card-action:hover {
+  color: #ffffff;
+  border-color: #FF4500;
+  box-shadow: 0 0 25px rgba(255, 69, 0, 0.6), 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
 
