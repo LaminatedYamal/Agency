@@ -812,6 +812,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initInquiryForm();
   initMobileNavPill();
   initCapabilitiesStack();
+  initInteractiveTooltips();
 });
 
 /**
@@ -1173,6 +1174,52 @@ function initCapabilitiesStack() {
       if (window.innerWidth > 767) return;
       cards.forEach(c => c.classList.remove('is-peeled'));
       card.classList.add('is-peeled');
+    });
+  });
+}
+
+/**
+ * 7. Interactive Tech Icon Tooltips (Cursor-Relative Inside Card)
+ */
+function initInteractiveTooltips() {
+  const cards = document.querySelectorAll('.service-item');
+  if (!cards.length) return;
+
+  cards.forEach(card => {
+    const wrappers = card.querySelectorAll('.tech-icon-wrapper');
+    wrappers.forEach(wrapper => {
+      const tooltip = wrapper.querySelector('.tech-icon-tooltip');
+      if (!tooltip) return;
+
+      function updatePosition(e) {
+        const cardRect = card.getBoundingClientRect();
+        const tooltipWidth = tooltip.offsetWidth || 60;
+        const tooltipHeight = tooltip.offsetHeight || 18;
+
+        const mouseX = e.clientX - cardRect.left;
+        const mouseY = e.clientY - cardRect.top;
+
+        // Position below cursor with 24px clearance so cursor never covers the name
+        let top = mouseY + 24;
+
+        // If it would overflow the card bottom, flip above cursor
+        if (top + tooltipHeight > cardRect.height - 8) {
+          top = mouseY - tooltipHeight - 12;
+        }
+
+        // Clamp horizontally inside card boundaries
+        const halfWidth = tooltipWidth / 2;
+        const minLeft = halfWidth + 8;
+        const maxLeft = cardRect.width - halfWidth - 8;
+        const left = Math.max(minLeft, Math.min(maxLeft, mouseX));
+
+        tooltip.style.left = `${left}px`;
+        tooltip.style.top = `${top}px`;
+        tooltip.style.transform = 'translateX(-50%)';
+      }
+
+      wrapper.addEventListener('mouseenter', updatePosition);
+      wrapper.addEventListener('mousemove', updatePosition);
     });
   });
 }

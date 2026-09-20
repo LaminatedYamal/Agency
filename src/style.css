@@ -807,6 +807,7 @@ body.bg-studio {
   display: flex;
   flex-direction: column;
   transition: all 0.25s ease;
+  position: relative;
 }
 
 .service-item:hover {
@@ -870,13 +871,12 @@ body.bg-studio {
   transition: transform 0.2s ease;
 }
 
-/* Interactive tech icons with underneath tooltips inside the card */
+/* Interactive tech icons with cursor-relative tooltips inside the card */
 .service-tech-icons-interactive {
-  position: relative;
+  position: static;
 }
 
 .tech-icon-wrapper {
-  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -889,9 +889,9 @@ body.bg-studio {
 
 .tech-icon-tooltip {
   position: absolute;
-  top: calc(100% + 3px);
-  left: 50%;
-  transform: translateX(-50%) translateY(3px);
+  top: var(--tooltip-top, calc(100% + 3px));
+  left: var(--tooltip-left, 50%);
+  transform: translateX(-50%);
   font-family: var(--font-mono);
   font-size: 0.54rem;
   line-height: 1.2;
@@ -907,7 +907,7 @@ body.bg-studio {
   pointer-events: none;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.2s ease, transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  transition: opacity 0.15s ease, border-color 0.2s ease, color 0.2s ease;
   z-index: 10;
 }
 
@@ -915,29 +915,6 @@ body.bg-studio {
 .tech-icon-wrapper:hover .tech-icon-tooltip {
   opacity: 1;
   visibility: visible;
-  transform: translateX(-50%) translateY(0);
-}
-
-/* Edge safety so tooltip doesn't overflow card borders */
-.service-tech-icons-interactive .tech-icon-wrapper:first-child .tech-icon-tooltip {
-  left: 0;
-  right: auto;
-  transform: translateY(3px);
-}
-
-.service-tech-icons-interactive .tech-icon-wrapper:first-child:hover .tech-icon-tooltip {
-  transform: translateY(0);
-}
-
-/* Reddit in Card 03 is at the far right edge of the 5-icon row */
-.service-tech-icons-interactive .tech-icon-wrapper-reddit .tech-icon-tooltip {
-  left: auto;
-  right: 0;
-  transform: translateY(3px);
-}
-
-.service-tech-icons-interactive .tech-icon-wrapper-reddit:hover .tech-icon-tooltip {
-  transform: translateY(0);
 }
 
 /* Specific brand hover accent styles */
