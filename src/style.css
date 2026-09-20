@@ -191,7 +191,7 @@ body.bg-studio {
   width: 6px;
   height: 6px;
   background-color: var(--color-dijon);
-  border-radius: 50%;
+  border-radius: 0;
   box-shadow: 0 0 8px var(--color-dijon-bright);
 }
 
@@ -207,7 +207,7 @@ body.bg-studio {
   color: #040507;
   background: var(--color-dijon-bright);
   padding: 8px 18px;
-  border-radius: 4px;
+  border-radius: 0;
   text-decoration: none;
   transition: all 0.2s ease;
 }
@@ -224,7 +224,7 @@ body.bg-studio {
   gap: 0.35rem;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 4px;
+  border-radius: 0;
   padding: 3px 6px;
 }
 
@@ -237,7 +237,7 @@ body.bg-studio {
   font-weight: 700;
   letter-spacing: 0.12em;
   padding: 3px 6px;
-  border-radius: 2px;
+  border-radius: 0;
   cursor: pointer;
   transition: all 0.2s ease;
   line-height: 1;
@@ -320,7 +320,7 @@ body.bg-studio {
   height: 72vh;
   min-height: 580px;
   max-height: 860px;
-  border-radius: 24px;
+  border-radius: 0;
   overflow: hidden;
   background-color: #040507;
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -380,19 +380,6 @@ body.bg-studio {
   pointer-events: none;
 }
 
-/* Subtle Architectural Grid / Film Texture */
-.video-grid-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 5;
-  background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-  background-size: 80px 80px;
-  opacity: 0.45;
-  pointer-events: none;
-}
-
 /* Pending Video Beacon (Discreet luxury notification until video file arrives) */
 .video-status-indicator {
   position: absolute;
@@ -405,7 +392,7 @@ body.bg-studio {
   padding: 6px 14px;
   background: rgba(11, 13, 18, 0.85);
   border: 1px solid rgba(229, 168, 59, 0.35);
-  border-radius: 999px;
+  border-radius: 0;
   backdrop-filter: blur(12px);
   font-family: var(--font-mono);
   font-size: 0.62rem;
@@ -425,7 +412,7 @@ body.bg-studio {
   width: 7px;
   height: 7px;
   background: #e5a83b;
-  border-radius: 50%;
+  border-radius: 0;
   box-shadow: 0 0 10px #e5a83b;
   animation: beacon-pulse 2s infinite ease-in-out;
 }
@@ -613,7 +600,7 @@ body.bg-studio {
   padding: 6px 14px;
   background: rgba(11, 13, 18, 0.75);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
+  border-radius: 0;
   color: #cbd5e1;
   font-family: var(--font-mono);
   font-size: 0.62rem;
@@ -639,7 +626,7 @@ body.bg-studio {
   padding: 1.2rem 2rem;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: 12px;
+  border-radius: 0;
 }
 
 .editorial-item {
@@ -678,7 +665,7 @@ body.bg-studio {
 
 .manifesto-grid {
   display: grid;
-  grid-template-columns: 1fr 1.3fr;
+  grid-template-columns: 1.618fr 1fr;
   gap: 4.5rem;
   align-items: start;
 }
@@ -716,7 +703,7 @@ body.bg-studio {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   padding: 1.4rem 1.8rem;
-  border-radius: 14px;
+  border-radius: 0;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -793,7 +780,7 @@ body.bg-studio {
 .service-item {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: 14px;
+  border-radius: 0;
   padding: 2.2rem 1.8rem;
   display: flex;
   flex-direction: column;
@@ -842,7 +829,7 @@ body.bg-studio {
   color: var(--color-dijon);
   border: 1px solid var(--color-dijon-dim);
   padding: 3px 8px;
-  border-radius: 3px;
+  border-radius: 0;
   align-self: flex-start;
 }
 
@@ -914,7 +901,7 @@ body.bg-studio {
   height: 44px;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: 8px;
+  border-radius: 0;
   color: #ffffff;
   font-family: var(--font-serif);
   font-size: 1.15rem;
@@ -968,7 +955,7 @@ body.bg-studio {
   box-sizing: border-box;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: 18px;
+  border-radius: 0;
   padding: clamp(1.6rem, 2.2vh, 2rem) clamp(1.3rem, 1.6vw, 1.8rem) clamp(2.2rem, 3.2vh, 2.8rem);
   display: flex;
   flex-direction: column;
@@ -1027,7 +1014,7 @@ body.bg-studio {
   background: rgba(229, 168, 59, 0.08);
   border: 1px solid rgba(229, 168, 59, 0.22);
   padding: 4px 10px;
-  border-radius: 4px;
+  border-radius: 0;
 }
 
 .card-title {
@@ -1102,7 +1089,7 @@ body.bg-studio {
   padding: 0.75rem 1.35rem;
   background: rgba(229, 168, 59, 0.05);
   border: 1px solid rgba(229, 168, 59, 0.35);
-  border-radius: 8px;
+  border-radius: 0;
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -1375,9 +1362,17 @@ body.bg-studio {
   background-color: var(--color-bg);
 }
 
+.section-about .section-header {
+  text-align: right;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.618fr;
   gap: 2.2rem;
   margin-bottom: 2.5rem;
 }
@@ -1385,7 +1380,7 @@ body.bg-studio {
 .about-column {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: 18px;
+  border-radius: 0;
   padding: clamp(2rem, 3vh, 2.6rem) clamp(1.8rem, 2.2vw, 2.4rem);
   display: flex;
   flex-direction: column;
@@ -1409,7 +1404,7 @@ body.bg-studio {
   background: rgba(229, 168, 59, 0.08);
   border: 1px solid rgba(229, 168, 59, 0.22);
   padding: 4px 10px;
-  border-radius: 4px;
+  border-radius: 0;
   align-self: flex-start;
   margin-bottom: 1.2rem;
 }
@@ -1439,7 +1434,7 @@ body.bg-studio {
   gap: 1.5rem;
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid var(--color-border);
-  border-radius: 12px;
+  border-radius: 0;
   padding: 1.2rem 1.8rem;
 }
 
@@ -1532,11 +1527,19 @@ body.bg-studio {
 .contact-card {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: 24px;
+  border-radius: 0;
   padding: 4rem;
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
+  grid-template-columns: 1fr 1.618fr;
   gap: 4rem;
+}
+
+.contact-card .contact-form {
+  order: 1;
+}
+
+.contact-card .contact-info {
+  order: 2;
 }
 
 .contact-headline {
@@ -1624,7 +1627,7 @@ body.bg-studio {
   border: 1px solid var(--color-border);
   color: #ffffff;
   padding: 12px 16px;
-  border-radius: 6px;
+  border-radius: 0;
   font-family: var(--font-sans);
   font-size: 0.9rem;
   outline: none;
@@ -1658,7 +1661,7 @@ body.bg-studio {
   background: var(--color-dijon-bright);
   border: none;
   padding: 14px 28px;
-  border-radius: 6px;
+  border-radius: 0;
   cursor: pointer;
   transition: all 0.2s ease;
   margin-top: 0.6rem;
@@ -1738,7 +1741,7 @@ body.bg-studio {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(229, 168, 59, 0.3);
-  border-radius: 9999px;
+  border-radius: 0;
   padding: 0.42rem 0.85rem;
   box-shadow: 0 14px 36px rgba(0, 0, 0, 0.7), 0 0 20px rgba(229, 168, 59, 0.12);
   opacity: 0;
@@ -1768,7 +1771,7 @@ body.bg-studio {
   font-weight: 300;
   letter-spacing: 0.08em;
   padding: 0.28rem 0.5rem;
-  border-radius: 9999px;
+  border-radius: 0;
   transition: all 0.25s ease;
   white-space: nowrap;
 }
@@ -1825,7 +1828,7 @@ body.bg-studio {
     left: auto;
     transform: translateY(-50%) translateX(25px);
     padding: 1.6rem 0.55rem;
-    border-radius: 9999px;
+    border-radius: 0;
     border: 1px solid rgba(229, 168, 59, 0.22);
     background: rgba(8, 10, 14, 0.92);
     backdrop-filter: blur(24px);
@@ -1902,7 +1905,7 @@ body.bg-studio {
     background: rgba(8, 10, 14, 0.95);
     border: 1px solid rgba(229, 168, 59, 0.3);
     padding: 4px 9px;
-    border-radius: 4px;
+    border-radius: 0;
     font-family: var(--font-mono);
     font-size: 0.62rem;
     letter-spacing: 0.14em;
@@ -1941,7 +1944,7 @@ body.bg-studio {
     bottom: 0.4rem;
     width: 2px;
     background: rgba(229, 168, 59, 0.15);
-    border-radius: 2px;
+    border-radius: 0;
     overflow: hidden;
   }
 
@@ -1950,7 +1953,7 @@ body.bg-studio {
     height: 0%;
     background: var(--color-dijon-bright);
     box-shadow: 0 0 8px var(--color-dijon-bright);
-    border-radius: 2px;
+    border-radius: 0;
     transition: height 0.08s linear;
   }
 }
@@ -2002,6 +2005,11 @@ body.bg-studio {
   .about-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+
+  .section-about .section-header {
+    text-align: left;
+    align-items: flex-start;
   }
 
   .content-container {
@@ -2101,7 +2109,7 @@ body.bg-studio {
 
   .service-item {
     cursor: pointer;
-    border-radius: 14px;
+    border-radius: 0;
     padding: 1.2rem 1.4rem;
     border: 1px solid var(--color-border);
     background: var(--color-surface);
@@ -2188,7 +2196,7 @@ body.bg-studio {
     max-width: calc(100cqw - 0.5rem);
     scroll-snap-align: center;
     padding: 2rem 1.4rem;
-    border-radius: 16px;
+    border-radius: 0;
   }
 
   .carousel-nav-controls {
@@ -2237,11 +2245,19 @@ body.bg-studio {
     grid-template-columns: 1fr;
     padding: 2.2rem 1.4rem;
     gap: 2.2rem;
-    border-radius: 18px;
+    border-radius: 0;
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
     overflow: hidden;
+  }
+
+  .contact-card .contact-info {
+    order: 1;
+  }
+
+  .contact-card .contact-form {
+    order: 2;
   }
 
   .contact-info {
@@ -2357,7 +2373,7 @@ body.bg-studio {
   .hero-stage {
     height: 60vh;
     min-height: 480px;
-    border-radius: 22px;
+    border-radius: 0;
   }
 
   .hero-monolith-title {
@@ -2608,7 +2624,7 @@ body.bg-studio {
     height: 46vh;
     min-height: 480px;
     max-height: 600px;
-    border-radius: 24px;
+    border-radius: 0;
   }
 
   .hero-foreground-content {
@@ -2725,7 +2741,7 @@ body.bg-studio {
     height: 74vh;
     min-height: 540px;
     max-height: 760px;
-    border-radius: 28px;
+    border-radius: 0;
   }
 
   .hero-foreground-content {
@@ -2779,7 +2795,7 @@ body.bg-studio {
   .contact-card {
     padding: 3.8rem;
     gap: 4rem;
-    grid-template-columns: 1.1fr 1fr;
+    grid-template-columns: 1fr 1.618fr;
   }
 
   .contact-headline {
@@ -2811,7 +2827,7 @@ body.bg-studio {
   .hero-stage {
     height: 74vh;
     max-height: 1000px;
-    border-radius: 36px;
+    border-radius: 0;
   }
 
   .hero-monolith-title {
@@ -2867,7 +2883,7 @@ body.bg-studio {
   .hero-stage {
     height: 76vh;
     max-height: 1050px;
-    border-radius: 32px;
+    border-radius: 0;
   }
 
   .hero-monolith-title {
@@ -2919,7 +2935,7 @@ body.bg-studio {
   .hero-stage {
     height: 78vh;
     max-height: 1100px;
-    border-radius: 40px;
+    border-radius: 0;
   }
 
   .hero-monolith-title {
@@ -2970,7 +2986,7 @@ body.bg-studio {
   background: radial-gradient(circle at 10% 20%, rgba(229, 168, 59, 0.08) 0%, rgba(10, 12, 16, 0.95) 70%);
   border: 1px solid rgba(229, 168, 59, 0.35);
   border-left: 4px solid var(--color-dijon-bright);
-  border-radius: 14px;
+  border-radius: 0;
   padding: 2.2rem 2.5rem;
   position: relative;
   overflow: hidden;
@@ -3002,12 +3018,12 @@ body.bg-studio {
   color: #040507;
   background: var(--color-dijon-bright);
   padding: 3px 8px;
-  border-radius: 3px;
+  border-radius: 0;
 }
 
 .doctrine-body {
   display: grid;
-  grid-template-columns: 1fr 1.25fr;
+  grid-template-columns: 1fr 1.618fr;
   gap: 3.5rem;
   align-items: start;
 }
@@ -3076,7 +3092,7 @@ body.bg-studio {
   gap: 1.5rem;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: 14px;
+  border-radius: 0;
   padding: 1.4rem 2rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
