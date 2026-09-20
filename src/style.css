@@ -867,7 +867,108 @@ body.bg-studio {
   width: 32px;
   height: 32px;
   margin: 0;
+  transition: transform 0.2s ease;
 }
+
+/* Interactive tech icons with underneath tooltips inside the card */
+.service-tech-icons-interactive {
+  position: relative;
+  padding-bottom: 1.6rem;
+}
+
+.tech-icon-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.tech-icon-wrapper:hover .tech-icon {
+  transform: translateY(-2px);
+}
+
+.tech-icon-tooltip {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-slate-light);
+  background: #080a0f;
+  border: 1px solid var(--color-border);
+  border-radius: 0;
+  padding: 3px 6px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  z-index: 10;
+}
+
+/* Active / hover state */
+.tech-icon-wrapper:hover .tech-icon-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Edge safety so tooltip doesn't overflow card borders */
+.service-tech-icons-interactive .tech-icon-wrapper:first-child .tech-icon-tooltip {
+  left: 0;
+  transform: translateY(4px);
+}
+
+.service-tech-icons-interactive .tech-icon-wrapper:first-child:hover .tech-icon-tooltip {
+  transform: translateY(0);
+}
+
+.service-tech-icons-interactive .tech-icon-wrapper:last-child .tech-icon-tooltip {
+  left: auto;
+  right: 0;
+  transform: translateY(4px);
+}
+
+.service-tech-icons-interactive .tech-icon-wrapper:last-child:hover .tech-icon-tooltip {
+  transform: translateY(0);
+}
+
+/* Specific brand hover accent styles */
+.tech-icon-wrapper-googleads:hover .tech-icon-tooltip {
+  color: #4285f4;
+  border-color: rgba(66, 133, 244, 0.6);
+  box-shadow: 0 0 8px rgba(66, 133, 244, 0.25);
+}
+
+.tech-icon-wrapper-meta:hover .tech-icon-tooltip {
+  color: #0467df;
+  border-color: rgba(4, 103, 223, 0.6);
+  box-shadow: 0 0 8px rgba(4, 103, 223, 0.25);
+}
+
+.tech-icon-wrapper-linkedin:hover .tech-icon-tooltip {
+  color: #0a66c2;
+  border-color: rgba(10, 102, 194, 0.6);
+  box-shadow: 0 0 8px rgba(10, 102, 194, 0.25);
+}
+
+.tech-icon-wrapper-tiktok:hover .tech-icon-tooltip {
+  color: #fe2c55;
+  border-color: rgba(254, 44, 85, 0.6);
+  box-shadow: 0 0 8px rgba(254, 44, 85, 0.25);
+}
+
+.tech-icon-wrapper-reddit:hover .tech-icon-tooltip {
+  color: #ff4500;
+  border-color: rgba(255, 69, 0, 0.6);
+  box-shadow: 0 0 8px rgba(255, 69, 0, 0.25);
+}
+
 
 /* ==========================================================================
    SECTION 03: AREAS OF EXPERTISE (PLATFORM CAROUSEL)
