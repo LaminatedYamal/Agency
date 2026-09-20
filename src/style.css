@@ -63,10 +63,7 @@
 
 @media (dynamic-range: high) {
   .hero-video-element {
-    filter: contrast(1.18) saturate(1.24) brightness(1.04);
-  }
-  .hero-monolith-title {
-    text-shadow: 0 0 35px rgba(255, 255, 255, 0.4), 0 0 90px rgba(229, 168, 59, 0.25);
+    filter: brightness(0.5) contrast(1.25) saturate(0.5);
   }
   .inquire-btn {
     box-shadow: 0 0 24px rgba(229, 168, 59, 0.45);
@@ -347,8 +344,7 @@ body.bg-studio {
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 
     0 30px 80px rgba(0, 0, 0, 0.95),
-    0 0 1px 1px rgba(255, 255, 255, 0.05),
-    0 0 50px rgba(229, 168, 59, 0.12);
+    0 0 1px 1px rgba(255, 255, 255, 0.05);
   display: flex;
   flex-direction: column;
 }
@@ -375,12 +371,12 @@ body.bg-studio {
   object-position: center;
   z-index: 2;
   opacity: 0;
-  filter: contrast(1.14) saturate(1.18) brightness(1.02);
+  filter: brightness(0.48) contrast(1.28) saturate(0.45);
   transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
 }
 
 .hero-video-element.is-playing {
-  opacity: 0.92;
+  opacity: 0.38;
 }
 
 /* Luxury Cinematic Scrim & Vignette Overlays */
@@ -389,8 +385,8 @@ body.bg-studio {
   inset: 0;
   z-index: 3;
   background: 
-    linear-gradient(180deg, rgba(4, 5, 7, 0.72) 0%, rgba(4, 5, 7, 0.22) 45%, rgba(4, 5, 7, 0.88) 100%),
-    radial-gradient(ellipse at 50% 50%, transparent 40%, rgba(4, 5, 7, 0.75) 100%);
+    linear-gradient(180deg, rgba(4, 5, 7, 0.88) 0%, rgba(4, 5, 7, 0.62) 45%, rgba(4, 5, 7, 0.96) 100%),
+    radial-gradient(ellipse at 50% 50%, rgba(4, 5, 7, 0.55) 0%, rgba(4, 5, 7, 0.92) 100%);
   pointer-events: none;
 }
 
@@ -528,30 +524,16 @@ body.bg-studio {
   padding: 0;
   position: relative;
   user-select: none;
-  text-shadow: 
-    0 15px 40px rgba(0, 0, 0, 0.95),
-    0 2px 4px rgba(0, 0, 0, 0.8),
-    0 0 60px rgba(229, 168, 59, 0.25);
-  transition: transform 0.4s var(--ease-smooth), text-shadow 0.4s ease;
+  text-shadow: none;
+  transition: transform 0.4s var(--ease-smooth);
 }
 
 .hero-monolith-title:hover {
-  text-shadow: 
-    0 20px 50px rgba(0, 0, 0, 0.98),
-    0 0 80px rgba(229, 168, 59, 0.45);
+  text-shadow: none;
 }
 
 .hero-title-glow {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 110%;
-  height: 90%;
-  background: radial-gradient(ellipse at 50% 50%, rgba(229, 168, 59, 0.22) 0%, rgba(229, 168, 59, 0.05) 50%, transparent 75%);
-  filter: blur(40px);
-  pointer-events: none;
-  z-index: -1;
+  display: none !important;
 }
 
 .hero-monolith-subtitle {
@@ -566,7 +548,7 @@ body.bg-studio {
   justify-content: center;
   gap: 1.2rem;
   flex-wrap: wrap;
-  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.9);
+  text-shadow: none;
 }
 
 .sub-sep {
