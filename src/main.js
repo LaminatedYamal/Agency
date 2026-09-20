@@ -714,13 +714,22 @@ function initExpertiseCarousel() {
     }
   }
 
+  function getScrollStep() {
+    if (cards.length > 1) {
+      return cards[1].offsetLeft - cards[0].offsetLeft;
+    }
+    return viewport.clientWidth * 0.8;
+  }
+
   if (prevBtn) {
     prevBtn.addEventListener('click', () => {
       const maxScroll = getMaxScrollLeft();
       if (viewport.scrollLeft <= 15) {
         viewport.scrollTo({ left: maxScroll, behavior: 'smooth' });
       } else {
-        scrollToIndex(Math.max(0, currentIndex - 1));
+        const step = getScrollStep();
+        const target = Math.max(0, viewport.scrollLeft - step);
+        viewport.scrollTo({ left: target, behavior: 'smooth' });
       }
     });
   }
@@ -729,9 +738,11 @@ function initExpertiseCarousel() {
     nextBtn.addEventListener('click', () => {
       const maxScroll = getMaxScrollLeft();
       if (viewport.scrollLeft >= maxScroll - 15) {
-        scrollToIndex(0);
+        viewport.scrollTo({ left: 0, behavior: 'smooth' });
       } else {
-        scrollToIndex(currentIndex + 1);
+        const step = getScrollStep();
+        const target = Math.min(maxScroll, viewport.scrollLeft + step);
+        viewport.scrollTo({ left: target, behavior: 'smooth' });
       }
     });
   }
@@ -878,22 +889,42 @@ function initMobileNavPill() {
     }
 
     let activeId = null;
-    const scrollPos = scrollY + window.innerHeight * 0.35;
+    let activeEl = null;
+    const viewportHeight = window.innerHeight;
+    const scrollPos = scrollY + viewportHeight * 0.35;
 
     for (let i = sectionEls.length - 1; i >= 0; i--) {
       const el = sectionEls[i];
       if (el && el.offsetTop <= scrollPos) {
         activeId = el.id;
+        activeEl = el;
         break;
       }
+    }
+
+    // Calculate section scroll progress (how close we are to the end of the section)
+    let sectionProgress = 0;
+    if (activeEl) {
+      const rect = activeEl.getBoundingClientRect();
+      const sectionHeight = activeEl.offsetHeight;
+      const scrolledIntoSection = (viewportHeight * 0.35) - rect.top;
+      sectionProgress = Math.min(Math.max(scrolledIntoSection / sectionHeight, 0), 1);
     }
 
     links.forEach(link => {
       const section = link.getAttribute('data-section');
       if (section === activeId) {
         link.classList.add('active');
+        const fill = link.querySelector('.pill-progress-fill');
+        if (fill) {
+          fill.style.height = `${(sectionProgress * 100).toFixed(1)}%`;
+        }
       } else {
         link.classList.remove('active');
+        const fill = link.querySelector('.pill-progress-fill');
+        if (fill) {
+          fill.style.height = '0%';
+        }
       }
     });
   }
@@ -904,7 +935,7 @@ function initMobileNavPill() {
       const targetId = link.getAttribute('href')?.replace('#', '');
       const targetEl = document.getElementById(targetId);
       if (targetEl) {
-        const offset = 80;
+        const offset = window.innerWidth >= 1025 ? 24 : 80;
         const top = targetEl.getBoundingClientRect().top + window.pageYOffset - offset;
         window.scrollTo({ top, behavior: 'smooth' });
       }

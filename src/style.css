@@ -97,7 +97,7 @@ body.bg-studio {
    Header Navigation
    ========================================================================== */
 .site-header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -817,11 +817,12 @@ body.bg-studio {
 
 .service-name {
   font-family: var(--font-sans);
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   font-weight: 400;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
   color: #ffffff;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.85rem;
+  line-height: 1.28;
 }
 
 .service-desc {
@@ -829,7 +830,7 @@ body.bg-studio {
   font-weight: 300;
   line-height: 1.6;
   color: var(--color-slate);
-  margin-bottom: 2rem;
+  margin-bottom: 1.8rem;
   flex-grow: 1;
 }
 
@@ -843,6 +844,20 @@ body.bg-studio {
   padding: 3px 8px;
   border-radius: 3px;
   align-self: flex-start;
+}
+
+.service-tech-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.service-tech-icons .tech-icon {
+  width: 32px;
+  height: 32px;
+  margin: 0;
 }
 
 /* ==========================================================================
@@ -990,6 +1005,10 @@ body.bg-studio {
   margin-bottom: 1.4rem;
 }
 
+.expertise-card:not(:has(.card-num)) .card-top {
+  margin-bottom: 0.75rem;
+}
+
 .card-num {
   font-family: var(--font-num);
   font-size: 1.05rem;
@@ -999,6 +1018,7 @@ body.bg-studio {
 }
 
 .card-badge {
+  margin-left: auto;
   font-family: var(--font-num);
   font-size: 0.65rem;
   font-weight: 400;
@@ -1790,8 +1810,148 @@ body.bg-studio {
 }
 
 @media (min-width: 1025px) {
+  .content-container {
+    max-width: 1440px;
+    padding-right: clamp(6.5rem, 8vw, 9.5rem);
+    padding-left: clamp(2.5rem, 4vw, 4rem);
+  }
+
   .mobile-nav-pill {
+    display: block !important;
+    position: fixed;
+    top: 50%;
+    right: 1.8rem;
+    bottom: auto;
+    left: auto;
+    transform: translateY(-50%) translateX(25px);
+    padding: 1.6rem 0.55rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(229, 168, 59, 0.22);
+    background: rgba(8, 10, 14, 0.92);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 25px rgba(229, 168, 59, 0.08);
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+    width: auto;
+    min-width: 44px;
+    box-sizing: border-box;
+  }
+
+  .mobile-nav-pill.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(-50%) translateX(0);
+  }
+
+  .mobile-nav-pill .pill-track {
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+  }
+
+  .mobile-nav-pill .pill-sep {
+    display: none;
+  }
+
+  .mobile-nav-pill .pill-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0.3rem 0;
+    text-decoration: none;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+    transition: all 0.25s ease;
+  }
+
+  .mobile-nav-pill .pill-link .pill-num {
+    display: block;
+    font-family: var(--font-num);
+    font-size: 0.74rem;
+    font-weight: 400;
+    color: var(--color-slate);
+    letter-spacing: 0.08em;
+    transition: color 0.25s ease;
+  }
+
+  .mobile-nav-pill .pill-link .pill-label {
+    display: none;
+    margin: 0;
+    max-width: none;
+    opacity: 1;
+  }
+
+  .mobile-nav-pill .pill-link .pill-progress {
+    display: none;
+  }
+
+  /* Hover on inactive item: highlight number and show tooltip on left */
+  .mobile-nav-pill .pill-link:not(.active):hover .pill-num {
+    color: var(--color-dijon-bright);
+  }
+
+  .mobile-nav-pill .pill-link:not(.active):hover::after {
+    content: attr(data-label);
+    position: absolute;
+    right: calc(100% + 14px);
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(8, 10, 14, 0.95);
+    border: 1px solid rgba(229, 168, 59, 0.3);
+    padding: 4px 9px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    color: #ffffff;
+    white-space: nowrap;
+    pointer-events: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  }
+
+  /* Active item: HIDE number, SHOW vertical word, SHOW vertical section progress line */
+  .mobile-nav-pill .pill-link.active .pill-num {
     display: none !important;
+  }
+
+  .mobile-nav-pill .pill-link.active .pill-label {
+    display: block !important;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    color: var(--color-dijon-bright);
+    text-transform: uppercase;
+    padding: 0.8rem 0;
+    position: relative;
+    white-space: nowrap;
+    line-height: 1;
+  }
+
+  .mobile-nav-pill .pill-link.active .pill-progress {
+    display: block;
+    position: absolute;
+    left: -7px;
+    top: 0.4rem;
+    bottom: 0.4rem;
+    width: 2px;
+    background: rgba(229, 168, 59, 0.15);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .mobile-nav-pill .pill-link.active .pill-progress .pill-progress-fill {
+    width: 100%;
+    height: 0%;
+    background: var(--color-dijon-bright);
+    box-shadow: 0 0 8px var(--color-dijon-bright);
+    border-radius: 2px;
+    transition: height 0.08s linear;
   }
 }
 
@@ -2280,7 +2440,11 @@ body.bg-studio {
     padding: 0 2.5rem;
   }
 
-  .content-container,
+  .content-container {
+    padding-left: 2.5rem;
+    padding-right: 9.5rem;
+  }
+
   .footer-container {
     padding: 0 2.5rem;
   }
@@ -2578,7 +2742,12 @@ body.bg-studio {
     gap: 1.4rem;
   }
 
-  .content-container,
+  .content-container {
+    max-width: 1720px;
+    padding-left: 3rem;
+    padding-right: 10rem;
+  }
+
   .footer-container {
     max-width: 1720px;
     padding: 0 3rem;
@@ -2836,6 +3005,13 @@ body.bg-studio {
   border-radius: 3px;
 }
 
+.doctrine-body {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
 .doctrine-title {
   font-family: var(--font-serif);
   font-size: 1.55rem;
@@ -2843,14 +3019,14 @@ body.bg-studio {
   letter-spacing: 0.02em;
   color: #ffffff;
   line-height: 1.35;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0;
 }
 
 .doctrine-desc {
   font-size: 0.94rem;
   line-height: 1.68;
   color: #cbd5e1;
-  max-width: 900px;
+  max-width: none;
 }
 
 /* Subpage Architectural Dossier Styles */
@@ -2973,6 +3149,13 @@ body.bg-studio {
 @media (max-width: 1024px) {
   .dossier-specs-bar {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .doctrine-body {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }
 
