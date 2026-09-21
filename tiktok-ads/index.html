@@ -37,11 +37,16 @@
     </nav>
 
     <div class="header-actions">
-      <!-- Language Switcher: EN | PT -->
-      <div class="lang-switch" id="lang-switch" role="group" aria-label="Language selection">
-        <button type="button" class="lang-btn active" data-lang="en">EN</button>
-        <span class="lang-sep">/</span>
-        <button type="button" class="lang-btn" data-lang="pt">PT</button>
+      <!-- Language Switcher: Hover Reveal -->
+      <div class="lang-selector-wrap" id="lang-selector" role="group" aria-label="Language selection">
+        <button type="button" class="lang-current" aria-haspopup="true" aria-expanded="false">
+          <span class="lang-current-label">EN</span>
+          <span class="lang-caret">▾</span>
+        </button>
+        <div class="lang-options">
+          <button type="button" class="lang-btn active" data-lang="en">EN</button>
+          <button type="button" class="lang-btn" data-lang="pt">PT</button>
+        </div>
       </div>
 
       <div class="live-clock">
@@ -49,7 +54,7 @@
         <span id="header-time">16:49</span>
         <span class="clock-tz">PORTUGAL</span>
       </div>
-      <a href="#contact" class="inquire-btn" data-i18n="nav_initiate">INITIATE</a>
+      <a href="#contact" class="inquire-btn" data-i18n="nav_initiate">START PROJECT</a>
     </div>
   </header>
 
@@ -119,27 +124,51 @@
 
         <div class="services-grid subpage-deliverables-grid">
           <div class="service-item">
-            <div class="service-icon">01</div>
-            <h4 class="service-name"><svg class="tech-icon tech-icon-tiktok" viewBox="0 0 24 24" width="22" height="22" fill="#FE2C55" xmlns="http://www.w3.org/2000/svg" aria-label="TikTok"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg> <span data-i18n="tiktok_ads_d1_t">Pattern-Interrupt Video Hooks</span></h4>
+            <h4 class="service-name"><span data-i18n="tiktok_ads_d1_t">Pattern-Interrupt Video Hooks</span></h4>
             <p class="service-desc" data-i18n="tiktok_ads_d1_d">The first 2 seconds engineered with severe visual contrast and auditory triggers to halt the swipe and hold qualified buyer attention.</p>
+            <div class="service-tech-icons service-tech-icons-interactive">
+              <div class="tech-icon-wrapper tech-icon-wrapper-tiktok">
+                <svg class="tech-icon tech-icon-tiktok" viewBox="0 0 24 24" width="32" height="32" fill="#FE2C55" xmlns="http://www.w3.org/2000/svg" aria-label="TikTok"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                <span class="tech-icon-tooltip">TikTok Hooks</span>
+              </div>
+            </div>
           </div>
 
           <div class="service-item">
-            <div class="service-icon">02</div>
-            <h4 class="service-name"><svg class="tech-icon tech-icon-tiktok" viewBox="0 0 24 24" width="22" height="22" fill="#FE2C55" xmlns="http://www.w3.org/2000/svg" aria-label="TikTok"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg> <span data-i18n="tiktok_ads_d2_t">Native Direct-Response Scripting</span></h4>
+            <h4 class="service-name"><span data-i18n="tiktok_ads_d2_t">Native Direct-Response Scripting</span></h4>
             <p class="service-desc" data-i18n="tiktok_ads_d2_d">Scripted frameworks that agitate real customer pain points and demonstrate immediate solutions, speaking authentic TikTok vernacular without corporate fluff.</p>
+            <div class="service-tech-icons service-tech-icons-interactive">
+              <div class="tech-icon-wrapper tech-icon-wrapper-tiktok">
+                <svg class="tech-icon tech-icon-tiktok" viewBox="0 0 24 24" width="32" height="32" fill="#FE2C55" xmlns="http://www.w3.org/2000/svg" aria-label="TikTok"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                <span class="tech-icon-tooltip">TikTok Scripting</span>
+              </div>
+            </div>
           </div>
 
           <div class="service-item">
-            <div class="service-icon">03</div>
-            <h4 class="service-name" data-i18n="tiktok_ads_d3_t">Spark Ads &amp; Creator Amplification</h4>
+            <h4 class="service-name"><span data-i18n="tiktok_ads_d3_t">Spark Ads &amp; Creator Amplification</span></h4>
             <p class="service-desc" data-i18n="tiktok_ads_d3_d">Boosting authentic creator content directly through official ad accounts to leverage social proof, high comment engagement, and lower CPMs.</p>
+            <div class="service-tech-icons service-tech-icons-interactive">
+              <div class="tech-icon-wrapper tech-icon-wrapper-tiktok">
+                <svg class="tech-icon tech-icon-tiktok" viewBox="0 0 24 24" width="32" height="32" fill="#FE2C55" xmlns="http://www.w3.org/2000/svg" aria-label="TikTok"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                <span class="tech-icon-tooltip">Spark Ads</span>
+              </div>
+            </div>
           </div>
 
           <div class="service-item">
-            <div class="service-icon">04</div>
-            <h4 class="service-name"><svg class="tech-icon tech-icon-tiktok" viewBox="0 0 24 24" width="22" height="22" fill="#FE2C55" xmlns="http://www.w3.org/2000/svg" aria-label="TikTok"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg> <span data-i18n="tiktok_ads_d4_t">TikTok Events API &amp; Fast Checkouts</span></h4>
+            <h4 class="service-name"><span data-i18n="tiktok_ads_d4_t">TikTok Events API &amp; Fast Checkouts</span></h4>
             <p class="service-desc" data-i18n="tiktok_ads_d4_d">Server-side conversion tracking integrated with fast mobile landers and 1-click checkout experiences to prevent drop-offs.</p>
+            <div class="service-tech-icons service-tech-icons-interactive">
+              <div class="tech-icon-wrapper tech-icon-wrapper-tiktok">
+                <svg class="tech-icon tech-icon-tiktok" viewBox="0 0 24 24" width="32" height="32" fill="#FE2C55" xmlns="http://www.w3.org/2000/svg" aria-label="TikTok"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                <span class="tech-icon-tooltip">Events API</span>
+              </div>
+              <div class="tech-icon-wrapper tech-icon-wrapper-shopify">
+                <svg class="tech-icon tech-icon-shopify" viewBox="0 0 24 24" width="32" height="32" fill="#95BF47" xmlns="http://www.w3.org/2000/svg" aria-label="Shopify"><path d="M19.344 4.707a.972.972 0 0 0-.82-.246l-4.496.79-2.31-2.31a.987.987 0 0 0-1.4 0L8.01 5.25 3.51 4.46a.97.97 0 0 0-.82.247.98.98 0 0 0-.29.83l2.25 15.75c.06.44.4.78.84.84l6.25.87h.51l6.26-.87a.985.985 0 0 0 .84-.84l2.25-15.75a.98.98 0 0 0-.29-.832z"/></svg>
+                <span class="tech-icon-tooltip">Fast Checkout</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -150,7 +179,7 @@
       <div class="content-container">
         <div class="contact-card">
           <div class="contact-info">
-            <span class="section-num" data-i18n="sec5_num">05 // INITIATE</span>
+            <span class="section-num" data-i18n="sec5_num">05 // START PROJECT</span>
             <h2 class="contact-headline" data-i18n="sec5_title">Let us solve your problem definitively.</h2>
             <p class="contact-sub" data-i18n="sec5_subtitle">
               Tell us about your project or current bottlenecks. We analyze every inquiry directly and reply within 24 hours with an unmediated technical evaluation.

@@ -38,11 +38,16 @@
     </nav>
 
     <div class="header-actions">
-      <!-- Language Switcher: EN | PT -->
-      <div class="lang-switch" id="lang-switch" role="group" aria-label="Language selection">
-        <button type="button" class="lang-btn active" data-lang="en">EN</button>
-        <span class="lang-sep">/</span>
-        <button type="button" class="lang-btn" data-lang="pt">PT</button>
+      <!-- Language Switcher: Hover Reveal -->
+      <div class="lang-selector-wrap" id="lang-selector" role="group" aria-label="Language selection">
+        <button type="button" class="lang-current" aria-haspopup="true" aria-expanded="false">
+          <span class="lang-current-label">EN</span>
+          <span class="lang-caret">▾</span>
+        </button>
+        <div class="lang-options">
+          <button type="button" class="lang-btn active" data-lang="en">EN</button>
+          <button type="button" class="lang-btn" data-lang="pt">PT</button>
+        </div>
       </div>
 
       <div class="live-clock">
@@ -50,7 +55,7 @@
         <span id="header-time">16:49</span>
         <span class="clock-tz">PORTUGAL</span>
       </div>
-      <a href="#contact" class="inquire-btn" data-i18n="nav_initiate">INITIATE</a>
+      <a href="#contact" class="inquire-btn" data-i18n="nav_initiate">START PROJECT</a>
     </div>
   </header>
 
@@ -73,6 +78,9 @@
             muted 
             playsinline
             preload="auto"
+            disablePictureInPicture
+            controlsList="nodownload noplaybackrate nofullscreen noremoteplayback"
+            oncontextmenu="return false;"
           >
             <source src="14293640_1920_1080_25fps.mp4" type="video/mp4">
             <source src="hero.mp4" type="video/mp4">
@@ -617,7 +625,7 @@
       <div class="content-container">
         <div class="contact-card">
           <div class="contact-info">
-            <span class="section-num" data-i18n="sec5_num">05 // INITIATE</span>
+            <span class="section-num" data-i18n="sec5_num">05 // START PROJECT</span>
             <h2 class="contact-headline" data-i18n="sec5_title">Let us solve your problem definitively.</h2>
             <p class="contact-sub" data-i18n="sec5_subtitle">
               Tell us what is broken, slow, or manual in your business. We will analyze your case and propose a tailored, no-fluff solution.

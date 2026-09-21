@@ -9,7 +9,7 @@ export const translations = {
     "nav_capabilities": "<span>02</span> CAPABILITIES",
     "nav_expertise": "<span>03</span> EXPERTISE",
     "nav_about": "<span>04</span> ABOUT",
-    "nav_initiate": "INITIATE",
+    "nav_initiate": "START PROJECT",
     "nav_back_monolith": "<span>←</span> BACK TO MONOLITH",
     "nav_deliverables": "DELIVERABLES",
     "nav_commission": "COMMISSION",
@@ -144,7 +144,7 @@ export const translations = {
     "about_meta_comm_val": "LIMITED CLIENT INTAKE PER QUARTER",
     "about_meta_ai_label": "AI DOCTRINE",
     "about_meta_ai_val": "AI IS A TOOL • WE WON'T MAKE THE CLIENT A FOOL",
-    "sec5_num": "05 // INITIATE",
+    "sec5_num": "05 // START PROJECT",
     "sec5_title": "Let us solve your problem definitively.",
     "sec5_subtitle": "Tell us what is broken, slow, or manual in your business. We will analyze your case and propose a tailored, no-fluff solution.",
     "contact_loc_label": "LOCATION",
@@ -370,7 +370,7 @@ export const translations = {
     "nav_capabilities": "<span>02</span> CAPACIDADES",
     "nav_expertise": "<span>03</span> EXPERTÍCIA",
     "nav_about": "<span>04</span> SOBRE",
-    "nav_initiate": "INICIAR",
+    "nav_initiate": "INICIAR PROJETO",
     "nav_back_monolith": "<span>←</span> VOLTAR AO MONÓLITO",
     "nav_deliverables": "ENTREGÁVEIS",
     "nav_commission": "COMISSIONAR",
@@ -505,7 +505,7 @@ export const translations = {
     "about_meta_comm_val": "NÚMERO ESTRITAMENTE LIMITADO POR TRIMESTRE",
     "about_meta_ai_label": "DOUTRINA DE IA",
     "about_meta_ai_val": "A IA COMO FERRAMENTA • NUNCA FAREMOS O CLIENTE DE TOLO",
-    "sec5_num": "05 // INICIAR",
+    "sec5_num": "05 // INICIAR PROJETO",
     "sec5_title": "Vamos resolver o seu problema de forma definitiva.",
     "sec5_subtitle": "Diga-nos o que está lento, ineficiente ou manual no seu negócio. Analisamos a sua situação e propomos uma solução sob medida, sem floreados.",
     "contact_loc_label": "LOCALIZAÇÃO",
@@ -763,13 +763,16 @@ export function setLanguage(lang) {
     }
   });
 
-  // 3. Update Header toggle buttons
+  // 3. Update Header toggle buttons and active label
   document.querySelectorAll('.lang-btn').forEach(btn => {
     if (btn.getAttribute('data-lang') === lang) {
       btn.classList.add('active');
     } else {
       btn.classList.remove('active');
     }
+  });
+  document.querySelectorAll('.lang-current-label').forEach(el => {
+    el.textContent = lang.toUpperCase();
   });
 
   // 4. Update dynamic mobile pill labels
@@ -802,7 +805,23 @@ function initI18n() {
       e.preventDefault();
       const lang = btn.getAttribute('data-lang');
       setLanguage(lang);
+      const wrap = btn.closest('.lang-selector-wrap');
+      if (wrap) wrap.classList.remove('is-open');
     });
+  });
+
+  document.querySelectorAll('.lang-current').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const wrap = btn.closest('.lang-selector-wrap');
+      if (wrap) wrap.classList.toggle('is-open');
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.lang-selector-wrap')) {
+      document.querySelectorAll('.lang-selector-wrap.is-open').forEach(w => w.classList.remove('is-open'));
+    }
   });
 }
 
@@ -1031,6 +1050,7 @@ function initHeroVideo() {
   if (!video) return;
 
   video.muted = true;
+  video.disablePictureInPicture = true;
 
   function markVideoActive() {
     video.classList.add('is-playing');

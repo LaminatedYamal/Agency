@@ -120,7 +120,7 @@ body.bg-studio {
   left: 0;
   width: 100%;
   height: 72px;
-  padding: 0 3.5rem;
+  padding: 0 max(2rem, calc((100% - 1540px) / 2 + 2rem));
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -235,46 +235,111 @@ body.bg-studio {
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
 }
 
-/* Language Switcher: EN | PT */
-.lang-switch {
-  display: flex;
+/* ==========================================================================
+   Language Switcher: Architectural Hover-Reveal Dropdown
+   ========================================================================== */
+.lang-selector-wrap {
+  position: relative;
+  display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 0;
-  padding: 3px 6px;
 }
 
-.lang-btn {
+.lang-current {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 0;
+  padding: 5px 9px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--color-slate);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1;
+}
+
+.lang-current-label {
+  color: var(--color-dijon-bright);
+}
+
+.lang-caret {
+  font-size: 0.55rem;
+  color: var(--color-slate);
+  transition: transform 0.25s ease, color 0.2s ease;
+  display: inline-block;
+  line-height: 1;
+}
+
+.lang-current:hover,
+.lang-selector-wrap:hover .lang-current,
+.lang-selector-wrap.is-open .lang-current {
+  background: rgba(229, 168, 59, 0.08);
+  border-color: rgba(229, 168, 59, 0.35);
+}
+
+.lang-selector-wrap:hover .lang-caret,
+.lang-selector-wrap.is-open .lang-caret {
+  transform: rotate(180deg);
+  color: var(--color-dijon-bright);
+}
+
+.lang-options {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  min-width: 100%;
+  background: #0a0c10;
+  border: 1px solid rgba(229, 168, 59, 0.3);
+  border-radius: 0;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.9), 0 0 15px rgba(229, 168, 59, 0.06);
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-4px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  z-index: 200;
+}
+
+.lang-selector-wrap:hover .lang-options,
+.lang-selector-wrap.is-open .lang-options {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.lang-options .lang-btn {
   background: none;
   border: none;
   color: var(--color-slate);
   font-family: var(--font-mono);
-  font-size: 0.64rem;
+  font-size: 0.65rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
-  padding: 3px 6px;
+  letter-spacing: 0.14em;
+  padding: 8px 12px;
   border-radius: 0;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.15s ease;
+  text-align: center;
   line-height: 1;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.lang-btn:hover {
+.lang-options .lang-btn:hover {
   color: #ffffff;
+  background: rgba(255, 255, 255, 0.06);
 }
 
-.lang-btn.active {
+.lang-options .lang-btn.active {
   color: #040507;
   background: var(--color-dijon-bright);
-}
-
-.lang-sep {
-  color: rgba(255, 255, 255, 0.2);
-  font-size: 0.6rem;
-  user-select: none;
-  line-height: 1;
 }
 
 /* ==========================================================================
@@ -373,6 +438,7 @@ body.bg-studio {
   opacity: 0;
   filter: brightness(0.78) contrast(1.15) saturate(0.8);
   transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+  pointer-events: none;
 }
 
 .hero-video-element.is-playing {
@@ -713,26 +779,10 @@ body.bg-studio {
   overflow: hidden;
 }
 
-.pillar-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 3px;
-  height: 100%;
-  background: var(--color-dijon);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
 .pillar-card:hover {
-  border-color: rgba(229, 168, 59, 0.3);
-  transform: translateX(4px);
+  border-color: rgba(229, 168, 59, 0.35);
+  transform: translateY(-3px);
   background: var(--color-surface-hover);
-}
-
-.pillar-card:hover::before {
-  opacity: 1;
 }
 
 .pillar-num {
@@ -2945,7 +2995,7 @@ body.bg-studio {
 
   .site-header {
     height: 72px;
-    padding: 0 4rem;
+    padding: 0 max(3rem, calc((100% - 1720px) / 2 + 3rem));
   }
 
   .hero-section {
@@ -3138,7 +3188,7 @@ body.bg-studio {
   
   .site-header {
     height: 80px;
-    padding: 0 5rem;
+    padding: 0 max(5.5rem, calc((100% - 3000px) / 2 + 5.5rem));
   }
 
   .content-container,
