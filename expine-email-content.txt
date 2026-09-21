@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXPINE - Natural Wellness Creams & Lotions</title>
+    <style>
+        /* Reset styles */
+        body, table, td, div, p, a {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333333;
+            background-color: #f8faf7;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        /* Main container */
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 100, 50, 0.1);
+        }
+        
+        /* Header styles */
+        .header {
+            background: linear-gradient(135deg, #6ab87d 0%, #4a9c6b 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        
+        .tagline {
+            font-size: 18px;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        
+        /* Hero section */
+        .hero {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #f0f7f2;
+        }
+        
+        .hero h1 {
+            color: #2e6d4a;
+            font-size: 28px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .hero p {
+            color: #5b7d6c;
+            font-size: 16px;
+            max-width: 500px;
+            margin: 0 auto 25px;
+        }
+        
+        /* Product cards */
+        .products {
+            padding: 30px 20px;
+        }
+        
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .product-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 100, 50, 0.08);
+            width: calc(50% - 10px);
+            min-width: 250px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 100, 50, 0.15);
+        }
+        
+        .product-image {
+            height: 160px;
+            background-color: #e8f4ed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            font-size: 50px;
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-title {
+            color: #2e6d4a;
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .product-description {
+            color: #5b7d6c;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        
+        /* CTA section */
+        .cta-section {
+            background-color: #e8f4ed;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #6ab87d 0%, #4a9c6b 100%);
+            color: white !important;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 10px;
+            box-shadow: 0 4px 10px rgba(0, 100, 50, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 100, 50, 0.3);
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #2e6d4a;
+            color: white;
+            padding: 25px 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        .social-icons {
+            margin: 15px 0;
+        }
+        
+        .social-icon {
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            margin: 0 5px;
+            line-height: 36px;
+            color: white !important;
+            text-decoration: none;
+        }
+        
+        /* Responsive adjustments */
+        @media screen and (max-width: 600px) {
+            .product-card {
+                width: 100%;
+            }
+            
+            .hero h1 {
+                font-size: 24px;
+            }
+            
+            .header {
+                padding: 20px 15px;
+            }
+        }
+        
+        /* Utility classes */
+        .text-center {
+            text-align: center !important;
+        }
+        
+        .mt-30 {
+            margin-top: 30px !important;
+        }
+        
+        .mb-30 {
+            margin-bottom: 30px !important;
+        }
+        
+        .p-20 {
+            padding: 20px !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">EXPINE</div>
+            <div class="tagline">Natural Wellness for Your Skin</div>
+        </div>
+        
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>Experience Pure Natural Care</h1>
+            <p>Discover our premium collection of organic creams and lotions designed to nourish, protect, and rejuvenate your skin with nature's finest ingredients.</p>
+            <img src="https://placehold.co/300x200/6ab87d/ffffff?text=Natural+Skincare" alt="Natural Skincare Products" style="max-width: 100%; height: auto; border-radius: 8px;">
+        </div>
+        
+        <!-- Product Showcase -->
+        <div class="products">
+            <h2 style="text-align: center; color: #2e6d4a; margin-bottom: 30px;">Our Premium Products</h2>
+            
+            <div class="product-grid">
+                <!-- Product Card 1 -->
+                <div class="product-card">
+                    <div class="product-image">🌿</div>
+                    <div class="product-info">
+                        <h3 class="product-title">Organic Moisturizing Cream</h3>
+                        <p class="product-description">Rich hydration for all skin types with natural shea butter and aloe vera.</p>
+                    </div>
+                </div>
+                
+                <!-- Product Card 2 -->
+                <div class="product-card">
+                    <div class="product-image">🌱</div>
+                    <div class="product-info">
+                        <h3 class="product-title">Gentle Daily Lotion</h3>
+                        <p class="product-description">Lightweight formula perfect for daily use, absorbs quickly without greasiness.</p>
+                    </div>
+                </div>
+                
+                <!-- Product Card 3 -->
+                <div class="product-card">
+                    <div class="product-image">🍃</div>
+                    <div class="product-info">
+                        <h3 class="product-title">Anti-Aging Serum</h3>
+                        <p class="product-description">Natural antioxidants to help reduce signs of aging and promote healthy skin.</p>
+                    </div>
+                </div>
+                
+                <!-- Product Card 4 -->
+                <div class="product-card">
+                    <div class="product-image">💧</div>
+                    <div class="product-info">
+                        <h3 class="product-title">Hydrating Face Mist</h3>
+                        <p class="product-description">Refreshing mist to hydrate and revitalize your skin throughout the day.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h2 style="color: #2e6d4a;">Ready for Natural Wellness?</h2>
+            <p>Discover the difference that natural ingredients can make for your skin.</p>
+            <a href="#" class="cta-button">Shop Our Collection</a>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <div class="social-icons">
+                <a href="#" class="social-icon">📘</a>
+                <a href="#" class="social-icon">📸</a>
+                <a href="#" class="social-icon">🐦</a>
+                <a href="#" class="social-icon">💌</a>
+            </div>
+            <p>© 2023 EXPINE Wellness. All rights reserved.</p>
+            <p style="margin-top: 10px;">123 Natural Way, Green Valley | info@expine.com</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -13,3 +13,4 @@
 3. GIT DISCIPLINE:
    - Do not touch `.obsidian/workspace.json`.
    - Keep markdown documentation clean, plain-text, and link-friendly for Obsidian.
+   - 
