@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tecipa | A Magia do Tecido Não Tecido</title>
+  <meta name="description" content="A Tecipa produz uma gama variada de produtos em tecido não tecido para Restauração, Hotelaria, Indústria e Aviação Civil. Fundada em 1998 na Figueira da Foz.">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Cinzel:wght@600;700&family=Great+Vibes&family=Montserrat:wght@500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Prata&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Header & Navigation
+       ========================================================================== -->
+  <header class="header">
+    <div class="container nav-container">
+      <div class="logo-wrap">
+        <a href="#hero" aria-label="Tecipa Home">
+          <img src="assets/logo-transparent.png" alt="Tecipa" class="brand-logo-img">
+        </a>
+        <span class="brand-tagline" data-i18n="nav_tagline">A Magia do Tecido Não Tecido</span>
+      </div>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#products" class="nav-link" data-i18n="nav_products">Produtos & Sectores</a></li>
+        <li><a href="#advantages" class="nav-link" data-i18n="nav_advantages">Vantagens</a></li>
+        <li><a href="#fold-guide" class="nav-link" data-i18n="nav_fold">Dobras & Dimensões</a></li>
+        <li><a href="#about" class="nav-link" data-i18n="nav_about">A Empresa</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Bilingual PT/EN Switcher -->
+        <div class="lang-switcher" aria-label="Language Selector">
+          <button type="button" class="lang-btn active" id="langTogglePt">PT</button>
+          <button type="button" class="lang-btn" id="langToggleEn">EN</button>
+        </div>
+
+        <a href="#quote-section" class="btn btn-primary btn-sm" data-i18n="nav_quote_btn">Pedir Orçamento</a>
+
+        <button class="mobile-menu-btn" aria-label="Toggle Navigation">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       Hero Section
+       ========================================================================== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <span class="hero-badge" data-i18n="hero_badge">Fundada em 1998 • Figueira da Foz, Portugal</span>
+          <h1 data-i18n="hero_title">A Magia do <span class="gold">Tecido Não Tecido</span></h1>
+          <p class="hero-subtitle" data-i18n="hero_subtitle">
+            Consegue imaginar aquilo que o Tecido não Tecido pode fazer por si e pela sua empresa? Com características únicas, permite conciliar design e funcionalidade num só produto. Desde a Hotelaria e Restauração, à Indústria e Aviação Civil, os nossos clientes reconhecem a vantagem da Tecipa.
+          </p>
+          <div class="hero-trust-bar">
+            <div class="trust-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span data-i18n="hero_trust_1">Design Gráfico Personalizado</span>
+            </div>
+            <div class="trust-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+              <span data-i18n="hero_trust_2">Elevada Absorção & Resistência</span>
+            </div>
+            <div class="trust-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              <span data-i18n="hero_trust_3">Aviação Civil, Hotelaria & Indústria</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side Luxury Napkin Showcase (As tall as text, without description) -->
+        <div class="hero-visual">
+          <div class="hero-visual-card">
+            <div class="hero-visual-img-wrap">
+              <img src="assets/hero-luxury-napkins.jpg" alt="Tecipa - Alta Restauração e Hotelaria com Guardanapos Tecido não Tecido" class="hero-luxury-img">
+              <div class="hero-visual-glow"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Product Showcase & Industry Tabs (Exact Tecipa Portfolio)
+       ========================================================================== -->
+  <section class="products-section" id="products">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag" data-i18n="prod_tag">A Nossa Gama</span>
+        <h2 class="section-title" data-i18n="prod_title">Gama Variada em Tecido Não Tecido</h2>
+        <p class="section-desc" data-i18n="prod_desc">
+          Produzimos e personalizamos soluções para Restauração, Hotelaria, Aviação Civil e Limpeza Industrial de acordo com as necessidades específicas de cada cliente.
+        </p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs">
+        <button class="filter-tab-btn active" data-filter="all" data-i18n="filter_all">Todos os Produtos</button>
+        <button class="filter-tab-btn" data-filter="horeca" data-i18n="filter_horeca">Hotelaria & Restauração</button>
+        <button class="filter-tab-btn" data-filter="aviation" data-i18n="filter_aviation">Aviação Civil</button>
+        <button class="filter-tab-btn" data-filter="industry" data-i18n="filter_industry">Limpeza Industrial</button>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="product-grid">
+        <!-- 1. Guardanapos -->
+        <div class="product-card" data-category="horeca">
+          <div class="card-header-visual">
+            <span class="card-tag" data-i18n="tag_prod_1">Restauração & Hotelaria</span>
+            <img src="assets/prod-napkins.webp" alt="Guardanapos Personalizados" class="product-img" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Guardanapos Personalizados</h3>
+            <p class="card-desc">
+              Em várias texturas, cores e dimensões, é possível personalizar e criar um design exclusivo que reforça a imagem do seu restaurante ou hotel.
+            </p>
+            <ul class="card-features">
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Variedade de texturas, formatos e gramagens
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Personalização gráfica à medida
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Higiene absoluta de utilização única
+              </li>
+            </ul>
+            <div class="card-footer">
+              <span class="card-moq">Produção: <strong>Tecipa, Lda.</strong></span>
+              <a href="#quote-section" class="btn btn-outline btn-sm">Pedir Cotação</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Toalhetes Individuais -->
+        <div class="product-card" data-category="horeca">
+          <div class="card-header-visual">
+            <span class="card-tag" data-i18n="tag_prod_2">Mesa & Design</span>
+            <img src="assets/prod-placemats.webp" alt="Toalhetes Individuais" class="product-img" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Toalhetes Individuais</h3>
+            <p class="card-desc">
+              Toalhetes individuais criados para combinar perfeitamente o seu design gráfico com o guardanapo, criando uma apresentação harmoniosa.
+            </p>
+            <ul class="card-features">
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Design coordenado com os guardanapos
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Redução substancial de custos de lavandaria
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Sempre disponível em picos de consumo
+              </li>
+            </ul>
+            <div class="card-footer">
+              <span class="card-moq">Produção: <strong>Tecipa, Lda.</strong></span>
+              <a href="#quote-section" class="btn btn-outline btn-sm">Pedir Cotação</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Chemin de Table -->
+        <div class="product-card" data-category="horeca">
+          <div class="card-header-visual">
+            <span class="card-tag" data-i18n="tag_prod_3">Atmosfera & Elegância</span>
+            <img src="assets/prod-chemindetable.webp" alt="Toalhetes Chemin de Table" class="product-img" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Toalhetes "Chemin de Table"</h3>
+            <p class="card-desc">
+              Caminhos de mesa em tecido não tecido combinando cor e textura com a sua mesa, conferindo uma atmosfera requintada e acolhedora.
+            </p>
+            <ul class="card-features">
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Cores e texturas premium
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Elimina manchas e manutenção de tecidos
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Substituição rápida e económica
+              </li>
+            </ul>
+            <div class="card-footer">
+              <span class="card-moq">Produção: <strong>Tecipa, Lda.</strong></span>
+              <a href="#quote-section" class="btn btn-outline btn-sm">Pedir Cotação</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Toalha de Base -->
+        <div class="product-card" data-category="horeca">
+          <div class="card-header-visual">
+            <span class="card-tag" data-i18n="tag_prod_4">Base Tradicional</span>
+            <img src="assets/prod-tablecloth.webp" alt="Toalha de Base" class="product-img" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Toalha de Base</h3>
+            <p class="card-desc">
+              Simples e tradicional na base da sua mesa. Oferece a textura do tecido com a conveniência, higiene e economia do tecido não tecido.
+            </p>
+            <ul class="card-features">
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Proteção e elegância para mesas
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Evita paragens por falhas de lavandaria
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Diversas medidas sob consulta
+              </li>
+            </ul>
+            <div class="card-footer">
+              <span class="card-moq">Produção: <strong>Tecipa, Lda.</strong></span>
+              <a href="#quote-section" class="btn btn-outline btn-sm">Pedir Cotação</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Tray Mats para Aviação Civil -->
+        <div class="product-card" data-category="aviation">
+          <div class="card-header-visual">
+            <span class="card-tag" data-i18n="tag_prod_5">Aviação Civil</span>
+            <img src="assets/prod-traymats.webp" alt="Tray Mats para Aviação Civil" class="product-img" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Tray Mats para Aviação Civil</h3>
+            <p class="card-desc">
+              Os nossos "Tray mats" possuem características semelhantes ao tecido. Elevada absorção, comportamento anti-deslizante e design próprio a cada companhia aérea.
+            </p>
+            <ul class="card-features">
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Comportamento anti-deslizante seguro
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Toque suave e elevada absorção
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Design exclusivo para cada companhia aérea
+              </li>
+            </ul>
+            <div class="card-footer">
+              <span class="card-moq">Produção: <strong>Tecipa, Lda.</strong></span>
+              <a href="#quote-section" class="btn btn-outline btn-sm">Pedir Cotação</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Limpeza Industrial -->
+        <div class="product-card" data-category="industry">
+          <div class="card-header-visual">
+            <span class="card-tag" data-i18n="tag_prod_6">Limpeza Industrial</span>
+            <img src="assets/prod-industrial.webp" alt="Rolos para Limpeza Industrial" class="product-img" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Rolos para Limpeza Industrial</h3>
+            <p class="card-desc">
+              Elevada absorção aliada à resistência mecânica para todas as superfícies. Diferencia-se do papel pela sua excelente resistência mecânica em húmido, não se desagregando.
+            </p>
+            <ul class="card-features">
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Excelente resistência mecânica em húmido
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Não se desagrega nem liberta resíduos
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Diferentes texturas, gramagens e comprimentos
+              </li>
+            </ul>
+            <div class="card-footer">
+              <span class="card-moq">Produção: <strong>Tecipa, Lda.</strong></span>
+              <a href="#quote-section" class="btn btn-outline btn-sm">Pedir Cotação</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       As 5 Grandes Vantagens do Tecido Não Tecido
+       ========================================================================== -->
+  <section class="advantages-section" id="advantages">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 3.5rem;">
+        <span class="section-tag" data-i18n="adv_tag">Porquê a Tecipa?</span>
+        <h2 class="section-title" data-i18n="adv_title">As 5 Grandes Vantagens do Tecido Não Tecido</h2>
+        <p class="section-desc" data-i18n="adv_desc">
+          Conciliamos design e funcionalidade num só produto, eliminando os custos e constrangimentos do tecido tradicional.
+        </p>
+      </div>
+
+      <div class="advantages-grid">
+        <div class="advantage-card">
+          <div class="advantage-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h4 data-i18n="adv_1_title">1. Redução de Custos</h4>
+          <p data-i18n="adv_1_desc">Poupança significativa relativamente à manutenção, rotação, substituição de tecidos tradicionais e dispendiosos custos de lavandaria.</p>
+        </div>
+
+        <div class="advantage-card">
+          <div class="advantage-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+          </div>
+          <h4 data-i18n="adv_2_title">2. Personalização Total</h4>
+          <p data-i18n="adv_2_desc">Reforço imediato da sua imagem corporativa através da personalização gráfica exclusiva desenvolvida em parceria connosco.</p>
+        </div>
+
+        <div class="advantage-card">
+          <div class="advantage-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h4 data-i18n="adv_3_title">3. Design & Textura Únicos</h4>
+          <p data-i18n="adv_3_desc">Toque de tecido através da variedade de texturas, dimensões, formatos e criação gráfica à medida do seu espaço.</p>
+        </div>
+
+        <div class="advantage-card">
+          <div class="advantage-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h4 data-i18n="adv_4_title">4. Higiene de Utilização Única</h4>
+          <p data-i18n="adv_4_desc">Produto 100% higiénico e de utilização única, garantindo a máxima segurança para clientes e passageiros.</p>
+        </div>
+
+        <div class="advantage-card">
+          <div class="advantage-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
+          <h4 data-i18n="adv_5_title">5. Logística Facilitada</h4>
+          <p data-i18n="adv_5_desc">Produto sempre disponível, mesmo em picos sazonais de consumo, evitando os inconvenientes e atrasos das falhas de lavandaria.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Interactive Napkin Dimension & Fold Style Visual Guide
+       ========================================================================== -->
+  <section class="fold-guide-section" id="fold-guide">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 3rem;">
+        <span class="section-tag" data-i18n="fold_tag">Ferramenta Interativa</span>
+        <h2 class="section-title" data-i18n="fold_title">Guia de Dimensões e Dobras de Guardanapos</h2>
+        <p class="section-desc" data-i18n="fold_desc">
+          Em várias texturas, cores e dimensões, é possível personalizar e criar um design exclusivo adaptado à atmosfera do seu restaurante, hotel ou companhia aérea.
+        </p>
+      </div>
+
+      <div class="guide-layout">
+        <!-- Controls Column -->
+        <div class="guide-controls">
+          <!-- 1. Dimension Toggle -->
+          <div class="control-group">
+            <div class="control-label">
+              <span data-i18n="fold_label_dim">1. Dimensões</span>
+              <span class="hint" data-i18n="fold_label_dim_hint">Tamanho Aberto</span>
+            </div>
+            <div class="btn-toggle-group">
+              <button class="btn-toggle" data-dimension="cocktail">
+                <span class="title" data-i18n="fold_cocktail">Cocktail</span>
+                <span class="subtitle" data-i18n="fold_cocktail_sub">25 × 25 cm</span>
+              </button>
+              <button class="btn-toggle" data-dimension="lunch">
+                <span class="title" data-i18n="fold_lunch">Almoço</span>
+                <span class="subtitle" data-i18n="fold_lunch_sub">33 × 33 cm</span>
+              </button>
+              <button class="btn-toggle active" data-dimension="dinner">
+                <span class="title" data-i18n="fold_dinner">Jantar</span>
+                <span class="subtitle" data-i18n="fold_dinner_sub">40 × 40 cm</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- 2. Fold Style Toggle -->
+          <div class="control-group">
+            <div class="control-label">
+              <span data-i18n="fold_label_fold">2. Tipo de Dobra</span>
+              <span class="hint" data-i18n="fold_label_fold_hint">Apresentação na Mesa</span>
+            </div>
+            <div class="btn-toggle-group">
+              <button class="btn-toggle" data-fold="quarter">
+                <span class="title" data-i18n="fold_1_4">1/4 Dobra</span>
+                <span class="subtitle" data-i18n="fold_1_4_sub">Quadrada Tradicional</span>
+              </button>
+              <button class="btn-toggle active" data-fold="eighth">
+                <span class="title" data-i18n="fold_1_8">1/8 Dobra</span>
+                <span class="subtitle" data-i18n="fold_1_8_sub">Banquete & Aviação</span>
+              </button>
+              <button class="btn-toggle" data-fold="pocket">
+                <span class="title" data-i18n="fold_pocket">Bolso de Talher</span>
+                <span class="subtitle" data-i18n="fold_pocket_sub">Higiénico para Talheres</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- 3. Material Texture Toggle -->
+          <div class="control-group">
+            <div class="control-label">
+              <span data-i18n="fold_label_mat">3. Tecido & Textura</span>
+              <span class="hint" data-i18n="fold_label_mat_hint">Toque e Gramagem</span>
+            </div>
+            <div class="material-toggle-group">
+              <button class="btn-toggle active" data-material="airlaid">
+                <span class="title" data-i18n="fold_mat_airlaid">Tecido Airlaid Luxo</span>
+                <span class="subtitle" data-i18n="fold_mat_airlaid_sub">Toque de Tecido • 55–65 g/m²</span>
+              </button>
+              <button class="btn-toggle" data-material="tissue">
+                <span class="title" data-i18n="fold_mat_tissue">Tissue Folha Múltipla</span>
+                <span class="subtitle" data-i18n="fold_mat_tissue_sub">2 ou 3 Folhas • Pura Celulose</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- 4. Branding Imprint Toggle -->
+          <div class="control-group">
+            <div class="control-label">
+              <span data-i18n="fold_label_imp">4. Personalização Gráfica</span>
+              <span class="hint" data-i18n="fold_label_imp_hint">Personalização</span>
+            </div>
+            <div class="btn-toggle-group">
+              <button class="btn-toggle active" data-branding="foil">
+                <span class="title" data-i18n="fold_imp_foil">Estampa Dourada</span>
+                <span class="subtitle" data-i18n="fold_imp_foil_sub">Foil Metálico</span>
+              </button>
+              <button class="btn-toggle" data-branding="print">
+                <span class="title" data-i18n="fold_imp_print">Impressão a Cores</span>
+                <span class="subtitle" data-i18n="fold_imp_print_sub">Tinta Alimentar</span>
+              </button>
+              <button class="btn-toggle" data-branding="emboss">
+                <span class="title" data-i18n="fold_imp_emboss">Relevo a Seco</span>
+                <span class="subtitle" data-i18n="fold_imp_emboss_sub">Sem Tinta (3D)</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- 5. Logo Text, Font & Color Personalization OR SVG/PNG Upload -->
+          <div class="control-group personalization-group" style="margin-bottom: 0;">
+            <div class="control-label">
+              <span data-i18n="fold_label_custom">5. Logótipo: Texto ou Imagem (SVG/PNG)</span>
+              <span class="hint" data-i18n="fold_label_custom_hint">Pré-visualização em Tempo Real</span>
+            </div>
+
+            <!-- Mode Switch Tabs: Text vs Image vs Both -->
+            <div class="personalization-mode-tabs">
+              <button type="button" class="mode-tab-btn active" id="modeTabText" data-i18n="fold_mode_text">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
+                Texto
+              </button>
+              <button type="button" class="mode-tab-btn" id="modeTabImage" data-i18n="fold_mode_logo">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                Logótipo
+              </button>
+              <button type="button" class="mode-tab-btn" id="modeTabBoth" data-i18n="fold_mode_both">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                Logótipo + Texto
+              </button>
+            </div>
+
+            <!-- Lockup Layout Switcher (Active when Logo + Text is selected) -->
+            <div id="lockupControlsWrap" style="display: none; margin-bottom: 1.25rem;">
+              <div class="custom-field-row" style="margin-bottom: 0;">
+                <label class="custom-field-label" data-i18n="fold_lockup_lbl">Disposição do Conjunto</label>
+                <div class="lockup-toggle-group">
+                  <button type="button" class="lockup-btn active" id="lockupVerticalBtn" data-layout="vertical" data-i18n="fold_lockup_vertical">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="3" width="10" height="7" rx="1"/><line x1="4" y1="15" x2="20" y2="15"/><line x1="7" y1="19" x2="17" y2="19"/></svg>
+                    Vertical (Sobreposto)
+                  </button>
+                  <button type="button" class="lockup-btn" id="lockupHorizontalBtn" data-layout="horizontal" data-i18n="fold_lockup_horizontal">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="7" height="12" rx="1"/><line x1="14" y1="10" x2="21" y2="10"/><line x1="14" y1="14" x2="19" y2="14"/></svg>
+                    Horizontal (Lado a Lado)
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- TAB 1: Text & Typography Personalization -->
+            <div id="textPersonalizationWrap">
+              <!-- Text Input -->
+              <div class="custom-field-row">
+                <label for="customTextInput" class="custom-field-label" data-i18n="fold_custom_text_lbl">Texto / Nome da Empresa</label>
+                <input type="text" id="customTextInput" class="custom-text-input" value="Tecipa" placeholder="Ex: Tecipa, Hotel Ritz, TAP..." maxlength="28">
+              </div>
+
+              <!-- Font Selector -->
+              <div class="custom-field-row">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
+                  <label for="customFontSelect" class="custom-field-label" style="margin-bottom: 0;" data-i18n="fold_custom_font_lbl">Tipo de Letra (Tipografia)</label>
+                  <button type="button" class="font-upload-trigger-btn" id="fontUploadBtn" title="Carregar ficheiro .ttf, .otf ou .woff">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                    <span data-i18n="fold_upload_font_btn">Carregar Fonte (.ttf, .otf)</span>
+                  </button>
+                  <input type="file" id="customFontFileInput" accept=".ttf,.otf,.woff,.woff2" style="display: none;">
+                </div>
+                <select id="customFontSelect" class="custom-font-select">
+                  <option value="'Segoe Script', cursive">Segoe Script (Assinatura Elegante)</option>
+                  <option value="'Playfair Display', serif">Playfair Display (Serifa Luxo)</option>
+                  <option value="'Cinzel', serif">Cinzel (Gravura Imperial)</option>
+                  <option value="'Great Vibes', cursive">Great Vibes (Caligrafia Clássica)</option>
+                  <option value="'Prata', serif">Prata (Didone Editorial)</option>
+                  <option value="'Caveat', cursive">Caveat (Manuscrito Fluido)</option>
+                  <option value="'Montserrat', sans-serif">Montserrat (Moderno Geométrico)</option>
+                  <option value="'Segoe UI', sans-serif">Segoe UI (Minimalista Neutro)</option>
+                </select>
+                <!-- Uploaded Font Status Badge -->
+                <div class="uploaded-font-badge" id="uploadedFontBadge" style="display: none;">
+                  <div class="font-badge-content">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span class="uploaded-font-name" id="uploadedFontName">MinhaFonte.ttf</span>
+                  </div>
+                  <button type="button" class="font-reset-btn" id="fontResetBtn" title="Remover Fonte" data-i18n-title="fold_remove_font">✕</button>
+                </div>
+              </div>
+
+              <!-- Font Size Slider -->
+              <div class="custom-field-row">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
+                  <label for="fontSizeSlider" class="custom-field-label" style="margin-bottom: 0;" data-i18n="fold_font_size_lbl">Tamanho do Texto</label>
+                  <span class="slider-value-display" id="fontSizeDisplay">18px</span>
+                </div>
+                <div class="slider-control-wrap">
+                  <input type="range" id="fontSizeSlider" class="custom-range-slider" min="10" max="40" value="18" step="1">
+                </div>
+              </div>
+
+              <!-- Color Picker with Hex Wheel & Hex Coding -->
+              <div class="custom-field-row">
+                <label class="custom-field-label" data-i18n="fold_custom_color_lbl">Cor do Logótipo (Roda de Cores & Hex)</label>
+                <div class="color-picker-composite">
+                  <div class="color-wheel-wrapper" title="Clique para abrir a Roda de Cores">
+                    <input type="color" id="imprintColorPicker" class="color-wheel-input" value="#C59B27">
+                    <span class="color-wheel-preview" id="colorWheelPreview" style="background-color: #C59B27;"></span>
+                  </div>
+                  <div class="hex-input-wrapper">
+                    <span class="hex-prefix">#</span>
+                    <input type="text" id="imprintHexInput" class="hex-code-input" value="C59B27" maxlength="6" placeholder="C59B27" spellcheck="false">
+                  </div>
+                  <!-- Preset Swatches -->
+                  <div class="color-swatches">
+                    <button type="button" class="swatch-btn active" data-color="#C59B27" style="background: #C59B27;" title="Dourado Metálico"></button>
+                    <button type="button" class="swatch-btn" data-color="#D4AF37" style="background: #D4AF37;" title="Champagne Gold"></button>
+                    <button type="button" class="swatch-btn" data-color="#01025C" style="background: #01025C;" title="Azul Tecipa"></button>
+                    <button type="button" class="swatch-btn" data-color="#8E979D" style="background: #8E979D;" title="Prateado"></button>
+                    <button type="button" class="swatch-btn" data-color="#B76E79" style="background: #B76E79;" title="Rose Gold"></button>
+                    <button type="button" class="swatch-btn" data-color="#1E293B" style="background: #1E293B;" title="Antracite"></button>
+                    <button type="button" class="swatch-btn" data-color="#1E4D2B" style="background: #1E4D2B;" title="Verde Floresta"></button>
+                    <button type="button" class="swatch-btn" data-color="#6A1B29" style="background: #6A1B29;" title="Bordeaux"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- TAB 2: Logo Image File Upload (SVG, PNG, JPG) -->
+            <div id="logoUploadWrap" style="display: none;">
+              <div class="logo-upload-zone" id="logoUploadZone">
+                <input type="file" id="logoFileInput" accept=".svg,.png,.jpg,.jpeg,.webp" style="display: none;">
+                <div class="upload-prompt" id="uploadPrompt">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                  <span class="upload-title" data-i18n="fold_upload_prompt">Clique ou arraste um ficheiro SVG ou PNG</span>
+                  <span class="upload-hint" data-i18n="fold_upload_hint">Fundo transparente recomendado • SVG, PNG até 5MB</span>
+                </div>
+                <div class="uploaded-logo-info" id="uploadedLogoInfo" style="display: none;">
+                  <div class="logo-preview-thumb-wrap">
+                    <img id="logoThumbPreview" class="logo-thumb-preview" alt="Preview">
+                  </div>
+                  <div class="logo-file-details">
+                    <span class="logo-file-name" id="logoFileName">logo.svg</span>
+                    <span class="logo-file-status" data-i18n="fold_logo_applied">Aplicado na Maquete</span>
+                  </div>
+                  <button type="button" class="btn btn-outline btn-sm logo-remove-btn" id="logoRemoveBtn" data-i18n="fold_remove_logo">Remover</button>
+                </div>
+              </div>
+
+              <!-- Logo Scale Slider -->
+              <div class="custom-field-row" style="margin-top: 1rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
+                  <label for="logoSizeSlider" class="custom-field-label" style="margin-bottom: 0;" data-i18n="fold_logo_size_lbl">Tamanho do Logótipo</label>
+                  <span class="slider-value-display" id="logoSizeDisplay">70%</span>
+                </div>
+                <div class="slider-control-wrap">
+                  <input type="range" id="logoSizeSlider" class="custom-range-slider" min="20" max="100" value="70" step="2">
+                </div>
+              </div>
+            </div>
+
+            <!-- Placement / Positioning Control (Common to both Text & Image) -->
+            <div class="custom-field-row" style="margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--slate-200);">
+              <label class="custom-field-label" data-i18n="fold_placement_lbl">Posicionamento na Maquete</label>
+              <div class="placement-controls-wrap">
+                <!-- 3x3 Interactive Alignment Matrix -->
+                <div class="placement-matrix" id="placementMatrix" title="Clique para posicionar na maquete">
+                  <button type="button" class="matrix-cell" data-pos="top-left" title="Canto Superior Esquerdo"></button>
+                  <button type="button" class="matrix-cell" data-pos="top-center" title="Superior Centro"></button>
+                  <button type="button" class="matrix-cell" data-pos="top-right" title="Canto Superior Direito"></button>
+                  <button type="button" class="matrix-cell" data-pos="center-left" title="Centro Esquerdo"></button>
+                  <button type="button" class="matrix-cell active" data-pos="center" title="Centro"></button>
+                  <button type="button" class="matrix-cell" data-pos="center-right" title="Centro Direito"></button>
+                  <button type="button" class="matrix-cell" data-pos="bottom-left" title="Canto Inferior Esquerdo"></button>
+                  <button type="button" class="matrix-cell" data-pos="bottom-center" title="Inferior Centro"></button>
+                  <button type="button" class="matrix-cell" data-pos="bottom-right" title="Canto Inferior Direito (Clássico)"></button>
+                </div>
+                <!-- Preset Buttons -->
+                <div class="placement-presets">
+                  <button type="button" class="placement-preset-btn active" data-pos="center" data-i18n="pos_center">Centro</button>
+                  <button type="button" class="placement-preset-btn" data-pos="bottom-right" data-i18n="pos_bottom_right">Canto Inferior Direito</button>
+                  <button type="button" class="placement-preset-btn" data-pos="bottom-center" data-i18n="pos_bottom_center">Inferior Centro</button>
+                  <button type="button" class="placement-preset-btn" data-pos="top-center" data-i18n="pos_top_center">Superior Centro</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual Stage Column -->
+        <div class="visualizer-stage" id="visualizerStage">
+          <!-- Stage Top Toolbar: Scale Mode (Fit vs 1:1) - Displayed only on large screens -->
+          <div class="stage-toolbar" id="stageToolbar">
+            <div class="scale-toggle-wrap" id="scaleToggleWrap">
+              <button type="button" class="stage-toggle-btn active" id="scaleFitBtn" data-scale="fit">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 14 10 14 10 20"/><polyline points="20 10 14 10 14 4"/><line x1="14" y1="10" x2="21" y2="3"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+                <span data-i18n="scale_fit_lbl">Ajustar ao Ecrã</span>
+              </button>
+              <button type="button" class="stage-toggle-btn" id="scaleRealBtn" data-scale="real">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                <span data-i18n="scale_real_lbl">Tamanho Real (1:1)</span>
+                <span class="scale-badge">1:1</span>
+              </button>
+            </div>
+
+            <!-- Drag & Move Hint (Cleanly placed in toolbar to avoid overlapping with bottom dimension tags) -->
+            <div class="drag-hint-pill" id="dragHintPill">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="5 9 2 12 5 15"/><polyline points="9 5 12 2 15 5"/><polyline points="15 19 12 22 9 19"/><polyline points="19 9 22 12 19 15"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="12" y1="2" x2="12" y2="22"/></svg>
+              <span data-i18n="fold_drag_hint">Clique e arraste o logótipo para mover livremente no guardanapo</span>
+            </div>
+
+            <div class="stage-actions-wrap">
+              <button type="button" class="stage-action-btn" id="fullscreenBtn" title="Ecrã Inteiro" data-i18n-title="fullscreen_btn_title">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="visualizer-canvas-wrap" id="visualizerCanvasWrap">
+            <div class="napkin-canvas-container" id="napkinCanvasContainer">
+              <div class="interactive-napkin texture-airlaid fold-eighth" id="interactiveNapkin">
+                <div class="emboss-border-effect"></div>
+                <div class="napkin-logo-imprint pos-center" id="napkinLogoImprint">
+                  <img id="napkinLogoImg" class="napkin-logo-img" style="display: none;" alt="Logótipo">
+                  <div class="imprint-text imprint-foil" id="napkinImprint">Tecipa</div>
+                </div>
+              </div>
+
+              <!-- Outside Dimension Rulers -->
+              <!-- Width Ruler (strictly outside bottom edge) -->
+              <div class="dimension-ruler-outside ruler-width" id="rulerWidth">
+                <div class="ruler-ticks-h"></div>
+                <span class="dimension-tag width-tag" id="widthTag">10 cm</span>
+              </div>
+
+              <!-- Height Ruler (strictly outside right edge) -->
+              <div class="dimension-ruler-outside ruler-height" id="rulerHeight">
+                <div class="ruler-ticks-v"></div>
+                <span class="dimension-tag height-tag" id="heightTag">20 cm</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Spec Summary Matrix -->
+          <div class="guide-spec-summary">
+            <div class="summary-col">
+              <div class="col-lbl" data-i18n="spec_lbl_unfolded">Tamanho Aberto</div>
+              <div class="col-val" id="specUnfolded">40 × 40 cm</div>
+            </div>
+            <div class="summary-col">
+              <div class="col-lbl" data-i18n="spec_lbl_folded">Tamanho Dobrado</div>
+              <div class="col-val" id="specFolded">10 × 20 cm</div>
+            </div>
+            <div class="summary-col">
+              <div class="col-lbl" data-i18n="spec_lbl_weight">Gramagem do Tecido</div>
+              <div class="col-val" id="specGrammage">55 – 65 g/m² (Airlaid Luxo)</div>
+            </div>
+            <div class="summary-col">
+              <div class="col-lbl" data-i18n="spec_lbl_use">Aplicação Recomendada</div>
+              <div class="col-val" id="specUseCase" style="font-size: 0.82rem;">Restauração de topo, primeira classe e banquetes</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       2-Step Quick Quote & Meeting Scheduling Section (n8n Webhook Ready)
+       ========================================================================== -->
+  <section class="quote-section" id="quote-section">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 2.5rem;">
+        <span class="section-tag" data-i18n="quote_tag">Atendimento Rápido</span>
+        <h2 class="section-title" data-i18n="quote_title">Pedido de Orçamento & Reunião</h2>
+        <p class="section-desc" data-i18n="quote_desc">
+          Selecione as especificações dos seus produtos e agende uma breve reunião com a nossa equipa. Os seus dados são enviados diretamente para o nosso fluxo n8n.
+        </p>
+      </div>
+
+      <div class="quote-wrapper">
+        <!-- Header & Stepper -->
+        <div class="quote-header">
+          <div>
+            <h3 data-i18n="step1_title">Especificação do Pedido</h3>
+            <p>Tecipa, Lda. • Figueira da Foz, Portugal</p>
+          </div>
+
+          <div class="stepper-progress">
+            <div class="step-indicator active" id="indicatorStep1">
+              <span class="step-bubble">1</span>
+              <span>1. Produto</span>
+            </div>
+            <div class="stepper-divider"></div>
+            <div class="step-indicator" id="indicatorStep2">
+              <span class="step-bubble">2</span>
+              <span>2. Reunião</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Body -->
+        <div class="quote-body">
+          <!-- ===================== STEP 1 VIEW ===================== -->
+          <div id="step1View">
+            <!-- 1. Industry Selection (Always Open Initially) -->
+            <div class="quote-prog-group is-expanded" id="quoteGroup1">
+              <div class="form-section-title">
+                <span class="prog-step-badge">1</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                <span data-i18n="industry_title">Sector de Atividade</span>
+              </div>
+              <div class="select-card-grid">
+                <div class="select-card" data-quote-industry data-value="Restauração & Bares">
+                  <span class="card-name" data-i18n="ind_dining">Restauração & Bares</span>
+                  <span class="card-sub" data-i18n="ind_dining_sub">Guardanapos & toalhetes</span>
+                </div>
+                <div class="select-card" data-quote-industry data-value="Aviação Civil">
+                  <span class="card-name" data-i18n="ind_aviation">Aviação Civil</span>
+                  <span class="card-sub" data-i18n="ind_aviation_sub">Tray mats & voos</span>
+                </div>
+                <div class="select-card" data-quote-industry data-value="Hotelaria & Eventos">
+                  <span class="card-name" data-i18n="ind_hotel">Hotelaria & Eventos</span>
+                  <span class="card-sub" data-i18n="ind_hotel_sub">Chemin de table & toalhas</span>
+                </div>
+                <div class="select-card" data-quote-industry data-value="Indústria & Limpeza">
+                  <span class="card-name" data-i18n="ind_industry">Indústria & Limpeza</span>
+                  <span class="card-sub" data-i18n="ind_industry_sub">Rolos de alta absorção</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Product Line (Expands after Sector selection) -->
+            <div class="quote-prog-group is-collapsed" id="quoteGroup2">
+              <div class="form-section-title">
+                <span class="prog-step-badge">2</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                <span data-i18n="prod_type_title">Tipo de Produto</span>
+              </div>
+              <div class="select-card-grid">
+                <div class="select-card" data-quote-product data-value="Guardanapos Personalizados">
+                  <span class="card-name" data-i18n="p_napkins">Guardanapos Personalizados</span>
+                  <span class="card-sub" data-i18n="p_napkins_sub">Textura linho & personalização</span>
+                </div>
+                <div class="select-card" data-quote-product data-value="Tray Mats (Aviação Civil)">
+                  <span class="card-name" data-i18n="p_traymats">Tray Mats (Aviação Civil)</span>
+                  <span class="card-sub" data-i18n="p_traymats_sub">Anti-deslizante e toque tecido</span>
+                </div>
+                <div class="select-card" data-quote-product data-value="Toalhetes Individuais / Chemin de Table">
+                  <span class="card-name" data-i18n="p_placemats">Toalhetes / Chemin de Table</span>
+                  <span class="card-sub" data-i18n="p_placemats_sub">Toalhetes e toalha de base</span>
+                </div>
+                <div class="select-card" data-quote-product data-value="Rolos de Tecido Limpeza Industrial">
+                  <span class="card-name" data-i18n="p_rolls">Rolos Limpeza Industrial</span>
+                  <span class="card-sub" data-i18n="p_rolls_sub">Não se desagrega em húmido</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Size & Fold (Expands after Product selection) -->
+            <div class="quote-prog-group is-collapsed" id="quoteGroup3">
+              <div class="form-section-title">
+                <span class="prog-step-badge">3</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m21 16-4 4-4-4"/><path d="M17 20V4"/><path d="m3 8 4-4 4 4"/><path d="M7 4v16"/></svg>
+                <span data-i18n="sizefold_title">Dimensões & Formato</span>
+              </div>
+              <div class="select-card-grid">
+                <div class="select-card" data-quote-sizefold data-value="Jantar 40x40 cm (1/8 Dobra)">
+                  <span class="card-name" data-i18n="sf_dinner_eighth">Jantar 40×40 cm</span>
+                  <span class="card-sub" data-i18n="sf_dinner_eighth_sub">1/8 Dobra Banquete</span>
+                </div>
+                <div class="select-card" data-quote-sizefold data-value="Jantar 40x40 cm (Bolso de Talher)">
+                  <span class="card-name" data-i18n="sf_dinner_pocket">Jantar 40×40 cm</span>
+                  <span class="card-sub" data-i18n="sf_dinner_pocket_sub">Com Bolso p/ Talher</span>
+                </div>
+                <div class="select-card" data-quote-sizefold data-value="Almoço 33x33 cm (1/4 Dobra)">
+                  <span class="card-name" data-i18n="sf_lunch_quarter">Almoço 33×33 cm</span>
+                  <span class="card-sub" data-i18n="sf_lunch_quarter_sub">1/4 Dobra Tradicional</span>
+                </div>
+                <div class="select-card" data-quote-sizefold data-value="Cocktail 25x25 cm (1/4 Dobra)">
+                  <span class="card-name" data-i18n="sf_cocktail_quarter">Cocktail 25×25 cm</span>
+                  <span class="card-sub" data-i18n="sf_cocktail_quarter_sub">Bar & Bebidas</span>
+                </div>
+                <div class="select-card" data-quote-sizefold data-value="Medida Sob Consulta / Rolos">
+                  <span class="card-name" data-i18n="sf_custom">Medida Sob Consulta</span>
+                  <span class="card-sub" data-i18n="sf_custom_sub">Tray mats ou rolos</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. Monthly Volume & Branding (Expands after Size/Fold selection) -->
+            <div class="quote-prog-group is-collapsed" id="quoteGroup4">
+              <div class="form-row">
+                <div>
+                  <div class="form-section-title">
+                    <span class="prog-step-badge">4</span>
+                    <span data-i18n="volume_title">Volume Estimado</span>
+                  </div>
+                  <div class="select-card-grid" style="grid-template-columns: 1fr 1fr; margin-bottom: 0;">
+                    <div class="select-card" data-quote-volume data-value="25.000 unidades">
+                      <span class="card-name" data-i18n="vol_25k">25.000 un.</span>
+                      <span class="card-sub" data-i18n="vol_25k_sub">Arranque / Piloto</span>
+                    </div>
+                    <div class="select-card" data-quote-volume data-value="100.000 unidades">
+                      <span class="card-name" data-i18n="vol_100k">100.000 un.</span>
+                      <span class="card-sub" data-i18n="vol_100k_sub">Restauração / Hotel</span>
+                    </div>
+                    <div class="select-card" data-quote-volume data-value="500.000 unidades">
+                      <span class="card-name" data-i18n="vol_500k">500.000 un.</span>
+                      <span class="card-sub" data-i18n="vol_500k_sub">Aviação / Cadeia</span>
+                    </div>
+                    <div class="select-card" data-quote-volume data-value="1.000.000+ unidades">
+                      <span class="card-name" data-i18n="vol_1m">1M+ un.</span>
+                      <span class="card-sub" data-i18n="vol_1m_sub">Grande Escala</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="form-section-title">
+                    <span class="prog-step-badge">5</span>
+                    <span data-i18n="branding_title">Personalização Gráfica</span>
+                  </div>
+                  <div class="select-card-grid" style="grid-template-columns: 1fr 1fr; margin-bottom: 0;">
+                    <div class="select-card" data-quote-branding data-value="Design Gráfico Personalizado">
+                      <span class="card-name" data-i18n="b_custom">Design Personalizado</span>
+                      <span class="card-sub" data-i18n="b_custom_sub">Criação gráfica à medida</span>
+                    </div>
+                    <div class="select-card" data-quote-branding data-value="Estampa Metálica (Hot Foil)">
+                      <span class="card-name" data-i18n="b_foil">Estampa Metálica</span>
+                      <span class="card-sub" data-i18n="b_foil_sub">Dourado / Prateado</span>
+                    </div>
+                    <div class="select-card" data-quote-branding data-value="Sem Impressão / Branco">
+                      <span class="card-name" data-i18n="b_white">Branco / Sem Impressão</span>
+                      <span class="card-sub" data-i18n="b_white_sub">Puro e higiénico</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 1 Button (Expands after Volume & Branding selection) -->
+            <div class="quote-prog-group is-collapsed" id="quoteGroupSubmit" style="margin-top: 2rem; display: flex; justify-content: flex-end;">
+              <button class="btn btn-primary" id="toStep2Btn">
+                <span data-i18n="btn_to_step2">Avançar para Agendamento →</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- ===================== STEP 2 VIEW ===================== -->
+          <div id="step2View" style="display: none;">
+            <div style="background: var(--slate-100); padding: 0.85rem 1.25rem; border-radius: var(--radius-md); margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--slate-500); font-weight: 700; display: block;" data-i18n="lbl_selected_config">Configuração Selecionada:</span>
+                <span style="font-size: 0.95rem; font-weight: 700; color: var(--primary);" id="step2SpecPreview">Restauração • Guardanapos Personalizados (100.000 un.)</span>
+              </div>
+              <button class="btn btn-outline btn-sm" id="backToStep1Btn" style="padding: 0.35rem 0.75rem;" data-i18n="btn_edit">Editar</button>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactNameInput" data-i18n="lbl_fullname">Nome Completo *</label>
+                <input type="text" id="contactNameInput" placeholder="ex: Manuel Silva" required>
+              </div>
+              <div class="form-group">
+                <label for="contactEmailInput" data-i18n="lbl_email">Endereço Eletrónico / E-mail *</label>
+                <input type="email" id="contactEmailInput" placeholder="nome@empresa.pt" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="companyNameInput" data-i18n="lbl_company">Nome da Empresa / Organização *</label>
+                <input type="text" id="companyNameInput" placeholder="ex: Restaurante / Hotel / Companhia Aérea" required>
+              </div>
+              <div class="form-group">
+                <label for="phoneInput" data-i18n="lbl_phone">Telefone / Contacto</label>
+                <input type="tel" id="phoneInput" placeholder="233 000 000 ou +351 900 000 000">
+              </div>
+            </div>
+
+            <!-- Meeting Scheduling Date & Time -->
+            <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--slate-200);">
+              <div class="form-section-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                <span data-i18n="meeting_section_title">Agendar Reunião Breve com a Equipa Tecipa (15 Minutos)</span>
+              </div>
+
+              <div class="form-row" style="align-items: start;">
+                <div class="form-group">
+                  <label for="meetingDateInput" data-i18n="lbl_date">Data Preferencial</label>
+                  <input type="date" id="meetingDateInput">
+                  <span style="font-size: 0.75rem; color: var(--slate-500); margin-top: 4px;"><span data-i18n="lbl_timezone">Fuso Horário:</span> <strong id="userTimezoneDisplay">Detectando...</strong></span>
+                </div>
+
+                <div class="form-group">
+                  <label data-i18n="lbl_time">Horário Pretendido</label>
+                  <div class="time-slot-grid">
+                    <button type="button" class="time-slot-btn" data-time="09:30">09:30</button>
+                    <button type="button" class="time-slot-btn selected" data-time="11:30">11:30</button>
+                    <button type="button" class="time-slot-btn" data-time="14:30">14:30</button>
+                    <button type="button" class="time-slot-btn" data-time="16:30">16:30</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="notesInput" data-i18n="lbl_notes">Mensagem ou Especificações Adicionais (Opcional)</label>
+                <textarea id="notesInput" rows="3" placeholder="Indique detalhes sobre as dimensões pretendidas, envio de logótipo para amostras, ou datas limite..."></textarea>
+              </div>
+            </div>
+
+            <!-- Live Webhook Notification Bar -->
+            <div class="webhook-bar">
+              <div>
+                <span class="webhook-status-dot"></span>
+                Webhook n8n: <span id="currentWebhookDisplay" style="font-family: monospace; font-weight: 600;">https://n8n.yourdomain.com/webhook/tecipa-leads</span>
+              </div>
+              <button class="btn btn-outline btn-sm" id="editWebhookLink" onclick="document.getElementById('webhookModal').classList.add('open')" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">Alterar</button>
+            </div>
+
+            <!-- Submit Action -->
+            <div style="margin-top: 2rem; display: flex; justify-content: space-between; align-items: center;">
+              <button class="btn btn-outline" id="backToStep1Btn2" onclick="document.getElementById('backToStep1Btn').click()" data-i18n="btn_back">
+                ← Voltar
+              </button>
+              <button class="btn btn-accent" id="submitQuoteBtn">
+                <span data-i18n="btn_submit">Confirmar & Enviar para n8n</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- ===================== SUCCESS VIEW ===================== -->
+          <div id="quoteSuccessView" class="quote-success-view">
+            <div class="success-icon-wrap">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h3 style="font-size: 1.75rem; font-weight: 800; color: var(--slate-900); margin-bottom: 0.5rem;">Pedido Enviado & Reunião Agendada!</h3>
+            <p style="color: var(--slate-600); max-width: 520px; margin: 0 auto 1.5rem;">
+              O seu pedido de cotação e agendamento de reunião foram transmitidos via webhook para o fluxo n8n da Tecipa. A nossa equipa entrará em contacto brevemente.
+            </p>
+
+            <div class="quote-summary-box" id="quoteSummaryBox">
+              <!-- Dynamically populated -->
+            </div>
+
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+              <button class="btn btn-outline btn-sm" id="viewPayloadBtn">
+                Inspecionar Payload JSON (n8n)
+              </button>
+              <button class="btn btn-primary btn-sm" id="restartQuoteBtn">
+                Novo Pedido
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Company Profile & Real Facilities (Figueira da Foz, Portugal)
+       ========================================================================== -->
+  <section class="about-section" id="about">
+    <div class="container about-grid">
+      <!-- Left Column: Story & 4 Stat Cards -->
+      <div class="about-left-col">
+        <span class="section-tag" data-i18n="about_tag">Desde 1998</span>
+        <h2 class="section-title" data-i18n="about_title">A Tecipa: Experiência & Parceria</h2>
+        <p class="section-desc" style="margin-bottom: 1.25rem;" data-i18n="about_desc_1">
+          A Tecipa foi fundada em 1998 e produz uma gama variada de produtos em tecido não tecido para a Restauração, Hotelaria, Indústria e Aviação Civil.
+        </p>
+        <p style="color: var(--slate-600); font-size: 0.95rem; margin-bottom: 2rem;" data-i18n="about_desc_2">
+          Estabelecemos parcerias com os nossos clientes no desenvolvimento de produto e criação gráfica de acordo com as suas necessidades específicas. Em sectores como a Restauração e Hotelaria estamos vocacionados para a personalização dos produtos por forma a criar um design único para cada cliente.
+        </p>
+
+        <!-- 4 Stat Cards -->
+        <div class="stat-grid">
+          <div class="stat-card">
+            <div class="stat-val" data-i18n="stat_1_val">28 Anos</div>
+            <div class="stat-lbl" data-i18n="stat_1_lbl">Anos de experiência em produção de tecido não tecido (desde 1998)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-val" data-i18n="stat_2_val">4 Sectores</div>
+            <div class="stat-lbl" data-i18n="stat_2_lbl">Aviação Civil, Hotelaria, Restauração e Limpeza Industrial</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-val">100%</div>
+            <div class="stat-lbl" data-i18n="stat_3_lbl">Personalização gráfica exclusiva desenvolvida para cada cliente</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-val" data-i18n="stat_4_val">Resistência</div>
+            <div class="stat-lbl" data-i18n="stat_4_lbl">Excelente resistência mecânica em húmido: não se desagrega como o papel</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Building Showcase & Google Maps (Bigger!) -->
+      <div class="facility-showcase">
+        <div class="facility-image-wrap">
+          <img src="assets/building.png" alt="Instalações Tecipa, Lda. - Figueira da Foz" class="facility-img">
+          <div class="facility-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span data-i18n="about_facility_badge">Sede e Fábrica • Figueira da Foz, Portugal</span>
+          </div>
+        </div>
+
+        <!-- Google Maps Overhaul Card (Bigger!) -->
+        <div class="facility-map-card">
+          <div class="map-card-header">
+            <div class="map-header-left">
+              <div class="map-pin-badge">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="map-header-text">
+                <span class="map-header-title">Sede & Unidade Fabril</span>
+                <span class="map-header-coords">40.1340° N, 8.8475° W • Gala</span>
+              </div>
+            </div>
+            <a href="https://maps.google.com/?q=Parque+Industrial+da+Gala,+Rua+das+Ac%C3%A1cias,+58,+3090-380+Figueira+da+Foz,+Portugal" target="_blank" rel="noopener noreferrer" class="map-action-link" title="Abrir no Google Maps">
+              <span>Google Maps</span>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+
+          <div class="facility-map-frame">
+            <iframe
+              src="https://maps.google.com/maps?q=Parque+Industrial+da+Gala,+Rua+das+Ac%C3%A1cias,+58,+3090-380+Figueira+da+Foz,+Portugal&t=&z=14&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="380"
+              style="border:0; border-radius: 0; display: block;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Localização Tecipa - Parque Industrial da Gala, Figueira da Foz">
+            </iframe>
+          </div>
+
+          <div class="map-card-footer">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Parque Industrial da Gala, Rua das Acácias, 58 • 3090-380 Figueira da Foz</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Footer (Exact Tecipa Real Contacts)
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/logo-white.png" alt="Tecipa" class="footer-logo-img">
+          <p data-i18n="footer_desc">
+            Produção de tecido não tecido para Restauração, Hotelaria, Indústria e Aviação Civil. Fundada em 1998 na Figueira da Foz, Portugal.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Produtos</h5>
+          <ul class="footer-links">
+            <li><a href="#products">Guardanapos Personalizados</a></li>
+            <li><a href="#products">Toalhetes Individuais</a></li>
+            <li><a href="#products">Toalhetes "Chemin de Table"</a></li>
+            <li><a href="#products">Toalha de Base</a></li>
+            <li><a href="#products">Tray Mats para Aviação Civil</a></li>
+            <li><a href="#products">Rolos Limpeza Industrial</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Ferramentas</h5>
+          <ul class="footer-links">
+            <li><a href="#fold-guide">Guia de Dobras & Formatos</a></li>
+            <li><a href="#advantages">As 5 Vantagens</a></li>
+            <li><a href="#quote-section">Pedido de Orçamento</a></li>
+            <li><a href="#quote-section">Agendar Reunião</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Contactos</h5>
+          <ul class="footer-links">
+            <li><span style="color: var(--white); font-weight: 600;">Tecipa, Lda.</span></li>
+            <li><a href="tel:233412957">Telefone: 233 412 957</a></li>
+            <li><a href="mailto:geral@tecipa.pt">E-mail: geral@tecipa.pt</a></li>
+            <li style="margin-top: 0.75rem;">
+              <span style="font-size: 0.8rem; color: var(--slate-400); display: block;" data-i18n="footer_address">
+                Parque Industrial da Gala, Rua das Acácias, 58<br>
+                3090-380 Figueira da Foz, Portugal
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          <span data-i18n="footer_rights">&copy; 2026 Tecipa, Lda. Todos os direitos reservados.</span>
+          <span class="agency-credit" data-i18n="agency_credit">Produzido por <a href="#" class="agency-link">BRUTO</a></span>
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#about">A Empresa</a>
+          <a href="#products">Produtos</a>
+          <a href="#quote-section">Contactos</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       n8n Webhook Configuration Modal
+       ========================================================================== -->
+  <div class="modal-overlay" id="webhookModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4>Configurar Webhook n8n</h4>
+        <button class="modal-close-btn" id="closeWebhookModalBtn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 0.88rem; color: var(--slate-600); margin-bottom: 1.25rem;">
+          Insira o URL do seu webhook n8n. Ao submeter o pedido de orçamento e agendamento de reunião, o payload estruturado em JSON será enviado via HTTP POST para este endpoint.
+        </p>
+
+        <div class="form-group">
+          <label for="webhookUrlInput">URL Webhook n8n</label>
+          <input type="url" id="webhookUrlInput" placeholder="https://seu-n8n.com/webhook/tecipa-leads">
+        </div>
+
+        <div style="margin-top: 1.5rem; display: flex; justify-content: flex-end; gap: 0.75rem;">
+          <button class="btn btn-outline btn-sm" onclick="document.getElementById('webhookModal').classList.remove('open')">Cancelar</button>
+          <button class="btn btn-primary btn-sm" id="saveWebhookBtn">Guardar Webhook</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="./js/app.js"></script>
+  <script type="module" src="./js/quote-scheduler.js"></script>
+</body>
+</html>
