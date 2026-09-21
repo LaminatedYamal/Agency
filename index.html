@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title data-i18n="page_title_home">BRUTO</title>
+  
+  <!-- Primary Font: Avenor (Self-Hosted WOFF2) -->
+  <link rel="preload" href="./fonts/avenor/at-avenor.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- Premium Typography: Syne, Space Mono, Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Favicon System -->
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="icon" type="image/x-icon" href="./favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  
+  <script type="module" crossorigin src="./assets/modulepreload-polyfill-B5Qt9EMX.js"></script>
+  <script type="module" crossorigin src="./assets/main-F_GWO8Fe.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-Yem0qgML.css">
+</head>
+<body class="bg-studio">
+  <!-- Minimalist Header -->
+  <header class="site-header">
+    <div class="header-brand">
+      <span class="brand-logo">BRUTO</span>
+      <span class="brand-tag" data-i18n="header_est">EST. 2026</span>
+    </div>
+
+    <nav class="header-nav">
+      <a href="#manifesto" class="header-link" data-i18n="nav_process"><span>01</span> PROCESS</a>
+      <a href="#capabilities" class="header-link" data-i18n="nav_capabilities"><span>02</span> CAPABILITIES</a>
+      <a href="#expertise" class="header-link" data-i18n="nav_expertise"><span>03</span> EXPERTISE</a>
+      <a href="#about" class="header-link" data-i18n="nav_about"><span>04</span> ABOUT</a>
+    </nav>
+
+    <div class="header-actions">
+      <!-- Language Switcher: Hover Reveal -->
+      <div class="lang-selector-wrap" id="lang-selector" role="group" aria-label="Language selection">
+        <button type="button" class="lang-current" aria-haspopup="true" aria-expanded="false">
+          <span class="lang-current-label">EN</span>
+          <span class="lang-caret">▾</span>
+        </button>
+        <div class="lang-options">
+          <button type="button" class="lang-btn active" data-lang="en">EN</button>
+          <button type="button" class="lang-btn" data-lang="pt">PT</button>
+        </div>
+      </div>
+
+      <div class="live-clock">
+        <span class="clock-dot"></span>
+        <span id="header-time">16:49</span>
+        <span class="clock-tz">PORTUGAL</span>
+      </div>
+      <a href="#contact" class="inquire-btn" data-i18n="nav_initiate">START PROJECT</a>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main class="page-main">
+    
+    <!-- ==========================================
+         HERO SECTION: MONUMENTAL CINEMATIC VIDEO STAGE
+         ========================================== -->
+    <section id="hero" class="hero-section">
+      <div class="hero-stage hero-video-stage" id="hero-stage-container">
+        
+        <!-- Video Viewport & Background Layers -->
+        <div class="video-viewport">
+          <video 
+            id="hero-bg-video" 
+            class="hero-video-element" 
+            autoplay 
+            loop 
+            muted 
+            playsinline
+            preload="auto"
+            disablePictureInPicture
+            controlsList="nodownload noplaybackrate nofullscreen noremoteplayback"
+            oncontextmenu="return false;"
+          >
+            <source src="./assets/14293640_1920_1080_25fps-Bsv7U_jj.mp4" type="video/mp4">
+            <source src="hero.mp4" type="video/mp4">
+            <source src="./assets/16338759_1280_720_30fps-C4AWBJhe.mp4" type="video/mp4">
+            <source src="video.mp4" type="video/mp4">
+            <source src="hero-video.mp4" type="video/mp4">
+            <source src="bruto.mp4" type="video/mp4">
+            <source src="hero.webm" type="video/webm">
+          </video>
+          
+          <!-- Cinematic Luxury Scrim & Vignette Overlays -->
+          <div class="video-overlay-gradient"></div>
+          <div class="video-vignette"></div>
+
+          <!-- Pending Video Drop Beacon -->
+          <div class="video-status-indicator" id="video-status-badge">
+            <span class="pulse-beacon"></span>
+            <span class="status-msg" data-i18n="hero_status_beacon">VIDEO ENGINE READY // DROP VIDEO FILE HERE OR PLACE IN FOLDER</span>
+          </div>
+        </div>
+
+        <!-- Foreground Content -->
+        <div class="hero-foreground-content">
+          <div class="hero-center-monolith">
+            <div class="hero-title-container">
+              <h1 class="hero-monolith-title" data-text="BRUTO">BRUTO</h1>
+              <div class="hero-title-glow"></div>
+            </div>
+            <p class="hero-monolith-subtitle" data-i18n="hero_subtitle">
+              <span>HEAVY-DUTY WEBSITES</span>
+              <span class="sub-sep">•</span>
+              <span>WORKFLOW AUTOMATION</span>
+              <span class="sub-sep">•</span>
+              <span>PRECISION GROWTH</span>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Golden Circle Bar under Hero -->
+      <div class="hero-editorial-bar">
+        <div class="editorial-item">
+          <span class="ed-label" data-i18n="ed_why_label">01 // WHY (PURPOSE)</span>
+          <span class="ed-val" data-i18n="ed_why_val">Definitive Engineering Over Commercial Fluff</span>
+        </div>
+        <div class="editorial-item">
+          <span class="ed-label" data-i18n="ed_how_label">02 // HOW (METHOD)</span>
+          <span class="ed-val" data-i18n="ed_how_val">Direct Senior Partnership, Zero Middlemen</span>
+        </div>
+        <div class="editorial-item">
+          <span class="ed-label" data-i18n="ed_what_label">03 // WHAT (OUTPUT)</span>
+          <span class="ed-val" data-i18n="ed_what_val">Heavy-Duty Web, Automations &amp; Acquisition</span>
+        </div>
+        <div class="editorial-item">
+          <span class="ed-label" data-i18n="ed_who_label">04 // FOR WHOM (AUDIENCE)</span>
+          <span class="ed-val" data-i18n="ed_who_val">Founders Demanding Permanent Results</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 01: MANIFESTO / PROCESS
+         ========================================== -->
+    <section id="manifesto" class="section-manifesto">
+      <div class="content-container">
+        <div class="section-header">
+          <span class="section-num" data-i18n="sec1_num">01 // MANIFESTO &amp; PROCESS</span>
+          <h2 class="section-title" data-i18n="sec1_title">Architectural Rigor Over Commercial Fluff.</h2>
+        </div>
+
+        <div class="manifesto-grid">
+          <div class="manifesto-lead">
+            <p class="lead-text" data-i18n="sec1_lead">
+              Most digital agencies sell fragile templates, bloated retainers, and vanity metrics that evaporate in months. At BRUTO, we solve problems definitively: engineered directly around your business, built with clean performance, and delivered with zero fluff.
+            </p>
+            <p class="body-text" data-i18n="sec1_body">
+              From our base in Portugal, we work as dedicated technical partners directly with business owners. No middlemen, no junior account managers—just heavy-duty digital execution tailored to your commercial reality.
+            </p>
+          </div>
+
+          <div class="pillars-list">
+            <div class="pillar-card">
+              <div class="pillar-num">01</div>
+              <h3 class="pillar-title" data-i18n="pillar1_title">SOLVE DEFINITIVELY</h3>
+              <p class="pillar-desc" data-i18n="pillar1_desc">
+                No temporary band-aids or fragile plugin stacks. We diagnose root operational bottlenecks and engineer solid, permanent digital solutions built to last.
+              </p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-num">02</div>
+              <h3 class="pillar-title" data-i18n="pillar2_title">TAILORED TO THE BUSINESS</h3>
+              <p class="pillar-desc" data-i18n="pillar2_desc">
+                No generic copy-paste templates. Whether it is a custom WordPress setup, a Shopify store, or n8n workflow automations, everything is built specifically around your operations.
+              </p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-num">03</div>
+              <h3 class="pillar-title" data-i18n="pillar3_title">ZERO COMMERCIAL FLUFF</h3>
+              <p class="pillar-desc" data-i18n="pillar3_desc">
+                We do not sell vanity redesigns or empty marketing buzzwords. We build fast, high-converting digital platforms and targeted acquisition engines that drive measurable commercial revenue.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- The AI Doctrine: Human Authority & Tool Distinction -->
+        <div class="ai-doctrine-banner">
+          <div class="doctrine-header">
+            <span class="doctrine-tag" data-i18n="ai_doctrine_tag">OPERATIONAL DOCTRINE // AI GOVERNANCE</span>
+            <span class="doctrine-badge" data-i18n="ai_doctrine_badge">HUMAN ACCOUNTABILITY</span>
+          </div>
+          <div class="doctrine-body">
+            <h3 class="doctrine-title" data-i18n="ai_doctrine_title">
+              We use AI to help, never to do the job. AI is a tool — we won't make the client a fool.
+            </h3>
+            <p class="doctrine-desc" data-i18n="ai_doctrine_desc">
+              If an agency simply copy-pastes AI outputs, clients could save that money and do it themselves. We use AI to accelerate research and speed up execution, but we never copy-paste results in or let software do the thinking for us. Every architecture, layout, line of code, and automation workflow is engineered, audited, and held accountable by senior human hands — zero generic prompts, zero client deception.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 02: CAPABILITIES
+         ========================================== -->
+    <section id="capabilities" class="section-capabilities">
+      <div class="content-container">
+        <div class="section-header">
+          <span class="section-num" data-i18n="sec2_num">02 // CAPABILITIES</span>
+          <h2 class="section-title" data-i18n="sec2_title">Engineered for uncompromising authority.</h2>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-item">
+            <h4 class="service-name"><span data-i18n="serv1_title">Custom Web Creation</span></h4>
+            <p class="service-desc" data-i18n="serv1_desc">
+              Clean, robust websites and e-commerce platforms. From bespoke corporate front-ends to high-conversion WordPress and Shopify stores built for blistering speed and mobile responsiveness.
+            </p>
+            <div class="service-tech-icons service-tech-icons-interactive">
+              <div class="tech-icon-wrapper tech-icon-wrapper-wordpress">
+                <svg class="tech-icon tech-icon-wordpress" viewBox="0 0 24 24" width="32" height="32" fill="#21759B" xmlns="http://www.w3.org/2000/svg" aria-label="Wordpress"><path d="M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.11m-7.981.105c.647-.03 1.232-.105 1.232-.105.582-.075.514-.93-.067-.899 0 0-1.755.135-2.88.135-1.064 0-2.85-.15-2.85-.15-.585-.03-.661.855-.075.885 0 0 .54.061 1.125.09l1.68 4.605-2.37 7.08L5.354 6.9c.649-.03 1.234-.1 1.234-.1.585-.075.516-.93-.065-.896 0 0-1.746.138-2.874.138-.2 0-.438-.008-.69-.015C4.911 3.15 8.235 1.215 12 1.215c2.809 0 5.365 1.072 7.286 2.833-.046-.003-.091-.009-.141-.009-1.06 0-1.812.923-1.812 1.914 0 .89.513 1.643 1.06 2.531.411.72.89 1.643.89 2.977 0 .915-.354 1.994-.821 3.479l-1.075 3.585-3.9-11.61.001.014zM12 22.784c-1.059 0-2.081-.153-3.048-.437l3.237-9.406 3.315 9.087c.024.053.05.101.078.149-1.12.393-2.325.609-3.582.609M1.211 12c0-1.564.336-3.05.935-4.39L7.29 21.709C3.694 19.96 1.212 16.271 1.211 12M12 0C5.385 0 0 5.385 0 12s5.385 12 12 12 12-5.385 12-12S18.615 0 12 0"/></svg>
+                <span class="tech-icon-tooltip">WordPress</span>
+              </div>
+              <div class="tech-icon-wrapper tech-icon-wrapper-shopify">
+                <svg class="tech-icon tech-icon-shopify" viewBox="0 0 24 24" width="32" height="32" fill="#7AB55C" xmlns="http://www.w3.org/2000/svg" aria-label="Shopify"><path d="M15.337 23.979l7.216-1.561s-2.604-17.613-2.625-17.73c-.018-.116-.114-.192-.211-.192s-1.929-.136-1.929-.136-1.275-1.274-1.439-1.411c-.045-.037-.075-.057-.121-.074l-.914 21.104h.023zM11.71 11.305s-.81-.424-1.774-.424c-1.447 0-1.504.906-1.504 1.141 0 1.232 3.24 1.715 3.24 4.629 0 2.295-1.44 3.76-3.406 3.76-2.354 0-3.54-1.465-3.54-1.465l.646-2.086s1.245 1.066 2.28 1.066c.675 0 .975-.545.975-.932 0-1.619-2.654-1.694-2.654-4.359-.034-2.237 1.571-4.416 4.827-4.416 1.257 0 1.875.361 1.875.361l-.945 2.715-.02.01zM11.17.83c.136 0 .271.038.405.135-.984.465-2.064 1.639-2.508 3.992-.656.213-1.293.405-1.889.578C7.697 3.75 8.951.84 11.17.84V.83zm1.235 2.949v.135c-.754.232-1.583.484-2.394.736.466-1.777 1.333-2.645 2.085-2.971.193.501.309 1.176.309 2.1zm.539-2.234c.694.074 1.141.867 1.429 1.755-.349.114-.735.231-1.158.366v-.252c0-.752-.096-1.371-.271-1.871v.002zm2.992 1.289c-.02 0-.06.021-.078.021s-.289.075-.714.21c-.423-1.233-1.176-2.37-2.508-2.37h-.115C12.135.209 11.669 0 11.265 0 8.159 0 6.675 3.877 6.21 5.846c-1.194.365-2.063.636-2.16.674-.675.213-.694.232-.772.87-.075.462-1.83 14.063-1.83 14.063L15.009 24l.927-21.166z"/></svg>
+                <span class="tech-icon-tooltip">Shopify</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <h4 class="service-name"><span data-i18n="serv2_title">Practical Business Automations</span></h4>
+            <p class="service-desc" data-i18n="serv2_desc">
+              Eliminating manual data entry, missed leads, and slow response times. Using n8n to connect your website forms, customer pipelines, CRMs, and internal team alerts.
+            </p>
+            <div class="service-tech-icons service-tech-icons-interactive">
+              <div class="tech-icon-wrapper tech-icon-wrapper-n8n">
+                <svg class="tech-icon tech-icon-n8n" viewBox="0 0 24 24" width="32" height="32" fill="#EA4B71" xmlns="http://www.w3.org/2000/svg" aria-label="N8n"><path d="M21.4737 5.6842c-1.1772 0-2.1663.8051-2.4468 1.8947h-2.8955c-1.235 0-2.289.893-2.492 2.111l-.1038.623a1.263 1.263 0 0 1-1.246 1.0555H11.289c-.2805-1.0896-1.2696-1.8947-2.4468-1.8947s-2.1663.8051-2.4467 1.8947H4.973c-.2805-1.0896-1.2696-1.8947-2.4468-1.8947C1.1311 9.4737 0 10.6047 0 12s1.131 2.5263 2.5263 2.5263c1.1772 0 2.1663-.8051 2.4468-1.8947h1.4223c.2804 1.0896 1.2696 1.8947 2.4467 1.8947 1.1772 0 2.1663-.8051 2.4468-1.8947h1.0008a1.263 1.263 0 0 1 1.2459 1.0555l.1038.623c.203 1.218 1.257 2.111 2.492 2.111h.3692c.2804 1.0895 1.2696 1.8947 2.4468 1.8947 1.3952 0 2.5263-1.131 2.5263-2.5263s-1.131-2.5263-2.5263-2.5263c-1.1772 0-2.1664.805-2.4468 1.8947h-.3692a1.263 1.263 0 0 1-1.246-1.0555l-.1037-.623A2.52 2.52 0 0 0 13.9607 12a2.52 2.52 0 0 0 .821-1.4794l.1038-.623a1.263 1.263 0 0 1 1.2459-1.0555h2.8955c.2805 1.0896 1.2696 1.8947 2.4468 1.8947 1.3952 0 2.5263-1.131 2.5263-2.5263s-1.131-2.5263-2.5263-2.5263m0 1.2632a1.263 1.263 0 0 1 1.2631 1.2631 1.263 1.263 0 0 1-1.2631 1.2632 1.263 1.263 0 0 1-1.2632-1.2632 1.263 1.263 0 0 1 1.2632-1.2631M2.5263 10.7368A1.263 1.263 0 0 1 3.7895 12a1.263 1.263 0 0 1-1.2632 1.2632A1.263 1.263 0 0 1 1.2632 12a1.263 1.263 0 0 1 1.2631-1.2632m6.3158 0A1.263 1.263 0 0 1 10.1053 12a1.263 1.263 0 0 1-1.2632 1.2632A1.263 1.263 0 0 1 7.579 12a1.263 1.263 0 0 1 1.2632-1.2632m10.1053 3.7895a1.263 1.263 0 0 1 1.2631 1.2632 1.263 1.263 0 0 1-1.2631 1.2631 1.263 1.263 0 0 1-1.2632-1.2631 1.263 1.263 0 0 1 1.2632-1.2632"/></svg>
+                <span class="tech-icon-tooltip">n8n</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <h4 class="service-name"><span data-i18n="serv3_title">Search &amp; Paid Acquisition</span></h4>
+            <p class="service-desc" data-i18n="serv3_desc">
+              Capturing real buyers through targeted Google Search ads, high-converting Meta &amp; TikTok campaigns, B2B LinkedIn pipeline, and Reddit community discovery—anchored by clean technical SEO and conversion tracking.
+            </p>
+            <div class="service-tech-icons service-tech-icons-interactive">
+              <div class="tech-icon-wrapper tech-icon-wrapper-googleads">
+                <svg class="tech-icon tech-icon-googleads" viewBox="0 0 252 226" width="32" height="32" xmlns="http://www.w3.org/2000/svg" aria-label="Google Ads">
+                  <path fill="#4285F4" d="M85.9,28.6c2.4-6.3,5.7-12.1,10.6-16.8c19.6-19.1,52-14.3,65.3,9.7c10,18.2,20.6,36,30.9,54 c17.2,29.9,34.6,59.8,51.6,89.8c14.3,25.1-1.2,56.8-29.6,61.1c-17.4,2.6-33.7-5.4-42.7-21c-15.1-26.3-30.3-52.6-45.4-78.8 c-0.3-0.6-0.7-1.1-1.1-1.6c-1.6-1.3-2.3-3.2-3.3-4.9c-6.7-11.8-13.6-23.5-20.3-35.2c-4.3-7.6-8.8-15.1-13.1-22.7 c-3.9-6.8-5.7-14.2-5.5-22C83.6,36.2,84.1,32.2,85.9,28.6"/>
+                  <path fill="#FBBC04" d="M85.9,28.6c-0.9,3.6-1.7,7.2-1.9,11c-0.3,8.4,1.8,16.2,6,23.5C101,82,112,101,122.9,120c1,1.7,1.8,3.4,2.8,5 c-6,10.4-12,20.7-18.1,31.1c-8.4,14.5-16.8,29.1-25.3,43.6c-0.4,0-0.5-0.2-0.6-0.5c-0.1-0.8,0.2-1.5,0.4-2.3 c4.1-15,0.7-28.3-9.6-39.7c-6.3-6.9-14.3-10.8-23.5-12.1c-12-1.7-22.6,1.4-32.1,8.9c-1.7,1.3-2.8,3.2-4.8,4.2 c-0.4,0-0.6-0.2-0.7-0.5c4.8-8.3,9.5-16.6,14.3-24.9C45.5,98.4,65.3,64,85.2,29.7C85.4,29.3,85.7,29,85.9,28.6"/>
+                  <path fill="#34A853" d="M11.8,158c1.9-1.7,3.7-3.5,5.7-5.1c24.3-19.2,60.8-5.3,66.1,25.1c1.3,7.3,0.6,14.3-1.6,21.3 c-0.1,0.6-0.2,1.1-0.4,1.7c-0.9,1.6-1.7,3.3-2.7,4.9c-8.9,14.7-22,22-39.2,20.9C20,225.4,4.5,210.6,1.8,191 c-1.3-9.5,0.6-18.4,5.5-26.6c1-1.8,2.2-3.4,3.3-5.2C11.1,158.8,10.9,158,11.8,158"/>
+                </svg>
+                <span class="tech-icon-tooltip">Google Ads</span>
+              </div>
+              <div class="tech-icon-wrapper tech-icon-wrapper-meta">
+                <svg class="tech-icon tech-icon-meta" viewBox="0 0 24 24" width="32" height="32" fill="#0467DF" xmlns="http://www.w3.org/2000/svg" aria-label="Meta"><path d="M6.915 4.03c-1.968 0-3.683 1.28-4.871 3.113C.704 9.208 0 11.883 0 14.449c0 .706.07 1.369.21 1.973a6.624 6.624 0 0 0 .265.86 5.297 5.297 0 0 0 .371.761c.696 1.159 1.818 1.927 3.593 1.927 1.497 0 2.633-.671 3.965-2.444.76-1.012 1.144-1.626 2.663-4.32l.756-1.339.186-.325c.061.1.121.196.183.3l2.152 3.595c.724 1.21 1.665 2.556 2.47 3.314 1.046.987 1.992 1.22 3.06 1.22 1.075 0 1.876-.355 2.455-.843a3.743 3.743 0 0 0 .81-.973c.542-.939.861-2.127.861-3.745 0-2.72-.681-5.357-2.084-7.45-1.282-1.912-2.957-2.93-4.716-2.93-1.047 0-2.088.467-3.053 1.308-.652.57-1.257 1.29-1.82 2.05-.69-.875-1.335-1.547-1.958-2.056-1.182-.966-2.315-1.303-3.454-1.303zm10.16 2.053c1.147 0 2.188.758 2.992 1.999 1.132 1.748 1.647 4.195 1.647 6.4 0 1.548-.368 2.9-1.839 2.9-.58 0-1.027-.23-1.664-1.004-.496-.601-1.343-1.878-2.832-4.358l-.617-1.028a44.908 44.908 0 0 0-1.255-1.98c.07-.109.141-.224.211-.327 1.12-1.667 2.118-2.602 3.358-2.602zm-10.201.553c1.265 0 2.058.791 2.675 1.446.307.327.737.871 1.234 1.579l-1.02 1.566c-.757 1.163-1.882 3.017-2.837 4.338-1.191 1.649-1.81 1.817-2.486 1.817-.524 0-1.038-.237-1.383-.794-.263-.426-.464-1.13-.464-2.046 0-2.221.63-4.535 1.66-6.088.454-.687.964-1.226 1.533-1.533a2.264 2.264 0 0 1 1.088-.285z"/></svg>
+                <span class="tech-icon-tooltip">Meta Ads</span>
+              </div>
+              <div class="tech-icon-wrapper tech-icon-wrapper-linkedin">
+                <svg class="tech-icon tech-icon-linkedin" viewBox="0 0 24 24" width="32" height="32" fill="#0A66C2" xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.6 1.6 0 0 0 1.6-1.6 1.6 1.6 0 0 0-3.2 0 1.6 1.6 0 0 0 1.6 1.6m1.4 9.74v-8.37H5.06v8.37h2.8z"/></svg>
+                <span class="tech-icon-tooltip">LinkedIn Ads</span>
+              </div>
+              <div class="tech-icon-wrapper tech-icon-wrapper-tiktok">
+                <svg class="tech-icon tech-icon-tiktok" viewBox="0 0 24 24" width="32" height="32" fill="#FE2C55" xmlns="http://www.w3.org/2000/svg" aria-label="TikTok"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                <span class="tech-icon-tooltip">TikTok Ads</span>
+              </div>
+              <div class="tech-icon-wrapper tech-icon-wrapper-reddit">
+                <svg class="tech-icon tech-icon-reddit" viewBox="0 0 24 24" width="32" height="32" fill="#FF4500" xmlns="http://www.w3.org/2000/svg" aria-label="Reddit"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
+                <span class="tech-icon-tooltip">Reddit Ads</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <h4 class="service-name"><span data-i18n="serv4_title">Brand Posture &amp; Social Media</span></h4>
+            <p class="service-desc" data-i18n="serv4_desc">
+              Authoritative visual presence, consistent brand guidelines, editorial calendar planning, and creative asset production tailored to your preferred level of involvement.
+            </p>
+            <div class="service-tech-icons service-tech-icons-interactive">
+              <div class="tech-icon-wrapper tech-icon-wrapper-instagram">
+                <svg class="tech-icon tech-icon-instagram" viewBox="0 0 24 24" width="32" height="32" fill="#FF0069" xmlns="http://www.w3.org/2000/svg" aria-label="Instagram"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>
+                <span class="tech-icon-tooltip">Instagram</span>
+              </div>
+              <div class="tech-icon-wrapper tech-icon-wrapper-facebook">
+                <svg class="tech-icon tech-icon-facebook" viewBox="0 0 24 24" width="32" height="32" fill="#0866FF" xmlns="http://www.w3.org/2000/svg" aria-label="Facebook"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
+                <span class="tech-icon-tooltip">Facebook</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 03: AREAS OF EXPERTISE (CAROUSEL)
+         ========================================== -->
+    <section id="expertise" class="section-expertise">
+      <div class="content-container">
+        <div class="section-header flex-header">
+          <div>
+            <span class="section-num" data-i18n="sec3_num">03 // AREAS OF EXPERTISE</span>
+            <h2 class="section-title" data-i18n="sec3_title">Platforms &amp; Technologies We Command</h2>
+            <p class="section-subtitle" data-i18n="sec3_subtitle">From fast custom front-ends and e-commerce stores to pragmatic n8n automations and data-driven acquisition, here is the machinery we deploy.</p>
+          </div>
+          <div class="carousel-nav-controls">
+            <div class="carousel-btn-group">
+              <button class="carousel-btn" id="carousel-prev" aria-label="Previous platform">←</button>
+              <button class="carousel-btn" id="carousel-next" aria-label="Next platform">→</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel Viewport & Cards Track -->
+        <div class="expertise-carousel-viewport" id="expertise-viewport">
+          <div class="expertise-track" id="expertise-track">
+            <!-- Card 01: WordPress & VIP -->
+            <article class="expertise-card" data-index="0">
+              <div class="card-bg-watermark card-bg-watermark-wipe" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="#21759B" xmlns="http://www.w3.org/2000/svg"><path d="M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.11m-7.981.105c.647-.03 1.232-.105 1.232-.105.582-.075.514-.93-.067-.899 0 0-1.755.135-2.88.135-1.064 0-2.85-.15-2.85-.15-.585-.03-.661.855-.075.885 0 0 .54.061 1.125.09l1.68 4.605-2.37 7.08L5.354 6.9c.649-.03 1.234-.1 1.234-.1.585-.075.516-.93-.065-.896 0 0-1.746.138-2.874.138-.2 0-.438-.008-.69-.015C4.911 3.15 8.235 1.215 12 1.215c2.809 0 5.365 1.072 7.286 2.833-.046-.003-.091-.009-.141-.009-1.06 0-1.812.923-1.812 1.914 0 .89.513 1.643 1.06 2.531.411.72.89 1.643.89 2.977 0 .915-.354 1.994-.821 3.479l-1.075 3.585-3.9-11.61.001.014zM12 22.784c-1.059 0-2.081-.153-3.048-.437l3.237-9.406 3.315 9.087c.024.053.05.101.078.149-1.12.393-2.325.609-3.582.609M1.211 12c0-1.564.336-3.05.935-4.39L7.29 21.709C3.694 19.96 1.212 16.271 1.211 12M12 0C5.385 0 0 5.385 0 12s5.385 12 12 12 12-5.385 12-12S18.615 0 12 0"/></svg>
+              </div>
+              <h3 class="card-title"><svg class="tech-icon tech-icon-wordpress" viewBox="0 0 24 24" width="22" height="22" fill="#21759B" xmlns="http://www.w3.org/2000/svg" aria-label="Wordpress"><path d="M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.11m-7.981.105c.647-.03 1.232-.105 1.232-.105.582-.075.514-.93-.067-.899 0 0-1.755.135-2.88.135-1.064 0-2.85-.15-2.85-.15-.585-.03-.661.855-.075.885 0 0 .54.061 1.125.09l1.68 4.605-2.37 7.08L5.354 6.9c.649-.03 1.234-.1 1.234-.1.585-.075.516-.93-.065-.896 0 0-1.746.138-2.874.138-.2 0-.438-.008-.69-.015C4.911 3.15 8.235 1.215 12 1.215c2.809 0 5.365 1.072 7.286 2.833-.046-.003-.091-.009-.141-.009-1.06 0-1.812.923-1.812 1.914 0 .89.513 1.643 1.06 2.531.411.72.89 1.643.89 2.977 0 .915-.354 1.994-.821 3.479l-1.075 3.585-3.9-11.61.001.014zM12 22.784c-1.059 0-2.081-.153-3.048-.437l3.237-9.406 3.315 9.087c.024.053.05.101.078.149-1.12.393-2.325.609-3.582.609M1.211 12c0-1.564.336-3.05.935-4.39L7.29 21.709C3.694 19.96 1.212 16.271 1.211 12M12 0C5.385 0 0 5.385 0 12s5.385 12 12 12 12-5.385 12-12S18.615 0 12 0"/></svg> <span data-i18n="card1_title">WordPress &amp; VIP</span></h3>
+              <p class="card-tagline" data-i18n="card1_tagline">Enterprise publishing with architectural performance &amp; zero bloat.</p>
+              <p class="card-desc" data-i18n="card1_desc">
+                Clean front-end engineering, bespoke Gutenberg block suites, headless architecture, and Core Web Vitals tuned for sub-second speed.
+              </p>
+              <div class="card-features">
+                <div class="feature-item"><span>+</span> <span data-i18n="card1_f1">Custom Block Suites &amp; FSE Themes</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card1_f2">Headless &amp; Decoupled Backends</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card1_f3">VIP &amp; High-Traffic Architecture</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card1_f4">Sub-second Speed &amp; Zero Bloat</span></div>
+              </div>
+              <div class="card-footer">
+                <a href="./wordpress/" class="card-action">
+                  <div class="card-action-fill" aria-hidden="true">
+                    <svg class="card-action-bg-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <circle class="wp-bg-circle" cx="12" cy="12" r="11" />
+                      <path class="wp-bg-glyph" d="M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.11m-7.981.105c.647-.03 1.232-.105 1.232-.105.582-.075.514-.93-.067-.899 0 0-1.755.135-2.88.135-1.064 0-2.85-.15-2.85-.15-.585-.03-.661.855-.075.885 0 0 .54.061 1.125.09l1.68 4.605-2.37 7.08L5.354 6.9c.649-.03 1.234-.1 1.234-.1.585-.075.516-.93-.065-.896 0 0-1.746.138-2.874.138-.2 0-.438-.008-.69-.015C4.911 3.15 8.235 1.215 12 1.215c2.809 0 5.365 1.072 7.286 2.833-.046-.003-.091-.009-.141-.009-1.06 0-1.812.923-1.812 1.914 0 .89.513 1.643 1.06 2.531.411.72.89 1.643.89 2.977 0 .915-.354 1.994-.821 3.479l-1.075 3.585-3.9-11.61.001.014zM12 22.784c-1.059 0-2.081-.153-3.048-.437l3.237-9.406 3.315 9.087c.024.053.05.101.078.149-1.12.393-2.325.609-3.582.609M1.211 12c0-1.564.336-3.05.935-4.39L7.29 21.709C3.694 19.96 1.212 16.271 1.211 12M12 0C5.385 0 0 5.385 0 12s5.385 12 12 12 12-5.385 12-12S18.615 0 12 0"/>
+                    </svg>
+                  </div>
+                  <span class="card-action-text" data-i18n="card_dossier_btn">DEEP DIVE DOSSIER</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Card 02: Shopify Plus & Stores -->
+            <article class="expertise-card" data-index="1">
+              <div class="card-bg-watermark card-bg-watermark-wipe" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="#7AB55C" xmlns="http://www.w3.org/2000/svg"><path d="M15.337 23.979l7.216-1.561s-2.604-17.613-2.625-17.73c-.018-.116-.114-.192-.211-.192s-1.929-.136-1.929-.136-1.275-1.274-1.439-1.411c-.045-.037-.075-.057-.121-.074l-.914 21.104h.023zM11.71 11.305s-.81-.424-1.774-.424c-1.447 0-1.504.906-1.504 1.141 0 1.232 3.24 1.715 3.24 4.629 0 2.295-1.44 3.76-3.406 3.76-2.354 0-3.54-1.465-3.54-1.465l.646-2.086s1.245 1.066 2.28 1.066c.675 0 .975-.545.975-.932 0-1.619-2.654-1.694-2.654-4.359-.034-2.237 1.571-4.416 4.827-4.416 1.257 0 1.875.361 1.875.361l-.945 2.715-.02.01zM11.17.83c.136 0 .271.038.405.135-.984.465-2.064 1.639-2.508 3.992-.656.213-1.293.405-1.889.578C7.697 3.75 8.951.84 11.17.84V.83zm1.235 2.949v.135c-.754.232-1.583.484-2.394.736.466-1.777 1.333-2.645 2.085-2.971.193.501.309 1.176.309 2.1zm.539-2.234c.694.074 1.141.867 1.429 1.755-.349.114-.735.231-1.158.366v-.252c0-.752-.096-1.371-.271-1.871v.002zm2.992 1.289c-.02 0-.06.021-.078.021s-.289.075-.714.21c-.423-1.233-1.176-2.37-2.508-2.37h-.115C12.135.209 11.669 0 11.265 0 8.159 0 6.675 3.877 6.21 5.846c-1.194.365-2.063.636-2.16.674-.675.213-.694.232-.772.87-.075.462-1.83 14.063-1.83 14.063L15.009 24l.927-21.166z"/></svg>
+              </div>
+              <h3 class="card-title"><svg class="tech-icon tech-icon-shopify" viewBox="0 0 24 24" width="22" height="22" fill="#7AB55C" xmlns="http://www.w3.org/2000/svg" aria-label="Shopify"><path d="M15.337 23.979l7.216-1.561s-2.604-17.613-2.625-17.73c-.018-.116-.114-.192-.211-.192s-1.929-.136-1.929-.136-1.275-1.274-1.439-1.411c-.045-.037-.075-.057-.121-.074l-.914 21.104h.023zM11.71 11.305s-.81-.424-1.774-.424c-1.447 0-1.504.906-1.504 1.141 0 1.232 3.24 1.715 3.24 4.629 0 2.295-1.44 3.76-3.406 3.76-2.354 0-3.54-1.465-3.54-1.465l.646-2.086s1.245 1.066 2.28 1.066c.675 0 .975-.545.975-.932 0-1.619-2.654-1.694-2.654-4.359-.034-2.237 1.571-4.416 4.827-4.416 1.257 0 1.875.361 1.875.361l-.945 2.715-.02.01zM11.17.83c.136 0 .271.038.405.135-.984.465-2.064 1.639-2.508 3.992-.656.213-1.293.405-1.889.578C7.697 3.75 8.951.84 11.17.84V.83zm1.235 2.949v.135c-.754.232-1.583.484-2.394.736.466-1.777 1.333-2.645 2.085-2.971.193.501.309 1.176.309 2.1zm.539-2.234c.694.074 1.141.867 1.429 1.755-.349.114-.735.231-1.158.366v-.252c0-.752-.096-1.371-.271-1.871v.002zm2.992 1.289c-.02 0-.06.021-.078.021s-.289.075-.714.21c-.423-1.233-1.176-2.37-2.508-2.37h-.115C12.135.209 11.669 0 11.265 0 8.159 0 6.675 3.877 6.21 5.846c-1.194.365-2.063.636-2.16.674-.675.213-.694.232-.772.87-.075.462-1.83 14.063-1.83 14.063L15.009 24l.927-21.166z"/></svg> <span data-i18n="card2_title">Shopify Plus &amp; Stores</span></h3>
+              <p class="card-tagline" data-i18n="card2_tagline">High-conversion luxury commerce &amp; bespoke store architecture.</p>
+              <p class="card-desc" data-i18n="card2_desc">
+                Custom Liquid sections, native checkout extensibility, high-impact product presentation, fast mobile checkout, and ERP/CRM integrations.
+              </p>
+              <div class="card-features">
+                <div class="feature-item"><span>+</span> <span data-i18n="card2_f1">Bespoke Liquid Theme Architecture</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card2_f2">Custom Checkout Extensibility UI</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card2_f3">Headless Hydrogen &amp; Global Edge</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card2_f4">ERP, CRM &amp; 3PL Logistics Sync</span></div>
+              </div>
+              <div class="card-footer">
+                <a href="./shopify/" class="card-action">
+                  <div class="card-action-fill" aria-hidden="true">
+                    <svg class="card-action-bg-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path fill="#ffffff" d="M15.337 23.979l7.216-1.561s-2.604-17.613-2.625-17.73c-.018-.116-.114-.192-.211-.192s-1.929-.136-1.929-.136-1.275-1.274-1.439-1.411c-.045-.037-.075-.057-.121-.074l-.914 21.104h.023zM11.71 11.305s-.81-.424-1.774-.424c-1.447 0-1.504.906-1.504 1.141 0 1.232 3.24 1.715 3.24 4.629 0 2.295-1.44 3.76-3.406 3.76-2.354 0-3.54-1.465-3.54-1.465l.646-2.086s1.245 1.066 2.28 1.066c.675 0 .975-.545.975-.932 0-1.619-2.654-1.694-2.654-4.359-.034-2.237 1.571-4.416 4.827-4.416 1.257 0 1.875.361 1.875.361l-.945 2.715-.02.01zM11.17.83c.136 0 .271.038.405.135-.984.465-2.064 1.639-2.508 3.992-.656.213-1.293.405-1.889.578C7.697 3.75 8.951.84 11.17.84V.83zm1.235 2.949v.135c-.754.232-1.583.484-2.394.736.466-1.777 1.333-2.645 2.085-2.971.193.501.309 1.176.309 2.1zm.539-2.234c.694.074 1.141.867 1.429 1.755-.349.114-.735.231-1.158.366v-.252c0-.752-.096-1.371-.271-1.871v.002zm2.992 1.289c-.02 0-.06.021-.078.021s-.289.075-.714.21c-.423-1.233-1.176-2.37-2.508-2.37h-.115C12.135.209 11.669 0 11.265 0 8.159 0 6.675 3.877 6.21 5.846c-1.194.365-2.063.636-2.16.674-.675.213-.694.232-.772.87-.075.462-1.83 14.063-1.83 14.063L15.009 24l.927-21.166z"/>
+                    </svg>
+                  </div>
+                  <span class="card-action-text" data-i18n="card_dossier_btn">DEEP DIVE DOSSIER</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Card 03: n8n Automation Engine -->
+            <article class="expertise-card" data-index="2">
+              <div class="card-bg-watermark card-bg-watermark-wipe" aria-hidden="true">
+                <svg viewBox="0 5.6842 24 12.6316" fill="#EA4B71" xmlns="http://www.w3.org/2000/svg"><path d="M21.4737 5.6842c-1.1772 0-2.1663.8051-2.4468 1.8947h-2.8955c-1.235 0-2.289.893-2.492 2.111l-.1038.623a1.263 1.263 0 0 1-1.246 1.0555H11.289c-.2805-1.0896-1.2696-1.8947-2.4468-1.8947s-2.1663.8051-2.4467 1.8947H4.973c-.2805-1.0896-1.2696-1.8947-2.4468-1.8947C1.1311 9.4737 0 10.6047 0 12s1.131 2.5263 2.5263 2.5263c1.1772 0 2.1663-.8051 2.4468-1.8947h1.4223c.2804 1.0896 1.2696 1.8947 2.4467 1.8947 1.1772 0 2.1663-.8051 2.4468-1.8947h1.0008a1.263 1.263 0 0 1 1.2459 1.0555l.1038.623c.203 1.218 1.257 2.111 2.492 2.111h.3692c.2804 1.0895 1.2696 1.8947 2.4468 1.8947 1.3952 0 2.5263-1.131 2.5263-2.5263s-1.131-2.5263-2.5263-2.5263c-1.1772 0-2.1664.805-2.4468 1.8947h-.3692a1.263 1.263 0 0 1-1.246-1.0555l-.1037-.623A2.52 2.52 0 0 0 13.9607 12a2.52 2.52 0 0 0 .821-1.4794l.1038-.623a1.263 1.263 0 0 1 1.2459-1.0555h2.8955c.2805 1.0896 1.2696 1.8947 2.4468 1.8947 1.3952 0 2.5263-1.131 2.5263-2.5263s-1.131-2.5263-2.5263-2.5263m0 1.2632a1.263 1.263 0 0 1 1.2631 1.2631 1.263 1.263 0 0 1-1.2631 1.2632 1.263 1.263 0 0 1-1.2632-1.2632 1.263 1.263 0 0 1 1.2632-1.2631M2.5263 10.7368A1.263 1.263 0 0 1 3.7895 12a1.263 1.263 0 0 1-1.2632 1.2632A1.263 1.263 0 0 1 1.2632 12a1.263 1.263 0 0 1 1.2631-1.2632m6.3158 0A1.263 1.263 0 0 1 10.1053 12a1.263 1.263 0 0 1-1.2632 1.2632A1.263 1.263 0 0 1 7.579 12a1.263 1.263 0 0 1 1.2632-1.2632m10.1053 3.7895a1.263 1.263 0 0 1 1.2631 1.2632 1.263 1.263 0 0 1-1.2631 1.2631 1.263 1.263 0 0 1-1.2632-1.2631 1.263 1.263 0 0 1 1.2632-1.2632"/></svg>
+              </div>
+              <h3 class="card-title"><svg class="tech-icon tech-icon-n8n" viewBox="0 0 24 24" width="22" height="22" fill="#EA4B71" xmlns="http://www.w3.org/2000/svg" aria-label="N8n"><path d="M21.4737 5.6842c-1.1772 0-2.1663.8051-2.4468 1.8947h-2.8955c-1.235 0-2.289.893-2.492 2.111l-.1038.623a1.263 1.263 0 0 1-1.246 1.0555H11.289c-.2805-1.0896-1.2696-1.8947-2.4468-1.8947s-2.1663.8051-2.4467 1.8947H4.973c-.2805-1.0896-1.2696-1.8947-2.4468-1.8947C1.1311 9.4737 0 10.6047 0 12s1.131 2.5263 2.5263 2.5263c1.1772 0 2.1663-.8051 2.4468-1.8947h1.4223c.2804 1.0896 1.2696 1.8947 2.4467 1.8947 1.1772 0 2.1663-.8051 2.4468-1.8947h1.0008a1.263 1.263 0 0 1 1.2459 1.0555l.1038.623c.203 1.218 1.257 2.111 2.492 2.111h.3692c.2804 1.0895 1.2696 1.8947 2.4468 1.8947 1.3952 0 2.5263-1.131 2.5263-2.5263s-1.131-2.5263-2.5263-2.5263c-1.1772 0-2.1664.805-2.4468 1.8947h-.3692a1.263 1.263 0 0 1-1.246-1.0555l-.1037-.623A2.52 2.52 0 0 0 13.9607 12a2.52 2.52 0 0 0 .821-1.4794l.1038-.623a1.263 1.263 0 0 1 1.2459-1.0555h2.8955c.2805 1.0896 1.2696 1.8947 2.4468 1.8947 1.3952 0 2.5263-1.131 2.5263-2.5263s-1.131-2.5263-2.5263-2.5263m0 1.2632a1.263 1.263 0 0 1 1.2631 1.2631 1.263 1.263 0 0 1-1.2631 1.2632 1.263 1.263 0 0 1-1.2632-1.2632 1.263 1.263 0 0 1 1.2632-1.2631M2.5263 10.7368A1.263 1.263 0 0 1 3.7895 12a1.263 1.263 0 0 1-1.2632 1.2632A1.263 1.263 0 0 1 1.2632 12a1.263 1.263 0 0 1 1.2631-1.2632m6.3158 0A1.263 1.263 0 0 1 10.1053 12a1.263 1.263 0 0 1-1.2632 1.2632A1.263 1.263 0 0 1 7.579 12a1.263 1.263 0 0 1 1.2632-1.2632m10.1053 3.7895a1.263 1.263 0 0 1 1.2631 1.2632 1.263 1.263 0 0 1-1.2631 1.2631 1.263 1.263 0 0 1-1.2632-1.2631 1.263 1.263 0 0 1 1.2632-1.2632"/></svg> <span data-i18n="card3_title">n8n Automation Engine</span></h3>
+              <p class="card-tagline" data-i18n="card3_tagline">Eliminating manual friction, lost leads, and slow response times.</p>
+              <p class="card-desc" data-i18n="card3_desc">
+                Pragmatic workflow pipelines: instant web form routing to WhatsApp/Slack, automatic spreadsheet and CRM synchronization, and automated customer notifications.
+              </p>
+              <div class="card-features">
+                <div class="feature-item"><span>+</span> <span data-i18n="card3_f1">Instant Lead Capture &amp; Team Alerts</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card3_f2">Spreadsheet &amp; CRM Synchronization</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card3_f3">E-Commerce &amp; Order Fulfillment Pipelines</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card3_f4">Zero Monthly Per-Task Platform Fees</span></div>
+              </div>
+              <div class="card-footer">
+                <a href="./n8n/" class="card-action">
+                  <div class="card-action-fill" aria-hidden="true">
+                    <svg class="card-action-bg-svg" viewBox="0 5.6842 24 12.6316" xmlns="http://www.w3.org/2000/svg">
+                      <path fill="#ffffff" d="M21.4737 5.6842c-1.1772 0-2.1663.8051-2.4468 1.8947h-2.8955c-1.235 0-2.289.893-2.492 2.111l-.1038.623a1.263 1.263 0 0 1-1.246 1.0555H11.289c-.2805-1.0896-1.2696-1.8947-2.4468-1.8947s-2.1663.8051-2.4467 1.8947H4.973c-.2805-1.0896-1.2696-1.8947-2.4468-1.8947C1.1311 9.4737 0 10.6047 0 12s1.131 2.5263 2.5263 2.5263c1.1772 0 2.1663-.8051 2.4468-1.8947h1.4223c.2804 1.0896 1.2696 1.8947 2.4467 1.8947 1.1772 0 2.1663-.8051 2.4468-1.8947h1.0008a1.263 1.263 0 0 1 1.2459 1.0555l.1038.623c.203 1.218 1.257 2.111 2.492 2.111h.3692c.2804 1.0895 1.2696 1.8947 2.4468 1.8947 1.3952 0 2.5263-1.131 2.5263-2.5263s-1.131-2.5263-2.5263-2.5263c-1.1772 0-2.1664.805-2.4468 1.8947h-.3692a1.263 1.263 0 0 1-1.246-1.0555l-.1037-.623A2.52 2.52 0 0 0 13.9607 12a2.52 2.52 0 0 0 .821-1.4794l.1038-.623a1.263 1.263 0 0 1 1.2459-1.0555h2.8955c.2805 1.0896 1.2696 1.8947 2.4468 1.8947 1.3952 0 2.5263-1.131 2.5263-2.5263s-1.131-2.5263-2.5263-2.5263m0 1.2632a1.263 1.263 0 0 1 1.2631 1.2631 1.263 1.263 0 0 1-1.2631 1.2632 1.263 1.263 0 0 1-1.2632-1.2632 1.263 1.263 0 0 1 1.2632-1.2631M2.5263 10.7368A1.263 1.263 0 0 1 3.7895 12a1.263 1.263 0 0 1-1.2632 1.2632A1.263 1.263 0 0 1 1.2632 12a1.263 1.263 0 0 1 1.2631-1.2632m6.3158 0A1.263 1.263 0 0 1 10.1053 12a1.263 1.263 0 0 1-1.2632 1.2632A1.263 1.263 0 0 1 7.579 12a1.263 1.263 0 0 1 1.2632-1.2632m10.1053 3.7895a1.263 1.263 0 0 1 1.2631 1.2632 1.263 1.263 0 0 1-1.2631 1.2631 1.263 1.263 0 0 1-1.2632-1.2631 1.263 1.263 0 0 1 1.2632-1.2632"/>
+                    </svg>
+                  </div>
+                  <span class="card-action-text" data-i18n="card_dossier_btn">DEEP DIVE DOSSIER</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Card 04: Google Ads (Search & Intent) -->
+            <article class="expertise-card" data-index="3">
+              <div class="card-bg-watermark card-bg-watermark-wipe" aria-hidden="true">
+                <svg viewBox="0 0 252 226" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="#4285F4" d="M85.9,28.6c2.4-6.3,5.7-12.1,10.6-16.8c19.6-19.1,52-14.3,65.3,9.7c10,18.2,20.6,36,30.9,54 c17.2,29.9,34.6,59.8,51.6,89.8c14.3,25.1-1.2,56.8-29.6,61.1c-17.4,2.6-33.7-5.4-42.7-21c-15.1-26.3-30.3-52.6-45.4-78.8 c-0.3-0.6-0.7-1.1-1.1-1.6c-1.6-1.3-2.3-3.2-3.3-4.9c-6.7-11.8-13.6-23.5-20.3-35.2c-4.3-7.6-8.8-15.1-13.1-22.7 c-3.9-6.8-5.7-14.2-5.5-22C83.6,36.2,84.1,32.2,85.9,28.6"/>
+                  <path fill="#FBBC04" d="M85.9,28.6c-0.9,3.6-1.7,7.2-1.9,11c-0.3,8.4,1.8,16.2,6,23.5C101,82,112,101,122.9,120c1,1.7,1.8,3.4,2.8,5 c-6,10.4-12,20.7-18.1,31.1c-8.4,14.5-16.8,29.1-25.3,43.6c-0.4,0-0.5-0.2-0.6-0.5c-0.1-0.8,0.2-1.5,0.4-2.3 c4.1-15,0.7-28.3-9.6-39.7c-6.3-6.9-14.3-10.8-23.5-12.1c-12-1.7-22.6,1.4-32.1,8.9c-1.7,1.3-2.8,3.2-4.8,4.2 c-0.4,0-0.6-0.2-0.7-0.5c4.8-8.3,9.5-16.6,14.3-24.9C45.5,98.4,65.3,64,85.2,29.7C85.4,29.3,85.7,29,85.9,28.6"/>
+                  <path fill="#34A853" d="M11.8,158c1.9-1.7,3.7-3.5,5.7-5.1c24.3-19.2,60.8-5.3,66.1,25.1c1.3,7.3,0.6,14.3-1.6,21.3 c-0.1,0.6-0.2,1.1-0.4,1.7c-0.9,1.6-1.7,3.3-2.7,4.9c-8.9,14.7-22,22-39.2,20.9C20,225.4,4.5,210.6,1.8,191 c-1.3-9.5,0.6-18.4,5.5-26.6c1-1.8,2.2-3.4,3.3-5.2C11.1,158.8,10.9,158,11.8,158"/>
+                </svg>
+              </div>
+              <h3 class="card-title"><svg class="tech-icon tech-icon-googleads" viewBox="0 0 252 226" width="22" height="22" xmlns="http://www.w3.org/2000/svg" aria-label="Google Ads">
+  <path fill="#4285F4" d="M85.9,28.6c2.4-6.3,5.7-12.1,10.6-16.8c19.6-19.1,52-14.3,65.3,9.7c10,18.2,20.6,36,30.9,54
+		c17.2,29.9,34.6,59.8,51.6,89.8c14.3,25.1-1.2,56.8-29.6,61.1c-17.4,2.6-33.7-5.4-42.7-21c-15.1-26.3-30.3-52.6-45.4-78.8
+		c-0.3-0.6-0.7-1.1-1.1-1.6c-1.6-1.3-2.3-3.2-3.3-4.9c-6.7-11.8-13.6-23.5-20.3-35.2c-4.3-7.6-8.8-15.1-13.1-22.7
+		c-3.9-6.8-5.7-14.2-5.5-22C83.6,36.2,84.1,32.2,85.9,28.6"/>
+  <path fill="#FBBC04" d="M85.9,28.6c-0.9,3.6-1.7,7.2-1.9,11c-0.3,8.4,1.8,16.2,6,23.5C101,82,112,101,122.9,120c1,1.7,1.8,3.4,2.8,5
+		c-6,10.4-12,20.7-18.1,31.1c-8.4,14.5-16.8,29.1-25.3,43.6c-0.4,0-0.5-0.2-0.6-0.5c-0.1-0.8,0.2-1.5,0.4-2.3
+		c4.1-15,0.7-28.3-9.6-39.7c-6.3-6.9-14.3-10.8-23.5-12.1c-12-1.7-22.6,1.4-32.1,8.9c-1.7,1.3-2.8,3.2-4.8,4.2
+		c-0.4,0-0.6-0.2-0.7-0.5c4.8-8.3,9.5-16.6,14.3-24.9C45.5,98.4,65.3,64,85.2,29.7C85.4,29.3,85.7,29,85.9,28.6"/>
+  <path fill="#34A853" d="M11.8,158c1.9-1.7,3.7-3.5,5.7-5.1c24.3-19.2,60.8-5.3,66.1,25.1c1.3,7.3,0.6,14.3-1.6,21.3
+		c-0.1,0.6-0.2,1.1-0.4,1.7c-0.9,1.6-1.7,3.3-2.7,4.9c-8.9,14.7-22,22-39.2,20.9C20,225.4,4.5,210.6,1.8,191
+		c-1.3-9.5,0.6-18.4,5.5-26.6c1-1.8,2.2-3.4,3.3-5.2C11.1,158.8,10.9,158,11.8,158"/>
+</svg> <span data-i18n="card4_title">Google Ads (Search &amp; Intent)</span></h3>
+              <p class="card-tagline" data-i18n="card4_tagline">High-intent commercial search funnels capturing active buyers.</p>
+              <p class="card-desc" data-i18n="card4_desc">
+                Targeted advertising engineered to solve business revenue needs: Google Search ads capturing active buyer demand with negative keyword moats and conversion tracking.
+              </p>
+              <div class="card-features">
+                <div class="feature-item"><span>+</span> <span data-i18n="card4_f1">Commercial Keyword Harvesting</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card4_f2">Negative Keyword Protection Moats</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card4_f3">Landing Page Alignment &amp; Message Match</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card4_f4">Conversion Tracking &amp; Real ROAS</span></div>
+              </div>
+              <div class="card-footer">
+                <a href="./google-ads/" class="card-action">
+                  <div class="card-action-fill" aria-hidden="true">
+                    <svg class="card-action-bg-svg" viewBox="0 0 252 226" xmlns="http://www.w3.org/2000/svg">
+                      <path fill="#ffffff" d="M85.9,28.6c2.4-6.3,5.7-12.1,10.6-16.8c19.6-19.1,52-14.3,65.3,9.7c10,18.2,20.6,36,30.9,54 c17.2,29.9,34.6,59.8,51.6,89.8c14.3,25.1-1.2,56.8-29.6,61.1c-17.4,2.6-33.7-5.4-42.7-21c-15.1-26.3-30.3-52.6-45.4-78.8 c-0.3-0.6-0.7-1.1-1.1-1.6c-1.6-1.3-2.3-3.2-3.3-4.9c-6.7-11.8-13.6-23.5-20.3-35.2c-4.3-7.6-8.8-15.1-13.1-22.7 c-3.9-6.8-5.7-14.2-5.5-22C83.6,36.2,84.1,32.2,85.9,28.6"/>
+                      <path fill="#ffffff" d="M85.9,28.6c-0.9,3.6-1.7,7.2-1.9,11c-0.3,8.4,1.8,16.2,6,23.5C101,82,112,101,122.9,120c1,1.7,1.8,3.4,2.8,5 c-6,10.4-12,20.7-18.1,31.1c-8.4,14.5-16.8,29.1-25.3,43.6c-0.4,0-0.5-0.2-0.6-0.5c-0.1-0.8,0.2-1.5,0.4-2.3 c4.1-15,0.7-28.3-9.6-39.7c-6.3-6.9-14.3-10.8-23.5-12.1c-12-1.7-22.6,1.4-32.1,8.9c-1.7,1.3-2.8,3.2-4.8,4.2 c-0.4,0-0.6-0.2-0.7-0.5c4.8-8.3,9.5-16.6,14.3-24.9C45.5,98.4,65.3,64,85.2,29.7C85.4,29.3,85.7,29,85.9,28.6"/>
+                      <path fill="#ffffff" d="M11.8,158c1.9-1.7,3.7-3.5,5.7-5.1c24.3-19.2,60.8-5.3,66.1,25.1c1.3,7.3,0.6,14.3-1.6,21.3 c-0.1,0.6-0.2,1.1-0.4,1.7c-0.9,1.6-1.7,3.3-2.7,4.9c-8.9,14.7-22,22-39.2,20.9C20,225.4,4.5,210.6,1.8,191 c-1.3-9.5,0.6-18.4,5.5-26.6c1-1.8,2.2-3.4,3.3-5.2C11.1,158.8,10.9,158,11.8,158"/>
+                    </svg>
+                  </div>
+                  <span class="card-action-text" data-i18n="card_dossier_btn">DEEP DIVE DOSSIER</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Card 05: Meta Ads (Paid Social) -->
+            <article class="expertise-card" data-index="4">
+              <div class="card-bg-watermark card-bg-watermark-wipe" aria-hidden="true">
+                <svg viewBox="0 4.03 24 15.92" fill="#0467DF" xmlns="http://www.w3.org/2000/svg"><path d="M6.915 4.03c-1.968 0-3.683 1.28-4.871 3.113C.704 9.208 0 11.883 0 14.449c0 .706.07 1.369.21 1.973a6.624 6.624 0 0 0 .265.86 5.297 5.297 0 0 0 .371.761c.696 1.159 1.818 1.927 3.593 1.927 1.497 0 2.633-.671 3.965-2.444.76-1.012 1.144-1.626 2.663-4.32l.756-1.339.186-.325c.061.1.121.196.183.3l2.152 3.595c.724 1.21 1.665 2.556 2.47 3.314 1.046.987 1.992 1.22 3.06 1.22 1.075 0 1.876-.355 2.455-.843a3.743 3.743 0 0 0 .81-.973c.542-.939.861-2.127.861-3.745 0-2.72-.681-5.357-2.084-7.45-1.282-1.912-2.957-2.93-4.716-2.93-1.047 0-2.088.467-3.053 1.308-.652.57-1.257 1.29-1.82 2.05-.69-.875-1.335-1.547-1.958-2.056-1.182-.966-2.315-1.303-3.454-1.303zm10.16 2.053c1.147 0 2.188.758 2.992 1.999 1.132 1.748 1.647 4.195 1.647 6.4 0 1.548-.368 2.9-1.839 2.9-.58 0-1.027-.23-1.664-1.004-.496-.601-1.343-1.878-2.832-4.358l-.617-1.028a44.908 44.908 0 0 0-1.255-1.98c.07-.109.141-.224.211-.327 1.12-1.667 2.118-2.602 3.358-2.602zm-10.201.553c1.265 0 2.058.791 2.675 1.446.307.327.737.871 1.234 1.579l-1.02 1.566c-.757 1.163-1.882 3.017-2.837 4.338-1.191 1.649-1.81 1.817-2.486 1.817-.524 0-1.038-.237-1.383-.794-.263-.426-.464-1.13-.464-2.046 0-2.221.63-4.535 1.66-6.088.454-.687.964-1.226 1.533-1.533a2.264 2.264 0 0 1 1.088-.285z"/></svg>
+              </div>
+              <h3 class="card-title"><svg class="tech-icon tech-icon-meta" viewBox="0 0 24 24" width="22" height="22" fill="#0467DF" xmlns="http://www.w3.org/2000/svg" aria-label="Meta"><path d="M6.915 4.03c-1.968 0-3.683 1.28-4.871 3.113C.704 9.208 0 11.883 0 14.449c0 .706.07 1.369.21 1.973a6.624 6.624 0 0 0 .265.86 5.297 5.297 0 0 0 .371.761c.696 1.159 1.818 1.927 3.593 1.927 1.497 0 2.633-.671 3.965-2.444.76-1.012 1.144-1.626 2.663-4.32l.756-1.339.186-.325c.061.1.121.196.183.3l2.152 3.595c.724 1.21 1.665 2.556 2.47 3.314 1.046.987 1.992 1.22 3.06 1.22 1.075 0 1.876-.355 2.455-.843a3.743 3.743 0 0 0 .81-.973c.542-.939.861-2.127.861-3.745 0-2.72-.681-5.357-2.084-7.45-1.282-1.912-2.957-2.93-4.716-2.93-1.047 0-2.088.467-3.053 1.308-.652.57-1.257 1.29-1.82 2.05-.69-.875-1.335-1.547-1.958-2.056-1.182-.966-2.315-1.303-3.454-1.303zm10.16 2.053c1.147 0 2.188.758 2.992 1.999 1.132 1.748 1.647 4.195 1.647 6.4 0 1.548-.368 2.9-1.839 2.9-.58 0-1.027-.23-1.664-1.004-.496-.601-1.343-1.878-2.832-4.358l-.617-1.028a44.908 44.908 0 0 0-1.255-1.98c.07-.109.141-.224.211-.327 1.12-1.667 2.118-2.602 3.358-2.602zm-10.201.553c1.265 0 2.058.791 2.675 1.446.307.327.737.871 1.234 1.579l-1.02 1.566c-.757 1.163-1.882 3.017-2.837 4.338-1.191 1.649-1.81 1.817-2.486 1.817-.524 0-1.038-.237-1.383-.794-.263-.426-.464-1.13-.464-2.046 0-2.221.63-4.535 1.66-6.088.454-.687.964-1.226 1.533-1.533a2.264 2.264 0 0 1 1.088-.285z"/></svg> <span data-i18n="card5_title">Meta Ads (Paid Social)</span></h3>
+              <p class="card-tagline" data-i18n="card5_tagline">Direct-response creative architecture that stops scrolling and converts.</p>
+              <p class="card-desc" data-i18n="card5_desc">
+                Paid social campaigns designed to generate warm customer inquiries: thumb-stopping creative visuals, persuasive problem-solving copy, and server-side Conversions API.
+              </p>
+              <div class="card-features">
+                <div class="feature-item"><span>+</span> <span data-i18n="card5_f1">Thumb-Stopping Creative Architecture</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card5_f2">Direct-Response Persuasive Copy</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card5_f3">Conversions API (CAPI) Server Tracking</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card5_f4">Retargeting &amp; Audience Moats</span></div>
+              </div>
+              <div class="card-footer">
+                <a href="./meta-ads/" class="card-action">
+                  <div class="card-action-fill" aria-hidden="true">
+                    <svg class="card-action-bg-svg" viewBox="0 4.03 24 15.92" xmlns="http://www.w3.org/2000/svg">
+                      <path fill="#ffffff" d="M6.915 4.03c-1.968 0-3.683 1.28-4.871 3.113C.704 9.208 0 11.883 0 14.449c0 .706.07 1.369.21 1.973a6.624 6.624 0 0 0 .265.86 5.297 5.297 0 0 0 .371.761c.696 1.159 1.818 1.927 3.593 1.927 1.497 0 2.633-.671 3.965-2.444.76-1.012 1.144-1.626 2.663-4.32l.756-1.339.186-.325c.061.1.121.196.183.3l2.152 3.595c.724 1.21 1.665 2.556 2.47 3.314 1.046.987 1.992 1.22 3.06 1.22 1.075 0 1.876-.355 2.455-.843a3.743 3.743 0 0 0 .81-.973c.542-.939.861-2.127.861-3.745 0-2.72-.681-5.357-2.084-7.45-1.282-1.912-2.957-2.93-4.716-2.93-1.047 0-2.088.467-3.053 1.308-.652.57-1.257 1.29-1.82 2.05-.69-.875-1.335-1.547-1.958-2.056-1.182-.966-2.315-1.303-3.454-1.303zm10.16 2.053c1.147 0 2.188.758 2.992 1.999 1.132 1.748 1.647 4.195 1.647 6.4 0 1.548-.368 2.9-1.839 2.9-.58 0-1.027-.23-1.664-1.004-.496-.601-1.343-1.878-2.832-4.358l-.617-1.028a44.908 44.908 0 0 0-1.255-1.98c.07-.109.141-.224.211-.327 1.12-1.667 2.118-2.602 3.358-2.602zm-10.201.553c1.265 0 2.058.791 2.675 1.446.307.327.737.871 1.234 1.579l-1.02 1.566c-.757 1.163-1.882 3.017-2.837 4.338-1.191 1.649-1.81 1.817-2.486 1.817-.524 0-1.038-.237-1.383-.794-.263-.426-.464-1.13-.464-2.046 0-2.221.63-4.535 1.66-6.088.454-.687.964-1.226 1.533-1.533a2.264 2.264 0 0 1 1.088-.285z"/>
+                    </svg>
+                  </div>
+                  <span class="card-action-text" data-i18n="card_dossier_btn">DEEP DIVE DOSSIER</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Card 06: LinkedIn Ads (B2B & Enterprise) -->
+            <article class="expertise-card" id="card-linkedin" data-index="5">
+              <div class="card-bg-watermark card-bg-watermark-wipe" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="#0A66C2" xmlns="http://www.w3.org/2000/svg"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.6 1.6 0 0 0 1.6-1.6 1.6 1.6 0 0 0-3.2 0 1.6 1.6 0 0 0 1.6 1.6m1.4 9.74v-8.37H5.06v8.37h2.8z"/></svg>
+              </div>
+              <h3 class="card-title"><svg class="tech-icon tech-icon-linkedin" viewBox="0 0 24 24" width="22" height="22" fill="#0A66C2" xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.6 1.6 0 0 0 1.6-1.6 1.6 1.6 0 0 0-3.2 0 1.6 1.6 0 0 0 1.6 1.6m1.4 9.74v-8.37H5.06v8.37h2.8z"/></svg> <span data-i18n="card6_title">LinkedIn Ads (B2B &amp; Enterprise)</span></h3>
+              <p class="card-tagline" data-i18n="card6_tagline">High-value B2B pipeline engineering targeting verified decision-makers.</p>
+              <p class="card-desc" data-i18n="card6_desc">
+                Precision account-based campaigns designed for high deal values: surgical job title and company targeting, native Lead Gen forms, and CRM pipeline sync.
+              </p>
+              <div class="card-features">
+                <div class="feature-item"><span>+</span> <span data-i18n="card6_f1">Account-Based Targeting (ABM)</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card6_f2">Native In-Feed Lead Gen Forms</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card6_f3">Thought Leader &amp; Document Ads</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card6_f4">CRM &amp; Pipeline Synchronization</span></div>
+              </div>
+              <div class="card-footer">
+                <a href="./linkedin-ads/" class="card-action">
+                  <div class="card-action-fill" aria-hidden="true">
+                    <svg class="card-action-bg-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path fill="#ffffff" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.6 1.6 0 0 0 1.6-1.6 1.6 1.6 0 0 0-3.2 0 1.6 1.6 0 0 0 1.6 1.6m1.4 9.74v-8.37H5.06v8.37h2.8z"/>
+                    </svg>
+                  </div>
+                  <span class="card-action-text" data-i18n="card_dossier_btn">DEEP DIVE DOSSIER</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Card 07: TikTok Ads (Creative Funnels) -->
+            <article class="expertise-card" id="card-tiktok" data-index="6">
+              <div class="card-bg-watermark card-bg-watermark-wipe" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="#FE2C55" xmlns="http://www.w3.org/2000/svg"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+              </div>
+              <h3 class="card-title"><svg class="tech-icon tech-icon-tiktok" viewBox="0 0 24 24" width="22" height="22" fill="#FE2C55" xmlns="http://www.w3.org/2000/svg" aria-label="TikTok"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg> <span data-i18n="card7_title">TikTok Ads (Creative Funnels)</span></h3>
+              <p class="card-tagline" data-i18n="card7_tagline">High-velocity native creative funnels engineered for rapid customer acquisition.</p>
+              <p class="card-desc" data-i18n="card7_desc">
+                Paid video funnels engineered for scale: pattern-interrupt hooks, authentic direct-response creative, Spark Ads amplification, and server-side Events API.
+              </p>
+              <div class="card-features">
+                <div class="feature-item"><span>+</span> <span data-i18n="card7_f1">Pattern-Interrupt Video Hooks</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card7_f2">Native Direct-Response Scripting</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card7_f3">Spark Ads &amp; Creator Amplification</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card7_f4">Events API &amp; Fast Mobile Landers</span></div>
+              </div>
+              <div class="card-footer">
+                <a href="./tiktok-ads/" class="card-action">
+                  <div class="card-action-fill" aria-hidden="true">
+                    <svg class="card-action-bg-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path fill="#ffffff" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                    </svg>
+                  </div>
+                  <span class="card-action-text" data-i18n="card_dossier_btn">DEEP DIVE DOSSIER</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Card 08: Reddit Ads (Community Infiltration) -->
+            <article class="expertise-card" id="card-reddit" data-index="7">
+              <div class="card-bg-watermark card-bg-watermark-wipe" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="#FF4500" xmlns="http://www.w3.org/2000/svg"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
+              </div>
+              <h3 class="card-title"><svg class="tech-icon tech-icon-reddit" viewBox="0 0 24 24" width="22" height="22" fill="#FF4500" xmlns="http://www.w3.org/2000/svg" aria-label="Reddit"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg> <span data-i18n="card8_title">Reddit Ads (Community Infiltration)</span></h3>
+              <p class="card-tagline" data-i18n="card8_tagline">Subreddit-level commercial targeting that penetrates high-skepticism communities.</p>
+              <p class="card-desc" data-i18n="card8_desc">
+                Subreddit-specific advertising engineered for high-intent audiences: transparent copy posture, conversation thread placements, and Conversions API tracking.
+              </p>
+              <div class="card-features">
+                <div class="feature-item"><span>+</span> <span data-i18n="card8_f1">Surgical Subreddit Targeting</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card8_f2">Raw, Transparent Ad Copy</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card8_f3">Conversation Thread Placements</span></div>
+                <div class="feature-item"><span>+</span> <span data-i18n="card8_f4">Conversions API (CAPI) Server Tracking</span></div>
+              </div>
+              <div class="card-footer">
+                <a href="./reddit-ads/" class="card-action">
+                  <div class="card-action-fill" aria-hidden="true">
+                    <svg class="card-action-bg-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path fill="#ffffff" d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/>
+                    </svg>
+                  </div>
+                  <span class="card-action-text" data-i18n="card_dossier_btn">DEEP DIVE DOSSIER</span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 04: ABOUT BRUTO
+         ========================================== -->
+    <section id="about" class="section-about">
+      <div class="content-container">
+        <div class="section-header">
+          <span class="section-num" data-i18n="sec4_num">04 // ABOUT BRUTO</span>
+          <h2 class="section-title" data-i18n="sec4_title">Not an agency. Not a studio. Simply BRUTO.</h2>
+          <p class="section-subtitle" data-i18n="sec4_subtitle">
+            We are a dedicated digital unit based in Portugal, built on a simple conviction: businesses deserve definitive solutions, not agency fluff.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-column">
+            <div class="about-badge" data-i18n="about_col1_badge">THE PROBLEM WE REJECT</div>
+            <h3 class="about-col-title" data-i18n="about_col1_title">Bureaucracy, Bloated Retainers &amp; Broken Promises</h3>
+            <p class="about-col-text" data-i18n="about_col1_text">
+              Most agencies operate like bureaucratic assembly lines. You pay inflated monthly retainers to speak with junior account managers while your website is built on slow, bloated templates and your marketing burns budget on vanity metrics. When something breaks, nobody takes responsibility.
+            </p>
+          </div>
+
+          <div class="about-column">
+            <div class="about-badge" data-i18n="about_col2_badge">HOW BRUTO OPERATES</div>
+            <h3 class="about-col-title" data-i18n="about_col2_title">Direct Access, Clean Code &amp; Definitive Solutions</h3>
+            <p class="about-col-text" data-i18n="about_col2_text">
+              BRUTO was formed to do the exact opposite. We work directly with business owners as unmediated technical partners. We build clean, fast front-ends that convert, implement practical n8n automations that eliminate daily manual friction, and run targeted campaigns that actually move the needle. No fluff, no excuses, just heavy-duty execution.
+            </p>
+          </div>
+        </div>
+
+        <div class="about-footer-bar">
+          <div class="about-meta-item">
+            <span class="about-meta-label" data-i18n="about_meta_base_label">BASE LOCATION</span>
+            <span class="about-meta-val" data-i18n="about_meta_base_val">PORTUGAL (GMT+0) • SERVING CLIENTS GLOBALLY</span>
+          </div>
+          <div class="about-meta-item">
+            <span class="about-meta-label" data-i18n="about_meta_comm_label">COMMISSIONS</span>
+            <span class="about-meta-val" data-i18n="about_meta_comm_val">LIMITED CLIENT INTAKE PER QUARTER</span>
+          </div>
+          <div class="about-meta-item">
+            <span class="about-meta-label" data-i18n="about_meta_ai_label">AI DOCTRINE</span>
+            <span class="about-meta-val" data-i18n="about_meta_ai_val">AI IS A TOOL • WE WON'T MAKE THE CLIENT A FOOL</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 05: CONTACT / INITIATE
+         ========================================== -->
+    <section id="contact" class="section-contact">
+      <div class="content-container">
+        <div class="contact-card">
+          <div class="contact-info">
+            <span class="section-num" data-i18n="sec5_num">05 // START PROJECT</span>
+            <h2 class="contact-headline" data-i18n="sec5_title">Let us solve your problem definitively.</h2>
+            <p class="contact-sub" data-i18n="sec5_subtitle">
+              Tell us what is broken, slow, or manual in your business. We will analyze your case and propose a tailored, no-fluff solution.
+            </p>
+
+            <div class="contact-details">
+              <div class="detail-item">
+                <span class="detail-label" data-i18n="contact_loc_label">LOCATION</span>
+                <span class="detail-val" data-i18n="contact_loc_val">Lisbon / Porto, Portugal</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label" data-i18n="contact_time_label">LOCAL TIME</span>
+                <span id="footer-time" class="detail-val">16:49 PORTUGAL (GMT+0)</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label" data-i18n="contact_email_label">DIRECT INQUIRIES</span>
+                <span class="detail-val" data-i18n="contact_email_val">agencia@bruto.pt</span>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" id="inquiry-form">
+            <div class="form-group">
+              <label for="name-input" data-i18n="form_name_label">FULL NAME OR ORGANIZATION</label>
+              <input type="text" id="name-input" required placeholder="e.g. David Daniel / Vanguard Ltd" data-i18n-ph="form_name_ph">
+            </div>
+
+            <div class="form-group">
+              <label for="email-input" data-i18n="form_contact_label">EMAIL OR WHATSAPP NUMBER</label>
+              <input type="text" id="email-input" required placeholder="contact@domain.com or +351 912 345 678" data-i18n-ph="form_contact_ph">
+            </div>
+
+            <div class="form-group">
+              <label for="scope-input" data-i18n="form_service_label">SERVICE NEEDED</label>
+              <select id="scope-input">
+                <option value="website" data-i18n="form_opt_web">Custom Website or Online Store (WordPress / Shopify)</option>
+                <option value="automation" data-i18n="form_opt_auto">Workflow Automations (n8n / Integrations)</option>
+                <option value="growth" data-i18n="form_opt_growth">Search &amp; Paid Acquisition (Google, Meta, LinkedIn, TikTok &amp; Reddit)</option>
+                <option value="social" data-i18n="form_opt_social">Brand Presence &amp; Social Media</option>
+                <option value="full-system" data-i18n="form_opt_full">Full Digital Overhaul (Web + Automations + Growth)</option>
+                <option value="other" data-i18n="form_opt_other">Other / Unsure (Let us discuss the problem)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message-input" data-i18n="form_msg_label">THE PROBLEM TO SOLVE</label>
+              <textarea id="message-input" rows="3" placeholder="Describe your current situation, what is causing friction, or what you want to achieve..." data-i18n-ph="form_msg_ph"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              <span data-i18n="form_submit">INITIATE TRANSMISSION →</span>
+            </button>
+            <div id="form-feedback" class="form-feedback"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Industrial Monolith Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="footer-brand">
+          <span class="brand-logo">BRUTO</span>
+          <span class="brand-tag">EST. 2026</span>
+        </div>
+        <span class="footer-copy" data-i18n="footer_copy">© 2026 BRUTO. HEAVY-DUTY DIGITAL. BASED IN PORTUGAL. ALL RIGHTS RESERVED.</span>
+      </div>
+      <div class="footer-right">
+        <a href="#hero" class="back-to-top" data-i18n="back_to_top">RETURN TO TOP ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Navigation Pill / Rail (Mobile Bottom, Desktop Right) -->
+  <nav class="mobile-nav-pill" id="mobile-nav-pill" aria-label="Quick section navigation">
+    <div class="pill-track">
+      <a href="#manifesto" class="pill-link" data-section="manifesto" data-num="01" data-label="PROCESS">
+        <div class="pill-progress"><div class="pill-progress-fill"></div></div>
+        <span class="pill-num">01</span>
+        <span class="pill-label" data-i18n="pill_process">PROCESS</span>
+      </a>
+      <span class="pill-sep">//</span>
+      <a href="#capabilities" class="pill-link" data-section="capabilities" data-num="02" data-label="CAPABILITIES">
+        <div class="pill-progress"><div class="pill-progress-fill"></div></div>
+        <span class="pill-num">02</span>
+        <span class="pill-label" data-i18n="pill_capabilities">CAPABILITIES</span>
+      </a>
+      <span class="pill-sep">//</span>
+      <a href="#expertise" class="pill-link" data-section="expertise" data-num="03" data-label="EXPERTISE">
+        <div class="pill-progress"><div class="pill-progress-fill"></div></div>
+        <span class="pill-num">03</span>
+        <span class="pill-label" data-i18n="pill_expertise">EXPERTISE</span>
+      </a>
+      <span class="pill-sep">//</span>
+      <a href="#about" class="pill-link" data-section="about" data-num="04" data-label="ABOUT">
+        <div class="pill-progress"><div class="pill-progress-fill"></div></div>
+        <span class="pill-num">04</span>
+        <span class="pill-label" data-i18n="pill_about">ABOUT</span>
+      </a>
+    </div>
+  </nav>
+
+</body>
+</html>
