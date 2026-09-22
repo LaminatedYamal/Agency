@@ -9,6 +9,9 @@ let currentLang = localStorage.getItem('tecipa_lang') || 'pt';
 // Bilingual Dictionary based on Tecipa's real content
 const i18n = {
   pt: {
+    // Topbar
+    topbar_status: "Produção Industrial Ativa • Figueira da Foz, Portugal",
+
     // Navigation
     nav_tagline: "A Magia do Tecido Não Tecido",
     nav_fold: "Configurador",
@@ -243,6 +246,9 @@ const i18n = {
   },
 
   en: {
+    // Topbar
+    topbar_status: "Active Industrial Production • Figueira da Foz, Portugal",
+
     // Navigation
     nav_tagline: "The Magic of Non-Woven Fabric",
     nav_fold: "Configurator",
