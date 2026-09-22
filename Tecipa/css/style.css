@@ -2074,6 +2074,20 @@ aside.topbar,
   margin-bottom: 1.25rem;
 }
 
+/* Bilingual Currency Icon Switching (Euro in PT, Dollar in EN) */
+html[lang="pt"] .currency-icon-dollar {
+  display: none !important;
+}
+html[lang="pt"] .currency-icon-euro {
+  display: block !important;
+}
+html[lang="en"] .currency-icon-euro {
+  display: none !important;
+}
+html[lang="en"] .currency-icon-dollar {
+  display: block !important;
+}
+
 .advantage-card h4 {
   font-family: var(--font-heading);
   font-size: 1.25rem;

@@ -521,6 +521,14 @@ function initLanguageToggle() {
     // Update html lang attribute
     document.documentElement.lang = lang;
 
+    // Toggle currency icons based on active language (Euro in PT, Dollar in EN)
+    document.querySelectorAll('.currency-icon-euro').forEach(el => {
+      el.style.display = lang === 'pt' ? 'block' : 'none';
+    });
+    document.querySelectorAll('.currency-icon-dollar').forEach(el => {
+      el.style.display = lang === 'en' ? 'block' : 'none';
+    });
+
     // Refresh Napkin Visualizer with language units
     if (window.updateNapkinVisualizer) {
       window.updateNapkinVisualizer();
