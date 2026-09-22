@@ -672,7 +672,7 @@ aside.topbar,
   display: grid;
   grid-template-columns: 1fr 1.618fr;
   gap: var(--space-xl);
-  align-items: center;
+  align-items: start;
 }
 
 .guide-controls {
@@ -764,34 +764,38 @@ aside.topbar,
   border: 1px solid var(--slate-200);
   box-shadow: var(--shadow-lg);
   padding: 1.75rem 2rem 2.25rem 2rem;
-  position: relative;
+  position: sticky;
+  top: 104px;
+  z-index: 20;
   min-height: 480px;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  transition: all 0.35s ease;
+  transition: box-shadow 0.35s ease, border-color 0.35s ease;
 }
 
 .visualizer-stage.real-size-active {
   min-height: 620px;
-  max-height: 85vh;
+  max-height: calc(100vh - 120px);
   overflow-y: auto;
   overflow-x: hidden;
   padding: 1.5rem 1rem 2rem 1rem;
 }
 
 .visualizer-stage.stage-fullscreen {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  width: 100vw;
-  height: 100vh;
-  max-height: 100vh;
-  overflow: auto;
-  background: #f8fafc;
-  padding: 2rem;
-  box-sizing: border-box;
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 9999 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  max-height: 100vh !important;
+  overflow: auto !important;
+  background: #f8fafc !important;
+  padding: 2rem !important;
+  box-sizing: border-box !important;
 }
 
 /* Stage Top Toolbar (Fit vs 1:1 + Actions) */
@@ -3253,6 +3257,9 @@ aside.topbar,
   }
 
   .visualizer-stage {
+    position: static;
+    top: auto;
+    max-height: none;
     padding: 1.5rem 1rem;
   }
 
@@ -3360,6 +3367,12 @@ aside.topbar,
   .guide-layout {
     grid-template-columns: 1fr;
     gap: 2.5rem;
+  }
+
+  .visualizer-stage {
+    position: static;
+    top: auto;
+    max-height: none;
   }
 
   .product-grid {
@@ -3475,6 +3488,12 @@ aside.topbar,
   .guide-layout {
     grid-template-columns: 1fr;
     gap: 3.5rem;
+  }
+
+  .visualizer-stage {
+    position: static;
+    top: auto;
+    max-height: none;
   }
 
   .product-grid {
@@ -3708,6 +3727,12 @@ aside.topbar,
   .guide-layout {
     grid-template-columns: 1fr;
     gap: 2.5rem;
+  }
+
+  .visualizer-stage {
+    position: static;
+    top: auto;
+    max-height: none;
   }
 
   .about-grid {
