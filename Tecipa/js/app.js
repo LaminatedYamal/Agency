@@ -26,25 +26,15 @@ const i18n = {
     hero_title: "A Magia do <span class='gold'>Tecido Não Tecido</span>",
     hero_subtitle: "Consegue imaginar aquilo que o Tecido não Tecido pode fazer por si e pela sua empresa? Com características únicas, permite conciliar design e funcionalidade num só produto. Desde a Hotelaria e Restauração, à Indústria e Aviação Civil, os nossos clientes reconhecem a vantagem da Tecipa.",
     hero_cta_quote: "Pedir Orçamento",
-<<<<<<< HEAD
-    hero_cta_fold: "Guia de Dobras & Formatos",
-=======
     hero_cta_fold: "Configurador de Guardanapos",
->>>>>>> d374175 (feat(tecipa): add Tecipa B2B website with configurator and quote system)
     hero_trust_1: "Design Gráfico Personalizado",
     hero_trust_2: "Elevada Absorção & Resistência",
     hero_trust_3: "Aviação Civil, Hotelaria & Indústria",
 
     // Fold Guide
-<<<<<<< HEAD
-    fold_tag: "Ferramenta Interativa",
-    fold_title: "Guia de Dimensões e Dobras de Guardanapos",
-    fold_desc: "Em várias texturas, cores e dimensões, é possível personalizar e criar um design exclusivo adaptado à atmosfera do seu espaço ou companhia aérea.",
-=======
     fold_tag: "Configurador Interativo",
     fold_title: "Configurador de Dimensões e Dobras de Guardanapos",
     fold_desc: "Em várias texturas, cores e dimensões, configure e personalize um design exclusivo em tempo real, adaptado à atmosfera do seu espaço ou companhia aérea.",
->>>>>>> d374175 (feat(tecipa): add Tecipa B2B website with configurator and quote system)
     fold_label_dim: "1. Dimensões",
     fold_label_dim_hint: "Tamanho Aberto",
     fold_label_fold: "2. Tipo de Dobra",
@@ -153,19 +143,12 @@ const i18n = {
 
     // Quote Section
     quote_tag: "Atendimento Rápido",
-<<<<<<< HEAD
-    quote_title: "Pedido de Orçamento & Reunião",
-    quote_desc: "Selecione as especificações dos seus produtos e agende uma breve reunião com a nossa equipa. Os seus dados são enviados diretamente para o nosso fluxo n8n.",
-    step1_title: "Especificação do Pedido",
-    step2_title: "Agendamento & Contacto",
-=======
     quote_title: "Pedido de Orçamento",
     quote_desc: "Selecione as especificações dos seus produtos e solicite a sua proposta à nossa equipa. Os seus dados serão enviados de imediato a um colaborador que entrará em contacto consigo no prazo de 1 hora.",
     step1_title: "Especificação do Pedido",
     step2_title: "Dados de Contacto",
     step1_indicator: "1. Produto",
     step2_indicator: "2. Contacto",
->>>>>>> d374175 (feat(tecipa): add Tecipa B2B website with configurator and quote system)
     industry_title: "Sector de Atividade",
     ind_horeca: "Hotelaria & Restauração",
     ind_horeca_sub: "Guardanapos, toalhetes & toalhas",
@@ -196,15 +179,9 @@ const i18n = {
     b_foil_sub: "Dourado / Prateado",
     b_white: "Branco / Sem Impressão",
     b_white_sub: "Puro e higiénico",
-<<<<<<< HEAD
-    btn_to_step2: "Avançar para Agendamento →",
-    btn_back: "← Voltar",
-    btn_submit: "Confirmar & Enviar para n8n",
-=======
     btn_to_step2: "Avançar para Pedido de Orçamento →",
     btn_back: "← Voltar",
     btn_submit: "Enviar Pedido de Orçamento",
->>>>>>> d374175 (feat(tecipa): add Tecipa B2B website with configurator and quote system)
 
     // Unit-specific & Quote Cards
     sizefold_title: "Dimensões & Formato",
@@ -228,24 +205,13 @@ const i18n = {
     vol_1m: "1M+ un.",
     vol_1m_sub: "Grande Escala",
 
-<<<<<<< HEAD
-    meeting_section_title: "Agendar Reunião Breve com a Equipa Tecipa (15 Minutos)",
-=======
->>>>>>> d374175 (feat(tecipa): add Tecipa B2B website with configurator and quote system)
     lbl_selected_config: "Configuração Selecionada:",
     btn_edit: "Editar",
     lbl_fullname: "Nome Completo *",
     lbl_email: "Endereço Eletrónico / E-mail *",
     lbl_company: "Nome da Empresa / Organização *",
     lbl_phone: "Telefone / Contacto",
-<<<<<<< HEAD
-    lbl_date: "Data Preferencial",
-    lbl_time: "Horário Pretendido",
     lbl_notes: "Mensagem ou Especificações Adicionais (Opcional)",
-    lbl_timezone: "Fuso Horário:",
-=======
-    lbl_notes: "Mensagem ou Especificações Adicionais (Opcional)",
->>>>>>> d374175 (feat(tecipa): add Tecipa B2B website with configurator and quote system)
 
     pocket_accent_text: "Bolso p/ Talher",
     stat_1_val: "28 Anos",
@@ -264,21 +230,12 @@ const i18n = {
     moq_card_notice: "Lote mínimo de produção sob consulta (MOQ)",
     lbl_selected_products: "produtos selecionados",
     lbl_select_at_least_one: "Selecione pelo menos um produto para continuar.",
-<<<<<<< HEAD
-    btn_proceed_multi: "Avançar para Agendamento",
-=======
     btn_proceed_multi: "Avançar para Pedido de Orçamento",
->>>>>>> d374175 (feat(tecipa): add Tecipa B2B website with configurator and quote system)
     lbl_dimensions_format: "Dimensões & Formato",
     lbl_volume_qty: "Quantidade Pretendida",
     lbl_selected_tray: "Produtos Selecionados no Pedido:",
     lbl_no_products_selected: "Nenhum produto selecionado. Clique num produto para adicionar.",
     lbl_remove_item: "Remover",
-<<<<<<< HEAD
-
-    // Footer
-    footer_desc: "Produção de tecido não tecido para Restauração, Hotelaria, Indústria e Aviação Civil. Fundada em 1998 na Figueira da Foz, Portugal.",
-=======
     quote_success_title: "Pedido de Orçamento Enviado!",
     quote_success_desc: "O seu pedido de orçamento foi transmitido via webhook para o fluxo n8n da Tecipa. A nossa equipa entrará em contacto brevemente com a sua proposta.",
 
@@ -286,7 +243,6 @@ const i18n = {
     footer_desc: "Produção de tecido não tecido para Restauração, Hotelaria, Indústria e Aviação Civil. Fundada em 1998 na Figueira da Foz, Portugal.",
     footer_configurator: "Configurador de Guardanapos",
     footer_quote: "Pedido de Orçamento",
->>>>>>> d374175 (feat(tecipa): add Tecipa B2B website with configurator and quote system)
     footer_rights: "© 2026 Tecipa, Lda. Todos os direitos reservados.",
     agency_credit: "Produzido por <a href='#' class='agency-link'>BRUTO</a>"
   },
@@ -309,25 +265,15 @@ const i18n = {
     hero_title: "The Magic of <span class='gold'>Non-Woven Fabric</span>",
     hero_subtitle: "Can you imagine what Non-Woven Fabric can do for you and your business? Combining unique characteristics, it unites design and functionality in a single product. From Hospitality and Dining to Industry and Civil Aviation, our clients recognize the Tecipa advantage.",
     hero_cta_quote: "Request a Quote",
-<<<<<<< HEAD
-    hero_cta_fold: "Interactive Fold Guide",
-=======
     hero_cta_fold: "Napkin Configurator",
->>>>>>> d374175 (feat(tecipa): add Tecipa B2B website with configurator and quote system)
     hero_trust_1: "Bespoke Graphic Design",
     hero_trust_2: "High Absorption & Strength",
     hero_trust_3: "Civil Aviation, Hospitality & Industry",
 
     // Fold Guide
-<<<<<<< HEAD
-    fold_tag: "Interactive Spec Tool",
-    fold_title: "Napkin Dimension & Fold Style Guide",
-    fold_desc: "In various textures, colors, and dimensions, we create an exclusive design tailored to the atmosphere of your restaurant, hotel, or airline.",
-=======
     fold_tag: "Interactive Configurator",
     fold_title: "Napkin Dimensions & Fold Style Configurator",
     fold_desc: "Across various textures, colors, and dimensions, configure and customize an exclusive design in real time, tailored to the atmosphere of your venue or airline.",
->>>>>>> d374175 (feat(tecipa): add Tecipa B2B website with configurator and quote system)
     fold_label_dim: "1. Dimensions",
     fold_label_dim_hint: "Unfolded Size",
     fold_label_fold: "2. Fold Style",
@@ -436,19 +382,12 @@ const i18n = {
 
     // Quote Section
     quote_tag: "Instant Response",
-<<<<<<< HEAD
-    quote_title: "Quick Quote & Meeting Scheduler",
-    quote_desc: "Configure your product specifications and schedule a brief consultation with our team. Your request is dispatched directly into our n8n automation pipeline.",
-    step1_title: "Order Specifications",
-    step2_title: "Schedule & Contact",
-=======
     quote_title: "Request a Quote",
     quote_desc: "Select your product specifications and request a tailored quote from our team. Your details will be sent immediately to a dedicated specialist who will get back to you within 1 hour.",
     step1_title: "Order Specifications",
     step2_title: "Contact Details",
     step1_indicator: "1. Product",
     step2_indicator: "2. Contact",
->>>>>>> d374175 (feat(tecipa): add Tecipa B2B website with configurator and quote system)
     industry_title: "Your Industry",
     ind_horeca: "Hospitality & Dining",
     ind_horeca_sub: "Napkins, placemats & tablecloths",
@@ -479,15 +418,9 @@ const i18n = {
     b_foil_sub: "Gold / Silver stamp",
     b_white: "White / Unprinted",
     b_white_sub: "Pristine & hygienic",
-<<<<<<< HEAD
-    btn_to_step2: "Proceed to Meeting Booking →",
-    btn_back: "← Back",
-    btn_submit: "Confirm & Dispatch to n8n",
-=======
     btn_to_step2: "Proceed to Quote Request →",
     btn_back: "← Back",
     btn_submit: "Submit Quote Request",
->>>>>>> d374175 (feat(tecipa): add Tecipa B2B website with configurator and quote system)
 
     // Unit-specific & Quote Cards
     sizefold_title: "Dimensions & Fold Style",
@@ -511,24 +444,13 @@ const i18n = {
     vol_1m: "1M+ units",
     vol_1m_sub: "Large Scale",
 
-<<<<<<< HEAD
-    meeting_section_title: "Schedule a Brief Consultation with the Tecipa Team (15 Minutes)",
-=======
->>>>>>> d374175 (feat(tecipa): add Tecipa B2B website with configurator and quote system)
     lbl_selected_config: "Selected Configuration:",
     btn_edit: "Edit",
     lbl_fullname: "Full Name *",
     lbl_email: "Work Email Address *",
     lbl_company: "Company / Organization Name *",
     lbl_phone: "Phone / Contact Number",
-<<<<<<< HEAD
-    lbl_date: "Preferred Date",
-    lbl_time: "Preferred Time Slot",
     lbl_notes: "Additional Specifications or Message (Optional)",
-    lbl_timezone: "Time Zone:",
-=======
-    lbl_notes: "Additional Specifications or Message (Optional)",
->>>>>>> d374175 (feat(tecipa): add Tecipa B2B website with configurator and quote system)
 
     pocket_accent_text: "Cutlery Pocket",
     stat_1_val: "28 Years",
@@ -547,21 +469,12 @@ const i18n = {
     moq_card_notice: "Minimum order quantity upon request (MOQ)",
     lbl_selected_products: "selected products",
     lbl_select_at_least_one: "Please select at least one product to proceed.",
-<<<<<<< HEAD
-    btn_proceed_multi: "Proceed to Meeting Booking",
-=======
     btn_proceed_multi: "Proceed to Quote Request",
->>>>>>> d374175 (feat(tecipa): add Tecipa B2B website with configurator and quote system)
     lbl_dimensions_format: "Dimensions & Format",
     lbl_volume_qty: "Requested Quantity",
     lbl_selected_tray: "Products Selected for Quote:",
     lbl_no_products_selected: "No products selected. Click a product below to add.",
     lbl_remove_item: "Remove",
-<<<<<<< HEAD
-
-    // Footer
-    footer_desc: "Production of non-woven fabrics for Dining, Hospitality, Industry, and Civil Aviation. Founded in 1998 in Figueira da Foz, Portugal.",
-=======
     quote_success_title: "Quote Request Sent!",
     quote_success_desc: "Your quote request has been transmitted via webhook to Tecipa's n8n pipeline. Our team will get back to you shortly with your proposal.",
 
@@ -569,7 +482,6 @@ const i18n = {
     footer_desc: "Production of non-woven fabrics for Dining, Hospitality, Industry, and Civil Aviation. Founded in 1998 in Figueira da Foz, Portugal.",
     footer_configurator: "Napkin Configurator",
     footer_quote: "Request a Quote",
->>>>>>> d374175 (feat(tecipa): add Tecipa B2B website with configurator and quote system)
     footer_rights: "© 2026 Tecipa, Lda. All rights reserved.",
     agency_credit: "Produced by <a href='#' class='agency-link'>BRUTO</a>"
   }
