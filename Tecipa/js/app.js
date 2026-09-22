@@ -554,6 +554,22 @@ function initNavigation() {
   const navMenu = document.querySelector('.nav-menu');
   const navLinks = document.querySelectorAll('.nav-link');
 
+  const brandLogoLink = document.querySelector('.brand-logo-link') || document.querySelector('.logo-wrap a');
+
+  // Smooth scroll to top when clicking logo (keeps topbar visible)
+  if (brandLogoLink) {
+    brandLogoLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+      if (history.pushState) {
+        history.pushState(null, null, '#top');
+      }
+    });
+  }
+
   // Sticky header shadow
   window.addEventListener('scroll', () => {
     if (window.scrollY > 20) {
