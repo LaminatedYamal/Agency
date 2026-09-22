@@ -7,7 +7,7 @@
   <meta name="description" content="A Tecipa produz uma gama variada de produtos em tecido não tecido para Restauração, Hotelaria, Indústria e Aviação Civil. Fundada em 1998 na Figueira da Foz.">
   <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
   <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
-  <link rel="stylesheet" href="./css/style.css?v=5.1">
+  <link rel="stylesheet" href="./css/style.css?v=5.2">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Cinzel:wght@600;700&family=Great+Vibes&family=Montserrat:wght@500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Prata&display=swap" rel="stylesheet">
@@ -49,13 +49,20 @@
         <li><a href="#advantages" class="nav-link" data-i18n="nav_advantages">Vantagens</a></li>
         <li><a href="#fold-guide" class="nav-link" data-i18n="nav_fold">Configurador</a></li>
         <li><a href="#about" class="nav-link" data-i18n="nav_about">A Empresa</a></li>
+        <!-- Mobile Language Toggle inside Hamburger Menu -->
+        <li class="mobile-lang-item">
+          <div class="lang-switcher" aria-label="Language Selector">
+            <button type="button" class="lang-btn active lang-toggle-pt" data-lang="pt">PT</button>
+            <button type="button" class="lang-btn lang-toggle-en" data-lang="en">EN</button>
+          </div>
+        </li>
       </ul>
 
       <div class="nav-actions">
-        <!-- Bilingual PT/EN Switcher -->
-        <div class="lang-switcher" aria-label="Language Selector">
-          <button type="button" class="lang-btn active" id="langTogglePt">PT</button>
-          <button type="button" class="lang-btn" id="langToggleEn">EN</button>
+        <!-- Desktop Bilingual PT/EN Switcher -->
+        <div class="lang-switcher desktop-lang-switcher" aria-label="Language Selector">
+          <button type="button" class="lang-btn active lang-toggle-pt" id="langTogglePt">PT</button>
+          <button type="button" class="lang-btn lang-toggle-en" id="langToggleEn">EN</button>
         </div>
 
         <a href="#quote-section" class="btn btn-primary btn-sm" data-i18n="nav_quote_btn">Pedir Orçamento</a>
@@ -1133,7 +1140,7 @@
   </div>
 
   <!-- Scripts -->
-  <script src="./js/app.js?v=4.7"></script>
+  <script src="./js/app.js?v=4.8"></script>
   <script src="./js/quote-scheduler.js?v=4.6"></script>
 </body>
 </html>

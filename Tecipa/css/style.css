@@ -447,6 +447,14 @@ aside.topbar,
   gap: 0.85rem;
 }
 
+.desktop-lang-switcher {
+  display: flex;
+}
+
+.mobile-lang-item {
+  display: none;
+}
+
 .lang-switcher {
   display: flex;
   align-items: center;
@@ -3732,6 +3740,34 @@ html[lang="en"] .currency-icon-dollar {
 
   .mobile-menu-btn {
     display: block;
+  }
+
+  .desktop-lang-switcher {
+    display: none !important;
+  }
+
+  .mobile-lang-item {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 1.25rem;
+    margin-top: 0.5rem;
+    border-top: 1px solid var(--slate-200);
+  }
+
+  .mobile-lang-item .lang-switcher {
+    display: flex !important;
+    padding: 3px;
+    background: var(--slate-100);
+    border: 1px solid var(--slate-200);
+    border-radius: 9999px;
+  }
+
+  .mobile-lang-item .lang-btn {
+    padding: 0.45rem 1.25rem;
+    font-size: 0.92rem;
+    font-weight: 700;
   }
 
   .hero-content h1 {

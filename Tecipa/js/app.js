@@ -494,18 +494,16 @@ document.addEventListener('DOMContentLoaded', () => {
    Bilingual Language Switcher (PT / EN)
    ========================================================================== */
 function initLanguageToggle() {
-  const ptBtn = document.getElementById('langTogglePt');
-  const enBtn = document.getElementById('langToggleEn');
+  const ptBtns = document.querySelectorAll('.lang-toggle-pt, #langTogglePt');
+  const enBtns = document.querySelectorAll('.lang-toggle-en, #langToggleEn');
 
   function applyLanguage(lang) {
     currentLang = lang;
     localStorage.setItem('tecipa_lang', lang);
 
-    // Update active button state
-    if (ptBtn && enBtn) {
-      ptBtn.classList.toggle('active', lang === 'pt');
-      enBtn.classList.toggle('active', lang === 'en');
-    }
+    // Update active button state across all switchers (desktop & mobile)
+    ptBtns.forEach(btn => btn.classList.toggle('active', lang === 'pt'));
+    enBtns.forEach(btn => btn.classList.toggle('active', lang === 'en'));
 
     // Translate all [data-i18n] elements
     const elements = document.querySelectorAll('[data-i18n]');
@@ -538,8 +536,8 @@ function initLanguageToggle() {
     window.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang } }));
   }
 
-  if (ptBtn) ptBtn.addEventListener('click', () => applyLanguage('pt'));
-  if (enBtn) enBtn.addEventListener('click', () => applyLanguage('en'));
+  ptBtns.forEach(btn => btn.addEventListener('click', () => applyLanguage('pt')));
+  enBtns.forEach(btn => btn.addEventListener('click', () => applyLanguage('en')));
 
   // Initial application
   applyLanguage(currentLang);
