@@ -59,6 +59,19 @@ export default defineConfig({
           next();
         });
       }
+    },
+    {
+      name: 'copy-tecipa-scripts',
+      closeBundle() {
+        const srcJsDir = path.resolve(__dirname, 'Tecipa/js');
+        const destJsDir = path.resolve(__dirname, 'dist/Tecipa/js');
+        if (fs.existsSync(srcJsDir)) {
+          fs.mkdirSync(destJsDir, { recursive: true });
+          fs.copyFileSync(path.join(srcJsDir, 'app.js'), path.join(destJsDir, 'app.js'));
+          fs.copyFileSync(path.join(srcJsDir, 'quote-scheduler.js'), path.join(destJsDir, 'quote-scheduler.js'));
+          console.log('✓ Successfully copied Tecipa scripts to dist/Tecipa/js');
+        }
+      }
     }
   ],
   build: {

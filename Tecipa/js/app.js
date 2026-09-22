@@ -11,7 +11,7 @@ const i18n = {
   pt: {
     // Navigation
     nav_tagline: "A Magia do Tecido Não Tecido",
-    nav_fold: "Dobras & Dimensões",
+    nav_fold: "Configurador",
     nav_products: "Produtos & Sectores",
     nav_advantages: "Vantagens",
     nav_about: "A Empresa",
@@ -105,10 +105,10 @@ const i18n = {
     filter_horeca: "Hotelaria & Restauração",
     filter_aviation: "Aviação Civil",
     filter_industry: "Limpeza Industrial",
-    tag_prod_1: "Restauração & Hotelaria",
-    tag_prod_2: "Mesa & Design",
-    tag_prod_3: "Atmosfera & Elegância",
-    tag_prod_4: "Base Tradicional",
+    tag_prod_1: "Hotelaria & Restauração",
+    tag_prod_2: "Hotelaria & Restauração",
+    tag_prod_3: "Hotelaria & Restauração",
+    tag_prod_4: "Hotelaria & Restauração",
     tag_prod_5: "Aviação Civil",
     tag_prod_6: "Limpeza Industrial",
 
@@ -245,7 +245,7 @@ const i18n = {
   en: {
     // Navigation
     nav_tagline: "The Magic of Non-Woven Fabric",
-    nav_fold: "Folds & Sizes",
+    nav_fold: "Configurator",
     nav_products: "Products & Sectors",
     nav_advantages: "Advantages",
     nav_about: "About Us",
@@ -340,9 +340,9 @@ const i18n = {
     filter_aviation: "Civil Aviation",
     filter_industry: "Industrial Cleaning",
     tag_prod_1: "Hospitality & Dining",
-    tag_prod_2: "Tabletop & Design",
-    tag_prod_3: "Atmosphere & Elegance",
-    tag_prod_4: "Traditional Base",
+    tag_prod_2: "Hospitality & Dining",
+    tag_prod_3: "Hospitality & Dining",
+    tag_prod_4: "Hospitality & Dining",
     tag_prod_5: "Civil Aviation",
     tag_prod_6: "Industrial Cleaning",
 
