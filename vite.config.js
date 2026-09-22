@@ -17,6 +17,15 @@ export default defineConfig({
       name: 'serve-root-videos',
       configureServer(server) {
         server.middlewares.use((req, res, next) => {
+          const rawUrl = req.url.split('?')[0];
+          if (rawUrl === '/Tecipa' || rawUrl === '/tecipa') {
+            const query = req.url.includes('?') ? '?' + req.url.split('?')[1] : '';
+            res.writeHead(301, { Location: '/Tecipa/' + query });
+            return res.end();
+          }
+          next();
+        });
+        server.middlewares.use((req, res, next) => {
           const url = req.url.split('?')[0];
           if (/\.(mp4|webm|mov|mkv)$/i.test(url)) {
             const fileName = path.basename(url);
