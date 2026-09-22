@@ -406,16 +406,12 @@ function initQuoteScheduler() {
     if (toStep2BtnText) {
       if (count > 1) {
         toStep2BtnText.textContent = isPt
-          ? `Avançar para Agendamento (${count} Produtos) →`
-          : `Proceed to Meeting (${count} Products) →`;
-      } else if (count === 1) {
-        toStep2BtnText.textContent = isPt
-          ? 'Avançar para Agendamento (1 Produto) →'
-          : 'Proceed to Meeting (1 Product) →';
+          ? `Avançar para Agendamento (${count}) →`
+          : `Proceed to Meeting (${count}) →`;
       } else {
         toStep2BtnText.textContent = isPt
           ? 'Avançar para Agendamento →'
-          : 'Proceed to Meeting Booking →';
+          : 'Proceed to Meeting →';
       }
     }
 

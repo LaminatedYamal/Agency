@@ -194,7 +194,7 @@ h1, h2, h3, .section-title {
   padding: 0.75rem 1.6rem;
   font-size: 0.95rem;
   font-weight: 600;
-  border-radius: var(--radius-md);
+  border-radius: 0 !important;
   border: 1px solid transparent;
   cursor: pointer;
   transition: all var(--transition-base);
@@ -2013,27 +2013,75 @@ aside.topbar,
   color: var(--slate-800);
 }
 
-/* Touch & mobile devices: normal flow so all content is naturally accessible */
+/* Touch & mobile devices: ultra-compact 275px cards */
 @media (hover: none), (max-width: 767px) {
   .product-card {
-    height: auto !important;
+    height: 275px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
   }
   .card-header-visual {
-    height: 230px !important;
+    height: 125px !important;
+    flex-shrink: 0 !important;
+  }
+  .card-tag {
+    font-size: 0.62rem !important;
+    padding: 0.2rem 0.5rem !important;
+    top: 0.5rem !important;
+    left: 0.5rem !important;
   }
   .card-body {
     position: relative !important;
     height: auto !important;
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
     transform: none !important;
     box-shadow: none !important;
-    padding: 1.25rem !important;
+    padding: 0.7rem 0.85rem 0.75rem !important;
+    border-top: 1px solid var(--slate-100) !important;
+  }
+  .card-title {
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 0.2rem !important;
+    line-height: 1.25 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
   }
   .card-desc {
-    -webkit-line-clamp: unset !important;
+    font-size: 0.76rem !important;
+    line-height: 1.35 !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    margin-bottom: 0.4rem !important;
+    color: var(--slate-600) !important;
   }
-  .card-features,
+  .card-features {
+    display: none !important;
+  }
   .card-footer {
+    display: flex !important;
+    align-items: center !important;
+    margin-top: auto !important;
+    padding-top: 0.35rem !important;
+    border-top: none !important;
     opacity: 1 !important;
+    visibility: visible !important;
+  }
+  .card-moq {
+    display: none !important;
+  }
+  .card-footer .btn {
+    width: 100% !important;
+    padding: 0.4rem 0.6rem !important;
+    font-size: 0.78rem !important;
+    justify-content: center !important;
   }
 }
 
@@ -2186,7 +2234,7 @@ html[lang="en"] .currency-icon-dollar {
   max-width: 1125px;
   margin: 0 auto;
   background: var(--white);
-  border-radius: var(--radius-xl);
+  border-radius: 0 !important;
   border: 1px solid var(--slate-200);
   box-shadow: var(--shadow-xl);
   overflow: hidden;
@@ -2301,11 +2349,16 @@ html[lang="en"] .currency-icon-dollar {
 }
 
 .quote-prog-group.is-expanded {
-  max-height: 1200px;
+  max-height: 4500px;
   opacity: 1;
   transform: translateY(0);
   overflow: visible;
   pointer-events: auto;
+}
+
+.quote-submit-row {
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* Form Groups & Cards */
@@ -2661,7 +2714,7 @@ html[lang="en"] .currency-icon-dollar {
   width: 100%;
   padding: 0.75rem 1rem;
   border: 1px solid var(--slate-300);
-  border-radius: var(--radius-md);
+  border-radius: 0 !important;
   background: var(--white);
   color: var(--slate-800);
   transition: border-color var(--transition-fast);
@@ -2686,7 +2739,7 @@ html[lang="en"] .currency-icon-dollar {
 .time-slot-btn {
   padding: 0.6rem 0.5rem;
   border: 1px solid var(--slate-200);
-  border-radius: var(--radius-sm);
+  border-radius: 0 !important;
   background: var(--white);
   font-size: 0.85rem;
   font-weight: 600;
@@ -2712,7 +2765,7 @@ html[lang="en"] .currency-icon-dollar {
   margin-top: 1.5rem;
   padding: 0.75rem 1rem;
   background: var(--slate-100);
-  border-radius: var(--radius-md);
+  border-radius: 0 !important;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2751,7 +2804,7 @@ html[lang="en"] .currency-icon-dollar {
 .quote-summary-box {
   background: var(--slate-50);
   border: 1px solid var(--slate-200);
-  border-radius: var(--radius-lg);
+  border-radius: 0 !important;
   padding: 1.5rem;
   max-width: 500px;
   margin: 1.5rem auto 2rem;
@@ -2804,7 +2857,7 @@ html[lang="en"] .currency-icon-dollar {
   background: var(--white);
   width: 100%;
   max-width: 550px;
-  border-radius: var(--radius-lg);
+  border-radius: 0 !important;
   box-shadow: var(--shadow-xl);
   overflow: hidden;
 }
@@ -3253,11 +3306,18 @@ html[lang="en"] .currency-icon-dollar {
   }
 
   .fold-guide-section,
-  .products-section,
   .advantages-section,
   .quote-section,
   .about-section {
     padding: 4rem 0;
+  }
+
+  .products-section {
+    padding: 2.75rem 0 !important;
+  }
+
+  .products-section .text-center {
+    margin-bottom: 1.75rem !important;
   }
 
   .guide-layout {
@@ -3299,30 +3359,262 @@ html[lang="en"] .currency-icon-dollar {
     font-size: 0.82rem;
   }
 
+  /* Mobile Horizontal Scroll-Snap Carousel for Products */
   .product-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    display: flex !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    margin-left: -1.25rem !important;
+    margin-right: -1.25rem !important;
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 1.5rem !important;
+    gap: 1rem !important;
+    scrollbar-width: none !important;
   }
 
+  .product-grid::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .product-grid .product-card {
+    flex: 0 0 72% !important;
+    max-width: 260px !important;
+    min-width: 210px !important;
+    height: 275px !important;
+    scroll-snap-align: center !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Mobile Horizontal Scroll-Snap Carousel for Advantages */
   .advantages-grid {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
+    display: flex !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    margin-left: -1.25rem !important;
+    margin-right: -1.25rem !important;
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 1.5rem !important;
+    gap: 1rem !important;
+    scrollbar-width: none !important;
   }
 
-  .advantage-card {
-    padding: 1.5rem;
+  .advantages-grid::-webkit-scrollbar {
+    display: none !important;
   }
 
+  .advantages-grid .advantage-card {
+    flex: 0 0 78% !important;
+    max-width: 280px !important;
+    min-width: 240px !important;
+    scroll-snap-align: center !important;
+    padding: 1.25rem 1.15rem !important;
+    margin-bottom: 0 !important;
+  }
+
+  .advantages-grid .advantage-icon-wrap {
+    width: 44px !important;
+    height: 44px !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .advantages-grid .advantage-card h4 {
+    font-size: 1.1rem !important;
+    margin-bottom: 0.45rem !important;
+  }
+
+  .advantages-grid .advantage-card p {
+    font-size: 0.84rem !important;
+    line-height: 1.45 !important;
+  }
+
+  /* Quote Section Mobile Refinements & Overlap Prevention */
   .quote-body {
-    padding: 1.25rem;
+    padding: 1.25rem !important;
   }
 
   .quote-header {
-    padding: 1.5rem 1.25rem;
+    padding: 1.5rem 1.25rem !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1.25rem !important;
+  }
+
+  .stepper-progress {
+    width: 100% !important;
+    justify-content: flex-start !important;
+    gap: 1rem !important;
+    flex-wrap: wrap;
+  }
+
+  .step-indicator {
+    font-size: 0.8rem;
+  }
+
+  .quote-prog-group.is-expanded {
+    max-height: none !important;
   }
 
   .select-card-grid {
     grid-template-columns: 1fr !important;
+    gap: 0.65rem !important;
+  }
+
+  /* Compact Product Multi-Grid in Quote Form */
+  .product-multi-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.85rem !important;
+  }
+
+  .product-multi-card {
+    margin-bottom: 0 !important;
+  }
+
+  .product-multi-header {
+    padding: 0.75rem 0.85rem !important;
+    gap: 0.65rem !important;
+  }
+
+  .product-multi-title {
+    font-size: 0.9rem !important;
+    margin-bottom: 2px !important;
+  }
+
+  .product-multi-sub {
+    font-size: 0.74rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .product-drawer {
+    padding: 0 0.85rem 0.75rem 0.85rem !important;
+  }
+
+  .drawer-section-label {
+    margin: 0.5rem 0 0.25rem !important;
+    font-size: 0.68rem !important;
+  }
+
+  .pill-select-group {
+    gap: 0.25rem !important;
+  }
+
+  .pill-option {
+    font-size: 0.72rem !important;
+    padding: 0.25rem 0.5rem !important;
+  }
+
+  .drawer-qty-row {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.35rem !important;
+  }
+
+  .drawer-qty-input {
+    width: 95px !important;
+    padding: 0.28rem 0.45rem !important;
+    font-size: 0.82rem !important;
+  }
+
+  .custom-qty-label {
+    font-size: 0.72rem !important;
+  }
+
+  .drawer-qty-suffix {
+    font-size: 0.72rem !important;
+  }
+
+  .moq-notice-tag {
+    margin-top: 0.5rem !important;
+    padding: 0.3rem 0.5rem !important;
+    font-size: 0.68rem !important;
+  }
+
+  .selected-products-tray {
+    padding: 0.75rem !important;
+  }
+
+  .tray-chip {
+    max-width: 100%;
+    word-break: break-word;
+    font-size: 0.75rem !important;
+  }
+
+  /* Submit Button & Actions */
+  .quote-submit-row,
+  #quoteGroupSubmit {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: stretch !important;
+    margin-top: 1.5rem !important;
+  }
+
+  #toStep2Btn {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    text-align: center !important;
+    justify-content: center !important;
+    padding: 0.85rem 1rem !important;
+    font-size: 0.92rem !important;
+    line-height: 1.35 !important;
+  }
+
+  #toStep2Btn span,
+  #toStep2BtnText {
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    text-align: center !important;
+    display: inline-block !important;
+    max-width: 100% !important;
+  }
+
+  .btn {
+    white-space: normal !important;
+    word-break: normal !important;
+  }
+
+  .step2-summary-bar {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.85rem !important;
+    border-radius: 0 !important;
+  }
+
+  .step2-summary-bar .btn {
+    align-self: flex-start !important;
+  }
+
+  .webhook-bar {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.75rem !important;
+    border-radius: 0 !important;
+  }
+
+  #currentWebhookDisplay {
+    word-break: break-all !important;
+    display: inline-block;
+  }
+
+  .step2-actions-row {
+    flex-direction: column-reverse !important;
+    width: 100% !important;
+    gap: 0.75rem !important;
+  }
+
+  .step2-actions-row .btn {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
   }
 
   .form-row {
@@ -3332,6 +3624,17 @@ html[lang="en"] .currency-icon-dollar {
 
   .time-slot-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .quote-summary-box {
+    padding: 1.25rem !important;
+    border-radius: 0 !important;
+  }
+
+  .summary-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.2rem !important;
   }
 
   .about-grid {

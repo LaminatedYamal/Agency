@@ -7,7 +7,7 @@
   <meta name="description" content="A Tecipa produz uma gama variada de produtos em tecido não tecido para Restauração, Hotelaria, Indústria e Aviação Civil. Fundada em 1998 na Figueira da Foz.">
   <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
   <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
-  <link rel="stylesheet" href="./css/style.css?v=5.2">
+  <link rel="stylesheet" href="./css/style.css?v=5.5">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Cinzel:wght@600;700&family=Great+Vibes&family=Montserrat:wght@500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Prata&display=swap" rel="stylesheet">
@@ -840,7 +840,7 @@
                 <span class="prog-step-badge">3</span>
                 <span data-i18n="branding_title">Personalização Gráfica do Pedido</span>
               </div>
-              <div class="select-card-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-bottom: 0;">
+              <div class="select-card-grid" style="margin-bottom: 0;">
                 <div class="select-card selected" data-quote-branding data-value="Design Gráfico Personalizado">
                   <span class="card-name" data-i18n="b_custom">Design Personalizado</span>
                   <span class="card-sub" data-i18n="b_custom_sub">Criação gráfica à medida</span>
@@ -857,7 +857,7 @@
             </div>
 
             <!-- Step 1 Actions: Proceed to Meeting -->
-            <div class="quote-prog-group is-collapsed" id="quoteGroupSubmit" style="margin-top: 2rem; display: flex; justify-content: flex-end;">
+            <div class="quote-prog-group is-collapsed quote-submit-row" id="quoteGroupSubmit" style="margin-top: 2rem;">
               <button class="btn btn-primary" id="toStep2Btn">
                 <span data-i18n="btn_to_step2" id="toStep2BtnText">Avançar para Agendamento →</span>
               </button>
@@ -866,7 +866,7 @@
 
           <!-- ===================== STEP 2 VIEW ===================== -->
           <div id="step2View" style="display: none;">
-            <div style="background: var(--slate-100); padding: 0.85rem 1.25rem; border-radius: var(--radius-md); margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: center;">
+            <div class="step2-summary-bar" style="background: var(--slate-100); padding: 0.85rem 1.25rem; border-radius: 0 !important; margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: center;">
               <div>
                 <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--slate-500); font-weight: 700; display: block;" data-i18n="lbl_selected_config">Configuração Selecionada:</span>
                 <span style="font-size: 0.95rem; font-weight: 700; color: var(--primary);" id="step2SpecPreview">Restauração • Guardanapos Personalizados (100.000 un.)</span>
@@ -937,7 +937,7 @@
             </div>
 
             <!-- Submit Action -->
-            <div style="margin-top: 2rem; display: flex; justify-content: space-between; align-items: center;">
+            <div class="step2-actions-row" style="margin-top: 2rem; display: flex; justify-content: space-between; align-items: center;">
               <button class="btn btn-outline" id="backToStep1Btn2" onclick="document.getElementById('backToStep1Btn').click()" data-i18n="btn_back">
                 ← Voltar
               </button>
@@ -1140,7 +1140,7 @@
   </div>
 
   <!-- Scripts -->
-  <script src="./js/app.js?v=4.8"></script>
-  <script src="./js/quote-scheduler.js?v=4.6"></script>
+  <script src="./js/app.js?v=4.9"></script>
+  <script src="./js/quote-scheduler.js?v=4.8"></script>
 </body>
 </html>
