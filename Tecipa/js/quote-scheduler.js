@@ -340,9 +340,12 @@ function initQuoteScheduler() {
     industry: 'Hotelaria & Restauração',
     items: [],
     branding: 'Design Gráfico Personalizado',
+<<<<<<< HEAD
     meetingDate: '',
     meetingTime: '11:30',
     timezone: Intl.DateTimeFormat().resolvedOptions().timeZone || 'Europe/Lisbon',
+=======
+>>>>>>> d374175 (feat(tecipa): add Tecipa B2B website with configurator and quote system)
     contactName: '',
     contactEmail: '',
     companyName: '',
@@ -359,6 +362,7 @@ function initQuoteScheduler() {
     return lang !== 'en';
   }
 
+<<<<<<< HEAD
   // Pre-fill default meeting date (tomorrow)
   const meetingDateInput = document.getElementById('meetingDateInput');
   if (meetingDateInput) {
@@ -376,6 +380,8 @@ function initQuoteScheduler() {
   const tzEl = document.getElementById('userTimezoneDisplay');
   if (tzEl) tzEl.textContent = quoteData.timezone;
 
+=======
+>>>>>>> d374175 (feat(tecipa): add Tecipa B2B website with configurator and quote system)
   function expandGroup(groupEl) {
     if (!groupEl) return;
     if (groupEl.classList.contains('is-collapsed')) {
@@ -406,12 +412,21 @@ function initQuoteScheduler() {
     if (toStep2BtnText) {
       if (count > 1) {
         toStep2BtnText.textContent = isPt
+<<<<<<< HEAD
           ? `Avançar para Agendamento (${count}) →`
           : `Proceed to Meeting (${count}) →`;
       } else {
         toStep2BtnText.textContent = isPt
           ? 'Avançar para Agendamento →'
           : 'Proceed to Meeting →';
+=======
+          ? `Avançar para Pedido de Orçamento (${count}) →`
+          : `Proceed to Quote Request (${count}) →`;
+      } else {
+        toStep2BtnText.textContent = isPt
+          ? 'Avançar para Pedido de Orçamento →'
+          : 'Proceed to Quote Request →';
+>>>>>>> d374175 (feat(tecipa): add Tecipa B2B website with configurator and quote system)
       }
     }
 
@@ -812,6 +827,7 @@ function initQuoteScheduler() {
     updateTrayAndProgress();
   });
 
+<<<<<<< HEAD
   /* --- Step 2 Time Slot Buttons --- */
   const timeSlotBtns = document.querySelectorAll('.time-slot-btn');
   timeSlotBtns.forEach(btn => {
@@ -822,6 +838,8 @@ function initQuoteScheduler() {
     });
   });
 
+=======
+>>>>>>> d374175 (feat(tecipa): add Tecipa B2B website with configurator and quote system)
   /* --- Form Submission to n8n Webhook --- */
   if (submitQuoteBtn) {
     submitQuoteBtn.addEventListener('click', async (e) => {
@@ -833,17 +851,32 @@ function initQuoteScheduler() {
       quoteData.companyName = document.getElementById('companyNameInput')?.value.trim() || '';
       quoteData.phone = document.getElementById('phoneInput')?.value.trim() || '';
       quoteData.notes = document.getElementById('notesInput')?.value.trim() || '';
+<<<<<<< HEAD
       quoteData.meetingDate = document.getElementById('meetingDateInput')?.value || quoteData.meetingDate;
 
       // Basic Validation
       if (!quoteData.contactName || !quoteData.contactEmail || !quoteData.companyName) {
         alert('Please fill in your Name, Work Email, and Company Name to schedule your consultation.');
+=======
+
+      // Basic Validation
+      if (!quoteData.contactName || !quoteData.contactEmail || !quoteData.companyName) {
+        alert(isPtLang()
+          ? 'Por favor preencha o seu Nome, Email profissional e Nome da Empresa para solicitar o seu orçamento.'
+          : 'Please fill in your Name, Work Email, and Company Name to request your quote.');
+>>>>>>> d374175 (feat(tecipa): add Tecipa B2B website with configurator and quote system)
         return;
       }
 
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(quoteData.contactEmail)) {
+<<<<<<< HEAD
         alert('Please provide a valid business email address.');
+=======
+        alert(isPtLang()
+          ? 'Por favor indique um endereço de email profissional válido.'
+          : 'Please provide a valid business email address.');
+>>>>>>> d374175 (feat(tecipa): add Tecipa B2B website with configurator and quote system)
         return;
       }
 
@@ -868,11 +901,14 @@ function initQuoteScheduler() {
           sizeAndFold: quoteData.items.map(i => i.sizeAndFold).join(', '),
           estimatedMonthlyVolume: quoteData.items.map(i => i.quantity).join(', ')
         },
+<<<<<<< HEAD
         meeting: {
           scheduledDate: quoteData.meetingDate,
           scheduledTime: quoteData.meetingTime,
           clientTimezone: quoteData.timezone
         },
+=======
+>>>>>>> d374175 (feat(tecipa): add Tecipa B2B website with configurator and quote system)
         contact: {
           fullName: quoteData.contactName,
           businessEmail: quoteData.contactEmail,
@@ -939,6 +975,7 @@ function initQuoteScheduler() {
 
             summaryBox.innerHTML = `
               <div class="summary-row">
+<<<<<<< HEAD
                 <span class="label">Reunião / Consulta:</span>
                 <span class="val">${quoteData.meetingDate} às ${quoteData.meetingTime} (${quoteData.timezone})</span>
               </div>
@@ -956,6 +993,31 @@ function initQuoteScheduler() {
               </div>
               <div style="margin-top: 0.75rem; margin-bottom: 0.75rem;">
                 <span class="label" style="display: block; margin-bottom: 0.5rem; font-weight: 700;">Produtos Pretendidos (${quoteData.items.length}):</span>
+=======
+                <span class="label">${isPt ? 'Representante / Contacto:' : 'Representative / Contact:'}</span>
+                <span class="val">${quoteData.contactName} (${quoteData.companyName})</span>
+              </div>
+              <div class="summary-row">
+                <span class="label">${isPt ? 'Email / Telefone:' : 'Email / Phone:'}</span>
+                <span class="val">${quoteData.contactEmail}${quoteData.phone ? ` • ${quoteData.phone}` : ''}</span>
+              </div>
+              <div class="summary-row">
+                <span class="label">${isPt ? 'Sector de Atividade:' : 'Industry:'}</span>
+                <span class="val">${quoteData.industry}</span>
+              </div>
+              <div class="summary-row">
+                <span class="label">${isPt ? 'Personalização:' : 'Customization:'}</span>
+                <span class="val">${quoteData.branding}</span>
+              </div>
+              ${quoteData.notes ? `
+              <div class="summary-row">
+                <span class="label">${isPt ? 'Notas / Especificações:' : 'Notes / Specifications:'}</span>
+                <span class="val">${quoteData.notes}</span>
+              </div>
+              ` : ''}
+              <div style="margin-top: 0.75rem; margin-bottom: 0.75rem;">
+                <span class="label" style="display: block; margin-bottom: 0.5rem; font-weight: 700;">${isPt ? `Produtos Pretendidos (${quoteData.items.length}):` : `Requested Products (${quoteData.items.length}):`}</span>
+>>>>>>> d374175 (feat(tecipa): add Tecipa B2B website with configurator and quote system)
                 ${itemsSummaryHtml}
               </div>
               <div class="summary-row">

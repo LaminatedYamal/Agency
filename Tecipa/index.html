@@ -7,7 +7,16 @@
   <meta name="description" content="A Tecipa produz uma gama variada de produtos em tecido não tecido para Restauração, Hotelaria, Indústria e Aviação Civil. Fundada em 1998 na Figueira da Foz.">
   <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
   <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
-  <link rel="stylesheet" href="./css/style.css?v=5.5">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png?v=2">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png?v=2">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png?v=2">
+  <link rel="shortcut icon" href="./favicon.ico?v=2">
+
+  <link rel="stylesheet" href="./css/style.css?v=6.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Cinzel:wght@600;700&family=Great+Vibes&family=Montserrat:wght@500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Prata&display=swap" rel="stylesheet">
@@ -393,10 +402,10 @@
   <section class="fold-guide-section" id="fold-guide">
     <div class="container">
       <div class="text-center" style="margin-bottom: 3rem;">
-        <span class="section-tag" data-i18n="fold_tag">Ferramenta Interativa</span>
-        <h2 class="section-title" data-i18n="fold_title">Guia de Dimensões e Dobras de Guardanapos</h2>
+        <span class="section-tag" data-i18n="fold_tag">Configurador Interativo</span>
+        <h2 class="section-title" data-i18n="fold_title">Configurador de Dimensões e Dobras de Guardanapos</h2>
         <p class="section-desc" data-i18n="fold_desc">
-          Em várias texturas, cores e dimensões, é possível personalizar e criar um design exclusivo adaptado à atmosfera do seu restaurante, hotel ou companhia aérea.
+          Em várias texturas, cores e dimensões, configure e personalize um design exclusivo em tempo real, adaptado à atmosfera do seu espaço ou companhia aérea.
         </p>
       </div>
 
@@ -743,15 +752,15 @@
   </section>
 
   <!-- ==========================================================================
-       2-Step Quick Quote & Meeting Scheduling Section (n8n Webhook Ready)
+       2-Step Quick Quote Section (n8n Webhook Ready)
        ========================================================================== -->
   <section class="quote-section" id="quote-section">
     <div class="container">
       <div class="text-center" style="margin-bottom: 2.5rem;">
         <span class="section-tag" data-i18n="quote_tag">Atendimento Rápido</span>
-        <h2 class="section-title" data-i18n="quote_title">Pedido de Orçamento & Reunião</h2>
+        <h2 class="section-title" data-i18n="quote_title">Pedido de Orçamento</h2>
         <p class="section-desc" data-i18n="quote_desc">
-          Selecione as especificações dos seus produtos e agende uma breve reunião com a nossa equipa. Os seus dados são enviados diretamente para o nosso fluxo n8n.
+          Selecione as especificações dos seus produtos e solicite a sua proposta à nossa equipa. Os seus dados serão enviados de imediato a um colaborador que entrará em contacto consigo no prazo de 1 hora.
         </p>
       </div>
 
@@ -766,12 +775,12 @@
           <div class="stepper-progress">
             <div class="step-indicator active" id="indicatorStep1">
               <span class="step-bubble">1</span>
-              <span>1. Produto</span>
+              <span data-i18n="step1_indicator">1. Produto</span>
             </div>
             <div class="stepper-divider"></div>
             <div class="step-indicator" id="indicatorStep2">
               <span class="step-bubble">2</span>
-              <span>2. Reunião</span>
+              <span data-i18n="step2_indicator">2. Contacto</span>
             </div>
           </div>
         </div>
@@ -856,10 +865,10 @@
               </div>
             </div>
 
-            <!-- Step 1 Actions: Proceed to Meeting -->
+            <!-- Step 1 Actions: Proceed to Quote -->
             <div class="quote-prog-group is-collapsed quote-submit-row" id="quoteGroupSubmit" style="margin-top: 2rem;">
               <button class="btn btn-primary" id="toStep2Btn">
-                <span data-i18n="btn_to_step2" id="toStep2BtnText">Avançar para Agendamento →</span>
+                <span data-i18n="btn_to_step2" id="toStep2BtnText">Avançar para Pedido de Orçamento →</span>
               </button>
             </div>
           </div>
@@ -896,35 +905,10 @@
               </div>
             </div>
 
-            <!-- Meeting Scheduling Date & Time -->
-            <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--slate-200);">
-              <div class="form-section-title">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                <span data-i18n="meeting_section_title">Agendar Reunião Breve com a Equipa Tecipa (15 Minutos)</span>
-              </div>
-
-              <div class="form-row" style="align-items: start;">
-                <div class="form-group">
-                  <label for="meetingDateInput" data-i18n="lbl_date">Data Preferencial</label>
-                  <input type="date" id="meetingDateInput">
-                  <span style="font-size: 0.75rem; color: var(--slate-500); margin-top: 4px;"><span data-i18n="lbl_timezone">Fuso Horário:</span> <strong id="userTimezoneDisplay">Detectando...</strong></span>
-                </div>
-
-                <div class="form-group">
-                  <label data-i18n="lbl_time">Horário Pretendido</label>
-                  <div class="time-slot-grid">
-                    <button type="button" class="time-slot-btn" data-time="09:30">09:30</button>
-                    <button type="button" class="time-slot-btn selected" data-time="11:30">11:30</button>
-                    <button type="button" class="time-slot-btn" data-time="14:30">14:30</button>
-                    <button type="button" class="time-slot-btn" data-time="16:30">16:30</button>
-                  </div>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="notesInput" data-i18n="lbl_notes">Mensagem ou Especificações Adicionais (Opcional)</label>
-                <textarea id="notesInput" rows="3" placeholder="Indique detalhes sobre as dimensões pretendidas, envio de logótipo para amostras, ou datas limite..."></textarea>
-              </div>
+            <!-- Notes and Specifications -->
+            <div class="form-group" style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--slate-200);">
+              <label for="notesInput" data-i18n="lbl_notes">Mensagem ou Especificações Adicionais (Opcional)</label>
+              <textarea id="notesInput" rows="3" placeholder="Indique detalhes sobre as dimensões pretendidas, envio de logótipo para amostras, ou outras especificações..."></textarea>
             </div>
 
             <!-- Live Webhook Notification Bar -->
@@ -942,7 +926,7 @@
                 ← Voltar
               </button>
               <button class="btn btn-accent" id="submitQuoteBtn">
-                <span data-i18n="btn_submit">Confirmar & Enviar para n8n</span>
+                <span data-i18n="btn_submit">Enviar Pedido de Orçamento</span>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
               </button>
             </div>
@@ -953,9 +937,9 @@
             <div class="success-icon-wrap">
               <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
-            <h3 style="font-size: 1.75rem; font-weight: 800; color: var(--slate-900); margin-bottom: 0.5rem;">Pedido Enviado & Reunião Agendada!</h3>
-            <p style="color: var(--slate-600); max-width: 520px; margin: 0 auto 1.5rem;">
-              O seu pedido de cotação e agendamento de reunião foram transmitidos via webhook para o fluxo n8n da Tecipa. A nossa equipa entrará em contacto brevemente.
+            <h3 style="font-size: 1.75rem; font-weight: 800; color: var(--slate-900); margin-bottom: 0.5rem;" data-i18n="quote_success_title">Pedido de Orçamento Enviado!</h3>
+            <p style="color: var(--slate-600); max-width: 520px; margin: 0 auto 1.5rem;" data-i18n="quote_success_desc">
+              O seu pedido de orçamento foi transmitido via webhook para o fluxo n8n da Tecipa. A nossa equipa entrará em contacto brevemente com a sua proposta.
             </p>
 
             <div class="quote-summary-box" id="quoteSummaryBox">
@@ -1075,10 +1059,9 @@
         <div class="footer-col">
           <h5>Ferramentas</h5>
           <ul class="footer-links">
-            <li><a href="#fold-guide">Guia de Dobras & Formatos</a></li>
+            <li><a href="#fold-guide" data-i18n="footer_configurator">Configurador de Guardanapos</a></li>
             <li><a href="#advantages">As 5 Vantagens</a></li>
-            <li><a href="#quote-section">Pedido de Orçamento</a></li>
-            <li><a href="#quote-section">Agendar Reunião</a></li>
+            <li><a href="#quote-section" data-i18n="footer_quote">Pedido de Orçamento</a></li>
           </ul>
         </div>
 
@@ -1123,7 +1106,7 @@
       </div>
       <div class="modal-body">
         <p style="font-size: 0.88rem; color: var(--slate-600); margin-bottom: 1.25rem;">
-          Insira o URL do seu webhook n8n. Ao submeter o pedido de orçamento e agendamento de reunião, o payload estruturado em JSON será enviado via HTTP POST para este endpoint.
+          Insira o URL do seu webhook n8n. Ao submeter o pedido de orçamento, o payload estruturado em JSON será enviado via HTTP POST para este endpoint.
         </p>
 
         <div class="form-group">
@@ -1140,7 +1123,7 @@
   </div>
 
   <!-- Scripts -->
-  <script src="./js/app.js?v=4.9"></script>
-  <script src="./js/quote-scheduler.js?v=4.8"></script>
+  <script src="./js/app.js?v=6.2"></script>
+  <script src="./js/quote-scheduler.js?v=6.2"></script>
 </body>
 </html>
