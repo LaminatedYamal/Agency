@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Visitas Guiadas à Coudelaria — Andrade Horses</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/brand/ferro-andrade-iron.svg?v=7">
+  
+  <!-- FONTS: Cormorant Garamond (Tratado Real) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --color-primary: #35845d;
+      --color-primary-dark: #235d40;
+      --color-primary-light: #eef6f1;
+      --color-gold: #c6923b;
+      --color-gold-light: #fdf8ef;
+      --color-text: #242527;
+      --color-muted: #5b6068;
+      --color-border: #e3e6ea;
+      --color-bg: #ffffff;
+      --color-bg-alt: #f8f9fa;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--color-text);
+      background-color: #faf9f6;
+      line-height: 1.7;
+      font-size: 15.5px;
+      position: relative;
+    }
+
+    .site-art-bg {
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      pointer-events: none; z-index: 0;
+      background-image: url('assets/images/brand/montado-minimal-charcoal.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center bottom;
+      opacity: 0.14;
+      mix-blend-mode: multiply;
+    }
+
+    header, main, footer, .top-bar { position: relative; z-index: 1; }
+
+    .container-wide { max-width: 1360px; margin: 0 auto; padding: 0 24px; }
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+    /* ========================================================
+       TOP NOBLESSE MASTHEAD WITH INTEGRATED PAGES
+       ======================================================== */
+    :root {
+      --header-height: 92px;
+      --color-gold: #cfa858;
+      --color-green: #295226;
+      --color-orange: #ed9807;
+    }
+
+    .masthead-noblesse {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      height: var(--header-height);
+      z-index: 1000;
+      background: #ed9807;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.45);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .masthead-noblesse::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #295226;
+      clip-path: polygon(
+        0 0,
+        calc(50% + 35.5px) 0,
+        calc(50% - 31.5px) 100%,
+        0 100%
+      );
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .masthead-inner {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      height: 100%;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* CENTER LOGO OVER CONTINUOUS RIBBON */
+    .masthead-center-logo {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      z-index: 10;
+    }
+
+    .masthead-center-logo img {
+      height: 78px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.45));
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .masthead-center-logo:hover img {
+      /* no zoom */
+    }
+
+    /* NAV WINGS */
+    .masthead-nav-wing {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .masthead-nav-wing.left-wing {
+      justify-content: flex-end;
+      flex: 1;
+      margin-right: 48px;
+    }
+
+    .masthead-nav-wing.right-wing {
+      justify-content: flex-start;
+      flex: 1;
+      margin-left: 48px;
+    }
+
+    /* NOBLE NAV LINKS */
+    .masthead-nav-link {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 0px;
+      transition: all 0.22s ease;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1.2;
+    }
+
+    /* LEFT WING (OVER GREEN #295226) */
+    .left-wing .masthead-nav-link {
+      color: #ffffff;
+      background: rgba(0, 0, 0, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+    .left-wing .masthead-nav-link:hover {
+      background: rgba(255, 255, 255, 0.22);
+      border-color: rgba(255, 255, 255, 0.6);
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+    .left-wing .masthead-nav-link.active {
+      background: #ffffff;
+      color: #1a3a18;
+      border-color: #ffffff;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    /* RIGHT WING (OVER ORANGE #ed9807) */
+    .right-wing .masthead-nav-link {
+      color: #1a1610;
+      background: rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(0, 0, 0, 0.24);
+    }
+    .right-wing .masthead-nav-link:hover {
+      background: rgba(0, 0, 0, 0.16);
+      border-color: rgba(0, 0, 0, 0.5);
+      color: #0a0805;
+      transform: translateY(-1px);
+    }
+    .right-wing .masthead-nav-link.active {
+      background: #141a12;
+      color: #f7ecd7;
+      border-color: #141a12;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+    }
+
+
+
+    
+    /* MOBILE NAVIGATION DRAWER & TOGGLE BASE (Hidden on Desktop) */
+    .mobile-menu-toggle {
+      display: none;
+    }
+    .mobile-nav-drawer {
+      display: none;
+    }
+
+    @media (max-width: 1200px) {
+      .masthead-nav-link {
+        font-size: 13.5px;
+        padding: 5px 9px;
+      }
+      .masthead-nav-wing {
+        gap: 8px;
+      }
+      .masthead-nav-wing.left-wing {
+        margin-right: 44px;
+      }
+      .masthead-nav-wing.right-wing {
+        margin-left: 44px;
+      }
+      .masthead-center-logo img {
+        height: 68px;
+      }
+    }
+
+    @media (max-width: 980px) {
+      :root {
+        --safe-top: env(safe-area-inset-top, 0px);
+        --header-height: calc(58px + env(safe-area-inset-top, 0px));
+      }
+
+      .masthead-noblesse {
+        height: calc(58px + env(safe-area-inset-top, 0px)) !important;
+        min-height: calc(58px + env(safe-area-inset-top, 0px)) !important;
+        padding: 0 !important;
+        padding-top: env(safe-area-inset-top, 0px) !important;
+        box-sizing: border-box !important;
+        background: #ed9807 !important;
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 1000 !important;
+        overflow: visible !important;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3) !important;
+        border-bottom: 1.5px solid rgba(0, 0, 0, 0.4) !important;
+      }
+
+      .masthead-noblesse::before {
+        content: '' !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: #295226 !important;
+        clip-path: polygon(
+          0 0,
+          calc(50% + 24px) 0,
+          calc(50% - 22px) 100%,
+          0 100%
+        ) !important;
+        z-index: 0 !important;
+        pointer-events: none !important;
+      }
+
+      .masthead-inner {
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        height: 58px !important;
+        padding: 0 16px !important;
+        gap: 0 !important;
+        position: relative !important;
+        z-index: 10 !important;
+        box-sizing: border-box !important;
+      }
+
+      /* Hide inline wings on mobile */
+      .masthead-nav-wing {
+        display: none !important;
+      }
+
+      /* Centered logo */
+      .masthead-center-logo {
+        position: absolute !important;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        margin: 0 !important;
+        z-index: 10 !important;
+      }
+
+      .masthead-center-logo img {
+        height: 44px !important;
+        width: auto !important;
+      }
+
+      /* Mobile Hamburger Button */
+      .mobile-menu-toggle {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 40px;
+        height: 40px;
+        background: rgba(0, 0, 0, 0.28);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+        cursor: pointer;
+        z-index: 20;
+        position: absolute !important; left: 16px !important; top: 50% !important; transform: translateY(-50%) !important; margin: 0 !important;
+        padding: 8px;
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+      }
+
+      .mobile-menu-toggle .menu-bar {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: #ffffff;
+        border-radius: 2px;
+      }
+
+      /* Mobile Navigation Drawer Overlay */
+      .mobile-nav-drawer {
+        display: block !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0.3s ease, opacity 0.3s ease;
+      }
+
+      .mobile-nav-drawer.open {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .mobile-drawer-backdrop {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(14, 20, 15, 0.72);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+      }
+
+            .mobile-drawer-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: auto;
+        width: 86%;
+        max-width: 340px;
+        height: 100%;
+        background: linear-gradient(175deg, #fdfbf7 0%, #f4efe4 100%);
+        border-right: 2px solid #295226;
+        border-left: none;
+        box-shadow: 8px 0 35px rgba(0, 0, 0, 0.25);
+        padding: 24px 20px;
+        padding-top: calc(24px + env(safe-area-inset-top, 0px));
+        display: flex;
+        flex-direction: column;
+        transform: translateX(-100%);
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        overflow-y: auto;
+      }
+
+      .mobile-nav-drawer.open .mobile-drawer-content {
+        transform: translateX(0);
+      }
+
+      .mobile-drawer-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 16px;
+        border-bottom: 1.5px solid rgba(41, 82, 38, 0.2);
+        margin-bottom: 20px;
+      }
+
+      .mobile-drawer-logo {
+        height: 48px;
+        width: auto;
+        filter: none !important;
+      }
+
+      .mobile-drawer-close {
+        background: rgba(41, 82, 38, 0.06);
+        border: 1px solid rgba(41, 82, 38, 0.3);
+        color: #295226;
+        font-size: 28px;
+        line-height: 1;
+        width: 36px;
+        height: 36px;
+        border-radius: 4px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s, color 0.2s;
+      }
+
+      .mobile-drawer-close:hover {
+        background: rgba(41, 82, 38, 0.15);
+        color: #1b3818;
+      }
+
+      .mobile-drawer-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        flex: 1;
+      }
+
+      .mobile-drawer-link {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        color: #1b321a;
+        text-decoration: none;
+        padding: 12px 14px;
+        border-radius: 4px;
+        border-left: 3px solid transparent;
+        transition: background 0.2s, border-color 0.2s, color 0.2s;
+        display: block;
+      }
+
+      .mobile-drawer-link:hover {
+        background: rgba(237, 152, 7, 0.1);
+        border-left-color: #ed9807;
+        color: #b37300;
+      }
+
+      .mobile-drawer-link.active {
+        background: rgba(41, 82, 38, 0.08);
+        border-left-color: #295226;
+        color: #295226;
+        font-weight: 700;
+      }
+
+      .mobile-drawer-footer {
+        margin-top: auto;
+        padding-top: 18px;
+        border-top: 1.5px solid rgba(41, 82, 38, 0.2);
+        text-align: center;
+      }
+
+      .mobile-drawer-farm {
+        font-family: 'Cormorant Garamond', serif;
+        font-style: italic;
+        font-size: 14.5px;
+        color: #4a5d48;
+        margin-bottom: 6px;
+      }
+
+      .mobile-drawer-phone {
+        font-family: 'Cinzel', Georgia, serif;
+        font-size: 13.5px;
+        color: #295226;
+        text-decoration: none;
+        letter-spacing: 0.05em;
+        font-weight: 700;
+      }
+
+      .mobile-drawer-phone:hover {
+        color: #ed9807;
+      }
+
+      /* Compact page banner */
+      .page-title-banner {
+        padding: 24px 16px 14px 16px !important;
+        margin-bottom: 16px !important;
+      }
+      .page-title {
+        font-size: 32px !important;
+        line-height: 1.2 !important;
+      }
+      .page-subtitle {
+        font-size: 16px !important;
+        line-height: 1.45 !important;
+        padding: 0 8px !important;
+      }
+      
+    }
+    }
+
+    /* COMPACT NOBLE PAGE HEADER (GETS SPACE BACK) */
+    .page-title-banner {
+      text-align: center;
+      padding: 34px 0 22px 0;
+      margin-bottom: 26px;
+      border-bottom: 1.5px solid rgba(207, 168, 88, 0.45);
+    }
+    .page-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 40px;
+      font-style: italic;
+      font-weight: 700;
+      color: #1a2217;
+      letter-spacing: 0.5px;
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+    .page-subtitle {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 18.5px;
+      font-style: italic;
+      color: #555e57;
+      max-width: 780px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    /* ========================================================
+       COOLMORE-INSPIRED NOBLE EDITORIAL SPLIT LAYOUT
+       ======================================================== */
+    .cm-editorial-section {
+      padding: 70px 0;
+      position: relative;
+    }
+    .cm-editorial-section + .cm-editorial-section {
+      border-top: 1px solid rgba(207, 168, 88, 0.25);
+    }
+
+    .cm-split-row {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .cm-split-row.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .cm-img-col {
+      flex: 1 1 50%;
+      position: relative;
+    }
+    .cm-img-frame {
+      position: relative;
+      width: 100%;
+      height: 480px;
+      overflow: hidden;
+      background: #141a12;
+      border: 1px solid rgba(207, 168, 88, 0.4);
+      box-shadow: 0 16px 40px rgba(20, 28, 22, 0.12);
+    }
+    .cm-img-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .cm-img-frame:hover img {
+      transform: none;
+    }
+    /* Subtle bottom gradient feathering into background, exactly like Coolmore */
+    .cm-img-feather {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 28%;
+      background: linear-gradient(to top, rgba(20, 26, 18, 0.7), transparent);
+      pointer-events: none;
+    }
+
+    .cm-copy-col {
+      flex: 1 1 50%;
+      max-width: 520px;
+    }
+    .cm-kicker {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #295226;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+    .cm-rule {
+      width: 60px;
+      height: 1.5px;
+      background: #cfa858;
+      border: none;
+      margin-bottom: 24px;
+    }
+    .cm-headline {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 32px;
+      line-height: 1.25;
+      font-weight: 700;
+      font-style: italic;
+      color: #141a12;
+      margin-bottom: 20px;
+      letter-spacing: 0.2px;
+    }
+    .cm-body {
+      font-size: 16px;
+      line-height: 1.85;
+      color: #4a5048;
+      margin-bottom: 22px;
+      font-weight: 400;
+    }
+
+    /* SPECIFICATION LIST (THE DETAILS) */
+    .cm-specs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 28px 0;
+      padding: 22px;
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(207, 168, 88, 0.35);
+      backdrop-filter: blur(8px);
+    }
+    .cm-spec-item {
+      display: flex;
+      flex-direction: column;
+    }
+    .cm-spec-label {
+      font-size: 11.5px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: #7d847b;
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+    .cm-spec-value {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 19px;
+      font-weight: 700;
+      color: #1a2417;
+    }
+
+    /* REFINED PILL CTA (COOLMORE STYLE) */
+    .cm-pill-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 32px;
+      border-radius: 9999px;
+      border: 1.5px solid #295226;
+      background: transparent;
+      color: #295226;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      margin-top: 10px;
+    }
+    .cm-pill-cta:hover {
+      background: #295226;
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(41, 82, 38, 0.25);
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1.5px solid rgba(207, 168, 88, 0.35);
+      background: #ffffff;
+      padding: 40px 0;
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      margin-top: 80px;
+    }
+    .footer-quote {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-weight: 600;
+      font-size: 19px;
+      color: #295226;
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: 960px) {
+      .cm-split-row,
+      .cm-split-row.reverse {
+        flex-direction: column;
+        gap: 36px;
+      }
+      .cm-img-col, .cm-copy-col {
+        max-width: 100%;
+        width: 100%;
+      }
+      .cm-img-frame {
+        height: 340px;
+      }
+      .cm-headline {
+        font-size: 27px;
+      }
+      .cm-specs-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  
+    /* STOP ALL IMAGE ZOOM ON HOVER EVERYWHERE */
+    img, .portal-card-bg, .cm-img-frame img, .archival-photo-frame img, .pillar-sketch-frame img {
+      transition: none !important;
+    }
+    *:hover > img,
+    *:hover img,
+    .cm-img-frame:hover img,
+    .archival-photo-frame:hover img,
+    .pillar-box:hover .pillar-sketch-frame img,
+    .portal-card:hover .portal-card-bg {
+      transform: none !important;
+    }
+    .archival-photo-frame:hover,
+    .cm-img-frame:hover,
+    .pillar-box:hover {
+      box-shadow: 0 14px 34px rgba(28, 32, 29, 0.16) !important;
+      border-color: rgba(207, 168, 88, 0.75) !important;
+    }
+    
+
+    /* MOBILE FOOTER TOGGLE BAR (HEADER-STYLE SPLIT WITH UPWARD CHEVRON) */
+    .mobile-footer-toggle-bar {
+      display: none;
+    }
+
+    @media (max-width: 980px) {
+      .mobile-footer-toggle-bar {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        position: relative !important;
+        height: 38px !important;
+        background: #ed9807 !important;
+        cursor: pointer !important;
+        user-select: none !important;
+        overflow: hidden !important;
+        box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15) !important;
+        border-top: 1.5px solid rgba(0, 0, 0, 0.25) !important;
+        box-sizing: border-box !important;
+      }
+
+      .mobile-footer-toggle-bar::before {
+        content: '' !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: #295226 !important;
+        clip-path: polygon(
+          0 0,
+          calc(50% + 20px) 0,
+          calc(50% - 18px) 100%,
+          0 100%
+        ) !important;
+        z-index: 1 !important;
+        pointer-events: none !important;
+      }
+
+      .mobile-footer-toggle-inner {
+        position: relative !important;
+        z-index: 2 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        width: 100% !important;
+        height: 100% !important;
+        padding: 0 16px !important;
+        color: #ffffff !important;
+        font-family: var(--font-heading, "Cinzel", Georgia, serif) !important;
+        font-size: 0.72rem !important;
+        letter-spacing: 0.12em !important;
+        text-transform: uppercase !important;
+        font-weight: 600 !important;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+      }
+
+      .mobile-footer-chevron {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      }
+
+      .mobile-footer-toggle-bar.open .mobile-footer-chevron {
+        transform: rotate(180deg) !important;
+      }
+
+      .footer-collapsible-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), padding 0.35s ease;
+        background: #faf8f5;
+        padding: 0 16px;
+      }
+
+      .footer-collapsible-content.open {
+        max-height: 400px;
+        padding: 22px 16px 28px 16px;
+        border-bottom: 2px solid #295226;
+      }
+    }
+
+</style>
+</head>
+<body>
+  <div class="site-art-bg"></div>
+
+  <!-- ========================================================
+       TOP MASTHEAD: SEAMLESS GREEN & ORANGE NOBLESSE
+       ======================================================== -->
+  <header class="masthead-noblesse">
+    <div class="masthead-inner">
+      
+      <!-- LEFT WING: 3 PAGES (Over Green #295226) -->
+      <nav class="masthead-nav-wing left-wing" aria-label="Navegação Esquerda">
+        <a href="historia.html" class="masthead-nav-link" data-pt="História" data-en="History">História</a>
+        <a href="o-cavalo-dandrade.html" class="masthead-nav-link" data-pt="O Cavalo D'Andrade" data-en="The D'Andrade Horse">O Cavalo D'Andrade</a>
+        <a href="sorraias.html" class="masthead-nav-link" data-pt="Sorraias" data-en="Sorraia Horses">Sorraias</a>
+      </nav>
+
+      <!-- BIG CENTERED LOGO OVER CONTINUOUS RIBBON -->
+      <a href="index.html" class="masthead-center-logo" title="Coudelaria Andrade &mdash; Voltar à Página Principal">
+        <img src="assets/images/brand/ferro-andrade-iron.svg?v=7" 
+             alt="Ferro SA &mdash; Coudelaria Andrade" 
+             id="masthead-logo">
+      </a>
+
+      <!-- RIGHT WING: 3 PAGES (Over Orange #ed9807) -->
+      <nav class="masthead-nav-wing right-wing" aria-label="Navegação Direita">
+        <a href="cavalos-para-venda.html" class="masthead-nav-link" data-pt="Cavalos para Venda" data-en="Horses for Sale">Cavalos para Venda</a>
+        <a href="visitas-guiadas.html" class="masthead-nav-link active" data-pt="Visitas Guiadas" data-en="Guided Visits">Visitas Guiadas</a>
+        <a href="contactos.html" class="masthead-nav-link" data-pt="Contactos" data-en="Contacts">Contactos</a>
+      </nav>
+      <!-- MOBILE MENU TOGGLE (<= 980px) -->
+      <button type="button" class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu" aria-expanded="false">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </button>
+    </div>
+  </header>
+  <!-- ========================================================
+       MOBILE NAVIGATION DRAWER
+       ======================================================== -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true">
+    <div class="mobile-drawer-backdrop" id="mobileDrawerBackdrop"></div>
+    <div class="mobile-drawer-content">
+      <div class="mobile-drawer-header">
+        <img src="assets/images/brand/ferro-andrade-iron.svg?v=7" alt="Ferro SA" class="mobile-drawer-logo">
+        <button type="button" class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Fechar">&times;</button>
+      </div>
+      
+      
+
+      <nav class="mobile-drawer-nav">
+        <a href="index.html" class="mobile-drawer-link" data-pt="Página Principal" data-en="Home">Página Principal</a>
+        <a href="historia.html" class="mobile-drawer-link" data-pt="História da Coudelaria SA" data-en="History of Stud d'Andrade">História da Coudelaria SA</a>
+        <a href="o-cavalo-dandrade.html" class="mobile-drawer-link" data-pt="O Cavalo D'Andrade" data-en="The D'Andrade Horse">O Cavalo D'Andrade</a>
+        <a href="sorraias.html" class="mobile-drawer-link" data-pt="Cavalos Sorraia" data-en="Sorraia Horses">Cavalos Sorraia</a>
+        <a href="cavalos-para-venda.html" class="mobile-drawer-link" data-pt="Cavalos para Venda" data-en="Horses for Sale">Cavalos para Venda</a>
+        <a href="visitas-guiadas.html" class="mobile-drawer-link active" data-pt="Visitas Guiadas" data-en="Guided Visits">Visitas Guiadas</a>
+        <a href="contactos.html" class="mobile-drawer-link" data-pt="Contactos &amp; Localização" data-en="Contacts &amp; Location">Contactos &amp; Localização</a>
+      </nav>
+      
+      <div class="mobile-drawer-footer">
+        <p class="mobile-drawer-farm">Herdade da Agolada de Baixo &middot; Coruche</p>
+        <a href="tel:+351962149845" class="mobile-drawer-phone">(+351) 962 149 845</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- PAGE TITLE BANNER -->
+    <div class="page-title-banner">
+      <h1 class="page-title" data-pt="Visitas Guiadas à Coudelaria" data-en="Exclusive Guided Visits to Our Stud">Visitas Guiadas à Coudelaria</h1>
+      <p class="page-subtitle" data-pt="Uma experiência íntima na Herdade da Agolada de Baixo, entre manadas em liberdade e séculos de tradição." data-en="An intimate experience at Herdade da Agolada de Baixo, among free-roaming herds and centuries of tradition.">
+        Uma experiência íntima na Herdade da Agolada de Baixo, entre manadas em liberdade e séculos de tradição.
+      </p>
+    </div>
+
+    <!-- CHAPTER 2: THE DETAILS / DETALHES DA VISITA (COPY LEFT, IMAGE RIGHT - REVERSE) -->
+    <section class="cm-editorial-section">
+      <div class="cm-split-row reverse">
+        <div class="cm-img-col">
+          <div class="cm-img-frame">
+            <img src="assets/images/pages/exclusive-guided-visits-to-our-stud/bmsc4214-editar.jpg" alt="Éguas com Poldros no Montado">
+            <div class="cm-img-feather"></div>
+          </div>
+        </div>
+        <div class="cm-copy-col">
+          <span class="cm-kicker" data-pt="Os Detalhes" data-en="The Details">Os Detalhes</span>
+          <div class="cm-rule"></div>
+          <h2 class="cm-headline" data-pt="Um percurso guiado pelas pastagens históricas, garanhões reprodutores e instalações tradicionais." data-en="A guided journey across historic pastures, reference stallions, and traditional facilities.">
+            Um percurso guiado pelas pastagens históricas, garanhões reprodutores e instalações tradicionais.
+          </h2>
+          <p class="cm-body" data-pt="As visitas realizam-se mediante reserva prévia obrigatória, assegurando total tranquilidade para os visitantes e respeito integral pelo bem-estar dos animais." data-en="Visits are conducted strictly by prior appointment, ensuring complete tranquility for guests and full respect for equine well-being.">
+            As visitas realizam-se mediante reserva prévia obrigatória, assegurando total tranquilidade para os visitantes e respeito integral pelo bem-estar dos animais.
+          </p>
+
+          <!-- Coolmore-style specifications box -->
+          <div class="cm-specs-grid">
+            <div class="cm-spec-item">
+              <span class="cm-spec-label" data-pt="Duração" data-en="Duration">Duração</span>
+              <span class="cm-spec-value" data-pt="~ 2 Horas" data-en="~ 2 Hours">~ 2 Horas</span>
+            </div>
+            <div class="cm-spec-item">
+              <span class="cm-spec-label" data-pt="Dimensão do Grupo" data-en="Group Size">Dimensão do Grupo</span>
+              <span class="cm-spec-value" data-pt="10 a 30 Pessoas" data-en="10 to 30 Guests">10 a 30 Pessoas</span>
+            </div>
+            <div class="cm-spec-item">
+              <span class="cm-spec-label" data-pt="Degustação" data-en="Tasting">Degustação</span>
+              <span class="cm-spec-value" data-pt="Vinhos & Petiscos" data-en="Wine & Local Bites">Vinhos & Petiscos</span>
+            </div>
+            <div class="cm-spec-item">
+              <span class="cm-spec-label" data-pt="Tarifa" data-en="Fee">Tarifa</span>
+              <span class="cm-spec-value">25 € / pessoa</span>
+            </div>
+          </div>
+
+          <a href="mailto:andradehorses@gmail.com?subject=Reserva%20de%20Visita%20Guiada%20-%20Coudelaria%20Andrade" class="cm-pill-cta" data-pt="Solicitar Reserva por Email" data-en="Request Tour Reservation">
+            Solicitar Reserva por Email
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 1: WELCOME / BEM-VINDO (IMAGE LEFT, COPY RIGHT) -->
+    <section class="cm-editorial-section">
+      <div class="cm-split-row">
+        <div class="cm-img-col">
+          <div class="cm-img-frame">
+            <img src="assets/images/pages/exclusive-guided-visits-to-our-stud/bmsc4428-editar.jpg" alt="Visitas na Herdade da Agolada">
+            <div class="cm-img-feather"></div>
+          </div>
+        </div>
+        <div class="cm-copy-col">
+          <span class="cm-kicker" data-pt="Bem-Vindo" data-en="Welcome">Bem-Vindo</span>
+          <div class="cm-rule"></div>
+          <h2 class="cm-headline" data-pt="A Coudelaria Andrade tem o privilégio de receber criadores, cavaleiros e entusiastas de todo o mundo." data-en="Coudelaria Andrade is proud to welcome breeders, riders, and equestrian enthusiasts from around the world.">
+            A Coudelaria Andrade tem o privilégio de receber criadores, cavaleiros e entusiastas de todo o mundo.
+          </h2>
+          <p class="cm-body" data-pt="Recordamos que somos uma coudelaria de trabalho e preservação viva do Puro Sangue Lusitano e do cavalo do Sorraia. Todas as nossas visitas são cuidadosamente programadas em função das rotinas dos animais, das pastagens e da equipa técnica." data-en="Please keep in mind that this is an active working stud dedicated to the Pure Blood Lusitano and Sorraia horse preservation. All tours are thoughtfully scheduled around the natural routines of the horses and farm staff.">
+            Recordamos que somos uma coudelaria de trabalho e preservação viva do Puro Sangue Lusitano e do cavalo do Sorraia. Todas as nossas visitas são cuidadosamente programadas em função das rotinas dos animais, das pastagens e da equipa técnica.
+          </p>
+          <p class="cm-body" data-pt="Aqui, o visitante não assiste a uma exibição artificial: convive com as manadas no seu habitat natural de montado e compreende a harmonia de séculos de seleção zootécnica." data-en="Here, visitors do not encounter a staged spectacle: you walk amidst herds in their natural cork oak montado and witness centuries of disciplined Iberian equestrian heritage.">
+            Aqui, o visitante não assiste a uma exibição artificial: convive com as manadas no seu habitat natural de montado e compreende a harmonia de séculos de seleção zootécnica.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 3: HERITAGE & ATMOSPHERE (IMAGE LEFT, COPY RIGHT) -->
+    <section class="cm-editorial-section">
+      <div class="cm-split-row reverse">
+        <div class="cm-img-col">
+          <div class="cm-img-frame">
+            <img src="assets/images/pages/exclusive-guided-visits-to-our-stud/bmsc3206-editar.jpg" alt="Instalações e Cavalariças Centenárias">
+            <div class="cm-img-feather"></div>
+          </div>
+        </div>
+        <div class="cm-copy-col">
+          <span class="cm-kicker" data-pt="Tradição & Convívio" data-en="Heritage & Hospitality">Tradição & Convívio</span>
+          <div class="cm-rule"></div>
+          <h2 class="cm-headline" data-pt="Conclusão da visita com sabores da região e conversa sobre a arte equestre." data-en="Concluding the experience with regional gastronomy and conversation on the equestrian arts.">
+            Conclusão da visita com sabores da região e conversa sobre a arte equestre.
+          </h2>
+          <p class="cm-body" data-pt="Após a caminhada pelas pastagens e o contacto próximo com os animais, os hóspedes são recebidos na herdade para uma degustação de vinhos e iguarias típicas ribatejanas, com opção de almoço tradicional mediante pedido antecipado." data-en="Following the walk through the pastures and close contact with our horses, guests are received at the estate for a tasting of regional wines and Ribatejo specialties, with traditional seated lunch options available upon prior request.">
+            Após a caminhada pelas pastagens e o contacto próximo com os animais, os hóspedes são recebidos na herdade para uma degustação de vinhos e iguarias típicas ribatejanas, com opção de almoço tradicional mediante pedido antecipado.
+          </p>
+          <a href="contactos.html" class="cm-pill-cta" data-pt="Localização & Como Chegar" data-en="Location & Directions">
+            Localização & Como Chegar
+          </a>
+        </div>
+      </div>
+    </section>
+  
+  </main>
+
+  <footer class="site-footer">
+    <div class="mobile-footer-toggle-bar" onclick="toggleMobileFooter(this)">
+      <div class="mobile-footer-toggle-inner">
+        <span class="mobile-footer-toggle-text">Herdade da Agolada de Baixo &bull; Contactos</span>
+        <span class="mobile-footer-chevron" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </span>
+      </div>
+    </div>
+    <div class="footer-collapsible-content">
+      <div class="container">
+      <p class="footer-quote" data-pt="“É uma coudelaria com uma forte raiz, que procura afirmar-se no presente com o valor do seu prestigiado passado.”" data-en="“It is a stud farm with deep roots, striving to stand tall in the present through the enduring worth of its prestigious past.”">
+        “É uma coudelaria com uma forte raiz, que procura afirmar-se no presente com o valor do seu prestigiado passado.”
+      </p>
+      <p style="margin-bottom: 4px;">
+        <strong>Coudelaria SA</strong> — Herdade da Agolada de Baixo, 2100-047 Coruche, Portugal
+      </p>
+      <p>
+        Email: <a href="mailto:andradehorses@gmail.com" style="color: var(--color-primary); font-weight: 600;">andradehorses@gmail.com</a> | 
+        <span data-pt="Telefone:" data-en="Phone:">Telefone:</span> <a href="tel:+351962149845" style="color: var(--color-primary); font-weight: 600;">(+351) 962 149 845</a>
+      </p>
+    </div>
+    </div>
+  </footer>
+
+  <script>
+    // AUTOMATIC BROWSER LANGUAGE DETECTION
+    function getPreferredLanguage() {
+      const browserLangs = navigator.languages || [navigator.language || navigator.userLanguage || 'pt'];
+      for (let l of browserLangs) {
+        if (l && l.toLowerCase().startsWith('pt')) return 'pt';
+      }
+      return 'en';
+    }
+
+    let currentLang = getPreferredLanguage();
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      document.documentElement.lang = lang;
+
+      document.querySelectorAll('[data-pt]').forEach(el => {
+        const text = el.getAttribute(`data-${lang}`);
+        if (text) el.innerText = text;
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      setLanguage(currentLang);
+    });
+  </script>
+<script>
+
+  // MOBILE DRAWER CONTROLLER
+  function initMobileDrawer() {
+    const toggleBtn = document.getElementById('mobileMenuToggle');
+    const drawer = document.getElementById('mobileNavDrawer');
+    const closeBtn = document.getElementById('mobileDrawerClose');
+    const backdrop = document.getElementById('mobileDrawerBackdrop');
+
+    if (toggleBtn && drawer) {
+      toggleBtn.addEventListener('click', () => {
+        drawer.classList.add('open');
+        drawer.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      });
+
+      const closeDrawer = () => {
+        drawer.classList.remove('open');
+        drawer.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      };
+
+      if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+      if (backdrop) backdrop.addEventListener('click', closeDrawer);
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
+      });
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMobileDrawer);
+  } else {
+    initMobileDrawer();
+  }
+
+</script>
+<script>
+  // MOBILE FOOTER CONTROLLER
+  function toggleMobileFooter(barEl) {
+    if (!barEl) return;
+    barEl.classList.toggle('open');
+    const content = barEl.parentElement.querySelector('.footer-collapsible-content');
+    if (content) {
+      content.classList.toggle('open');
+    }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,1663 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Andrade Horses &mdash; of Maria D'ANDRADE de Oliveira e Sousa</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/brand/ferro-andrade-iron.svg?v=7">
+  
+  <!-- TYPOGRAPHY: TRATADO REAL (CORMORANT GARAMOND COMPLETE) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --color-primary: #35845d;
+      --color-gold: #cfa858;
+      --color-gold-light: #f5e8cc;
+      --color-dark-bg: #090b0d;
+      --header-height: 98px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      background-color: var(--color-dark-bg);
+      color: #ffffff;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden; /* Full-screen horizontal experience */
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ========================================================
+       TOP MASTHEAD: SEAMLESS GREEN & ORANGE FROM LOGO
+       ======================================================== */
+    .masthead-noblesse {
+      position: relative;
+      width: 100%;
+      height: var(--header-height);
+      z-index: 1000;
+      background: #ed9807;
+      overflow: hidden;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.45);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+      display: flex;
+      align-items: center;
+    }
+
+    .masthead-noblesse::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #295226;
+      clip-path: polygon(
+        0 0,
+        calc(50% + 35.5px) 0,
+        calc(50% - 31.5px) 100%,
+        0 100%
+      );
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .masthead-inner {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      padding: 0 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .masthead-center-logo {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+
+    .masthead-center-logo img {
+      height: 80px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.45));
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .masthead-center-logo:hover img {
+      /* no zoom */
+    }
+
+    .masthead-nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    /* Header actions container */
+    .masthead-nav-actions {
+      display: flex;
+      align-items: center;
+    }
+
+    /* ========================================================
+       HORIZONTAL INFINITE CAROUSEL VIEWPORT
+       ======================================================== */
+    .carousel-viewport {
+      position: relative;
+      width: 100vw;
+      height: calc(100vh - var(--header-height));
+      overflow: hidden;
+      background: #000000;
+    }
+
+    /* Flex container for the cards */
+    .carousel-track {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    /* Individual Vertical Card */
+    .vertical-card {
+      position: relative;
+      flex: 1 1 33.333333%;
+      min-width: 33.333333%;
+      width: 33.333333%;
+      height: 100%;
+      overflow: hidden;
+      text-decoration: none;
+      color: #ffffff;
+      border-right: 1px solid rgba(255, 255, 255, 0.08);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: clamp(32px, 4.5vw, 64px) clamp(28px, 3.5vw, 52px);
+      box-shadow: inset 0 0 0 1.5px transparent;
+      transition: box-shadow 0.3s ease;
+      will-change: margin-left;
+      user-select: none;
+    }
+
+    .vertical-card:last-child {
+      border-right: none;
+    }
+
+    /* STABLE EQUAL-WIDTH CARDS: ZERO ACCORDION / ZERO IMAGE ZOOM ON HOVER */
+    .carousel-track:not(.is-sliding) .vertical-card:hover {
+      flex: 1 1 33.333333%;
+      min-width: 33.333333%;
+      width: 33.333333%;
+      box-shadow: inset 0 0 0 1.5px rgba(207, 168, 88, 0.9), 0 14px 34px rgba(0, 0, 0, 0.45);
+    }
+
+    /* LOCK POINTER EVENTS DURING SLIDING TO PREVENT DOUBLE ACTIVATION */
+    .carousel-track.is-sliding,
+    .carousel-track.is-sliding * {
+      pointer-events: none !important;
+    }
+
+    /* Background Photograph */
+    .card-photo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center center;
+      transition: filter 0.5s ease;
+      filter: brightness(1.0) contrast(1.02);
+      z-index: 1;
+    }
+
+    .vertical-card:hover .card-photo {
+      filter: brightness(1.04) contrast(1.03);
+    }
+
+    /* Luminous Bottom Scrim - Leaves top 55% completely clear and bright */
+    .card-scrim {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      background: linear-gradient(
+        to top,
+        rgba(6, 8, 7, 0.88) 0%,
+        rgba(6, 8, 7, 0.52) 20%,
+        rgba(6, 8, 7, 0.15) 35%,
+        transparent 48%
+      );
+      transition: background 0.4s ease;
+      pointer-events: none;
+    }
+
+    .vertical-card:hover .card-scrim {
+      background: linear-gradient(
+        to top,
+        rgba(6, 8, 7, 0.90) 0%,
+        rgba(6, 8, 7, 0.55) 24%,
+        rgba(6, 8, 7, 0.18) 38%,
+        transparent 50%
+      );
+    }
+
+    /* Card Content */
+    .card-content-box {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: 580px;
+    }
+
+    .card-num {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 14.5px;
+      letter-spacing: 2px;
+      color: var(--color-gold);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .card-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-weight: 700;
+      font-size: clamp(26px, 2.5vw, 42px);
+      letter-spacing: 0.4px;
+      color: #ffffff;
+      line-height: 1.15;
+      margin-bottom: 12px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
+      transition: color 0.25s ease;
+    }
+
+    .vertical-card:hover .card-title {
+      color: var(--color-gold-light);
+    }
+
+    .card-desc {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-size: clamp(15.5px, 1.25vw, 18px);
+      line-height: 1.48;
+      color: #e2e6eb;
+      margin-bottom: 22px;
+      max-width: 520px;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
+    }
+
+    .card-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 22px;
+      border-radius: 0px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      color: #ffffff;
+      backdrop-filter: blur(6px);
+      transition: all 0.25s ease;
+    }
+
+    .vertical-card:hover .card-cta {
+      background: var(--color-gold);
+      border-color: var(--color-gold);
+      color: #0d0f11;
+      box-shadow: 0 4px 16px rgba(207, 168, 88, 0.4);
+    }
+
+    .card-cta .cta-arrow {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-style: normal;
+      transition: transform 0.25s ease;
+    }
+
+    .vertical-card:hover .card-cta .cta-arrow {
+      transform: translateX(4px);
+    }
+
+    /* ========================================================
+       FLOATING NAVIGATION & INFINITE CONTROLS
+       ======================================================== */
+    .carousel-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      width: auto;
+      height: auto;
+      padding: 12px 20px;
+      background: none;
+      backdrop-filter: none;
+      border: none;
+      box-shadow: none;
+      color: #cfa858;
+      font-size: clamp(2.4rem, 3.6vw, 3.5rem);
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      user-select: none;
+      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.9)) drop-shadow(0 0 10px rgba(207, 168, 88, 0.45));
+      transition: transform 0.25s ease, filter 0.25s ease, color 0.25s ease;
+      opacity: 0.85;
+    }
+
+    .carousel-nav-btn:hover {
+      opacity: 1;
+      background: none;
+      border: none;
+      color: #ffd875;
+      transform: translateY(-50%) scale(1.18);
+      filter: drop-shadow(0 0 18px rgba(207, 168, 88, 0.9)) drop-shadow(0 2px 10px rgba(0, 0, 0, 0.95));
+    }
+
+    .prev-btn { left: 8px; }
+    .next-btn { right: 8px; }
+
+    /* Bottom Control Bar */
+    .carousel-bottom-bar {
+      position: absolute;
+      bottom: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 8px 22px;
+      background: rgba(8, 10, 12, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+    }
+
+    .indicator-dots {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .dot-step {
+      width: 24px;
+      height: 3px;
+      background: rgba(255, 255, 255, 0.25);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .dot-step.active-window {
+      background: var(--color-gold);
+    }
+
+    .dot-step.first-card {
+      height: 5px;
+      background: #ffffff;
+    }
+
+    .bottom-bar-sep {
+      color: rgba(255, 255, 255, 0.28);
+      font-size: 14px;
+      line-height: 1;
+      user-select: none;
+    }
+
+    .footer-drawer-btn {
+      background: transparent;
+      border: none;
+      color: var(--color-gold);
+      font-family: inherit;
+      font-style: italic;
+      font-size: 14.5px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.2s ease;
+      letter-spacing: 0.5px;
+    }
+    .footer-drawer-btn:hover {
+      color: #ffffff;
+    }
+
+    /* ========================================================
+       WHIMSICAL LUSITANO RUNNER ALONG HEADER BASELINE
+       ======================================================== */
+    .header-horse-track {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+      z-index: 3; /* Behind center logo shield (z-index 4), above header ribbon */
+      pointer-events: none;
+    }
+
+    .horse-runner {
+      position: absolute;
+      bottom: 0;
+      left: 4.5%;
+      transform: translateX(-50%);
+      pointer-events: none;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      user-select: none;
+      z-index: 20;
+      opacity: 0;
+      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .horse-runner.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .horse-figure {
+      width: 68px;
+      height: 47px;
+      background-image: url('assets/images/brand/horse/lusitano_walk_spritesheet.png');
+      background-size: 272px 47px;
+      background-repeat: no-repeat;
+      background-position: -204px 0; /* Frame 3: Standing proud pose */
+      filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.45));
+      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      transform-origin: bottom center;
+    }
+
+    /* Flip direction when going backwards */
+    .horse-runner.facing-left .horse-figure {
+      transform: scaleX(-1);
+    }
+
+    /* Energetic, frequent classical gait (90ms per frame cadence) */
+    .horse-runner.walking .horse-figure {
+      animation: horseCadence 0.36s steps(4) infinite;
+    }
+
+    @keyframes horseCadence {
+      from { background-position: 0 0; }
+      to { background-position: -272px 0; }
+    }
+
+    /* ========================================================
+       FOOTER MODAL / OVERLAY (ACCESSIBLE VIA BOTTOM BAR)
+       ======================================================== */
+    .footer-overlay {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      background: linear-gradient(180deg, rgba(16, 20, 26, 0.98) 0%, rgba(9, 11, 15, 0.99) 100%);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-top: 1px solid rgba(207, 168, 88, 0.5);
+      box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.85), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      z-index: 2000;
+      transform: translateY(100%);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      padding: 38px 24px 30px 24px;
+      text-align: center;
+      color: #e2e8f0;
+    }
+
+    .footer-overlay.open {
+      transform: translateY(0);
+    }
+
+    .footer-close-btn {
+      position: absolute;
+      top: 18px;
+      right: 28px;
+      background: rgba(16, 20, 26, 0.6);
+      border: 1px solid rgba(207, 168, 88, 0.45);
+      color: #f7dca3;
+      padding: 6px 16px;
+      font-size: 13px;
+      font-weight: 500;
+      border-radius: 0;
+      cursor: pointer;
+      font-style: italic;
+      letter-spacing: 1px;
+      transition: all 0.25s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    }
+    .footer-close-btn:hover {
+      border-color: #f7dca3;
+      background: var(--color-gold);
+      color: #080a0c;
+      font-weight: 600;
+      box-shadow: 0 0 14px rgba(207, 168, 88, 0.4);
+    }
+
+    .footer-logo {
+      height: 64px;
+      width: auto;
+      margin-bottom: 16px;
+      opacity: 0.9;
+      filter: invert(72%) sepia(80%) saturate(450%) hue-rotate(5deg) brightness(95%) contrast(90%) drop-shadow(0 2px 10px rgba(0, 0, 0, 0.6));
+    }
+
+    .footer-quote-tr {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-weight: 600;
+      font-size: clamp(20px, 1.9vw, 25px);
+      line-height: 1.4;
+      color: #f7dca3;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9), 0 0 30px rgba(247, 220, 163, 0.22);
+      margin-bottom: 14px;
+      max-width: 860px;
+    }
+
+    .footer-meta {
+      margin-bottom: 8px;
+      font-size: 15.5px;
+      line-height: 1.6;
+      color: #cbd5e1;
+      letter-spacing: 0.2px;
+    }
+
+    .footer-meta strong {
+      color: #ffffff;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .footer-links {
+      font-size: 15px;
+      color: #cbd5e1;
+    }
+
+    .footer-links a {
+      color: #f1f5f9;
+      font-weight: 500;
+      text-decoration: underline;
+      text-decoration-color: rgba(207, 168, 88, 0.55);
+      text-underline-offset: 4px;
+      transition: all 0.2s ease;
+    }
+    .footer-links a:hover {
+      color: #f7dca3;
+      text-decoration-color: #f7dca3;
+      text-shadow: 0 0 10px rgba(247, 220, 163, 0.4);
+    }
+
+    /* Responsive Mobile Carousel: 1 Card at a time, strictly horizontal swipe */
+    @media (max-width: 980px) {
+      .carousel-viewport {
+        position: relative !important;
+        width: 100vw !important;
+        height: calc(100vh - var(--header-height)) !important;
+        height: calc(100dvh - var(--header-height)) !important;
+        overflow: hidden !important;
+        background: #000000 !important;
+        touch-action: pan-y pinch-zoom;
+      }
+      .carousel-track {
+        display: flex !important;
+        flex-direction: row !important;
+        width: 100% !important;
+        height: 100% !important;
+        position: relative !important;
+        transform: none !important;
+      }
+      .vertical-card {
+        min-width: 100vw !important;
+        width: 100vw !important;
+        max-width: 100vw !important;
+        height: 100% !important;
+        flex: 0 0 100vw !important;
+        box-sizing: border-box !important;
+        padding: 36px 24px 44px 24px !important;
+      }
+      .carousel-bottom-bar {
+        display: none !important;
+      }
+      .carousel-nav-btn {
+        display: none !important;
+      }
+      .header-horse-track {
+        display: none !important;
+      }
+    }
+  
+    /* STOP ALL IMAGE ZOOM ON HOVER EVERYWHERE */
+    img, .portal-card-bg, .cm-img-frame img, .archival-photo-frame img, .pillar-sketch-frame img {
+      transition: none !important;
+    }
+    *:hover > img,
+    *:hover img,
+    .cm-img-frame:hover img,
+    .archival-photo-frame:hover img,
+    .pillar-box:hover .pillar-sketch-frame img,
+    .portal-card:hover .portal-card-bg {
+      transform: none !important;
+    }
+    .archival-photo-frame:hover,
+    .cm-img-frame:hover,
+    .pillar-box:hover {
+      box-shadow: 0 14px 34px rgba(28, 32, 29, 0.16) !important;
+      border-color: rgba(207, 168, 88, 0.75) !important;
+    }
+    
+
+    /* MOBILE NAVIGATION DRAWER & TOGGLE BASE (Hidden on Desktop) */
+    .mobile-menu-toggle {
+      display: none;
+    }
+    .mobile-nav-drawer {
+      display: none;
+    }
+
+      @media (max-width: 980px) {
+      :root {
+        --safe-top: env(safe-area-inset-top, 0px);
+        --header-height: calc(58px + env(safe-area-inset-top, 0px));
+      }
+
+      .masthead-noblesse {
+        height: calc(58px + env(safe-area-inset-top, 0px)) !important;
+        min-height: calc(58px + env(safe-area-inset-top, 0px)) !important;
+        padding: 0 !important;
+        padding-top: env(safe-area-inset-top, 0px) !important;
+        box-sizing: border-box !important;
+        background: #ed9807 !important;
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 1000 !important;
+        overflow: visible !important;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3) !important;
+        border-bottom: 1.5px solid rgba(0, 0, 0, 0.4) !important;
+      }
+
+      .masthead-noblesse::before {
+        content: '' !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: #295226 !important;
+        clip-path: polygon(
+          0 0,
+          calc(50% + 24px) 0,
+          calc(50% - 22px) 100%,
+          0 100%
+        ) !important;
+        z-index: 0 !important;
+        pointer-events: none !important;
+      }
+
+      .masthead-inner {
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        height: 58px !important;
+        padding: 0 16px !important;
+        gap: 0 !important;
+        position: relative !important;
+        z-index: 10 !important;
+        box-sizing: border-box !important;
+      }
+
+      /* Hide inline wings on mobile */
+      .masthead-nav-wing {
+        display: none !important;
+      }
+
+      /* Centered logo */
+      .masthead-center-logo {
+        position: absolute !important;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        margin: 0 !important;
+        z-index: 10 !important;
+      }
+
+      .masthead-center-logo img {
+        height: 44px !important;
+        width: auto !important;
+      }
+
+      /* Mobile Hamburger Button */
+      .mobile-menu-toggle {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 40px;
+        height: 40px;
+        background: rgba(0, 0, 0, 0.28);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+        cursor: pointer;
+        z-index: 20;
+        position: absolute !important; left: 16px !important; top: 50% !important; transform: translateY(-50%) !important; margin: 0 !important;
+        padding: 8px;
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+      }
+
+      .mobile-menu-toggle .menu-bar {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: #ffffff;
+        border-radius: 2px;
+      }
+
+      /* Mobile Navigation Drawer Overlay */
+      .mobile-nav-drawer {
+        display: block !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0.3s ease, opacity 0.3s ease;
+      }
+
+      .mobile-nav-drawer.open {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .mobile-drawer-backdrop {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(14, 20, 15, 0.72);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+      }
+
+            .mobile-drawer-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: auto;
+        width: 86%;
+        max-width: 340px;
+        height: 100%;
+        background: linear-gradient(175deg, #fdfbf7 0%, #f4efe4 100%);
+        border-right: 2px solid #295226;
+        border-left: none;
+        box-shadow: 8px 0 35px rgba(0, 0, 0, 0.25);
+        padding: 24px 20px;
+        padding-top: calc(24px + env(safe-area-inset-top, 0px));
+        display: flex;
+        flex-direction: column;
+        transform: translateX(-100%);
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        overflow-y: auto;
+      }
+
+      .mobile-nav-drawer.open .mobile-drawer-content {
+        transform: translateX(0);
+      }
+
+      .mobile-drawer-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 16px;
+        border-bottom: 1.5px solid rgba(41, 82, 38, 0.2);
+        margin-bottom: 20px;
+      }
+
+      .mobile-drawer-logo {
+        height: 48px;
+        width: auto;
+        filter: none !important;
+      }
+
+      .mobile-drawer-close {
+        background: rgba(41, 82, 38, 0.06);
+        border: 1px solid rgba(41, 82, 38, 0.3);
+        color: #295226;
+        font-size: 28px;
+        line-height: 1;
+        width: 36px;
+        height: 36px;
+        border-radius: 4px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s, color 0.2s;
+      }
+
+      .mobile-drawer-close:hover {
+        background: rgba(41, 82, 38, 0.15);
+        color: #1b3818;
+      }
+
+      .mobile-drawer-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        flex: 1;
+      }
+
+      .mobile-drawer-link {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        color: #1b321a;
+        text-decoration: none;
+        padding: 12px 14px;
+        border-radius: 4px;
+        border-left: 3px solid transparent;
+        transition: background 0.2s, border-color 0.2s, color 0.2s;
+        display: block;
+      }
+
+      .mobile-drawer-link:hover {
+        background: rgba(237, 152, 7, 0.1);
+        border-left-color: #ed9807;
+        color: #b37300;
+      }
+
+      .mobile-drawer-link.active {
+        background: rgba(41, 82, 38, 0.08);
+        border-left-color: #295226;
+        color: #295226;
+        font-weight: 700;
+      }
+
+      .mobile-drawer-footer {
+        margin-top: auto;
+        padding-top: 18px;
+        border-top: 1.5px solid rgba(41, 82, 38, 0.2);
+        text-align: center;
+      }
+
+      .mobile-drawer-farm {
+        font-family: 'Cormorant Garamond', serif;
+        font-style: italic;
+        font-size: 14.5px;
+        color: #4a5d48;
+        margin-bottom: 6px;
+      }
+
+      .mobile-drawer-phone {
+        font-family: 'Cinzel', Georgia, serif;
+        font-size: 13.5px;
+        color: #295226;
+        text-decoration: none;
+        letter-spacing: 0.05em;
+        font-weight: 700;
+      }
+
+      .mobile-drawer-phone:hover {
+        color: #ed9807;
+      }
+
+      /* Compact page banner */
+      .page-title-banner {
+        padding: 24px 16px 14px 16px !important;
+        margin-bottom: 16px !important;
+      }
+      .page-title {
+        font-size: 32px !important;
+        line-height: 1.2 !important;
+      }
+      .page-subtitle {
+        font-size: 16px !important;
+        line-height: 1.45 !important;
+        padding: 0 8px !important;
+      }
+      
+    }
+  
+    /* MOBILE FOOTER TOGGLE BAR (HEADER-STYLE SPLIT WITH UPWARD CHEVRON) */
+    .mobile-footer-toggle-bar {
+      display: none;
+    }
+
+    @media (max-width: 980px) {
+      .mobile-footer-toggle-bar {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        position: fixed !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        width: 100vw !important;
+        height: 38px !important;
+        background: #ed9807 !important;
+        cursor: pointer !important;
+        user-select: none !important;
+        overflow: hidden !important;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.4) !important;
+        border-top: 1.5px solid rgba(0, 0, 0, 0.25) !important;
+        z-index: 90 !important;
+        box-sizing: border-box !important;
+      }
+
+      .mobile-footer-toggle-bar::before {
+        content: '' !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: #295226 !important;
+        clip-path: polygon(
+          0 0,
+          calc(50% + 20px) 0,
+          calc(50% - 18px) 100%,
+          0 100%
+        ) !important;
+        z-index: 1 !important;
+        pointer-events: none !important;
+      }
+
+      .mobile-footer-toggle-inner {
+        position: relative !important;
+        z-index: 2 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        width: 100% !important;
+        height: 100% !important;
+        padding: 0 16px !important;
+        color: #ffffff !important;
+        font-family: var(--font-heading, "Cinzel", Georgia, serif) !important;
+        font-size: 0.72rem !important;
+        letter-spacing: 0.12em !important;
+        text-transform: uppercase !important;
+        font-weight: 600 !important;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+      }
+
+      .mobile-footer-chevron {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      }
+
+      .carousel-viewport {
+        height: calc(100vh - var(--header-height) - 38px) !important;
+        height: calc(100dvh - var(--header-height) - 38px) !important;
+      }
+    }
+
+</style>
+</head>
+<body>
+
+  <!-- ========================================================
+       TOP MASTHEAD: SEAMLESS GREEN & ORANGE FROM LOGO
+       ======================================================== -->
+  <header class="masthead-noblesse">
+    <div class="masthead-inner">
+      
+      <!-- BIG CENTERED LOGO OVER CONTINUOUS RIBBON -->
+      <a href="index.html" class="masthead-center-logo" title="Coudelaria Andrade &mdash; Página Principal">
+        <img src="assets/images/brand/ferro-andrade-iron.svg?v=7" 
+             alt="Ferro SA &mdash; Coudelaria Andrade" 
+             id="masthead-logo">
+      </a>
+
+      <!-- Center logo -->
+      <!-- MOBILE MENU TOGGLE (<= 980px) -->
+      <button type="button" class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu" aria-expanded="false">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </button>
+
+    </div>
+
+    <!-- WHIMSICAL LUSITANO HORSE TRACK ALONG HEADER BASELINE -->
+    <div class="header-horse-track">
+      <div class="horse-runner" id="horseRunner" title="Coudelaria Andrade &mdash; Herdade da Agolada de Baixo">
+        <div class="horse-figure" id="horseFigure"></div>
+      </div>
+    </div>
+  </header>
+  <!-- ========================================================
+       MOBILE NAVIGATION DRAWER
+       ======================================================== -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true">
+    <div class="mobile-drawer-backdrop" id="mobileDrawerBackdrop"></div>
+    <div class="mobile-drawer-content">
+      <div class="mobile-drawer-header">
+        <img src="assets/images/brand/ferro-andrade-iron.svg?v=7" alt="Ferro SA" class="mobile-drawer-logo">
+        <button type="button" class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Fechar">&times;</button>
+      </div>
+      
+      
+
+      <nav class="mobile-drawer-nav">
+        <a href="index.html" class="mobile-drawer-link active" data-pt="Página Principal" data-en="Home">Página Principal</a>
+        <a href="historia.html" class="mobile-drawer-link" data-pt="História da Coudelaria SA" data-en="History of Stud d'Andrade">História da Coudelaria SA</a>
+        <a href="o-cavalo-dandrade.html" class="mobile-drawer-link" data-pt="O Cavalo D'Andrade" data-en="The D'Andrade Horse">O Cavalo D'Andrade</a>
+        <a href="sorraias.html" class="mobile-drawer-link" data-pt="Cavalos Sorraia" data-en="Sorraia Horses">Cavalos Sorraia</a>
+        <a href="cavalos-para-venda.html" class="mobile-drawer-link" data-pt="Cavalos para Venda" data-en="Horses for Sale">Cavalos para Venda</a>
+        <a href="visitas-guiadas.html" class="mobile-drawer-link" data-pt="Visitas Guiadas" data-en="Guided Visits">Visitas Guiadas</a>
+        <a href="contactos.html" class="mobile-drawer-link" data-pt="Contactos &amp; Localização" data-en="Contacts &amp; Location">Contactos &amp; Localização</a>
+      </nav>
+      
+      <div class="mobile-drawer-footer">
+        <p class="mobile-drawer-farm">Herdade da Agolada de Baixo &middot; Coruche</p>
+        <a href="tel:+351962149845" class="mobile-drawer-phone">(+351) 962 149 845</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       HORIZONTAL INFINITE CAROUSEL VIEWPORT
+       ======================================================== */ -->
+  <main class="carousel-viewport" id="carouselViewport">
+    
+    <div class="carousel-track" id="carouselTrack">
+      <!-- 3 initial cards injected via JavaScript for smooth infinite sliding -->
+    </div>
+
+    <!-- Minimalist side navigation buttons -->
+    <button type="button" class="carousel-nav-btn prev-btn" id="prevBtn" title="Anterior">&larr;</button>
+    <button type="button" class="carousel-nav-btn next-btn" id="nextBtn" title="Seguinte">&rarr;</button>
+
+    <!-- Bottom Indicator Pill -->
+    <div class="carousel-bottom-bar">
+      <div class="indicator-dots" id="indicatorDots"></div>
+      <span class="bottom-bar-sep">&middot;</span>
+      <button type="button" class="footer-drawer-btn" onclick="toggleFooter(true)" data-pt="Sobre &amp; Contactos" data-en="About &amp; Contacts">Sobre &amp; Contactos</button>
+    </div>
+
+  </main>
+
+  <!-- ========================================================
+       FOOTER OVERLAY / DRAWER
+       ======================================================== -->
+    <!-- MOBILE FOOTER TOGGLE BAR (STYLED LIKE HEADER, WITH UPWARD CHEVRON) -->
+  <div class="mobile-footer-toggle-bar" id="mobileIndexFooterBar" onclick="toggleFooter(true)">
+    <div class="mobile-footer-toggle-inner">
+      <span class="mobile-footer-toggle-text">Herdade da Agolada de Baixo &bull; Contactos</span>
+      <span class="mobile-footer-chevron" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+      </span>
+    </div>
+  </div>
+
+<div class="footer-overlay" id="footerOverlay">
+    <button type="button" class="footer-close-btn" onclick="toggleFooter(false)" data-pt="&times; Fechar" data-en="&times; Close">&times; Fechar</button>
+    <div style="max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
+      <img src="assets/images/brand/ferro-andrade-iron.svg?v=7" alt="Ferro SA" class="footer-logo">
+      <p class="footer-quote-tr" data-pt="“É uma coudelaria com uma forte raiz, que procura afirmar-se no presente com o valor do seu prestigiado passado.”" data-en="“It is a stud farm with deep roots, striving to stand tall in the present through the enduring worth of its prestigious past.”">
+        “É uma coudelaria com uma forte raiz, que procura afirmar-se no presente com o valor do seu prestigiado passado.”
+      </p>
+      <p class="footer-meta">
+        <strong>Coudelaria SA</strong> &mdash; Maria D'Andrade de Oliveira e Sousa &middot; Herdade da Agolada de Baixo, 2100-047 Coruche, Portugal
+      </p>
+      <p class="footer-links">
+        Email: <a href="mailto:andradehorses@gmail.com">andradehorses@gmail.com</a> &middot; <span data-pt="Telefone:" data-en="Phone:">Telefone:</span> <a href="tel:+351962149845">(+351) 962 149 845</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       INFINITE HORIZONTAL CAROUSEL LOGIC
+       ======================================================== -->
+  <script>
+    const CARDS = [
+      {
+        num: "01",
+        href: "historia.html",
+        bg: "assets/images/pages/coudelaria-sa/royal-windsor-horse-show-135-1.jpg",
+        bgPos: "center center",
+        titlePt: "História da Coudelaria SA",
+        titleEn: "History of Stud d’Andrade",
+        descPt: "O encontro secular de duas linhagens ribatejanas dedicadas à nobreza e funcionalidade do cavalo ibérico.",
+        descEn: "The centennial union of two Ribatejo lineages dedicated to the nobility and athleticism of the Iberian horse.",
+        ctaPt: "Descobrir História",
+        ctaEn: "Discover History"
+      },
+      {
+        num: "02",
+        href: "o-cavalo-dandrade.html",
+        bg: "assets/images/horses/safari/bmsc3277-editar.jpg",
+        bgPos: "center center",
+        titlePt: "O Cavalo D'ANDRADE",
+        titleEn: "The D'ANDRADE Horse",
+        descPt: "Fortes, nobres e valentes — a lendária estirpe de Ruy d’Andrade moldada para a mais pura arte equestre.",
+        descEn: "Strong, noble, and courageous — Dr. Ruy d'Andrade's legendary line shaped for the purest equestrian art.",
+        ctaPt: "Conhecer a Estirpe",
+        ctaEn: "Meet the Lineage"
+      },
+      {
+        num: "03",
+        href: "sorraias.html",
+        bg: "assets/images/pages/o-cavalo-dandrade-eng/img_5583.jpg",
+        bgPos: "center center",
+        titlePt: "Sorraias",
+        titleEn: "Sorraia Horses",
+        descPt: "Os primitivos antepassados do cavalo ibérico, preservados em estado selvagem no coração do montado.",
+        descEn: "The primitive ancestors of the Iberian horse, preserved in their wild essence in the heart of the montado.",
+        ctaPt: "Explorar a Origem",
+        ctaEn: "Explore Origins"
+      },
+      {
+        num: "04",
+        href: "cavalos-para-venda.html",
+        bg: "assets/images/horses/selvagem/bmsc3761-editar.jpg",
+        bgPos: "center center",
+        titlePt: "Cavalos para Venda",
+        titleEn: "Horses for Sale",
+        descPt: "Exemplares de exceção com ferro SA, selecionados pelo temperamento nobre, morfologia e andamentos distintos.",
+        descEn: "Exceptional horses branded with the SA iron, selected for noble temper, morphology, and elevated gaits.",
+        ctaPt: "Ver Cavalos Disponíveis",
+        ctaEn: "View Available Horses"
+      },
+      {
+        num: "05",
+        href: "visitas-guiadas.html",
+        bg: "assets/images/pages/exclusive-guided-visits-to-our-stud/bmsc4428-editar.jpg",
+        bgPos: "center 65%",
+        titlePt: "Visitas Guiadas à Coudelaria",
+        titleEn: "Exclusive Guided Visits",
+        descPt: "Uma experiência íntima na Herdade da Agolada de Baixo, entre manadas em liberdade e séculos de tradição.",
+        descEn: "An intimate experience at Herdade da Agolada de Baixo, among free-roaming herds and centuries of tradition.",
+        ctaPt: "Reservar Visita",
+        ctaEn: "Book Private Visit"
+      },
+      {
+        num: "06",
+        href: "contactos.html",
+        bg: "assets/images/horses/trigo/bmsc4019-editar.jpg",
+        bgPos: "center center",
+        titlePt: "Contactos & Localização",
+        titleEn: "Contacts & Location",
+        descPt: "Herdade da Agolada de Baixo em Coruche — acolhemos criadores e admiradores de todo o mundo com marcação prévia.",
+        descEn: "Herdade da Agolada de Baixo in Coruche — welcoming breeders and enthusiasts worldwide by prior appointment.",
+        ctaPt: "Entrar em Contacto",
+        ctaEn: "Get in Touch"
+      }
+    ];
+
+    // AUTOMATIC BROWSER LANGUAGE DETECTION
+    function getPreferredLanguage() {
+      const browserLangs = navigator.languages || [navigator.language || navigator.userLanguage || 'pt'];
+      for (let l of browserLangs) {
+        if (l && l.toLowerCase().startsWith('pt')) return 'pt';
+      }
+      return 'en';
+    }
+
+    let currentLang = getPreferredLanguage();
+    let startIndex = 0; // The index of the first card on the left
+    let isSliding = false;
+    let lastWheelTime = 0;
+    const WHEEL_COOLDOWN_MS = 600;
+    const WHEEL_DELTA_THRESHOLD = 30;
+    const TOTAL = CARDS.length;
+
+    const track = document.getElementById('carouselTrack');
+    const dotsContainer = document.getElementById('indicatorDots');
+    const viewport = document.getElementById('carouselViewport');
+    const runner = document.getElementById('horseRunner');
+
+    // ========================================================
+    // DUAL-MODE CONTROLLER:
+    // 1) MANUAL MODE: Crisp 1-card steps, momentum absorbed.
+    // 2) IDLE MODE: 5s inactivity -> Lusitano walks left to right (30s)
+    //    advancing 1 card every 5s, fades out at 30s, loops.
+    // ========================================================
+    const MIN_X = 4.5;   // Left boundary (%)
+    const MAX_X = 92.5;  // Right boundary (%)
+    const SPAN_X = MAX_X - MIN_X; // 88% span
+
+    const IDLE_DELAY_MS = 5000;      // 5 seconds without touch triggers horse walk
+    const SHOWCASE_CYCLE_MS = 30000; // 30 seconds total for 6 cards
+    const CARD_STEP_MS = 5000;       // 5 seconds per card
+
+    let idleTimer = null;
+    let isShowcaseRunning = false;
+    let showcaseStartTime = 0;
+    let showcaseRafId = null;
+    let showcaseResetTimeout = null;
+    let lastCardStep = 0;
+
+    // Reset 5-second inactivity timer on any user touch/interaction
+    function handleUserActivity() {
+      stopIdleShowcase();
+      clearTimeout(idleTimer);
+      idleTimer = setTimeout(startIdleShowcase, IDLE_DELAY_MS);
+    }
+
+    // Start 30-second continuous idle showcase
+    function startIdleShowcase() {
+      if (isShowcaseRunning) return;
+      isShowcaseRunning = true;
+      lastCardStep = 0;
+      showcaseStartTime = performance.now();
+
+      if (runner) {
+        runner.style.left = `${MIN_X}%`;
+        runner.classList.remove('facing-left');
+        runner.classList.add('walking');
+        runner.classList.add('visible');
+      }
+
+      function showcaseTick(now) {
+        if (!isShowcaseRunning) return;
+
+        const elapsed = now - showcaseStartTime;
+        const progress = Math.min(elapsed / SHOWCASE_CYCLE_MS, 1.0);
+        const posX = MIN_X + (progress * SPAN_X);
+
+        if (runner) {
+          runner.style.left = `${posX}%`;
+        }
+
+        // Advance 1 card every 5 seconds (at 5s, 10s, 15s, 20s, 25s, 30s)
+        const currentStep = Math.floor(elapsed / CARD_STEP_MS);
+        if (currentStep > lastCardStep && currentStep <= TOTAL) {
+          lastCardStep = currentStep;
+          slideNext();
+        }
+
+        if (elapsed >= SHOWCASE_CYCLE_MS) {
+          // 30 seconds complete: gently fade out, reset to left, and restart cycle
+          if (runner) {
+            runner.classList.remove('visible');
+          }
+
+          showcaseResetTimeout = setTimeout(() => {
+            if (!isShowcaseRunning) return;
+            if (runner) {
+              runner.style.left = `${MIN_X}%`;
+              runner.classList.add('visible');
+            }
+            showcaseStartTime = performance.now();
+            lastCardStep = 0;
+            showcaseRafId = requestAnimationFrame(showcaseTick);
+          }, 700); // 700ms matches the 0.65s CSS fade transition
+          return;
+        }
+
+        showcaseRafId = requestAnimationFrame(showcaseTick);
+      }
+
+      showcaseRafId = requestAnimationFrame(showcaseTick);
+    }
+
+    // Immediately stop showcase, hide horse, and resume manual mode
+    function stopIdleShowcase() {
+      if (!isShowcaseRunning && !runner?.classList.contains('visible')) return;
+      isShowcaseRunning = false;
+      if (showcaseRafId) {
+        cancelAnimationFrame(showcaseRafId);
+        showcaseRafId = null;
+      }
+      if (showcaseResetTimeout) {
+        clearTimeout(showcaseResetTimeout);
+        showcaseResetTimeout = null;
+      }
+      if (runner) {
+        runner.classList.remove('visible');
+        runner.classList.remove('walking');
+      }
+    }
+
+    function createCardElement(cardData) {
+      const card = document.createElement('a');
+      card.href = cardData.href;
+      card.className = 'vertical-card';
+      
+      // Guard against accidental double activation or click when scrolling
+      card.addEventListener('click', (e) => {
+        handleUserActivity();
+        if (isSliding || (Date.now() - lastWheelTime < 400)) {
+          e.preventDefault();
+          e.stopPropagation();
+          return false;
+        }
+      });
+
+      const title = currentLang === 'pt' ? cardData.titlePt : cardData.titleEn;
+      const desc = currentLang === 'pt' ? cardData.descPt : cardData.descEn;
+      const cta = currentLang === 'pt' ? cardData.ctaPt : cardData.ctaEn;
+
+      card.innerHTML = `
+        <div class="card-photo" style="background-image: url('${cardData.bg}'); background-position: ${cardData.bgPos};"></div>
+        <div class="card-scrim"></div>
+        <div class="card-content-box">
+          <span class="card-num">${cardData.num}</span>
+          <h2 class="card-title" data-pt="${cardData.titlePt}" data-en="${cardData.titleEn}">${title}</h2>
+          <p class="card-desc" data-pt="${cardData.descPt}" data-en="${cardData.descEn}">${desc}</p>
+          <div class="card-cta">
+            <span data-pt="${cardData.ctaPt}" data-en="${cardData.ctaEn}">${cta}</span>
+            <span class="cta-arrow">&rarr;</span>
+          </div>
+        </div>
+      `;
+      return card;
+    }
+
+    function isMobileView() {
+      return window.innerWidth <= 980;
+    }
+
+    function renderActiveCards() {
+      track.classList.remove('is-sliding');
+      track.innerHTML = '';
+      
+      const isMobile = isMobileView();
+      const count = isMobile ? 1 : 3;
+
+      // Render visible cards (1 on mobile, 3 on desktop)
+      for (let i = 0; i < count; i++) {
+        const cardIndex = (startIndex + i) % TOTAL;
+        const cardEl = createCardElement(CARDS[cardIndex]);
+        if (isMobile) {
+          cardEl.style.minWidth = '100vw';
+          cardEl.style.width = '100vw';
+        }
+        track.appendChild(cardEl);
+      }
+      updateDots();
+    }
+
+    function updateDots() {
+      dotsContainer.innerHTML = '';
+      const isMobile = isMobileView();
+      for (let i = 0; i < TOTAL; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'dot-step';
+        // Highlight active window
+        const isCurrentFirst = (i === startIndex);
+        const isInWindow = isMobile ? isCurrentFirst : (
+          i === startIndex || 
+          i === (startIndex + 1) % TOTAL || 
+          i === (startIndex + 2) % TOTAL
+        );
+        if (isInWindow) dot.classList.add('active-window');
+        if (isCurrentFirst) dot.classList.add('first-card');
+        
+        dot.title = `Ir para cartão 0${i + 1}`;
+        dot.addEventListener('click', () => {
+          handleUserActivity();
+          if (!isSliding) {
+            startIndex = i;
+            renderActiveCards();
+          }
+        });
+        dotsContainer.appendChild(dot);
+      }
+    }
+
+    // SLIDE FORWARD: Mobile slides 1 full-width card; Desktop slides 1 of 3 cards
+    function slideNext() {
+      if (isSliding) return;
+      isSliding = true;
+      track.classList.add('is-sliding');
+
+      const isMobile = isMobileView();
+      startIndex = (startIndex + 1) % TOTAL;
+
+      if (isMobile) {
+        const nextCardEl = createCardElement(CARDS[startIndex]);
+        nextCardEl.style.minWidth = '100vw';
+        nextCardEl.style.width = '100vw';
+        track.appendChild(nextCardEl);
+
+        const firstCard = track.children[0];
+        firstCard.style.transition = 'margin-left 0.38s cubic-bezier(0.16, 1, 0.3, 1)';
+        
+        requestAnimationFrame(() => {
+          firstCard.style.marginLeft = '-100vw';
+        });
+
+        setTimeout(() => {
+          renderActiveCards();
+          setTimeout(() => {
+            isSliding = false;
+          }, 80);
+        }, 390);
+      } else {
+        const nextCardIndex = (startIndex + 2) % TOTAL;
+        const nextCardEl = createCardElement(CARDS[nextCardIndex]);
+        nextCardEl.style.minWidth = '33.333333%';
+        nextCardEl.style.width = '33.333333%';
+        track.appendChild(nextCardEl);
+
+        const firstCard = track.children[0];
+        firstCard.style.transition = 'margin-left 0.38s cubic-bezier(0.16, 1, 0.3, 1)';
+        
+        requestAnimationFrame(() => {
+          firstCard.style.marginLeft = '-33.333333%';
+        });
+
+        setTimeout(() => {
+          renderActiveCards();
+          setTimeout(() => {
+            isSliding = false;
+          }, 80);
+        }, 390);
+      }
+    }
+
+    // SLIDE PREV: Mobile slides 1 full-width card; Desktop slides 1 of 3 cards
+    function slidePrev() {
+      if (isSliding) return;
+      isSliding = true;
+      track.classList.add('is-sliding');
+
+      const isMobile = isMobileView();
+      startIndex = (startIndex - 1 + TOTAL) % TOTAL;
+
+      if (isMobile) {
+        const prevCardEl = createCardElement(CARDS[startIndex]);
+        prevCardEl.style.minWidth = '100vw';
+        prevCardEl.style.width = '100vw';
+        prevCardEl.style.marginLeft = '-100vw';
+        prevCardEl.style.transition = 'margin-left 0.38s cubic-bezier(0.16, 1, 0.3, 1)';
+        track.insertBefore(prevCardEl, track.firstChild);
+
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            prevCardEl.style.marginLeft = '0vw';
+          });
+        });
+
+        setTimeout(() => {
+          renderActiveCards();
+          setTimeout(() => {
+            isSliding = false;
+          }, 80);
+        }, 390);
+      } else {
+        const prevCardEl = createCardElement(CARDS[startIndex]);
+        prevCardEl.style.minWidth = '33.333333%';
+        prevCardEl.style.width = '33.333333%';
+        prevCardEl.style.marginLeft = '-33.333333%';
+        prevCardEl.style.transition = 'margin-left 0.38s cubic-bezier(0.16, 1, 0.3, 1)';
+        track.insertBefore(prevCardEl, track.firstChild);
+
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            prevCardEl.style.marginLeft = '0%';
+          });
+        });
+
+        setTimeout(() => {
+          renderActiveCards();
+          setTimeout(() => {
+            isSliding = false;
+          }, 80);
+        }, 390);
+      }
+    }
+
+    // MOUSE WHEEL: CRISP 1-CARD MANUAL SCROLL WITH MOMENTUM LOCK
+    window.addEventListener('wheel', (e) => {
+      if (e.target.closest('#footerOverlay')) return;
+
+      const delta = Math.abs(e.deltaY) > Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
+      if (Math.abs(delta) < WHEEL_DELTA_THRESHOLD) return;
+
+      e.preventDefault();
+      handleUserActivity();
+
+      const now = Date.now();
+      if (isSliding || (now - lastWheelTime < WHEEL_COOLDOWN_MS)) {
+        return;
+      }
+      lastWheelTime = now;
+
+      if (delta > 0) {
+        slideNext();
+      } else {
+        slidePrev();
+      }
+    }, { passive: false });
+
+    // TOUCH SWIPE SUPPORT (HORIZONTAL ONLY)
+    let touchStartX = 0;
+    let touchStartY = 0;
+    window.addEventListener('touchstart', (e) => {
+      handleUserActivity();
+      touchStartX = e.changedTouches[0].screenX;
+      touchStartY = e.changedTouches[0].screenY;
+    }, { passive: true });
+
+    window.addEventListener('touchmove', (e) => {
+      handleUserActivity();
+      const diffX = e.changedTouches[0].screenX - touchStartX;
+      const diffY = e.changedTouches[0].screenY - touchStartY;
+      if (isMobileView() && Math.abs(diffX) > Math.abs(diffY)) {
+        if (e.cancelable) e.preventDefault();
+      }
+    }, { passive: false });
+
+    window.addEventListener('touchend', (e) => {
+      handleUserActivity();
+      const touchEndX = e.changedTouches[0].screenX;
+      const touchEndY = e.changedTouches[0].screenY;
+      const diffX = touchEndX - touchStartX;
+      const diffY = touchEndY - touchStartY;
+
+      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 40) {
+        if (diffX < 0) {
+          slideNext();
+        } else {
+          slidePrev();
+        }
+      }
+    }, { passive: true });
+
+    // RESIZE LISTENER FOR SMOOTH ADAPTATION
+    let lastWidth = window.innerWidth;
+    window.addEventListener('resize', () => {
+      const cur = window.innerWidth;
+      const wasMobile = lastWidth <= 980;
+      const nowMobile = cur <= 980;
+      lastWidth = cur;
+      if (wasMobile !== nowMobile) {
+        renderActiveCards();
+      }
+    });
+
+    // POINTER ACTIVITY
+    window.addEventListener('pointerdown', handleUserActivity, { passive: true });
+    window.addEventListener('mousedown', handleUserActivity, { passive: true });
+
+    // KEYBOARD NAVIGATION
+    window.addEventListener('keydown', (e) => {
+      handleUserActivity();
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+        slideNext();
+      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        slidePrev();
+      } else if (e.key === 'Escape') {
+        toggleFooter(false);
+      }
+    });
+
+    // BUTTON LISTENERS
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      handleUserActivity();
+      slidePrev();
+    });
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      handleUserActivity();
+      slideNext();
+    });
+
+    // FOOTER DRAWER TOGGLE
+    function toggleFooter(open) {
+      handleUserActivity();
+      const overlay = document.getElementById('footerOverlay');
+      if (open) {
+        overlay.classList.add('open');
+      } else {
+        overlay.classList.remove('open');
+      }
+    }
+
+    // BILINGUAL LANGUAGE CONTROLLER
+    function setLanguage(lang) {
+      currentLang = lang;
+      document.documentElement.lang = lang;
+
+      document.querySelectorAll('[data-pt]').forEach(el => {
+        const text = el.getAttribute(`data-${lang}`);
+        if (text) el.innerText = text;
+      });
+
+      renderActiveCards();
+    }
+
+    // INITIALIZATION
+    document.addEventListener('DOMContentLoaded', () => {
+      setLanguage(currentLang);
+      renderActiveCards();
+      idleTimer = setTimeout(startIdleShowcase, IDLE_DELAY_MS);
+    });
+  </script>
+
+<script>
+
+  // MOBILE DRAWER CONTROLLER
+  function initMobileDrawer() {
+    const toggleBtn = document.getElementById('mobileMenuToggle');
+    const drawer = document.getElementById('mobileNavDrawer');
+    const closeBtn = document.getElementById('mobileDrawerClose');
+    const backdrop = document.getElementById('mobileDrawerBackdrop');
+
+    if (toggleBtn && drawer) {
+      toggleBtn.addEventListener('click', () => {
+        drawer.classList.add('open');
+        drawer.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      });
+
+      const closeDrawer = () => {
+        drawer.classList.remove('open');
+        drawer.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      };
+
+      if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+      if (backdrop) backdrop.addEventListener('click', closeDrawer);
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
+      });
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMobileDrawer);
+  } else {
+    initMobileDrawer();
+  }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,1525 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Contactos & Localização — Andrade Horses</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/brand/ferro-andrade-iron.svg?v=7">
+  
+  <!-- FONTS: Cormorant Garamond (Tratado Real) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --color-primary: #35845d;
+      --color-primary-dark: #235d40;
+      --color-primary-light: #eef6f1;
+      --color-gold: #c6923b;
+      --color-gold-light: #fdf8ef;
+      --color-text: #242527;
+      --color-muted: #5b6068;
+      --color-border: #e3e6ea;
+      --color-bg: #ffffff;
+      --color-bg-alt: #f8f9fa;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--color-text);
+      background-color: #faf9f6;
+      line-height: 1.7;
+      font-size: 15.5px;
+      position: relative;
+    }
+
+    .site-art-bg {
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      pointer-events: none; z-index: 0;
+      background-image: url('assets/images/brand/montado-minimal-charcoal.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center bottom;
+      opacity: 0.14;
+      mix-blend-mode: multiply;
+    }
+
+    header, main, footer, .top-bar { position: relative; z-index: 1; }
+
+    .container-wide { max-width: 1360px; margin: 0 auto; padding: 0 24px; }
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+    /* ========================================================
+       TOP NOBLESSE MASTHEAD WITH INTEGRATED PAGES
+       ======================================================== */
+    :root {
+      --header-height: 92px;
+      --color-gold: #cfa858;
+      --color-green: #295226;
+      --color-orange: #ed9807;
+    }
+
+    .masthead-noblesse {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      height: var(--header-height);
+      z-index: 1000;
+      background: #ed9807;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.45);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .masthead-noblesse::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #295226;
+      clip-path: polygon(
+        0 0,
+        calc(50% + 35.5px) 0,
+        calc(50% - 31.5px) 100%,
+        0 100%
+      );
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .masthead-inner {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      height: 100%;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* CENTER LOGO OVER CONTINUOUS RIBBON */
+    .masthead-center-logo {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      z-index: 10;
+    }
+
+    .masthead-center-logo img {
+      height: 78px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.45));
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .masthead-center-logo:hover img {
+      /* no zoom */
+    }
+
+    /* NAV WINGS */
+    .masthead-nav-wing {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .masthead-nav-wing.left-wing {
+      justify-content: flex-end;
+      flex: 1;
+      margin-right: 48px;
+    }
+
+    .masthead-nav-wing.right-wing {
+      justify-content: flex-start;
+      flex: 1;
+      margin-left: 48px;
+    }
+
+    /* NOBLE NAV LINKS */
+    .masthead-nav-link {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 0px;
+      transition: all 0.22s ease;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1.2;
+    }
+
+    /* LEFT WING (OVER GREEN #295226) */
+    .left-wing .masthead-nav-link {
+      color: #ffffff;
+      background: rgba(0, 0, 0, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+    .left-wing .masthead-nav-link:hover {
+      background: rgba(255, 255, 255, 0.22);
+      border-color: rgba(255, 255, 255, 0.6);
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+    .left-wing .masthead-nav-link.active {
+      background: #ffffff;
+      color: #1a3a18;
+      border-color: #ffffff;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    /* RIGHT WING (OVER ORANGE #ed9807) */
+    .right-wing .masthead-nav-link {
+      color: #1a1610;
+      background: rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(0, 0, 0, 0.24);
+    }
+    .right-wing .masthead-nav-link:hover {
+      background: rgba(0, 0, 0, 0.16);
+      border-color: rgba(0, 0, 0, 0.5);
+      color: #0a0805;
+      transform: translateY(-1px);
+    }
+    .right-wing .masthead-nav-link.active {
+      background: #141a12;
+      color: #f7ecd7;
+      border-color: #141a12;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+    }
+
+
+
+    
+    /* MOBILE NAVIGATION DRAWER & TOGGLE BASE (Hidden on Desktop) */
+    .mobile-menu-toggle {
+      display: none;
+    }
+    .mobile-nav-drawer {
+      display: none;
+    }
+
+    @media (max-width: 1200px) {
+      .masthead-nav-link {
+        font-size: 13.5px;
+        padding: 5px 9px;
+      }
+      .masthead-nav-wing {
+        gap: 8px;
+      }
+      .masthead-nav-wing.left-wing {
+        margin-right: 44px;
+      }
+      .masthead-nav-wing.right-wing {
+        margin-left: 44px;
+      }
+      .masthead-center-logo img {
+        height: 68px;
+      }
+    }
+
+    @media (max-width: 980px) {
+      :root {
+        --safe-top: env(safe-area-inset-top, 0px);
+        --header-height: calc(58px + env(safe-area-inset-top, 0px));
+      }
+
+      .masthead-noblesse {
+        height: calc(58px + env(safe-area-inset-top, 0px)) !important;
+        min-height: calc(58px + env(safe-area-inset-top, 0px)) !important;
+        padding: 0 !important;
+        padding-top: env(safe-area-inset-top, 0px) !important;
+        box-sizing: border-box !important;
+        background: #ed9807 !important;
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 1000 !important;
+        overflow: visible !important;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3) !important;
+        border-bottom: 1.5px solid rgba(0, 0, 0, 0.4) !important;
+      }
+
+      .masthead-noblesse::before {
+        content: '' !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: #295226 !important;
+        clip-path: polygon(
+          0 0,
+          calc(50% + 24px) 0,
+          calc(50% - 22px) 100%,
+          0 100%
+        ) !important;
+        z-index: 0 !important;
+        pointer-events: none !important;
+      }
+
+      .masthead-inner {
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        height: 58px !important;
+        padding: 0 16px !important;
+        gap: 0 !important;
+        position: relative !important;
+        z-index: 10 !important;
+        box-sizing: border-box !important;
+      }
+
+      /* Hide inline wings on mobile */
+      .masthead-nav-wing {
+        display: none !important;
+      }
+
+      /* Centered logo */
+      .masthead-center-logo {
+        position: absolute !important;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        margin: 0 !important;
+        z-index: 10 !important;
+      }
+
+      .masthead-center-logo img {
+        height: 44px !important;
+        width: auto !important;
+      }
+
+      /* Mobile Hamburger Button */
+      .mobile-menu-toggle {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 40px;
+        height: 40px;
+        background: rgba(0, 0, 0, 0.28);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+        cursor: pointer;
+        z-index: 20;
+        position: absolute !important; left: 16px !important; top: 50% !important; transform: translateY(-50%) !important; margin: 0 !important;
+        padding: 8px;
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+      }
+
+      .mobile-menu-toggle .menu-bar {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: #ffffff;
+        border-radius: 2px;
+      }
+
+      /* Mobile Navigation Drawer Overlay */
+      .mobile-nav-drawer {
+        display: block !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0.3s ease, opacity 0.3s ease;
+      }
+
+      .mobile-nav-drawer.open {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .mobile-drawer-backdrop {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(14, 20, 15, 0.72);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+      }
+
+            .mobile-drawer-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: auto;
+        width: 86%;
+        max-width: 340px;
+        height: 100%;
+        background: linear-gradient(175deg, #fdfbf7 0%, #f4efe4 100%);
+        border-right: 2px solid #295226;
+        border-left: none;
+        box-shadow: 8px 0 35px rgba(0, 0, 0, 0.25);
+        padding: 24px 20px;
+        padding-top: calc(24px + env(safe-area-inset-top, 0px));
+        display: flex;
+        flex-direction: column;
+        transform: translateX(-100%);
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        overflow-y: auto;
+      }
+
+      .mobile-nav-drawer.open .mobile-drawer-content {
+        transform: translateX(0);
+      }
+
+      .mobile-drawer-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 16px;
+        border-bottom: 1.5px solid rgba(41, 82, 38, 0.2);
+        margin-bottom: 20px;
+      }
+
+      .mobile-drawer-logo {
+        height: 48px;
+        width: auto;
+        filter: none !important;
+      }
+
+      .mobile-drawer-close {
+        background: rgba(41, 82, 38, 0.06);
+        border: 1px solid rgba(41, 82, 38, 0.3);
+        color: #295226;
+        font-size: 28px;
+        line-height: 1;
+        width: 36px;
+        height: 36px;
+        border-radius: 4px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s, color 0.2s;
+      }
+
+      .mobile-drawer-close:hover {
+        background: rgba(41, 82, 38, 0.15);
+        color: #1b3818;
+      }
+
+      .mobile-drawer-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        flex: 1;
+      }
+
+      .mobile-drawer-link {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        color: #1b321a;
+        text-decoration: none;
+        padding: 12px 14px;
+        border-radius: 4px;
+        border-left: 3px solid transparent;
+        transition: background 0.2s, border-color 0.2s, color 0.2s;
+        display: block;
+      }
+
+      .mobile-drawer-link:hover {
+        background: rgba(237, 152, 7, 0.1);
+        border-left-color: #ed9807;
+        color: #b37300;
+      }
+
+      .mobile-drawer-link.active {
+        background: rgba(41, 82, 38, 0.08);
+        border-left-color: #295226;
+        color: #295226;
+        font-weight: 700;
+      }
+
+      .mobile-drawer-footer {
+        margin-top: auto;
+        padding-top: 18px;
+        border-top: 1.5px solid rgba(41, 82, 38, 0.2);
+        text-align: center;
+      }
+
+      .mobile-drawer-farm {
+        font-family: 'Cormorant Garamond', serif;
+        font-style: italic;
+        font-size: 14.5px;
+        color: #4a5d48;
+        margin-bottom: 6px;
+      }
+
+      .mobile-drawer-phone {
+        font-family: 'Cinzel', Georgia, serif;
+        font-size: 13.5px;
+        color: #295226;
+        text-decoration: none;
+        letter-spacing: 0.05em;
+        font-weight: 700;
+      }
+
+      .mobile-drawer-phone:hover {
+        color: #ed9807;
+      }
+
+      /* Compact page banner */
+      .page-title-banner {
+        padding: 24px 16px 14px 16px !important;
+        margin-bottom: 16px !important;
+      }
+      .page-title {
+        font-size: 32px !important;
+        line-height: 1.2 !important;
+      }
+      .page-subtitle {
+        font-size: 16px !important;
+        line-height: 1.45 !important;
+        padding: 0 8px !important;
+      }
+      
+    }
+    }
+
+    /* COMPACT NOBLE PAGE HEADER (GETS SPACE BACK) */
+    .page-title-banner {
+      text-align: center;
+      padding: 34px 0 22px 0;
+      margin-bottom: 26px;
+      border-bottom: 1.5px solid rgba(207, 168, 88, 0.45);
+    }
+    .page-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 40px;
+      font-style: italic;
+      font-weight: 700;
+      color: #1a2217;
+      letter-spacing: 0.5px;
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+    .page-subtitle {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 18.5px;
+      font-style: italic;
+      color: #555e57;
+      max-width: 780px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    /* ========================================================
+       COOLMORE-INSPIRED NOBLE EDITORIAL SPLIT LAYOUT
+       ======================================================== */
+    .cm-editorial-section {
+      padding: 70px 0;
+      position: relative;
+    }
+    .cm-editorial-section + .cm-editorial-section {
+      border-top: 1px solid rgba(207, 168, 88, 0.25);
+    }
+
+    .cm-split-row {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .cm-split-row.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .cm-img-col {
+      flex: 1 1 50%;
+      position: relative;
+    }
+    .cm-img-frame {
+      position: relative;
+      width: 100%;
+      height: 480px;
+      overflow: hidden;
+      background: #141a12;
+      border: 1px solid rgba(207, 168, 88, 0.4);
+      box-shadow: 0 16px 40px rgba(20, 28, 22, 0.12);
+    }
+    .cm-img-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .cm-img-frame:hover img {
+      transform: none;
+    }
+    .cm-img-feather {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 28%;
+      background: linear-gradient(to top, rgba(20, 26, 18, 0.7), transparent);
+      pointer-events: none;
+    }
+
+    .cm-copy-col {
+      flex: 1 1 50%;
+      max-width: 520px;
+    }
+    .cm-kicker {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #295226;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+    .cm-rule {
+      width: 60px;
+      height: 1.5px;
+      background: #cfa858;
+      border: none;
+      margin-bottom: 24px;
+    }
+    .cm-headline {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 32px;
+      line-height: 1.25;
+      font-weight: 700;
+      font-style: italic;
+      color: #141a12;
+      margin-bottom: 20px;
+      letter-spacing: 0.2px;
+    }
+    .cm-body {
+      font-size: 16px;
+      line-height: 1.85;
+      color: #4a5048;
+      margin-bottom: 22px;
+      font-weight: 400;
+    }
+
+    /* SPECIFICATION LIST (THE DETAILS) */
+    .cm-specs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 24px 0;
+      padding: 22px;
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(207, 168, 88, 0.35);
+      backdrop-filter: blur(8px);
+    }
+    .cm-spec-item {
+      display: flex;
+      flex-direction: column;
+    }
+    .cm-spec-label {
+      font-size: 11.5px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: #7d847b;
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+    .cm-spec-value {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #1a2417;
+    }
+
+    /* REFINED PILL CTA */
+    .cm-pill-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 32px;
+      border-radius: 9999px;
+      border: 1.5px solid #295226;
+      background: transparent;
+      color: #295226;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      margin-top: 10px;
+    }
+    .cm-pill-cta:hover {
+      background: #295226;
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(41, 82, 38, 0.25);
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1.5px solid rgba(207, 168, 88, 0.35);
+      background: #ffffff;
+      padding: 40px 0;
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      margin-top: 80px;
+    }
+    .footer-quote {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-weight: 600;
+      font-size: 19px;
+      color: #295226;
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: 960px) {
+      .cm-split-row,
+      .cm-split-row.reverse {
+        flex-direction: column;
+        gap: 36px;
+      }
+      .cm-img-col, .cm-copy-col {
+        max-width: 100%;
+        width: 100%;
+      }
+      .cm-img-frame {
+        height: 340px;
+      }
+      .cm-headline {
+        font-size: 27px;
+      }
+      .cm-specs-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  
+    /* NOBLE CONTACT FORM (QWEN COUTURE) */
+    .noble-contact-form {
+      margin-top: 24px;
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(207, 168, 88, 0.55);
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(28, 32, 29, 0.08);
+      backdrop-filter: blur(8px);
+    }
+    .form-grid-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .form-field-full {
+      margin-bottom: 14px;
+    }
+    .noble-label {
+      display: block;
+      font-size: 11.5px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: #555e53;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    .noble-input, .noble-select, .noble-textarea {
+      width: 100%;
+      box-sizing: border-box;
+      font-family: inherit;
+      font-size: 14.5px;
+      color: #1a2217;
+      background: rgba(254, 252, 247, 0.9);
+      border: 1px solid rgba(207, 168, 88, 0.45);
+      padding: 9px 12px;
+      border-radius: 0;
+      transition: all 0.22s ease;
+    }
+    .noble-input:focus, .noble-select:focus, .noble-textarea:focus {
+      outline: none;
+      border-color: #295226;
+      background: #ffffff;
+      box-shadow: 0 0 0 2px rgba(41, 82, 38, 0.15);
+    }
+    .noble-textarea {
+      resize: vertical;
+      min-height: 90px;
+      line-height: 1.5;
+    }
+    .noble-submit-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 13px 24px;
+      border-radius: 0;
+      border: 1.5px solid #295226;
+      background: #295226;
+      color: #ffffff;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      margin-top: 6px;
+    }
+    .noble-submit-btn:hover {
+      background: #1e3d1c;
+      border-color: #1e3d1c;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(41, 82, 38, 0.25);
+    }
+    .form-success-banner {
+      display: none;
+      padding: 14px;
+      background: #eef6ec;
+      border: 1px solid #295226;
+      color: #1a3a18;
+      font-size: 14.5px;
+      margin-top: 14px;
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      .form-grid-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+    /* PERFECT SYMMETRICAL ALIGNMENT FOR APPOINTMENT SECTION */
+    .cm-split-row.appointment-row {
+      align-items: stretch;
+      gap: 40px;
+    }
+    .cm-split-row.appointment-row .cm-copy-col {
+      flex: 1 1 50%;
+      max-width: 560px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .cm-split-row.appointment-row .cm-img-col {
+      flex: 1 1 50%;
+      max-width: 560px;
+      display: flex;
+    }
+    .cm-split-row.appointment-row .cm-img-frame {
+      height: 100%;
+      width: 100%;
+      min-height: 100%;
+    }
+    .cm-split-row.appointment-row .cm-img-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 28% center;
+    }
+    .noble-contact-form {
+      margin-top: 18px;
+    }
+
+
+    /* PERFECT SYMMETRICAL ALIGNMENT FOR HEADQUARTERS SECTION */
+    .cm-split-row.headquarters-row {
+      align-items: stretch;
+      gap: 40px;
+    }
+    .cm-split-row.headquarters-row .cm-img-col {
+      flex: 1 1 50%;
+      max-width: 560px;
+      display: flex;
+    }
+    .cm-split-row.headquarters-row .cm-copy-col {
+      flex: 1 1 50%;
+      max-width: 560px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .cm-split-row.headquarters-row .cm-specs-grid {
+      margin-bottom: 0; /* Align perfectly with bottom of image frame */
+    }
+    .cm-img-frame.watercolor-frame {
+      height: 100%;
+      width: 100%;
+      background: #faf7f2;
+      border: 1px solid rgba(207, 168, 88, 0.5);
+      box-shadow: 0 12px 35px rgba(28, 32, 29, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+    }
+    .cm-img-frame.watercolor-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+
+    /* PHONE & WHATSAPP INTERACTION */
+    .phone-link-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .phone-click-link {
+      font-size: 16px;
+      font-weight: 700;
+      color: #1a2417;
+      text-decoration: none;
+      transition: color 0.2s ease;
+      cursor: pointer;
+    }
+    .phone-click-link:hover {
+      color: #295226;
+      text-decoration: underline;
+    }
+    .noble-wa-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 3px 9px;
+      background: #25D366;
+      color: #ffffff;
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+    .noble-wa-pill:hover {
+      background: #1eb855;
+      transform: translateY(-1px);
+    }
+    .wa-dot {
+      width: 6px;
+      height: 6px;
+      background: #ffffff;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    /* MOBILE CONTACT ACTION SHEET / MODAL */
+    .noble-phone-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(14, 20, 16, 0.65);
+      backdrop-filter: blur(4px);
+      z-index: 99999;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 20px;
+    }
+    .noble-phone-backdrop.active {
+      display: flex;
+    }
+    .noble-phone-modal {
+      width: 100%;
+      max-width: 420px;
+      background: #fcfbf7;
+      border: 1.5px solid rgba(207, 168, 88, 0.6);
+      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.35);
+      padding: 24px;
+      text-align: center;
+      animation: slideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .modal-estate-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 21px;
+      font-weight: 700;
+      color: #1a2417;
+      margin-bottom: 4px;
+    }
+    .modal-estate-sub {
+      font-size: 13.5px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+    .modal-action-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 13px 18px;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 17px;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+      transition: all 0.2s ease;
+      box-sizing: border-box;
+    }
+    .modal-action-call {
+      background: #295226;
+      color: #ffffff;
+      border: 1px solid #295226;
+    }
+    .modal-action-wa {
+      background: #25D366;
+      color: #ffffff;
+      border: 1px solid #1eb855;
+    }
+    .modal-action-cancel {
+      background: transparent;
+      color: #666;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      font-size: 14px;
+      padding: 8px 14px;
+      margin-top: 6px;
+      cursor: pointer;
+    }
+
+
+    /* STOP ALL IMAGE ZOOM ON HOVER EVERYWHERE */
+    img, .portal-card-bg, .cm-img-frame img, .archival-photo-frame img, .pillar-sketch-frame img {
+      transition: none !important;
+    }
+    *:hover > img,
+    *:hover img,
+    .cm-img-frame:hover img,
+    .archival-photo-frame:hover img,
+    .pillar-box:hover .pillar-sketch-frame img,
+    .portal-card:hover .portal-card-bg {
+      transform: none !important;
+    }
+    .archival-photo-frame:hover,
+    .cm-img-frame:hover,
+    .pillar-box:hover {
+      box-shadow: 0 14px 34px rgba(28, 32, 29, 0.16) !important;
+      border-color: rgba(207, 168, 88, 0.75) !important;
+    }
+    
+
+    /* MOBILE FOOTER TOGGLE BAR (HEADER-STYLE SPLIT WITH UPWARD CHEVRON) */
+    .mobile-footer-toggle-bar {
+      display: none;
+    }
+
+    @media (max-width: 980px) {
+      .mobile-footer-toggle-bar {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        position: relative !important;
+        height: 38px !important;
+        background: #ed9807 !important;
+        cursor: pointer !important;
+        user-select: none !important;
+        overflow: hidden !important;
+        box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15) !important;
+        border-top: 1.5px solid rgba(0, 0, 0, 0.25) !important;
+        box-sizing: border-box !important;
+      }
+
+      .mobile-footer-toggle-bar::before {
+        content: '' !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: #295226 !important;
+        clip-path: polygon(
+          0 0,
+          calc(50% + 20px) 0,
+          calc(50% - 18px) 100%,
+          0 100%
+        ) !important;
+        z-index: 1 !important;
+        pointer-events: none !important;
+      }
+
+      .mobile-footer-toggle-inner {
+        position: relative !important;
+        z-index: 2 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        width: 100% !important;
+        height: 100% !important;
+        padding: 0 16px !important;
+        color: #ffffff !important;
+        font-family: var(--font-heading, "Cinzel", Georgia, serif) !important;
+        font-size: 0.72rem !important;
+        letter-spacing: 0.12em !important;
+        text-transform: uppercase !important;
+        font-weight: 600 !important;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+      }
+
+      .mobile-footer-chevron {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      }
+
+      .mobile-footer-toggle-bar.open .mobile-footer-chevron {
+        transform: rotate(180deg) !important;
+      }
+
+      .footer-collapsible-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), padding 0.35s ease;
+        background: #faf8f5;
+        padding: 0 16px;
+      }
+
+      .footer-collapsible-content.open {
+        max-height: 400px;
+        padding: 22px 16px 28px 16px;
+        border-bottom: 2px solid #295226;
+      }
+    }
+
+</style>
+</head>
+<body>
+  <div class="site-art-bg"></div>
+
+  <!-- ========================================================
+       TOP MASTHEAD: SEAMLESS GREEN & ORANGE NOBLESSE
+       ======================================================== -->
+  <header class="masthead-noblesse">
+    <div class="masthead-inner">
+      
+      <!-- LEFT WING: 3 PAGES (Over Green #295226) -->
+      <nav class="masthead-nav-wing left-wing" aria-label="Navegação Esquerda">
+        <a href="historia.html" class="masthead-nav-link" data-pt="História" data-en="History">História</a>
+        <a href="o-cavalo-dandrade.html" class="masthead-nav-link" data-pt="O Cavalo D'Andrade" data-en="The D'Andrade Horse">O Cavalo D'Andrade</a>
+        <a href="sorraias.html" class="masthead-nav-link" data-pt="Sorraias" data-en="Sorraia Horses">Sorraias</a>
+      </nav>
+
+      <!-- BIG CENTERED LOGO OVER CONTINUOUS RIBBON -->
+      <a href="index.html" class="masthead-center-logo" title="Coudelaria Andrade &mdash; Voltar à Página Principal">
+        <img src="assets/images/brand/ferro-andrade-iron.svg?v=7" 
+             alt="Ferro SA &mdash; Coudelaria Andrade" 
+             id="masthead-logo">
+      </a>
+
+      <!-- RIGHT WING: 3 PAGES (Over Orange #ed9807) -->
+      <nav class="masthead-nav-wing right-wing" aria-label="Navegação Direita">
+        <a href="cavalos-para-venda.html" class="masthead-nav-link" data-pt="Cavalos para Venda" data-en="Horses for Sale">Cavalos para Venda</a>
+        <a href="visitas-guiadas.html" class="masthead-nav-link" data-pt="Visitas Guiadas" data-en="Guided Visits">Visitas Guiadas</a>
+        <a href="contactos.html" class="masthead-nav-link active" data-pt="Contactos" data-en="Contacts">Contactos</a>
+      </nav>
+      <!-- MOBILE MENU TOGGLE (<= 980px) -->
+      <button type="button" class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu" aria-expanded="false">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </button>
+    </div>
+  </header>
+  <!-- ========================================================
+       MOBILE NAVIGATION DRAWER
+       ======================================================== -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true">
+    <div class="mobile-drawer-backdrop" id="mobileDrawerBackdrop"></div>
+    <div class="mobile-drawer-content">
+      <div class="mobile-drawer-header">
+        <img src="assets/images/brand/ferro-andrade-iron.svg?v=7" alt="Ferro SA" class="mobile-drawer-logo">
+        <button type="button" class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Fechar">&times;</button>
+      </div>
+      
+      
+
+      <nav class="mobile-drawer-nav">
+        <a href="index.html" class="mobile-drawer-link" data-pt="Página Principal" data-en="Home">Página Principal</a>
+        <a href="historia.html" class="mobile-drawer-link" data-pt="História da Coudelaria SA" data-en="History of Stud d'Andrade">História da Coudelaria SA</a>
+        <a href="o-cavalo-dandrade.html" class="mobile-drawer-link" data-pt="O Cavalo D'Andrade" data-en="The D'Andrade Horse">O Cavalo D'Andrade</a>
+        <a href="sorraias.html" class="mobile-drawer-link" data-pt="Cavalos Sorraia" data-en="Sorraia Horses">Cavalos Sorraia</a>
+        <a href="cavalos-para-venda.html" class="mobile-drawer-link" data-pt="Cavalos para Venda" data-en="Horses for Sale">Cavalos para Venda</a>
+        <a href="visitas-guiadas.html" class="mobile-drawer-link" data-pt="Visitas Guiadas" data-en="Guided Visits">Visitas Guiadas</a>
+        <a href="contactos.html" class="mobile-drawer-link active" data-pt="Contactos &amp; Localização" data-en="Contacts &amp; Location">Contactos &amp; Localização</a>
+      </nav>
+      
+      <div class="mobile-drawer-footer">
+        <p class="mobile-drawer-farm">Herdade da Agolada de Baixo &middot; Coruche</p>
+        <a href="tel:+351962149845" class="mobile-drawer-phone">(+351) 962 149 845</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- PAGE TITLE BANNER -->
+    <div class="page-title-banner">
+      <h1 class="page-title" data-pt="Contactos & Localização" data-en="Contacts & Location">Contactos & Localização</h1>
+      <p class="page-subtitle" data-pt="Herdade da Agolada de Baixo em Coruche — acolhemos criadores e admiradores de todo o mundo com marcação prévia." data-en="Herdade da Agolada de Baixo in Coruche — welcoming breeders and enthusiasts worldwide by prior appointment.">
+        Herdade da Agolada de Baixo em Coruche — acolhemos criadores e admiradores de todo o mundo com marcação prévia.
+      </p>
+    </div>
+
+    <!-- CHAPTER 1: ESTATE & DIRECT CONTACT (IMAGE LEFT, COPY RIGHT) -->
+    <section class="cm-editorial-section">
+      <div class="cm-split-row headquarters-row">
+        <div class="cm-img-col">
+          <div class="cm-img-frame watercolor-frame">
+            <img src="assets/images/pages/contactos/picadeiro.jpg" alt="Picadeiro Tradicional da Herdade da Agolada — Aguarela Constança 2006">
+          </div>
+        </div>
+        <div class="cm-copy-col">
+          <span class="cm-kicker" data-pt="Sede da Coudelaria" data-en="Stud Farm Headquarters">Sede da Coudelaria</span>
+          <div class="cm-rule"></div>
+          <h2 class="cm-headline" data-pt="Herdade da Agolada de Baixo — O berço vivo do ferro SA em Coruche." data-en="Herdade da Agolada de Baixo — The living home of the SA brand in Coruche.">
+            Herdade da Agolada de Baixo — O berço vivo do ferro SA em Coruche.
+          </h2>
+          <p class="cm-body" data-pt="Situada na secular lezíria e montado do Ribatejo, a Herdade da Agolada de Baixo reúne as condições ecológicas e estruturais ideais para a criação em liberdade de cavalos de prestígio internacional." data-en="Located in the historic plains and montado of Ribatejo, Herdade da Agolada de Baixo offers ideal ecological and structural conditions for the free-roaming breeding of world-class horses.">
+            Situada na secular lezíria e montado do Ribatejo, a Herdade da Agolada de Baixo reúne as condições ecológicas e estruturais ideais para a criação em liberdade de cavalos de prestígio internacional.
+          </p>
+
+          <div class="cm-specs-grid">
+            <div class="cm-spec-item">
+              <span class="cm-spec-label" data-pt="Proprietária" data-en="Proprietor">Proprietária</span>
+              <span class="cm-spec-value">Maria D'Andrade de Oliveira e Sousa</span>
+            </div>
+            <div class="cm-spec-item">
+              <span class="cm-spec-label" data-pt="Localização" data-en="Location">Localização</span>
+              <span class="cm-spec-value" style="font-size: 15px;">Caminho da Herdade da Agolada de Baixo, 2100-000 Coruche</span>
+            </div>
+            <div class="cm-spec-item">
+              <span class="cm-spec-label">Email</span>
+              <span class="cm-spec-value" style="font-size: 15px;">andradehorses@gmail.com</span>
+            </div>
+            <div class="cm-spec-item phone-spec-item">
+              <span class="cm-spec-label" data-pt="Telefone" data-en="Phone">Telefone</span>
+              <div class="phone-link-group">
+                <a href="tel:+351962149845" class="cm-spec-value phone-click-link">
+                  (+351) 962 149 845
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 2: PROTOCOLO DE VISITAS (COPY LEFT, IMAGE RIGHT - REVERSE) -->
+    <section class="cm-editorial-section">
+      <div class="cm-split-row reverse appointment-row">
+        <div class="cm-img-col">
+          <div class="cm-img-frame">
+            <img src="assets/images/horses/trigo/bmsc4019-editar.jpg" alt="Lusitano na Herdade da Agolada">
+            
+          </div>
+        </div>
+        <div class="cm-copy-col">
+          <span class="cm-kicker" data-pt="Atendimento Personalizado" data-en="Private Appointments">Atendimento Personalizado</span>
+          <div class="cm-rule"></div>
+          <h2 class="cm-headline" data-pt="Visitas e reuniões técnicas exclusivamente mediante marcação prévia." data-en="Tours and technical meetings conducted strictly by prior appointment.">
+            Visitas e reuniões técnicas exclusivamente mediante marcação prévia.
+          </h2>
+          <p class="cm-body" data-pt="Para assegurar a atenção cuidada que cada criador e visitante merece, bem como manter a serenidade das manadas nas pastagens, não realizamos atendimento sem agendamento confirmado." data-en="To ensure the dedicated attention each breeder and guest deserves, and to preserve the peace of the herds in the pastures, we do not receive unannounced visitors.">
+            Para assegurar a atenção cuidada que cada criador e visitante merece, bem como manter a serenidade das manadas nas pastagens, não realizamos atendimento sem agendamento confirmado.
+          </p>
+          
+          <!-- NOBLE CONTACT & APPOINTMENT FORM -->
+          <form class="noble-contact-form" id="contactEstateForm" onsubmit="handleEstateForm(event)">
+            <div class="form-grid-row">
+              <div>
+                <label class="noble-label" for="formName" data-pt="Nome Completo *" data-en="Full Name *">Nome Completo *</label>
+                <input type="text" id="formName" required class="noble-input" 
+                       data-pt-placeholder="ex: D. Rodrigo de Noronha" 
+                       data-en-placeholder="e.g., Lord Rodrigo de Noronha" 
+                       placeholder="ex: D. Rodrigo de Noronha">
+              </div>
+              <div>
+                <label class="noble-label" for="formEmail" data-pt="Email *" data-en="Email Address *">Email *</label>
+                <input type="email" id="formEmail" required class="noble-input" 
+                       data-pt-placeholder="seu.email@exemplo.com" 
+                       data-en-placeholder="your.email@example.com" 
+                       placeholder="seu.email@exemplo.com">
+              </div>
+            </div>
+
+            <div class="form-grid-row">
+              <div>
+                <label class="noble-label" for="formPhone" data-pt="Telefone" data-en="Phone">Telefone</label>
+                <input type="tel" id="formPhone" class="noble-input" 
+                       data-pt-placeholder="+351 912 345 678" 
+                       data-en-placeholder="+351 912 345 678" 
+                       placeholder="+351 912 345 678">
+              </div>
+              <div>
+                <label class="noble-label" for="formSubject" data-pt="Assunto" data-en="Subject">Assunto</label>
+                <select id="formSubject" class="noble-select">
+                  <option value="visita" data-pt="Reserva de Visita Guiada" data-en="Guided Visit Reservation">Reserva de Visita Guiada</option>
+                  <option value="cavalos" data-pt="Aquisição de Cavalos" data-en="Horse Acquisition Inquiry">Aquisição de Cavalos</option>
+                  <option value="genetica" data-pt="Genética & Cobrições" data-en="Breeding & Pedigree Inquiry">Genética & Cobrições</option>
+                  <option value="outro" data-pt="Outro Assunto" data-en="Other Inquiry">Outro Assunto</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-field-full">
+              <label class="noble-label" for="formMessage" data-pt="Mensagem *" data-en="Message *">Mensagem *</label>
+              <textarea id="formMessage" required class="noble-textarea" 
+                        data-pt-placeholder="Descreva o seu pedido ou detalhes da sua visita..." 
+                        data-en-placeholder="Describe your inquiry or details of your requested visit..." 
+                        placeholder="Descreva o seu pedido ou detalhes da sua visita..."></textarea>
+            </div>
+
+            <button type="submit" class="noble-submit-btn" data-pt="Enviar Pedido de Contacto" data-en="Send Contact Request">
+              Enviar Pedido de Contacto
+            </button>
+
+            <div class="form-success-banner" id="formSuccess">
+              <span data-pt="✓ Obrigado pela sua mensagem. A Coudelaria Andrade responderá com a máxima brevidade." data-en="✓ Thank you for your inquiry. Coudelaria Andrade will reply promptly.">
+                ✓ Obrigado pela sua mensagem. A Coudelaria Andrade responderá com a máxima brevidade.
+              </span>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </section>
+  
+    <!-- INTERACTIVE NOBLE MAP EMBED -->
+    <section style="max-width: 1200px; margin: 0 auto 60px auto; padding: 0 24px;">
+      <div style="background: rgba(255, 255, 255, 0.9); border: 1.5px solid rgba(207, 168, 88, 0.45); padding: 18px; box-shadow: 0 12px 35px rgba(28, 32, 29, 0.08);">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <h3 style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 700; color: #1a2417; margin: 0;">
+              Andrade Horses &mdash; Coudelaria SA
+            </h3>
+            <p style="font-size: 14px; color: #666; margin: 2px 0 0 0;" data-pt="Caminho da Herdade da Agolada de Baixo, 2100-000 Coruche (Plus Code: 3Q3J+2X)" data-en="Caminho da Herdade da Agolada de Baixo, 2100-000 Coruche (Plus Code: 3Q3J+2X)">
+              Caminho da Herdade da Agolada de Baixo, 2100-000 Coruche (Plus Code: 3Q3J+2X)
+            </p>
+          </div>
+          <a href="https://www.google.com/maps/search/?api=1&query=Andrade+Horses+-+Coudelaria+SA+Coruche" target="_blank" rel="noopener noreferrer" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 700; color: #295226; text-decoration: none; border: 1px solid #295226; padding: 6px 16px; transition: all 0.2s ease;" data-pt="Abrir Navegação GPS ↗" data-en="Open GPS Navigation ↗">
+            Abrir Navegação GPS ↗
+          </a>
+        </div>
+        <div style="width: 100%; height: 380px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.1);">
+          <iframe 
+            src="https://maps.google.com/maps?q=Andrade+Horses+-+Coudelaria+SA,+Coruche&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+            width="100%" 
+            height="100%" 
+            style="border: 0;" 
+            allowfullscreen="" 
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="mobile-footer-toggle-bar" onclick="toggleMobileFooter(this)">
+      <div class="mobile-footer-toggle-inner">
+        <span class="mobile-footer-toggle-text">Herdade da Agolada de Baixo &bull; Contactos</span>
+        <span class="mobile-footer-chevron" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </span>
+      </div>
+    </div>
+    <div class="footer-collapsible-content">
+      <div class="container">
+      <p class="footer-quote" data-pt="“É uma coudelaria com uma forte raiz, que procura afirmar-se no presente com o valor do seu prestigiado passado.”" data-en="“It is a stud farm with deep roots, striving to stand tall in the present through the enduring worth of its prestigious past.”">
+        “É uma coudelaria com uma forte raiz, que procura afirmar-se no presente com o valor do seu prestigiado passado.”
+      </p>
+      <p style="margin-bottom: 4px;">
+        <strong>Coudelaria SA</strong> — Herdade da Agolada de Baixo, 2100-047 Coruche, Portugal
+      </p>
+      <p>
+        Email: <a href="mailto:andradehorses@gmail.com" style="color: var(--color-primary); font-weight: 600;">andradehorses@gmail.com</a> | 
+        <span data-pt="Telefone:" data-en="Phone:">Telefone:</span> <a href="tel:+351962149845" style="color: var(--color-primary); font-weight: 600;">(+351) 962 149 845</a>
+      </p>
+    </div>
+    </div>
+  </footer>
+
+  <script>
+    // AUTOMATIC BROWSER LANGUAGE DETECTION
+    function getPreferredLanguage() {
+      const browserLangs = navigator.languages || [navigator.language || navigator.userLanguage || 'pt'];
+      for (let l of browserLangs) {
+        if (l && l.toLowerCase().startsWith('pt')) return 'pt';
+      }
+      return 'en';
+    }
+
+    let currentLang = getPreferredLanguage();
+
+    
+    function handleEstateForm(e) {
+      e.preventDefault();
+      const name = document.getElementById('formName').value;
+      const email = document.getElementById('formEmail').value;
+      const phone = document.getElementById('formPhone').value;
+      const subjectSelect = document.getElementById('formSubject');
+      const subjectText = subjectSelect.options[subjectSelect.selectedIndex].text;
+      const message = document.getElementById('formMessage').value;
+
+      // Construct mailto as guaranteed direct fallback
+      const mailtoLink = `mailto:andradehorses@gmail.com?subject=${encodeURIComponent('[Coudelaria Andrade] ' + subjectText + ' - ' + name)}&body=${encodeURIComponent('Nome: ' + name + '\nEmail: ' + email + '\nTelefone: ' + phone + '\nAssunto: ' + subjectText + '\n\nMensagem:\n' + message)}`;
+      
+      // Show elegant on-screen success
+      const banner = document.getElementById('formSuccess');
+      if (banner) {
+        banner.style.display = 'block';
+      }
+
+      // Open email client in background
+      window.location.href = mailtoLink;
+    }
+
+
+    
+    function handlePhoneClick(e) {
+      // If on mobile / touch screen, open the chooser modal
+      if (window.innerWidth <= 820 || ('ontouchstart' in window)) {
+        e.preventDefault();
+        const modal = document.getElementById('phoneModal');
+        if (modal) modal.classList.add('active');
+      }
+      // On desktop, regular tel: link continues
+    }
+
+    function closePhoneModal(e) {
+      const modal = document.getElementById('phoneModal');
+      if (modal) modal.classList.remove('active');
+    }
+
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      document.documentElement.lang = lang;
+
+      document.querySelectorAll('[data-pt]').forEach(el => {
+        const text = el.getAttribute(`data-${lang}`);
+        if (text) el.innerText = text;
+      });
+
+      // Update input and textarea placeholders to match language
+      document.querySelectorAll('[data-pt-placeholder]').forEach(el => {
+        const ph = el.getAttribute(`data-${lang}-placeholder`);
+        if (ph) el.placeholder = ph;
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      setLanguage(currentLang);
+    });
+  </script>
+
+  <!-- MOBILE CONTACT CHOOSER MODAL (PHONE VS WHATSAPP) -->
+  <div class="noble-phone-backdrop" id="phoneModal" onclick="closePhoneModal(event)">
+    <div class="noble-phone-modal" onclick="event.stopPropagation()">
+      <div class="modal-estate-title" data-pt="Coudelaria Andrade" data-en="Coudelaria Andrade">Coudelaria Andrade</div>
+      <div class="modal-estate-sub" data-pt="Escolha o canal de contacto preferido:" data-en="Choose your preferred contact channel:">
+        Escolha o canal de contacto preferido:
+      </div>
+
+      <a href="https://wa.me/351962149845?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20Coudelaria%20Andrade." 
+         class="modal-action-btn modal-action-wa" target="_blank" rel="noopener noreferrer">
+        💬 <span data-pt="Conversar no WhatsApp" data-en="Chat on WhatsApp">Conversar no WhatsApp</span>
+      </a>
+
+      <a href="tel:+351962149845" class="modal-action-btn modal-action-call">
+        📞 <span data-pt="Chamada Telefónica (+351 962 149 845)" data-en="Phone Call (+351 962 149 845)">Chamada Telefónica (+351 962 149 845)</span>
+      </a>
+
+      <button type="button" class="modal-action-cancel" onclick="closePhoneModal()" data-pt="Cancelar" data-en="Cancel">
+        Cancelar
+      </button>
+    </div>
+  </div>
+
+<script>
+
+  // MOBILE DRAWER CONTROLLER
+  function initMobileDrawer() {
+    const toggleBtn = document.getElementById('mobileMenuToggle');
+    const drawer = document.getElementById('mobileNavDrawer');
+    const closeBtn = document.getElementById('mobileDrawerClose');
+    const backdrop = document.getElementById('mobileDrawerBackdrop');
+
+    if (toggleBtn && drawer) {
+      toggleBtn.addEventListener('click', () => {
+        drawer.classList.add('open');
+        drawer.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      });
+
+      const closeDrawer = () => {
+        drawer.classList.remove('open');
+        drawer.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      };
+
+      if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+      if (backdrop) backdrop.addEventListener('click', closeDrawer);
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
+      });
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMobileDrawer);
+  } else {
+    initMobileDrawer();
+  }
+
+</script>
+<script>
+  // MOBILE FOOTER CONTROLLER
+  function toggleMobileFooter(barEl) {
+    if (!barEl) return;
+    barEl.classList.toggle('open');
+    const content = barEl.parentElement.querySelector('.footer-collapsible-content');
+    if (content) {
+      content.classList.toggle('open');
+    }
+  }
+</script>
+</body>
+</html>

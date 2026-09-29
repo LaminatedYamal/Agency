@@ -23,6 +23,11 @@ export default defineConfig({
             res.writeHead(301, { Location: '/Tecipa/' + query });
             return res.end();
           }
+          if (rawUrl === '/coudelaria-andrade' || rawUrl === '/coudelaria') {
+            const query = req.url.includes('?') ? '?' + req.url.split('?')[1] : '';
+            res.writeHead(301, { Location: '/coudelaria-andrade/' + query });
+            return res.end();
+          }
           next();
         });
         server.middlewares.use((req, res, next) => {
@@ -79,6 +84,17 @@ export default defineConfig({
           fs.copyFileSync(path.join(srcJsDir, 'app.js'), path.join(destJsDir, 'app.js'));
           fs.copyFileSync(path.join(srcJsDir, 'quote-scheduler.js'), path.join(destJsDir, 'quote-scheduler.js'));
           console.log('✓ Successfully copied Tecipa scripts to dist/Tecipa/js');
+        }
+      }
+    },
+    {
+      name: 'copy-coudelaria-andrade',
+      closeBundle() {
+        const srcDir = path.resolve(__dirname, 'coudelaria-andrade');
+        const destDir = path.resolve(__dirname, 'dist/coudelaria-andrade');
+        if (fs.existsSync(srcDir)) {
+          fs.cpSync(srcDir, destDir, { recursive: true });
+          console.log('✓ Successfully copied Coudelaria Andrade to dist/coudelaria-andrade');
         }
       }
     }
