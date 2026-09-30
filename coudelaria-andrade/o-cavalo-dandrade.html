@@ -1277,28 +1277,38 @@
       // FLUID INK CALLIGRAPHY SCROLL UNVEIL CONTROLLER
       const inkElements = document.querySelectorAll('.ink-reveal');
       if (inkElements.length > 0) {
+        const revealEl = (el) => {
+          if (!el.classList.contains('in-view')) el.classList.add('in-view');
+        };
+
+        // Fire as soon as ANY part enters the viewport (generous rootMargin)
         const inkObserver = new IntersectionObserver((entries) => {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
-              entry.target.classList.add('in-view');
+              revealEl(entry.target);
               inkObserver.unobserve(entry.target);
             }
           });
         }, {
-          threshold: 0.1,
-          rootMargin: '0px 0px -40px 0px'
+          threshold: 0,
+          rootMargin: '0px 0px 100px 0px'
         });
 
         inkElements.forEach(el => inkObserver.observe(el));
 
-        setTimeout(() => {
+        // Immediate reveal for anything already on screen
+        const revealVisible = () => {
           inkElements.forEach(el => {
+            if (el.classList.contains('in-view')) return;
             const r = el.getBoundingClientRect();
-            if (r.top < window.innerHeight * 0.95) {
-              el.classList.add('in-view');
-            }
+            if (r.top < window.innerHeight + 120) revealEl(el);
           });
-        }, 80);
+        };
+
+        // Scroll fallback in case observer misses anything
+        window.addEventListener('scroll', revealVisible, { passive: true });
+        setTimeout(revealVisible, 100);
+        setTimeout(revealVisible, 600);
       }
 
       setLanguage(currentLang);
