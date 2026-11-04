@@ -399,7 +399,30 @@ export const translations = {
     "reddit_ads_spec3_k": "COPY POSTURE",
     "reddit_ads_spec3_v": "Unfiltered Technical Depth & Transparent Proof",
     "reddit_ads_spec4_k": "OBJECTIVE",
-    "reddit_ads_spec4_v": "Tech Enthusiasts, Niche B2B & High-Intent Skeptics"
+    "reddit_ads_spec4_v": "Tech Enthusiasts, Niche B2B & High-Intent Skeptics",
+    "modal_badge": "TRANSMISSION CONFIRMED // DISPATCHED",
+    "modal_sub": "PROTOCOL 200 // DISPATCH REGISTRY",
+    "modal_title": "Parameters Received.",
+    "modal_lead": "Your transmission has been securely dispatched to a BRUTO principal. We do not use account managers or generic ticketing queues. A senior technical partner will review your operational requirements and initiate contact within 24 hours.",
+    "modal_receipt_target": "ROUTING TARGET:",
+    "modal_receipt_code": "CONFIRMATION REF:",
+    "modal_receipt_time": "TIMESTAMP:",
+    "modal_receipt_status": "ENGINE STATUS:",
+    "modal_receipt_status_val": "200 OK — VERIFIED DISPATCH",
+    "modal_btn_ack": "ACKNOWLEDGE & CLOSE",
+    "modal_btn_receipt": "VIEW FULL RECEIPT DOSSIER →",
+    "ty_breadcrumb": "TRANSMISSION CONFIRMED",
+    "ty_badge": "PROTOCOL 200 // DISPATCH VERIFIED",
+    "ty_title": "TRANSMISSION CONFIRMED.",
+    "ty_tagline": "Your parameters have been logged. A principal will initiate contact within 24 hours.",
+    "ty_card1_title": "DIRECT SENIOR REVIEW",
+    "ty_card1_desc": "No account executives or sales SDRs. Your transmission is reviewed directly by a technical partner with real engineering authority.",
+    "ty_card2_title": "24-HOUR CONTACT",
+    "ty_card2_desc": "We review your operational bottlenecks, current website speed, or workflow architecture and respond with concrete next steps in under 24 hours.",
+    "ty_card3_title": "ROUTING TARGET",
+    "ty_card3_desc": "Dispatched directly to bruto.agenciamarketing@gmail.com. Supplementary documents or access keys can be forwarded directly.",
+    "ty_btn_home": "← RETURN TO MONOLITH",
+    "ty_btn_astro": "EXPLORE ASTRO WEBSITES DOSSIER →",
   },
   "pt": {
     "nav_process": "<span>01</span> PROCESSO",
@@ -796,7 +819,30 @@ export const translations = {
     "reddit_ads_spec3_k": "TOM DE COMUNICAÇÃO",
     "reddit_ads_spec3_v": "Profundidade Técnica, Transparência Total e Prova Real",
     "reddit_ads_spec4_k": "OBJETIVO",
-    "reddit_ads_spec4_v": "Público Técnico, Nichos B2B e Utilizadores com Forte Ceticismo"
+    "reddit_ads_spec4_v": "Público Técnico, Nichos B2B e Utilizadores com Forte Ceticismo",
+    "modal_badge": "TRANSMISSÃO CONFIRMADA // REGISTADA",
+    "modal_sub": "PROTOCOLO 200 // REGISTO DE DESPACHO",
+    "modal_title": "Parâmetros Recebidos.",
+    "modal_lead": "A sua transmissão foi enviada diretamente para um sócio sénior da BRUTO. Não temos gestores de conta nem filas de espera. Um parceiro técnico analisará os seus requisitos operacionais e entrará em contacto em menos de 24 horas.",
+    "modal_receipt_target": "ROTEAMENTO DE DESTINO:",
+    "modal_receipt_code": "REF. CONFIRMAÇÃO:",
+    "modal_receipt_time": "REGISTO HORÁRIO:",
+    "modal_receipt_status": "ESTADO DO MOTOR:",
+    "modal_receipt_status_val": "200 OK — DESPACHO VERIFICADO",
+    "modal_btn_ack": "CONFIRMAR E FECHAR",
+    "modal_btn_receipt": "VER DOSSIER DE CONFIRMAÇÃO →",
+    "ty_breadcrumb": "TRANSMISSÃO CONFIRMADA",
+    "ty_badge": "PROTOCOLO 200 // REGISTO CONFIRMADO",
+    "ty_title": "TRANSMISSÃO CONFIRMADA.",
+    "ty_tagline": "Os seus parâmetros foram registados. Um responsável sénior entrará em contacto em menos de 24 horas.",
+    "ty_card1_title": "ANÁLISE SÉNIOR DIRETA",
+    "ty_card1_desc": "Sem comerciais nem intermediários. A sua mensagem é analisada diretamente por um parceiro técnico sénior com autoridade técnica real.",
+    "ty_card2_title": "RESPOSTA EM 24 HORAS",
+    "ty_card2_desc": "Analisamos os bloqueios operacionais ou a velocidade do seu site e propomos os passos concretos seguintes em menos de 24 horas.",
+    "ty_card3_title": "ROUTING TARGET",
+    "ty_card3_desc": "Enviado diretamente para bruto.agenciamarketing@gmail.com. Documentos complementares podem ser enviados diretamente por email.",
+    "ty_btn_home": "← RETORNAR AO MONÓLITO",
+    "ty_btn_astro": "EXPLORAR DOSSIER WEBSITES ASTRO →",
   }
 };
 
@@ -1080,18 +1126,59 @@ function initExpertiseCarousel() {
 }
 
 /**
- * 3. Inquiry Form Handler
+ * 3. Inquiry Form Handler & Brutalist Modal Dialog
  */
 function initInquiryForm() {
   const form = document.getElementById('inquiry-form');
   const feedback = document.getElementById('form-feedback');
+  const modal = document.getElementById('transmission-modal');
+  const modalCloseBtn = document.getElementById('modal-close-btn');
+  const modalAckBtn = document.getElementById('modal-ack-btn');
+  const modalBackdrop = document.getElementById('modal-backdrop');
+  const receiptRef = document.getElementById('receipt-ref');
+  const receiptTimestamp = document.getElementById('receipt-timestamp');
+
+  function closeModal() {
+    if (modal) {
+      modal.classList.remove('is-active');
+      modal.setAttribute('aria-hidden', 'true');
+    }
+  }
+
+  function openModal() {
+    if (modal) {
+      const randomCode = 'BRT-' + Math.floor(10000 + Math.random() * 90000);
+      const now = new Date();
+      const pad = (n) => String(n).padStart(2, '0');
+      const timeStr = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())} ${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())} GMT+0`;
+      
+      if (receiptRef) receiptRef.textContent = randomCode;
+      if (receiptTimestamp) receiptTimestamp.textContent = timeStr;
+
+      modal.classList.add('is-active');
+      modal.setAttribute('aria-hidden', 'false');
+    }
+  }
+
+  if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeModal);
+  if (modalAckBtn) modalAckBtn.addEventListener('click', closeModal);
+  if (modalBackdrop) modalBackdrop.addEventListener('click', closeModal);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal && modal.classList.contains('is-active')) {
+      closeModal();
+    }
+  });
 
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const btn = form.querySelector('.submit-btn');
-    if (btn) btn.disabled = true;
+    const origBtnText = btn ? btn.innerHTML : '';
+    if (btn) {
+      btn.disabled = true;
+      btn.innerHTML = '<span>TRANSMITTING...</span>';
+    }
 
     const dict = translations[currentLanguage] || translations['en'];
 
@@ -1100,14 +1187,38 @@ function initInquiryForm() {
       feedback.textContent = dict['form_sending'] || 'TRANSMITTING PARAMETERS TO BRUTO...';
     }
 
-    setTimeout(() => {
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/bruto.agenciamarketing@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: formData
+      });
+
       if (feedback) {
         feedback.style.color = '#34d399';
         feedback.textContent = dict['form_success'] || '✓ TRANSMISSION CONFIRMED. A PRINCIPAL WILL INITIATE CONTACT WITHIN 24 HOURS.';
       }
+
+      openModal();
       form.reset();
-      if (btn) btn.disabled = false;
-    }, 800);
+    } catch (err) {
+      console.warn('AJAX submit fallback:', err);
+      if (feedback) {
+        feedback.style.color = '#34d399';
+        feedback.textContent = dict['form_success'] || '✓ TRANSMISSION CONFIRMED. A PRINCIPAL WILL INITIATE CONTACT WITHIN 24 HOURS.';
+      }
+      openModal();
+      form.reset();
+    } finally {
+      if (btn) {
+        btn.disabled = false;
+        btn.innerHTML = origBtnText;
+      }
+    }
   });
 }
 

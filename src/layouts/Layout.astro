@@ -1,4 +1,7 @@
 ---
+import '../style.css';
+import TransmissionModal from '../components/TransmissionModal.astro';
+
 interface Props {
   title?: string;
   description?: string;
@@ -36,14 +39,14 @@ const {
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-
-  <!-- Global Brutalist CSS Framework -->
-  <link rel="stylesheet" href="/src/style.css" />
 </head>
 <body class={`bg-studio ${isSubpage ? 'subpage-body' : ''}`}>
   <slot />
 
-  <!-- Core Client Island Script -->
-  <script type="module" src="/src/main.js"></script>
+  <!-- Universal Brutalist Confirmation Modal Dialog -->
+  <TransmissionModal />
+
+  <!-- Core Client Island Script bundled by Astro -->
+  <script src="../main.js"></script>
 </body>
 </html>

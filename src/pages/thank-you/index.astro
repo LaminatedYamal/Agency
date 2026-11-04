@@ -1,0 +1,80 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout 
+  title="BRUTO — Transmission Confirmed // Project Receipt Dossier"
+  description="Confirmation and technical receipt for project transmissions dispatched to BRUTO."
+  isSubpage={true}
+>
+  <Header isSubpage={true} />
+
+  <main class="page-main page-subpage thank-you-page">
+    <section class="subpage-hero" style="min-height: 80vh; display: flex; align-items: center;">
+      <div class="content-container">
+        <!-- Technical Breadcrumb -->
+        <nav class="subpage-breadcrumb" aria-label="Breadcrumb navigation">
+          <a href="/" class="breadcrumb-link" data-i18n="breadcrumb_home">BRUTO</a>
+          <span class="breadcrumb-sep">//</span>
+          <span class="breadcrumb-current" data-i18n="ty_breadcrumb">TRANSMISSION CONFIRMED</span>
+        </nav>
+
+        <div class="subpage-hero-grid" style="grid-template-columns: 1fr; max-width: 900px; margin: 0 auto; text-align: left;">
+          <div class="subpage-hero-info">
+            <div class="subpage-tag-badge">
+              <span class="pulse-beacon"></span>
+              <span class="badge-text" data-i18n="ty_badge">PROTOCOL 200 // DISPATCH VERIFIED</span>
+            </div>
+            <h1 class="subpage-title" style="font-size: clamp(2.5rem, 6vw, 4.5rem); margin: 1.5rem 0 1rem; line-height: 1.05;" data-i18n="ty_title">
+              TRANSMISSION CONFIRMED.
+            </h1>
+            <p class="subpage-tagline" style="font-size: 1.25rem; color: #f5c842; font-family: 'Space Mono', monospace; margin-bottom: 2rem;" data-i18n="ty_tagline">
+              Your parameters have been logged. A principal will initiate contact within 24 hours.
+            </p>
+          </div>
+
+          <!-- Technical Confirmation Dossier Grid -->
+          <div class="ty-pillars-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
+            <div class="pillar-card" style="border: 1px solid rgba(255,255,255,0.12); padding: 1.5rem; background: rgba(11,14,23,0.7);">
+              <div class="pillar-num" style="color: #f5c842;">01</div>
+              <h3 class="pillar-title" style="font-family: 'Syne', sans-serif; font-size: 1.15rem; margin: 0.75rem 0;" data-i18n="ty_card1_title">DIRECT SENIOR REVIEW</h3>
+              <p class="pillar-desc" style="color: #94a3b8; font-size: 0.9rem; line-height: 1.6;" data-i18n="ty_card1_desc">
+                No account executives or sales SDRs. Your transmission is reviewed directly by a technical partner with real engineering authority.
+              </p>
+            </div>
+
+            <div class="pillar-card" style="border: 1px solid rgba(255,255,255,0.12); padding: 1.5rem; background: rgba(11,14,23,0.7);">
+              <div class="pillar-num" style="color: #f5c842;">02</div>
+              <h3 class="pillar-title" style="font-family: 'Syne', sans-serif; font-size: 1.15rem; margin: 0.75rem 0;" data-i18n="ty_card2_title">24-HOUR CONTACT</h3>
+              <p class="pillar-desc" style="color: #94a3b8; font-size: 0.9rem; line-height: 1.6;" data-i18n="ty_card2_desc">
+                We review your operational bottlenecks, current website speed, or workflow architecture and respond with concrete next steps in under 24 hours.
+              </p>
+            </div>
+
+            <div class="pillar-card" style="border: 1px solid rgba(255,255,255,0.12); padding: 1.5rem; background: rgba(11,14,23,0.7);">
+              <div class="pillar-num" style="color: #f5c842;">03</div>
+              <h3 class="pillar-title" style="font-family: 'Syne', sans-serif; font-size: 1.15rem; margin: 0.75rem 0;" data-i18n="ty_card3_title">ROUTING TARGET</h3>
+              <p class="pillar-desc" style="color: #94a3b8; font-size: 0.9rem; line-height: 1.6;" data-i18n="ty_card3_desc">
+                Dispatched directly to <strong style="color: #fff;">bruto.agenciamarketing@gmail.com</strong>. Supplementary documents or access keys can be forwarded directly.
+              </p>
+            </div>
+          </div>
+
+          <!-- Bottom Actions -->
+          <div style="display: flex; gap: 1.25rem; flex-wrap: wrap; margin-top: 3rem;">
+            <a href="/" class="inquire-btn" style="text-decoration: none; padding: 1rem 2rem; font-family: 'Space Mono', monospace; font-size: 0.9rem;" data-i18n="ty_btn_home">
+              ← RETURN TO MONOLITH
+            </a>
+            <a href="/astro/" class="card-action" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; padding: 1rem 1.75rem; border: 1px solid rgba(255,93,1,0.5); color: #ff8c42; font-family: 'Space Mono', monospace; font-size: 0.85rem;" data-i18n="ty_btn_astro">
+              EXPLORE ASTRO WEBSITES DOSSIER →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer isSubpage={true} />
+</Layout>

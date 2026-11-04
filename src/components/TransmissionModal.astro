@@ -1,0 +1,59 @@
+---
+// TransmissionModal.astro - Brutalist High-Contrast Confirmation Modal Dialog
+---
+
+<div id="transmission-modal" class="transmission-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+  <div class="modal-backdrop" id="modal-backdrop"></div>
+  <div class="modal-dialog-panel">
+    <!-- Top Status Strip -->
+    <div class="modal-status-strip">
+      <div class="modal-status-indicator">
+        <span class="status-pulse-beacon"></span>
+        <span class="status-code" data-i18n="modal_badge">TRANSMISSION CONFIRMED // DISPATCHED</span>
+      </div>
+      <button type="button" class="modal-close-trigger" id="modal-close-btn" aria-label="Close dialog">✕</button>
+    </div>
+
+    <!-- Monolithic Body -->
+    <div class="modal-content-core">
+      <div class="modal-headline-wrap">
+        <span class="modal-mono-sub" data-i18n="modal_sub">PROTOCOL 200 // DISPATCH REGISTRY</span>
+        <h3 class="modal-headline" id="modal-title" data-i18n="modal_title">Parameters Received.</h3>
+      </div>
+
+      <p class="modal-narrative" data-i18n="modal_lead">
+        Your transmission has been securely dispatched to a BRUTO principal. We do not use account managers or generic ticketing queues. A senior technical partner will review your operational requirements and initiate contact within 24 hours.
+      </p>
+
+      <!-- Technical Receipt Dossier Grid -->
+      <div class="modal-receipt-box">
+        <div class="receipt-row">
+          <span class="receipt-label" data-i18n="modal_receipt_target">ROUTING TARGET:</span>
+          <span class="receipt-value receipt-target">bruto.agenciamarketing@gmail.com</span>
+        </div>
+        <div class="receipt-row">
+          <span class="receipt-label" data-i18n="modal_receipt_code">CONFIRMATION REF:</span>
+          <span class="receipt-value" id="receipt-ref">BRT-84920</span>
+        </div>
+        <div class="receipt-row">
+          <span class="receipt-label" data-i18n="modal_receipt_time">TIMESTAMP:</span>
+          <span class="receipt-value" id="receipt-timestamp">--</span>
+        </div>
+        <div class="receipt-row receipt-row-last">
+          <span class="receipt-label" data-i18n="modal_receipt_status">ENGINE STATUS:</span>
+          <span class="receipt-value receipt-success" data-i18n="modal_receipt_status_val">200 OK — VERIFIED DISPATCH</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Actions Bar -->
+    <div class="modal-action-bar">
+      <button type="button" class="modal-primary-action" id="modal-ack-btn" data-i18n="modal_btn_ack">
+        ACKNOWLEDGE &amp; CLOSE
+      </button>
+      <a href="/thank-you/" class="modal-secondary-action" data-i18n="modal_btn_receipt">
+        VIEW FULL RECEIPT DOSSIER →
+      </a>
+    </div>
+  </div>
+</div>

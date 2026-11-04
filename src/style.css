@@ -3721,3 +3721,243 @@ body.bg-studio {
 .service-item:hover .tech-icon-cloudflare {
   filter: drop-shadow(0 0 8px rgba(243, 128, 32, 0.8));
 }
+
+
+/* ==========================================================================
+   BRUTALIST TRANSMISSION MODAL & CONFIRMATION DOSSIER
+   ========================================================================== */
+.transmission-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.28s ease;
+}
+
+.transmission-modal.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 7, 11, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.modal-dialog-panel {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+  background: #0B0E17;
+  border: 1px solid rgba(245, 200, 66, 0.45);
+  box-shadow: 
+    0 30px 70px rgba(0, 0, 0, 0.9),
+    0 0 45px rgba(245, 200, 66, 0.15);
+  border-radius: 0 !important;
+  color: #fff;
+  z-index: 1;
+  transform: translateY(16px) scale(0.98);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 0;
+  overflow: hidden;
+}
+
+.transmission-modal.is-active .modal-dialog-panel {
+  transform: translateY(0) scale(1);
+}
+
+.modal-status-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1.4rem;
+  background: #080A0F;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-status-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  color: #F5C842;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.modal-close-trigger {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #94a3b8;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 0 !important;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.modal-close-trigger:hover {
+  background: #F5C842;
+  color: #080A0F;
+  border-color: #F5C842;
+}
+
+.modal-content-core {
+  padding: 1.75rem 1.75rem 1.5rem;
+}
+
+.modal-headline-wrap {
+  margin-bottom: 0.85rem;
+}
+
+.modal-mono-sub {
+  display: block;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: #94a3b8;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+}
+
+.modal-headline {
+  font-family: 'Syne', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: #ffffff;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.modal-narrative {
+  color: #cbd5e1;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin: 0 0 1.4rem;
+}
+
+.modal-receipt-box {
+  background: #07090E;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0 !important;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.78rem;
+}
+
+.receipt-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.45rem;
+}
+
+.receipt-row-last {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.receipt-label {
+  color: #64748b;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.receipt-value {
+  color: #f1f5f9;
+  font-weight: 600;
+}
+
+.receipt-target {
+  color: #F5C842;
+}
+
+.receipt-success {
+  color: #34d399;
+}
+
+.modal-action-bar {
+  display: flex;
+  align-items: stretch;
+  gap: 1rem;
+  padding: 1.2rem 1.75rem 1.75rem;
+  background: #080A0F;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.modal-primary-action {
+  flex: 1;
+  background: #F5C842;
+  color: #080A0F;
+  border: 1px solid #F5C842;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  padding: 0.95rem 1.2rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 0 !important;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.modal-primary-action:hover {
+  background: #ffffff;
+  color: #080A0F;
+  border-color: #ffffff;
+  box-shadow: 0 0 20px rgba(245, 200, 66, 0.5);
+}
+
+.modal-secondary-action {
+  background: transparent;
+  color: #cbd5e1;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-family: 'Space Mono', monospace;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  padding: 0.95rem 1.2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 0 !important;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-secondary-action:hover {
+  border-color: #F5C842;
+  color: #F5C842;
+  background: rgba(245, 200, 66, 0.08);
+}
+
+@media (max-width: 640px) {
+  .modal-action-bar {
+    flex-direction: column;
+  }
+}
