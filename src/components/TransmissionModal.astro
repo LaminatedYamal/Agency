@@ -41,7 +41,7 @@
         </div>
         <div class="receipt-row receipt-row-last">
           <span class="receipt-label" data-i18n="modal_receipt_status">ENGINE STATUS:</span>
-          <span class="receipt-value receipt-success" data-i18n="modal_receipt_status_val">200 OK — VERIFIED DISPATCH</span>
+          <span class="receipt-value receipt-success" id="receipt-status-val" data-i18n="modal_receipt_status_val">200 OK — VERIFIED DISPATCH</span>
         </div>
       </div>
     </div>
@@ -51,8 +51,11 @@
       <button type="button" class="modal-primary-action" id="modal-ack-btn" data-i18n="modal_btn_ack">
         ACKNOWLEDGE &amp; CLOSE
       </button>
+      <a id="modal-mailto-fallback" href="mailto:bruto.agenciamarketing@gmail.com" class="modal-secondary-action modal-mailto-btn" style="border-color: #F5C842; color: #F5C842;" data-i18n="modal_btn_email">
+        DIRECT EMAIL ✉
+      </a>
       <a href="/thank-you/" class="modal-secondary-action" data-i18n="modal_btn_receipt">
-        VIEW FULL RECEIPT DOSSIER →
+        VIEW RECEIPT →
       </a>
     </div>
   </div>
