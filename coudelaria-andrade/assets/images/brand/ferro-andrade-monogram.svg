@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" width="100%" height="100%">
+  <defs>
+    <style>
+      .iron-stroke {
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 7;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .iron-fill {
+        fill: currentColor;
+      }
+    </style>
+  </defs>
+
+  <g id="ferro-sa-monogram" class="iron-stroke">
+    <!-- Letter A (Arch & Legs) -->
+    <path d="
+      M 16,224
+      C 22,222 28,218 32,208
+      L 32,82
+      C 32,44 60,26 100,26
+      C 140,26 168,44 168,82
+      L 168,208
+      C 172,218 178,222 184,224
+    " />
+    
+    <!-- Feet detail barbs -->
+    <path stroke-width="4" d="M 14,218 L 16,226" />
+    <path stroke-width="4" d="M 186,218 L 184,226" />
+
+    <!-- A Crossbar -->
+    <line x1="30" y1="126" x2="170" y2="126" />
+
+    <!-- Letter S (Intertwined) -->
+    <path d="
+      M 134,68
+      C 134,64 135,58 132,54
+      C 126,46 116,42 100,42
+      C 82,42 66,54 66,74
+      C 66,94 82,108 100,126
+      C 118,144 134,158 134,178
+      C 134,198 118,210 100,210
+      C 82,210 68,198 66,182
+      L 66,172
+    " />
+    
+    <path stroke-width="5" d="M 134,68 L 138,74" />
+    <polygon class="iron-fill" points="66,164 61,176 71,176" stroke="none" />
+    <path stroke-width="3" d="M 61,176 C 58,172 59,166 66,164" />
+  </g>
+</svg>

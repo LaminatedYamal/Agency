@@ -1,0 +1,1693 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>História da Coudelaria SA — Andrade Horses</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/brand/ferro-andrade-iron.svg?v=7">
+  
+  <!-- TYPOGRAPHY: TRATADO REAL (CORMORANT GARAMOND COMPLETE) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --color-primary: #35845d;
+      --color-primary-dark: #235d40;
+      --color-primary-light: #eef6f1;
+      --color-gold: #cfa858;
+      --color-gold-dark: #8e651e;
+      --color-gold-light: #fbf5e8;
+      --color-text: #1a2217;
+      --color-text-muted: #535e52;
+      --color-border-gold: rgba(207, 168, 88, 0.45);
+      --header-height: 92px;
+      --color-green: #295226;
+      --color-orange: #ed9807;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      color: var(--color-text);
+      background-color: #f7f4ed; /* Warm ivory parchment backing */
+      line-height: 1.82;
+      font-size: 20px;
+      position: relative;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* THE MONTADO SKETCH BACKGROUND IS ALWAYS PRESENT */
+    .site-art-bg {
+      position: fixed;
+      top: 0; 
+      left: 0; 
+      width: 100vw; 
+      height: 100vh;
+      pointer-events: none; 
+      z-index: 0;
+      background-image: url('assets/images/brand/montado-minimal-charcoal.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center bottom;
+      opacity: 0.35;
+      mix-blend-mode: multiply;
+    }
+
+    header, main, footer { 
+      position: relative; 
+      z-index: 1; 
+    }
+
+    .container { 
+      max-width: 1400px; 
+      margin: 0 auto; 
+      padding: 0 24px; 
+    }
+
+    /* ========================================================
+       TOP NOBLESSE MASTHEAD WITH INTEGRATED PAGES
+       ======================================================== */
+    .masthead-noblesse {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      height: var(--header-height);
+      z-index: 1000;
+      background: #ed9807;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.45);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .masthead-noblesse::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #295226;
+      clip-path: polygon(
+        0 0,
+        calc(50% + 35.5px) 0,
+        calc(50% - 31.5px) 100%,
+        0 100%
+      );
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .masthead-inner {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      height: 100%;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* CENTER LOGO OVER CONTINUOUS RIBBON */
+    .masthead-center-logo {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      z-index: 10;
+    }
+
+    .masthead-center-logo img {
+      height: 78px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.45));
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .masthead-center-logo:hover img {
+      /* no zoom */
+    }
+
+    /* NAV WINGS (STANDARDIZED PIXEL-PERFECT UNIFORMITY) */
+    .masthead-nav-wing {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .masthead-nav-wing.left-wing {
+      justify-content: flex-end;
+      flex: 1;
+      margin-right: 48px;
+    }
+
+    .masthead-nav-wing.right-wing {
+      justify-content: flex-start;
+      flex: 1;
+      margin-left: 48px;
+    }
+
+    /* NOBLE NAV LINKS (STANDARDIZED SIZING ACROSS ALL PAGES) */
+    .masthead-nav-link {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 0px;
+      transition: all 0.22s ease;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1.2;
+    }
+
+    /* LEFT WING (OVER GREEN #295226) */
+    .left-wing .masthead-nav-link {
+      color: #ffffff;
+      background: rgba(0, 0, 0, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+    .left-wing .masthead-nav-link:hover {
+      background: rgba(255, 255, 255, 0.22);
+      border-color: rgba(255, 255, 255, 0.6);
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+    .left-wing .masthead-nav-link.active {
+      background: #ffffff;
+      color: #1a3a18;
+      border-color: #ffffff;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    /* RIGHT WING (OVER ORANGE #ed9807) */
+    .right-wing .masthead-nav-link {
+      color: #1a1610;
+      background: rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(0, 0, 0, 0.24);
+    }
+    .right-wing .masthead-nav-link:hover {
+      background: rgba(0, 0, 0, 0.16);
+      border-color: rgba(0, 0, 0, 0.5);
+      color: #0a0805;
+      transform: translateY(-1px);
+    }
+    .right-wing .masthead-nav-link.active {
+      background: #141a12;
+      color: #f7ecd7;
+      border-color: #141a12;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    
+    /* MOBILE NAVIGATION DRAWER & TOGGLE BASE (Hidden on Desktop) */
+    .mobile-menu-toggle {
+      display: none;
+    }
+    .mobile-nav-drawer {
+      display: none;
+    }
+
+    @media (max-width: 1200px) {
+      .masthead-nav-link {
+        font-size: 13.5px;
+        padding: 5px 9px;
+      }
+      .masthead-nav-wing {
+        gap: 8px;
+      }
+      .masthead-nav-wing.left-wing {
+        margin-right: 44px;
+      }
+      .masthead-nav-wing.right-wing {
+        margin-left: 44px;
+      }
+      .masthead-center-logo img {
+        height: 68px;
+      }
+    }
+
+    @media (max-width: 980px) {
+      :root {
+        --safe-top: env(safe-area-inset-top, 0px);
+        --header-height: calc(58px + env(safe-area-inset-top, 0px));
+      }
+
+      .masthead-noblesse {
+        height: calc(58px + env(safe-area-inset-top, 0px)) !important;
+        min-height: calc(58px + env(safe-area-inset-top, 0px)) !important;
+        padding: 0 !important;
+        padding-top: env(safe-area-inset-top, 0px) !important;
+        box-sizing: border-box !important;
+        background: #ed9807 !important;
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 1000 !important;
+        overflow: visible !important;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3) !important;
+        border-bottom: 1.5px solid rgba(0, 0, 0, 0.4) !important;
+      }
+
+      .masthead-noblesse::before {
+        content: '' !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: #295226 !important;
+        clip-path: polygon(
+          0 0,
+          calc(50% + 24px) 0,
+          calc(50% - 22px) 100%,
+          0 100%
+        ) !important;
+        z-index: 0 !important;
+        pointer-events: none !important;
+      }
+
+      .masthead-inner {
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        height: 58px !important;
+        padding: 0 16px !important;
+        gap: 0 !important;
+        position: relative !important;
+        z-index: 10 !important;
+        box-sizing: border-box !important;
+      }
+
+      /* Hide inline wings on mobile */
+      .masthead-nav-wing {
+        display: none !important;
+      }
+
+      /* Centered logo */
+      .masthead-center-logo {
+        position: absolute !important;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        margin: 0 !important;
+        z-index: 10 !important;
+      }
+
+      .masthead-center-logo img {
+        height: 44px !important;
+        width: auto !important;
+      }
+
+      /* Mobile Hamburger Button */
+      .mobile-menu-toggle {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 40px;
+        height: 40px;
+        background: rgba(0, 0, 0, 0.28);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+        cursor: pointer;
+        z-index: 20;
+        position: absolute !important; left: 16px !important; top: 50% !important; transform: translateY(-50%) !important; margin: 0 !important;
+        padding: 8px;
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+      }
+
+      .mobile-menu-toggle .menu-bar {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: #ffffff;
+        border-radius: 2px;
+      }
+
+      /* Mobile Navigation Drawer Overlay */
+      .mobile-nav-drawer {
+        display: block !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0.3s ease, opacity 0.3s ease;
+      }
+
+      .mobile-nav-drawer.open {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .mobile-drawer-backdrop {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(14, 20, 15, 0.72);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+      }
+
+            .mobile-drawer-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: auto;
+        width: 86%;
+        max-width: 340px;
+        height: 100%;
+        background: linear-gradient(175deg, #fdfbf7 0%, #f4efe4 100%);
+        border-right: 2px solid #295226;
+        border-left: none;
+        box-shadow: 8px 0 35px rgba(0, 0, 0, 0.25);
+        padding: 24px 20px;
+        padding-top: calc(24px + env(safe-area-inset-top, 0px));
+        display: flex;
+        flex-direction: column;
+        transform: translateX(-100%);
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        overflow-y: auto;
+      }
+
+      .mobile-nav-drawer.open .mobile-drawer-content {
+        transform: translateX(0);
+      }
+
+      .mobile-drawer-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 16px;
+        border-bottom: 1.5px solid rgba(41, 82, 38, 0.2);
+        margin-bottom: 20px;
+      }
+
+      .mobile-drawer-logo {
+        height: 48px;
+        width: auto;
+        filter: none !important;
+      }
+
+      .mobile-drawer-close {
+        background: rgba(41, 82, 38, 0.06);
+        border: 1px solid rgba(41, 82, 38, 0.3);
+        color: #295226;
+        font-size: 28px;
+        line-height: 1;
+        width: 36px;
+        height: 36px;
+        border-radius: 4px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s, color 0.2s;
+      }
+
+      .mobile-drawer-close:hover {
+        background: rgba(41, 82, 38, 0.15);
+        color: #1b3818;
+      }
+
+      .mobile-drawer-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        flex: 1;
+      }
+
+      .mobile-drawer-link {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        color: #1b321a;
+        text-decoration: none;
+        padding: 12px 14px;
+        border-radius: 4px;
+        border-left: 3px solid transparent;
+        transition: background 0.2s, border-color 0.2s, color 0.2s;
+        display: block;
+      }
+
+      .mobile-drawer-link:hover {
+        background: rgba(237, 152, 7, 0.1);
+        border-left-color: #ed9807;
+        color: #b37300;
+      }
+
+      .mobile-drawer-link.active {
+        background: rgba(41, 82, 38, 0.08);
+        border-left-color: #295226;
+        color: #295226;
+        font-weight: 700;
+      }
+
+      .mobile-drawer-footer {
+        margin-top: auto;
+        padding-top: 18px;
+        border-top: 1.5px solid rgba(41, 82, 38, 0.2);
+        text-align: center;
+      }
+
+      .mobile-drawer-farm {
+        font-family: 'Cormorant Garamond', serif;
+        font-style: italic;
+        font-size: 14.5px;
+        color: #4a5d48;
+        margin-bottom: 6px;
+      }
+
+      .mobile-drawer-phone {
+        font-family: 'Cinzel', Georgia, serif;
+        font-size: 13.5px;
+        color: #295226;
+        text-decoration: none;
+        letter-spacing: 0.05em;
+        font-weight: 700;
+      }
+
+      .mobile-drawer-phone:hover {
+        color: #ed9807;
+      }
+
+      /* Compact page banner */
+      .page-title-banner {
+        padding: 24px 16px 14px 16px !important;
+        margin-bottom: 16px !important;
+      }
+      .page-title {
+        font-size: 32px !important;
+        line-height: 1.2 !important;
+      }
+      .page-subtitle {
+        font-size: 16px !important;
+        line-height: 1.45 !important;
+        padding: 0 8px !important;
+      }
+
+      /* Sticky Registry Ribbon below 58px header */
+      .registry-ledger-ribbon {
+        top: 58px !important;
+        margin-bottom: 20px !important;
+        padding: 8px 12px !important;
+        gap: 8px !important;
+        justify-content: flex-start !important;
+        -webkit-overflow-scrolling: touch !important;
+      }
+      .registry-tab {
+        font-size: 13px !important;
+        padding: 5px 12px !important;
+        white-space: nowrap !important;
+      }
+
+      /* Timeline Layout Refinements */
+      .manuscript-timeline {
+        padding: 0 10px !important;
+      }
+      .manuscript-spine {
+        left: 14px !important;
+      }
+      .manuscript-chapter {
+        padding-left: 26px !important;
+        padding-right: 0 !important;
+        gap: 16px !important;
+      }
+      .manuscript-chapter::before {
+        left: 14px !important;
+        width: 10px !important;
+        height: 10px !important;
+        margin-left: -5px !important;
+        top: 1.6rem !important;
+      }
+      .chapter-title {
+        font-size: 25px !important;
+        line-height: 1.25 !important;
+      }
+      .chapter-subtitle {
+        font-size: 14.5px !important;
+        margin-bottom: 10px !important;
+      }
+      .chapter-prose p {
+        font-size: 16px !important;
+        line-height: 1.65 !important;
+      }
+      .chapter-quote {
+        font-size: 15.5px !important;
+        padding: 12px 14px !important;
+        margin-bottom: 12px !important;
+      }
+      .archival-photo-frame {
+        padding: 10px !important;
+      }
+      .archival-photo-frame img {
+        height: 220px !important;
+      }
+    }
+
+    /* COMPACT NOBLE PAGE HEADER (GETS SPACE BACK) */
+    .page-title-banner {
+      text-align: center;
+      padding: 30px 0 16px 0;
+      margin-bottom: 18px;
+      border-bottom: 1.5px solid var(--color-border-gold);
+    }
+    .page-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 44px;
+      font-style: italic;
+      font-weight: 700;
+      color: #1a2217;
+      letter-spacing: 0.5px;
+      line-height: 1.15;
+      margin-bottom: 6px;
+    }
+    .page-subtitle {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 20px;
+      font-style: italic;
+      color: var(--color-text-muted);
+      max-width: 860px;
+      margin: 0 auto;
+      line-height: 1.45;
+    }
+
+    /* ========================================================
+       PORTUGUESE RUSTIC OFFICIAL PAPERS MANUSCRIPT (PAPEL SELADO)
+       Coudelaria Andrade — historia.html
+       Palette: Iron gall ink #1c201d · Antique gold #cfa858 · Dark bistre #2a3229
+       ======================================================== */
+
+    /* STICKY REGISTRY RIBBON (NOTARY TABS) */
+    .registry-ledger-ribbon {
+      position: sticky;
+      top: var(--header-height);
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      gap: clamp(0.25rem, 1.2vw, 1rem);
+      padding: 10px 14px;
+      margin: 0 auto 30px auto;
+      max-width: 1140px;
+      background: linear-gradient(to bottom, rgba(253, 250, 243, 0.96), rgba(246, 241, 230, 0.94));
+      border: 1px solid var(--color-border-gold);
+      border-radius: 0px;
+      box-shadow: 0 4px 18px rgba(28, 32, 29, 0.08);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .registry-ledger-ribbon::-webkit-scrollbar { display: none; }
+
+    .registry-tab {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 14px;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(14px, 1.1vw, 16.5px);
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #2a3229;
+      text-decoration: none;
+      border: 1px solid transparent;
+      border-radius: 0px;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+    }
+
+    .registry-tab::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -1px;
+      width: 0;
+      height: 2px;
+      background: var(--color-gold);
+      transform: translateX(-50%);
+      transition: width 0.3s ease;
+    }
+
+    .registry-tab:hover,
+    .registry-tab.active {
+      color: #141a12;
+      border-color: rgba(207, 168, 88, 0.5);
+      background-color: rgba(207, 168, 88, 0.12);
+    }
+
+    .registry-tab.active::after {
+      width: 100%;
+    }
+
+    /* MANUSCRIPT SCROLL CONTAINER */
+    .manuscript-scroll {
+      position: relative;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 20px 0 60px 0;
+    }
+
+    /* CENTRAL TIMELINE NOTARY SPINE */
+    .manuscript-spine {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 2px;
+      transform: translateX(-50%);
+      background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        var(--color-gold) 6%,
+        var(--color-primary-dark) 50%,
+        var(--color-gold) 94%,
+        transparent 100%
+      );
+      opacity: 0.55;
+      pointer-events: none;
+    }
+
+    /* BILATERAL ALTERNATING CHAPTERS */
+    .manuscript-chapter {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2rem, 5vw, 5rem);
+      align-items: center;
+      padding: clamp(3.5rem, 6vh, 5.5rem) 0;
+      scroll-margin-top: calc(var(--header-height) + 60px);
+    }
+
+    /* Central diamond notary node where chapter meets the spine */
+    .manuscript-chapter::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 12px;
+      height: 12px;
+      transform: translate(-50%, -50%) rotate(45deg);
+      background: #f7f4ed;
+      border: 2px solid var(--color-gold);
+      box-shadow: 0 0 0 3px rgba(41, 82, 38, 0.15);
+      z-index: 2;
+    }
+
+    /* CHAPTER CONTENT & NOTARY ARTICLE (AUTHENTIC PARCHMENT SHEET) */
+    .chapter-content {
+      position: relative;
+      z-index: 3;
+      padding: clamp(22px, 2.5vw, 36px);
+      background: rgba(254, 252, 247, 0.94);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(207, 168, 88, 0.45);
+      border-radius: 0px;
+      box-shadow: 0 10px 30px rgba(28, 32, 29, 0.08),
+                  inset 0 0 0 1px rgba(255, 255, 255, 0.85);
+    }
+
+    /* REVERSED LAYOUT (EVEN CHAPTERS) */
+    .manuscript-chapter.reversed .chapter-content {
+      order: 2;
+    }
+    .manuscript-chapter.reversed .chapter-visual {
+      order: 1;
+    }
+
+    /* CHAPTER TYPOGRAPHY */
+    .chapter-num {
+      display: inline-block;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--color-gold-dark);
+      background: transparent;
+      border: none;
+      padding: 0;
+      margin-bottom: 12px;
+    }
+
+    .chapter-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(26px, 2.6vw, 36px);
+      font-weight: 700;
+      font-style: italic;
+      color: #141a12;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .chapter-subtitle {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 18px;
+      font-style: italic;
+      color: #4c574b;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(207, 168, 88, 0.45);
+      max-width: 440px;
+    }
+
+    .chapter-prose p {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 19.5px;
+      line-height: 1.8;
+      color: #252d24;
+      margin-bottom: 14px;
+    }
+    .chapter-prose p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ILLUMINATED NOTARY QUOTE */
+    .chapter-quote {
+      position: relative;
+      margin: 18px 0;
+      padding: 12px 18px 12px 22px;
+      border-left: 3.5px solid var(--color-primary-dark);
+      background: rgba(41, 82, 38, 0.06);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #1a291f;
+    }
+    .chapter-quote cite {
+      display: block;
+      margin-top: 6px;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 13.5px;
+      letter-spacing: 0.08em;
+      color: var(--color-gold-dark);
+    }
+
+    /* ARCHIVAL PHOTO FRAME (MOUNTED DEDICATION PLATE) */
+    .archival-photo-frame {
+      position: relative;
+      background: linear-gradient(145deg, #f9f6ef 0%, #ede6d7 100%);
+      padding: 14px;
+      border: 1.5px solid rgba(207, 168, 88, 0.55);
+      box-shadow: 0 10px 30px rgba(28, 32, 29, 0.12),
+                  inset 0 0 0 1px rgba(255, 255, 255, 0.8);
+      border-radius: 0px;
+      overflow: hidden;
+    }
+
+    .archival-photo-frame img {
+      display: block;
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      filter: contrast(1.02) saturate(0.95);
+      transition: transform 0.6s ease;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+    }
+    .archival-photo-frame:hover img {
+      transform: none;
+    }
+
+    .archival-photo-frame figcaption {
+      margin-top: 10px;
+      text-align: center;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-size: 14.5px;
+      color: #5c665a;
+      letter-spacing: 0.04em;
+    }
+
+    /* FLUID INK CALLIGRAPHY REVEAL */
+    
+
+    
+
+    @media (max-width: 900px) {
+      .manuscript-spine {
+        left: 20px;
+      }
+      .manuscript-chapter {
+        grid-template-columns: 1fr;
+        padding-left: 36px;
+        gap: 24px;
+      }
+      .manuscript-chapter::before {
+        left: 20px;
+        top: 2rem;
+      }
+      .manuscript-chapter.reversed .chapter-content {
+        order: 1;
+      }
+      .manuscript-chapter.reversed .chapter-visual {
+        order: 2;
+      }
+      .archival-photo-frame img {
+        height: 240px;
+      }
+    }
+
+    /* TREATISE PREAMBLE */
+    .treatise-preamble {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid var(--color-border-gold);
+      padding: 24px 34px;
+      margin-bottom: 22px;
+      box-shadow: 0 6px 26px rgba(41, 82, 38, 0.05);
+      text-align: center;
+    }
+    .treatise-preamble-lead {
+      font-size: 22px;
+      font-style: italic;
+      font-weight: 600;
+      color: var(--color-primary-dark);
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+    .treatise-preamble p {
+      font-size: 19px;
+      line-height: 1.75;
+      color: #333a30;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    /* CLOSING CHAPTER CARD: OS PILARES CENTENÁRIOS */
+    .closing-pillars-card {
+      background: rgba(254, 252, 247, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1.5px solid var(--color-border-gold);
+      box-shadow: 0 12px 45px rgba(28, 32, 29, 0.1);
+      padding: 44px 40px;
+      margin: 60px auto 40px auto;
+      max-width: 1380px;
+    }
+    .closing-pillars-card h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(28px, 3vw, 38px);
+      font-style: italic;
+      font-weight: 700;
+      color: var(--color-primary-dark);
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .closing-pillars-card .lead {
+      text-align: center;
+      font-size: 20px;
+      font-style: italic;
+      color: #555e53;
+      max-width: 860px;
+      margin: 0 auto 36px auto;
+      line-height: 1.5;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 20px;
+    }
+    .pillar-box {
+      border: 1px solid rgba(207, 168, 88, 0.45);
+      background: #fcfaf4;
+      padding: 24px 20px 28px 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 4px 16px rgba(28, 32, 29, 0.05);
+    }
+    .pillar-box:hover {
+      background: #ffffff;
+      border-color: rgba(207, 168, 88, 0.9);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(28, 32, 29, 0.12);
+    }
+    .pillar-sketch-frame {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      margin-bottom: 16px;
+      border: 1px solid rgba(207, 168, 88, 0.4);
+      border-radius: 2px;
+      background: #f7f3ec;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: inset 0 0 10px rgba(28, 32, 29, 0.05);
+    }
+    .pillar-sketch-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: contrast(1.04) saturate(0.95);
+      transition: transform 0.5s ease;
+    }
+    .pillar-box:hover .pillar-sketch-frame img {
+      transform: none;
+    }
+    .pillar-num {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--color-gold-dark);
+      margin-bottom: 4px;
+      letter-spacing: 1px;
+    }
+    .pillar-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 21px;
+      font-weight: 700;
+      font-style: italic;
+      color: #1a2217;
+      margin-bottom: 10px;
+      line-height: 1.25;
+    }
+    .pillar-desc {
+      font-size: 16.5px;
+      line-height: 1.65;
+      color: #384236;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1.5px solid var(--color-border-gold);
+      background: rgba(255, 255, 255, 0.90);
+      backdrop-filter: blur(8px);
+      padding: 38px 0;
+      text-align: center;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 17.5px;
+      color: #555e53;
+      margin-top: 50px;
+    }
+    .footer-quote {
+      font-style: italic;
+      font-weight: 600;
+      font-size: 21px;
+      color: var(--color-primary-dark);
+      margin-bottom: 10px;
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 1080px) {
+      .pillars-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .horizontal-wheel-stage {
+        height: 560px;
+      }
+      .h-wheel-card {
+        height: 510px;
+        margin-top: -255px;
+        padding: 26px 30px;
+      }
+      .timeline-image-frame {
+        height: 300px;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .horizontal-wheel-stage {
+        height: 680px;
+      }
+      .h-wheel-card {
+        height: 620px;
+        margin-top: -310px;
+        width: 88%;
+        margin-left: -44%;
+        padding: 22px 20px;
+      }
+      .h-wheel-card.prev-card {
+        transform: translateX(-102%) scale(0.90);
+      }
+      .h-wheel-card.next-card {
+        transform: translateX(102%) scale(0.90);
+      }
+      .wheel-card-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px;
+      }
+      .h-wheel-card.reversed .milestone-visual {
+        order: -1;
+      }
+      .timeline-image-frame {
+        height: 220px;
+      }
+      .timeline-title {
+        font-size: 26px;
+      }
+      .timeline-text {
+        font-size: 18px;
+        line-height: 1.65;
+      }
+      .page-title { font-size: 34px; }
+      .closing-pillars-card { padding: 26px 20px; }
+    }
+
+    @media (max-width: 600px) {
+      .container { padding: 0 14px; }
+      .wheel-controls-bar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .wheel-nav-actions {
+        justify-content: center;
+      }
+      .pillars-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  
+    /* STOP ALL IMAGE ZOOM ON HOVER EVERYWHERE */
+    img, .portal-card-bg, .cm-img-frame img, .archival-photo-frame img, .pillar-sketch-frame img {
+      transition: none !important;
+    }
+    *:hover > img,
+    *:hover img,
+    .cm-img-frame:hover img,
+    .archival-photo-frame:hover img,
+    .pillar-box:hover .pillar-sketch-frame img,
+    .portal-card:hover .portal-card-bg {
+      transform: none !important;
+    }
+    .archival-photo-frame:hover,
+    .cm-img-frame:hover,
+    .pillar-box:hover {
+      box-shadow: 0 14px 34px rgba(28, 32, 29, 0.16) !important;
+      border-color: rgba(207, 168, 88, 0.75) !important;
+    }
+    
+
+    /* FLUID CALLIGRAPHY INK UNVEIL ON SCROLL */
+    .ink-reveal {
+      clip-path: inset(0 100% 0 0);
+      opacity: 0;
+      filter: saturate(0.3) contrast(0.9);
+      transition:
+        clip-path 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.6s ease-out,
+        filter 1s ease;
+      will-change: clip-path, opacity, filter;
+    }
+    .ink-reveal.in-view {
+      clip-path: inset(0 -5% 0 0) !important;
+      opacity: 1 !important;
+      filter: saturate(1) contrast(1) !important;
+    }
+
+
+    /* MOBILE FOOTER TOGGLE BAR (HEADER-STYLE SPLIT WITH UPWARD CHEVRON) */
+    .mobile-footer-toggle-bar {
+      display: none;
+    }
+
+    @media (max-width: 980px) {
+      .mobile-footer-toggle-bar {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        position: relative !important;
+        height: 38px !important;
+        background: #ed9807 !important;
+        cursor: pointer !important;
+        user-select: none !important;
+        overflow: hidden !important;
+        box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15) !important;
+        border-top: 1.5px solid rgba(0, 0, 0, 0.25) !important;
+        box-sizing: border-box !important;
+      }
+
+      .mobile-footer-toggle-bar::before {
+        content: '' !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: #295226 !important;
+        clip-path: polygon(
+          0 0,
+          calc(50% + 20px) 0,
+          calc(50% - 18px) 100%,
+          0 100%
+        ) !important;
+        z-index: 1 !important;
+        pointer-events: none !important;
+      }
+
+      .mobile-footer-toggle-inner {
+        position: relative !important;
+        z-index: 2 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        width: 100% !important;
+        height: 100% !important;
+        padding: 0 16px !important;
+        color: #ffffff !important;
+        font-family: var(--font-heading, "Cinzel", Georgia, serif) !important;
+        font-size: 0.72rem !important;
+        letter-spacing: 0.12em !important;
+        text-transform: uppercase !important;
+        font-weight: 600 !important;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+      }
+
+      .mobile-footer-chevron {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      }
+
+      .mobile-footer-toggle-bar.open .mobile-footer-chevron {
+        transform: rotate(180deg) !important;
+      }
+
+      .footer-collapsible-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), padding 0.35s ease;
+        background: #faf8f5;
+        padding: 0 16px;
+      }
+
+      .footer-collapsible-content.open {
+        max-height: 400px;
+        padding: 22px 16px 28px 16px;
+        border-bottom: 2px solid #295226;
+      }
+    }
+
+</style>
+</head>
+<body>
+  <!-- THE MONTADO SKETCH BACKGROUND IS ALWAYS PRESENT -->
+  <div class="site-art-bg"></div>
+
+  <!-- ========================================================
+       TOP MASTHEAD: SEAMLESS GREEN & ORANGE NOBLESSE
+       ======================================================== -->
+  <header class="masthead-noblesse">
+    <div class="masthead-inner">
+      
+      <!-- LEFT WING: 3 PAGES (Over Green #295226) -->
+      <nav class="masthead-nav-wing left-wing" aria-label="Navegação Esquerda">
+        <a href="historia.html" class="masthead-nav-link active" data-pt="História" data-en="History">História</a>
+        <a href="o-cavalo-dandrade.html" class="masthead-nav-link" data-pt="O Cavalo D'Andrade" data-en="The D'Andrade Horse">O Cavalo D'Andrade</a>
+        <a href="sorraias.html" class="masthead-nav-link" data-pt="Sorraias" data-en="Sorraia Horses">Sorraias</a>
+      </nav>
+
+      <!-- BIG CENTERED LOGO OVER CONTINUOUS RIBBON -->
+      <a href="index.html" class="masthead-center-logo" title="Coudelaria Andrade &mdash; Voltar à Página Principal">
+        <img src="assets/images/brand/ferro-andrade-iron.svg?v=7" 
+             alt="Ferro SA &mdash; Coudelaria Andrade" 
+             id="masthead-logo">
+      </a>
+
+      <!-- RIGHT WING: 3 PAGES + RECTANGULAR LANGUAGE SWITCHER (Over Orange #ed9807) -->
+      <nav class="masthead-nav-wing right-wing" aria-label="Navegação Direita">
+        <a href="cavalos-para-venda.html" class="masthead-nav-link" data-pt="Cavalos para Venda" data-en="Horses for Sale">Cavalos para Venda</a>
+        <a href="visitas-guiadas.html" class="masthead-nav-link" data-pt="Visitas Guiadas" data-en="Guided Visits">Visitas Guiadas</a>
+        <a href="contactos.html" class="masthead-nav-link" data-pt="Contactos" data-en="Contacts">Contactos</a>
+      </nav>
+      <!-- MOBILE MENU TOGGLE (<= 980px) -->
+      <button type="button" class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu" aria-expanded="false">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </button>
+    </div>
+  </header>
+  <!-- ========================================================
+       MOBILE NAVIGATION DRAWER
+       ======================================================== -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true">
+    <div class="mobile-drawer-backdrop" id="mobileDrawerBackdrop"></div>
+    <div class="mobile-drawer-content">
+      <div class="mobile-drawer-header">
+        <img src="assets/images/brand/ferro-andrade-iron.svg?v=7" alt="Ferro SA" class="mobile-drawer-logo">
+        <button type="button" class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Fechar">&times;</button>
+      </div>
+      
+      
+
+      <nav class="mobile-drawer-nav">
+        <a href="index.html" class="mobile-drawer-link" data-pt="Página Principal" data-en="Home">Página Principal</a>
+        <a href="historia.html" class="mobile-drawer-link active" data-pt="História da Coudelaria SA" data-en="History of Stud d'Andrade">História da Coudelaria SA</a>
+        <a href="o-cavalo-dandrade.html" class="mobile-drawer-link" data-pt="O Cavalo D'Andrade" data-en="The D'Andrade Horse">O Cavalo D'Andrade</a>
+        <a href="sorraias.html" class="mobile-drawer-link" data-pt="Cavalos Sorraia" data-en="Sorraia Horses">Cavalos Sorraia</a>
+        <a href="cavalos-para-venda.html" class="mobile-drawer-link" data-pt="Cavalos para Venda" data-en="Horses for Sale">Cavalos para Venda</a>
+        <a href="visitas-guiadas.html" class="mobile-drawer-link" data-pt="Visitas Guiadas" data-en="Guided Visits">Visitas Guiadas</a>
+        <a href="contactos.html" class="mobile-drawer-link" data-pt="Contactos &amp; Localização" data-en="Contacts &amp; Location">Contactos &amp; Localização</a>
+      </nav>
+      
+      <div class="mobile-drawer-footer">
+        <p class="mobile-drawer-farm">Herdade da Agolada de Baixo &middot; Coruche</p>
+        <a href="tel:+351962149845" class="mobile-drawer-phone">(+351) 962 149 845</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="container">
+    <!-- PAGE TITLE BANNER (NO IMAGE, RECLAIMED VERTICAL SPACE) -->
+    <div class="page-title-banner">
+      <h1 class="page-title" data-pt="História da Coudelaria SA" data-en="History of Stud d’Andrade">História da Coudelaria SA</h1>
+      <p class="page-subtitle" data-pt="Uma cronologia secular dedicada à nobreza, robustez e funcionalidade do cavalo ibérico." data-en="A centennial chronology dedicated to the nobility, bone strength, and athleticism of the Iberian horse.">
+        Uma cronologia secular dedicada à nobreza, robustez e funcionalidade do cavalo ibérico.
+      </p>
+    </div>
+
+    <!-- TREATISE PREAMBLE -->
+    <div class="treatise-preamble">
+      <div class="treatise-preamble-lead" data-pt="O Encontro Secular de Duas Casas Coudélicas Ribatejanas" data-en="The Centennial Meeting of Two Ribatejo Studs">
+        O Encontro Secular de Duas Casas Coudélicas Ribatejanas
+      </div>
+      <p data-pt="Historicamente, em Portugal, existiam duas formas de estar ligado à criação equina: o rigor do trabalho agrário nas férteis lezírias e a busca erudita pelo aperfeiçoamento estético e biomecânico. A Coudelaria d’Andrade de Oliveira e Sousa (Coudelaria SA) representa a síntese viva destas duas tradições centenárias." data-en="Historically in Portugal, there were two profound approaches to horse breeding: the rigor of agricultural labor in the fertile floodplains and the scholarly pursuit of aesthetic and biomechanical perfection. Stud d’Andrade de Oliveira e Sousa (Coudelaria SA) represents the living synthesis of these two centennial traditions.">
+        Historicamente, em Portugal, existiam duas formas de estar ligado à criação equina: o rigor do trabalho agrário nas férteis lezírias e a busca erudita pelo aperfeiçoamento estético e biomecânico. A Coudelaria d’Andrade de Oliveira e Sousa (Coudelaria SA) representa a síntese viva destas duas tradições centenárias.
+      </p>
+    </div>
+
+    <!-- ========================================================
+         HORIZONTAL CHRONOLOGICAL WHEEL SECTION
+         ======================================================== -->
+    <!-- ========================================================
+         PORTUGUESE RUSTIC OFFICIAL PAPERS MANUSCRIPT (PAPEL SELADO)
+         ======================================================== -->
+    <div class="registry-ledger-ribbon" id="ledgerRibbon">
+      <a href="#marco-1" class="registry-tab active" data-index="0">I &middot; c. 1890</a>
+      <a href="#marco-2" class="registry-tab" data-index="1">II &middot; 1920</a>
+      <a href="#marco-3" class="registry-tab" data-index="2">III &middot; c. 1950</a>
+      <a href="#marco-4" class="registry-tab" data-index="3">IV &middot; c. 1985</a>
+      <a href="#marco-5" class="registry-tab" data-index="4">V &middot; 2000</a>
+      <a href="#marco-6" class="registry-tab" data-index="5">VI &middot; Futuro</a>
+    </div>
+
+    <section class="manuscript-scroll" id="manuscriptScroll">
+      <div class="manuscript-spine"></div>
+      
+      <!-- CHAPTER 1 -->
+      <article class="manuscript-chapter" id="marco-1" data-index="0">
+        <div class="chapter-content">
+          <span class="chapter-num" data-pt="Assento I &middot; Finais do Séc. XIX" data-en="Entry I &middot; Late 19th Century">Assento I &middot; Finais do Séc. XIX</span>
+          <h2 class="chapter-title ink-reveal" data-pt="A Fundação da Coudelaria Oliveira e Sousa" data-en="Founding of Stud Oliveira e Sousa">A Fundação da Coudelaria Oliveira e Sousa</h2>
+          <div class="chapter-subtitle ink-reveal" data-pt="As Lezírias Ribatejanas &middot; Força, Aprumos e Serenidade" data-en="The Ribatejo Floodplains &middot; Bone Strength &amp; Serenity">As Lezírias Ribatejanas &middot; Força, Aprumos e Serenidade</div>
+          <div class="chapter-prose ink-reveal">
+            <p data-pt="Fundada no final do século XIX nas ricas lezírias ribatejanas, a Coudelaria Oliveira e Sousa nasceu das severas exigências do trabalho agrícola e do manejo do gado nas campinas. Cavalos e éguas eram imprescindíveis para puxar trenós nos arrozais e conduzir as lides sob o calor do Ribatejo." data-en="Founded in the late 19th century in the fertile Ribatejo floodplains, the Oliveira e Sousa Stud arose from the demanding needs of agricultural labor and cattle handling. Horses were vital for hauling equipment through rice fields and enduring rigorous ranch work under the intense heat.">
+              Fundada no final do século XIX nas ricas lezírias ribatejanas, a Coudelaria Oliveira e Sousa nasceu das severas exigências do trabalho agrícola e do manejo do gado nas campinas. Cavalos e éguas eram imprescindíveis para puxar trenós nos arrozais e conduzir as lides sob o calor do Ribatejo.
+            </p>
+            <p data-pt="Esta seleção empírica mas implacável fixou uma estrutura óssea sólida, aprumos irrepreensíveis e um temperamento calmo e generoso, fornecendo a base de sustentação zootécnica essencial à estirpe moderna." data-en="This relentless empirical selection cemented dense bone structure, impeccable limbs, and a calm, generous temperament, providing the essential physical foundation for the modern lineage.">
+              Esta seleção empírica mas implacável fixou uma estrutura óssea sólida, aprumos irrepreensíveis e um temperamento calmo e generoso, fornecendo a base de sustentação zootécnica essencial à estirpe moderna.
+            </p>
+          </div>
+        </div>
+        <div class="chapter-visual">
+          <div class="archival-photo-frame ink-reveal">
+            <img src="assets/images/pages/coudelaria-sa/img_0374-1.jpg" alt="Tradição Ribatejana Oliveira e Sousa" loading="lazy">
+            <figcaption data-pt="Lezírias do Ribatejo &mdash; Robustez e aprumos da fundação" data-en="Ribatejo floodplains &mdash; Bone strength and foundation conformation">Lezírias do Ribatejo &mdash; Robustez e aprumos da fundação</figcaption>
+          </div>
+        </div>
+      </article>
+
+      <!-- CHAPTER 2 (REVERSED: VISUAL FIRST, CONTENT SECOND) -->
+      <article class="manuscript-chapter reversed" id="marco-2" data-index="1">
+        <div class="chapter-visual">
+          <div class="archival-photo-frame ink-reveal">
+            <img src="assets/images/pages/sorraias-eng/dr-ruy-dandrade-sorraia-cbced35b.jpeg" alt="Dr. Ruy d'Andrade com exemplar Sorraia" loading="lazy">
+            <figcaption data-pt="Dr. Ruy d'Andrade na lezíria &mdash; O resgate zootécnico" data-en="Dr. Ruy d'Andrade in the field &mdash; The zootechnical rescue">Dr. Ruy d'Andrade na lezíria &mdash; O resgate zootécnico</figcaption>
+          </div>
+        </div>
+        <div class="chapter-content">
+          <span class="chapter-num" data-pt="Assento II &middot; 1900 – 1920" data-en="Entry II &middot; 1900 – 1920">Assento II &middot; 1900 – 1920</span>
+          <h2 class="chapter-title ink-reveal" data-pt="Dr. Ruy d’Andrade &amp; O Resgate dos Sorraias" data-en="Dr. Ruy d’Andrade &amp; Discovery of the Sorraias">Dr. Ruy d’Andrade &amp; O Resgate dos Sorraias</h2>
+          <div class="chapter-subtitle ink-reveal" data-pt="A Erudição Zootécnica &amp; O Berço do Cavalo Ibérico" data-en="Zoological Erudition &amp; The Cradle of the Iberian Horse">A Erudição Zootécnica &amp; O Berço do Cavalo Ibérico</div>
+          <div class="chapter-prose ink-reveal">
+            <p data-pt="Paralelamente, o eminente paleontólogo, agrónomo e historiador Dr. Ruy d’Andrade iniciou a sua coudelaria com um propósito inovador: a recuperação da pureza do cavalo de sela barroco peninsular através de rigorosos critérios biológicos e morfológicos." data-en="In parallel, the eminent paleontologist, agronomist, and historian Dr. Ruy d’Andrade established his stud farm with an innovative mission: restoring the purity of the baroque Iberian saddle horse through rigorous biological and morphological standards.">
+              Paralelamente, o eminente paleontólogo, agrónomo e historiador Dr. Ruy d’Andrade iniciou a sua coudelaria com um propósito inovador: a recuperação da pureza do cavalo de sela barroco peninsular através de rigorosos critérios biológicos e morfológicos.
+            </p>
+            <div class="chapter-quote">
+              <span data-pt="“...em 1920, andando à caça na região de Coruche, no baixo Sorraia, deparei com uma manada de indivíduos muito zebrados e com aspecto geral absolutamente selvagem...”" data-en="“...in 1920, hunting around Coruche in the lower Sorraia basin, I encountered a herd of heavily striped individuals with an entirely wild aspect...”">
+                “...em 1920, andando à caça na região de Coruche, no baixo Sorraia, deparei com uma manada de indivíduos muito zebrados e com aspecto geral absolutamente selvagem...”
+              </span>
+              <cite data-pt="— Dr. Ruy d’Andrade (1920)" data-en="— Dr. Ruy d’Andrade (1920)">— Dr. Ruy d’Andrade (1920)</cite>
+            </div>
+            <p data-pt="Esta histórica descoberta em Coruche deu início ao resgate e preservação mundial da Raça Sorraia — o antepassado primitivo vivo do Cavalo Lusitano." data-en="This historic discovery in Coruche launched the worldwide rescue and preservation of the Sorraia breed — the living primitive ancestor of the Lusitano horse.">
+              Esta histórica descoberta em Coruche deu início ao resgate e preservação mundial da Raça Sorraia — o antepassado primitivo vivo do Cavalo Lusitano.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- CHAPTER 3 -->
+      <article class="manuscript-chapter" id="marco-3" data-index="2">
+        <div class="chapter-content">
+          <span class="chapter-num" data-pt="Assento III &middot; c. 1940 – 1970" data-en="Entry III &middot; c. 1940 – 1970">Assento III &middot; c. 1940 – 1970</span>
+          <h2 class="chapter-title ink-reveal" data-pt="Eng. Fernando Sommer d’Andrade: O Estalão Andrade" data-en="Eng. Fernando Sommer d’Andrade: The Andrade Standard">Eng. Fernando Sommer d’Andrade: O Estalão Andrade</h2>
+          <div class="chapter-subtitle ink-reveal" data-pt="Alta Escola, Consanguinidade Calculada &amp; Consagração" data-en="High School Dressage, Close Linebreeding &amp; Global Renown">Alta Escola, Consanguinidade Calculada &amp; Consagração</div>
+          <div class="chapter-prose ink-reveal">
+            <p data-pt="O Eng. Fernando Sommer d’Andrade deu continuidade à obra paterna com precisão zootécnica e visão a longo prazo. Através de um programa pioneiro de consanguinidade estreita e calculada, fixou o inconfundível fenótipo Andrade: animais mais altos, angulosos, com espáduas oblíquas, pescoço nobremente arqueado e garupas fortes." data-en="Eng. Fernando Sommer d’Andrade carried forward his father’s work with mathematical precision and long-range foresight. Through a pioneering program of strategic, calculated linebreeding, he fixed the unmistakable Andrade phenotype: taller animals with angular lines, oblique shoulders, noble arched necks, and formidable quarters.">
+              O Eng. Fernando Sommer d’Andrade deu continuidade à obra paterna com precisão zootécnica e visão a longo prazo. Através de um programa pioneiro de consanguinidade estreita e calculada, fixou o inconfundível fenótipo Andrade: animais mais altos, angulosos, com espáduas oblíquas, pescoço nobremente arqueado e garupas fortes.
+            </p>
+            <p data-pt="O cavalo Andrade consagrou-se mundialmente como a referência suprema para a Alta Escola, a Dressage clássica e o toureio a cavalo, influenciando os maiores criadores da Península Ibérica." data-en="The Andrade horse established itself globally as the supreme benchmark for classical High School dressage and rejoneo, shaping the most influential breeding houses of the Iberian Peninsula.">
+              O cavalo Andrade consagrou-se mundialmente como a referência suprema para a Alta Escola, a Dressage clássica e o toureio a cavalo, influenciando os maiores criadores da Península Ibérica.
+            </p>
+          </div>
+        </div>
+        <div class="chapter-visual">
+          <div class="archival-photo-frame ink-reveal">
+            <img src="assets/images/history/andrade-estalhao.jpg" alt="O Cavalo D'Andrade Clássico" loading="lazy">
+            <figcaption data-pt="O Estalão Andrade &mdash; Arquétipo nobre e andamentos elevados" data-en="The Andrade Standard &mdash; Noble archetype and elevated gaits">O Estalão Andrade &mdash; Arquétipo nobre e andamentos elevados</figcaption>
+          </div>
+        </div>
+      </article>
+
+      <!-- CHAPTER 4 (REVERSED) -->
+      <article class="manuscript-chapter reversed" id="marco-4" data-index="3">
+        <div class="chapter-visual">
+          <div class="archival-photo-frame ink-reveal" style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 360px; text-align: center;">
+            <img src="assets/images/brand/ferro-andrade-iron.svg?v=7" alt="Ferro SA Coudelaria Andrade" style="object-fit: contain; max-height: 240px; width: auto; margin: 0 auto; display: block; background: transparent; border: none !important; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.22));" loading="lazy">
+            <figcaption style="margin-top: 18px; width: 100%; text-align: center;" data-pt="O Ferro SA &mdash; A síntese coudélica de duas estirpes" data-en="The SA Brand &mdash; The synthesis of two bloodlines">O Ferro SA &mdash; A síntese coudélica de duas estirpes</figcaption>
+          </div>
+        </div>
+        <div class="chapter-content">
+          <span class="chapter-num" data-pt="Assento IV &middot; Final do Séc. XX" data-en="Entry IV &middot; Late 20th Century">Assento IV &middot; Final do Séc. XX</span>
+          <h2 class="chapter-title ink-reveal" data-pt="A Criação da Coudelaria SA (Ferro SA)" data-en="The Creation of Stud SA (The SA Brand)">A Criação da Coudelaria SA (Ferro SA)</h2>
+          <div class="chapter-subtitle ink-reveal" data-pt="A Harmonia entre Robustez Óssea e Elegância Aristocrática" data-en="Harmony between Bone Substance and Aristocratic Elegance">A Harmonia entre Robustez Óssea e Elegância Aristocrática</div>
+          <div class="chapter-prose ink-reveal">
+            <p data-pt="Da aliança matrimonial e secular entre as linhagens D’Andrade e Oliveira e Sousa nasce a Coudelaria SA. Esta fusão representou um marco coudélico extraordinário: a solidez física, serenidade e aprumos densos da linhagem agrária uniram-se à nobreza, impulsão e andamentos elevados da estirpe Andrade." data-en="From the marital and centennial alliance between the D’Andrade and Oliveira e Sousa bloodlines arose Coudelaria SA. This union marked an extraordinary breeding milestone: the physical substance, calm temperament, and dense limbs of the agricultural lineage joined the nobility, impulsion, and elevated cadence of the Andrade line.">
+              Da aliança matrimonial e secular entre as linhagens D’Andrade e Oliveira e Sousa nasce a Coudelaria SA. Esta fusão representou um marco coudélico extraordinário: a solidez física, serenidade e aprumos densos da linhagem agrária uniram-se à nobreza, impulsão e andamentos elevados da estirpe Andrade.
+            </p>
+            <p data-pt="O ferro histórico SA passa a distinguir exemplares que reúnem funcionalidade atlética e temperamento generoso, vocacionados para a arte equestre de topo." data-en="The historic SA iron came to brand horses that unite athletic versatility and generous temperament, destined for the highest levels of equestrian artistry.">
+              O ferro histórico SA passa a distinguir exemplares que reúnem funcionalidade atlética e temperamento generoso, vocacionados para a arte equestre de topo.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- CHAPTER 5 -->
+      <article class="manuscript-chapter" id="marco-5" data-index="4">
+        <div class="chapter-content">
+          <span class="chapter-num" data-pt="Assento V &middot; Século XXI" data-en="Entry V &middot; 21st Century">Assento V &middot; Século XXI</span>
+          <h2 class="chapter-title ink-reveal" data-pt="Maria D’Andrade na Herdade da Agolada de Baixo" data-en="Maria D’Andrade at Herdade da Agolada de Baixo">Maria D’Andrade na Herdade da Agolada de Baixo</h2>
+          <div class="chapter-subtitle ink-reveal" data-pt="Criação Extensiva em Liberdade no Montado de Coruche" data-en="Extensive Natural Breeding in the Coruche Montado">Criação Extensiva em Liberdade no Montado de Coruche</div>
+          <div class="chapter-prose ink-reveal">
+            <p data-pt="Atualmente, Maria D’Andrade de Oliveira e Sousa assegura com devoção a continuidade deste património na Herdade da Agolada de Baixo, em pleno coração do montado de Coruche. As manadas vivem em regime extensivo de liberdade total, alimentando-se em pastagens sem suplementação artificial forçada." data-en="Today, Maria D’Andrade de Oliveira e Sousa faithfully leads this living heritage at Herdade da Agolada de Baixo, deep in the cork oak forests of Coruche. The herds roam in complete natural liberty, grazing vast pastures without artificial feed acceleration.">
+              Atualmente, Maria D’Andrade de Oliveira e Sousa assegura com devoção a continuidade deste património na Herdade da Agolada de Baixo, em pleno coração do montado de Coruche. As manadas vivem em regime extensivo de liberdade total, alimentando-se em pastagens sem suplementação artificial forçada.
+            </p>
+            <p data-pt="O respeito pelo ciclo biológico do cavalo é imperativo: os poldros desenvolvem musculatura e esqueleto em liberdade, iniciando o desbaste apenas aos 3 anos, o que lhes garante uma longevidade desportiva e serenidade sem paralelo." data-en="Respect for the natural biological cycle is paramount: foals develop bone and muscle freely outdoors, beginning gentle training only at 3 years of age, ensuring exceptional sound health and serenity throughout their lives.">
+              O respeito pelo ciclo biológico do cavalo é imperativo: os poldros desenvolvem musculatura e esqueleto em liberdade, iniciando o desbaste apenas aos 3 anos, o que lhes garante uma longevidade desportiva e serenidade sem paralelo.
+            </p>
+          </div>
+        </div>
+        <div class="chapter-visual">
+          <div class="archival-photo-frame ink-reveal">
+            <img src="assets/images/pages/coudelaria-sa/poldros-c-com-0-anos-2007-141-1.jpg" alt="Poldros em liberdade na Agolada de Baixo" loading="lazy">
+            <figcaption data-pt="Herdade da Agolada de Baixo &mdash; Criação livre em montado puro" data-en="Herdade da Agolada de Baixo &mdash; Free breeding in untouched cork forest">Herdade da Agolada de Baixo &mdash; Criação livre em montado puro</figcaption>
+          </div>
+        </div>
+      </article>
+
+      <!-- CHAPTER 6 (REVERSED) -->
+      <article class="manuscript-chapter reversed" id="marco-6" data-index="5">
+        <div class="chapter-visual">
+          <div class="archival-photo-frame ink-reveal">
+            <img src="assets/images/history/royal-windsor-brand-focus.jpg" alt="Royal Windsor Horse Show e Coudelaria SA" loading="lazy">
+            <figcaption data-pt="Royal Windsor Horse Show &mdash; Consagração internacional da marca" data-en="Royal Windsor Horse Show &mdash; International acclaim of the brand">Royal Windsor Horse Show &mdash; Consagração internacional da marca</figcaption>
+          </div>
+        </div>
+        <div class="chapter-content">
+          <span class="chapter-num" data-pt="Assento VI &middot; O Futuro" data-en="Entry VI &middot; The Future">Assento VI &middot; O Futuro</span>
+          <h2 class="chapter-title ink-reveal" data-pt="Consagração Mundial e Equitação de Trabalho" data-en="Global Acclaim &amp; Working Equitation">Consagração Mundial e Equitação de Trabalho</h2>
+          <div class="chapter-subtitle ink-reveal" data-pt="Do Royal Windsor Horse Show às Pistas Internacionais" data-en="From Royal Windsor Horse Show to International Arenas">Do Royal Windsor Horse Show às Pistas Internacionais</div>
+          <div class="chapter-prose ink-reveal">
+            <p data-pt="Os cavalos com ferro SA continuam a brilhar nos palcos mais prestigiados do mundo, incluindo apresentações no Royal Windsor Horse Show e títulos europeus e mundiais de Equitação de Trabalho e Dressage. Conciliando a erudição clássica com o rigor do desporto moderno, a coudelaria projeta a alma do cavalo lusitano para o futuro." data-en="Horses bearing the SA brand continue to distinguish themselves on the world's most prestigious stages, including performances at the Royal Windsor Horse Show and international championships in Working Equitation and classical Dressage. Merging classical knowledge with modern competitive rigor, the stud projects the soul of the Lusitano horse into the future.">
+              Os cavalos com ferro SA continuam a brilhar nos palcos mais prestigiados do mundo, incluindo apresentações no Royal Windsor Horse Show e títulos europeus e mundiais de Equitação de Trabalho e Dressage. Conciliando a erudição clássica com o rigor do desporto moderno, a coudelaria projeta a alma do cavalo lusitano para o futuro.
+            </p>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- CLOSING NOBLE CARD: OS PILARES DA COUDELARIA -->
+    <!-- CLOSING NOBLE CARD: OS PILARES DA COUDELARIA -->
+    <div class="closing-pillars-card">
+      <h2 data-pt="Pilares Centenários da Coudelaria SA" data-en="Centennial Pillars of Stud SA">Pilares Centenários da Coudelaria SA</h2>
+      <p class="lead" data-pt="Cem anos de linhagem, território e devoção ao cavalo ibérico — os alicerces que sustentam a Coudelaria Andrade." data-en="A century of lineage, territory, and devotion to the Iberian horse — the pillars that sustain Coudelaria Andrade.">
+        Cem anos de linhagem, território e devoção ao cavalo ibérico — os alicerces que sustentam a Coudelaria Andrade.
+      </p>
+
+      <div class="pillars-grid">
+        <!-- PILAR I -->
+        <div class="pillar-box">
+          <div class="pillar-sketch-frame">
+            <img src="assets/images/brand/pillars/pillar-lusitano.jpg?v=4" alt="A Estirpe Andrade" loading="lazy">
+          </div>
+          <div class="pillar-num">I</div>
+          <div class="pillar-title" data-pt="A Estirpe Andrade" data-en="The Andrade Strain">A Estirpe Andrade</div>
+          <div class="pillar-desc" data-pt="Nascida da visão do Dr. Ruy d'Andrade e do Eng. Fernando Sommer, a Estirpe Andrade é a expressão máxima do Lusitano barroco: pescoço nobremente arqueado, andamentos elásticos e presença régia. Cada exemplar carrega o selo da Alta Escola — equilíbrio, coragem e generosidade." data-en="Born from the vision of Dr. Ruy d'Andrade and Eng. Fernando Sommer, the Andrade Strain is the supreme expression of the baroque Lusitano: arched neck, elastic gaits, and regal presence. Each horse bears the hallmark of Alta Escola — balance, courage, and generosity.">
+            Nascida da visão do Dr. Ruy d'Andrade e do Eng. Fernando Sommer, a Estirpe Andrade é a expressão máxima do Lusitano barroco: pescoço nobremente arqueado, andamentos elásticos e presença régia. Cada exemplar carrega o selo da Alta Escola — equilíbrio, coragem e generosidade.
+          </div>
+        </div>
+
+        <!-- PILAR II -->
+        <div class="pillar-box">
+          <div class="pillar-sketch-frame">
+            <img src="assets/images/brand/pillars/pillar-sorraias.jpg?v=4" alt="O Santuário Sorraia" loading="lazy">
+          </div>
+          <div class="pillar-num">II</div>
+          <div class="pillar-title" data-pt="O Santuário Sorraia" data-en="The Sorraia Sanctuary">O Santuário Sorraia</div>
+          <div class="pillar-desc" data-pt="Desde 1920, um garanhão primitivo e a sua manada livre habitam as terras de Coruche, resguardados como um tesouro zootécnico. O Sorraia é o ancestral vivo puro da Península Ibérica. A Coudelaria Andrade honra esta linhagem mantendo viva a memória genética original." data-en="Since 1920, a primitive stallion and his free herd have roamed Coruche, safeguarded as a living treasure. The Sorraia is the pure ancestral root of the Iberian horse. Coudelaria Andrade honours this lineage by preserving the original primitive genetic memory.">
+            Desde 1920, um garanhão primitivo e a sua manada livre habitam as terras de Coruche, resguardados como um tesouro zootécnico. O Sorraia é o ancestral vivo puro da Península Ibérica. A Coudelaria Andrade honra esta linhagem mantendo viva a memória genética original.
+          </div>
+        </div>
+
+        <!-- PILAR III -->
+        <div class="pillar-box">
+          <div class="pillar-sketch-frame">
+            <img src="assets/images/brand/pillars/pillar-mare-foal.jpg?v=4" alt="A Linha Materna & Criação Natural" loading="lazy">
+          </div>
+          <div class="pillar-num">III</div>
+          <div class="pillar-title" data-pt="A Linha Materna & Criação Natural" data-en="Maternal Line & Natural Rearing">A Linha Materna & Criação Natural</div>
+          <div class="pillar-desc" data-pt="Tudo começa com a égua e o seu poldro. Os animais crescem em regime de liberdade total nas pastagens abertas, sob o ritmo sereno da natureza. Sem pressa e sem suplementação forçada: o desbaste só acontece aos três anos, assegurando aprumos perfeitos e serenidade." data-en="Everything begins with the mare and her foal. Horses grow up in complete freedom in open pastures, at the tranquil pace of nature. No haste, no forced feed: gentle training begins only at three years of age, ensuring sound conformation and serene temperament.">
+            Tudo começa com a égua e o seu poldro. Os animais crescem em regime de liberdade total nas pastagens abertas, sob o ritmo sereno da natureza. Sem pressa e sem suplementação forçada: o desbaste só acontece aos três anos, assegurando aprumos perfeitos e serenidade.
+          </div>
+        </div>
+
+        <!-- PILAR IV -->
+        <div class="pillar-box">
+          <div class="pillar-sketch-frame">
+            <img src="assets/images/brand/pillars/pillar-montado.jpg?v=4" alt="O Montado da Agolada de Baixo" loading="lazy">
+          </div>
+          <div class="pillar-num">IV</div>
+          <div class="pillar-title" data-pt="O Montado da Agolada de Baixo" data-en="The Montado of Agolada de Baixo">O Montado da Agolada de Baixo</div>
+          <div class="pillar-desc" data-pt="Entre sobreiros centenários e encostas onduladas, a Herdade da Agolada de Baixo oferece um terroir ecológico único. A sombra dos carvalhos e a harmonia com o montado ribatejano criam as condições ideais para a robustez e longevidade dos cavalos Andrade." data-en="Among century-old cork oaks and rolling hills, Herdade da Agolada de Baixo provides a unique ecological terroir. The shade of the oaks and harmony with the Ribatejo landscape create the ideal environment for the sound health and longevity of Andrade horses.">
+            Entre sobreiros centenários e encostas onduladas, a Herdade da Agolada de Baixo oferece um terroir ecológico único. A sombra dos carvalhos e a harmonia com o montado ribatejano criam as condições ideais para a robustez e longevidade dos cavalos Andrade.
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="mobile-footer-toggle-bar" onclick="toggleMobileFooter(this)">
+      <div class="mobile-footer-toggle-inner">
+        <span class="mobile-footer-toggle-text">Herdade da Agolada de Baixo &bull; Contactos</span>
+        <span class="mobile-footer-chevron" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </span>
+      </div>
+    </div>
+    <div class="footer-collapsible-content">
+      <div class="container">
+      <p class="footer-quote" data-pt="“É uma coudelaria com uma forte raiz, que procura afirmar-se no presente com o valor do seu prestigiado passado.”" data-en="“It is a stud farm with deep roots, striving to stand tall in the present through the enduring worth of its prestigious past.”">
+        “É uma coudelaria com uma forte raiz, que procura afirmar-se no presente com o valor do seu prestigiado passado.”
+      </p>
+      <p style="margin-bottom: 4px;">
+        <strong>Coudelaria SA</strong> — Herdade da Agolada de Baixo, 2100-047 Coruche, Portugal
+      </p>
+      <p>
+        Email: <a href="mailto:andradehorses@gmail.com" style="color: var(--color-primary); font-weight: 700; text-decoration: none;">andradehorses@gmail.com</a> | 
+        Telefone: <a href="tel:+351962149845" style="color: var(--color-primary); font-weight: 700; text-decoration: none;">(+351) 962 149 845</a>
+      </p>
+    </div>
+    </div>
+  </footer>
+
+  <script>
+    // AUTOMATIC BROWSER LANGUAGE DETECTION & SWITCHER
+    function getPreferredLanguage() {
+      const browserLangs = navigator.languages || [navigator.language || navigator.userLanguage || 'pt'];
+      for (let l of browserLangs) {
+        if (l && l.toLowerCase().startsWith('pt')) return 'pt';
+      }
+      return 'en';
+    }
+
+    let currentLang = getPreferredLanguage();
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      document.documentElement.lang = lang;
+
+      document.querySelectorAll('[data-pt]').forEach(el => {
+        const text = el.getAttribute(`data-${lang}`);
+        if (text) el.innerText = text;
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // MOBILE DRAWER CONTROLLER
+      const toggleBtn = document.getElementById('mobileMenuToggle');
+      const drawer = document.getElementById('mobileNavDrawer');
+      const closeBtn = document.getElementById('mobileDrawerClose');
+      const backdrop = document.getElementById('mobileDrawerBackdrop');
+
+      if (toggleBtn && drawer) {
+        toggleBtn.addEventListener('click', () => {
+          drawer.classList.add('open');
+          drawer.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+        });
+
+        const closeDrawer = () => {
+          drawer.classList.remove('open');
+          drawer.setAttribute('aria-hidden', 'true');
+          document.body.style.overflow = '';
+        };
+
+        if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+        if (backdrop) backdrop.addEventListener('click', closeDrawer);
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
+        });
+      }
+
+
+      // FLUID INK CALLIGRAPHY SCROLL UNVEIL CONTROLLER
+      const inkElements = document.querySelectorAll('.ink-reveal');
+      if (inkElements.length > 0) {
+        const inkObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in-view');
+              inkObserver.unobserve(entry.target); // Keeps visible on scroll up
+            }
+          });
+        }, {
+          threshold: 0.1,
+          rootMargin: '0px 0px -40px 0px'
+        });
+
+        inkElements.forEach(el => inkObserver.observe(el));
+
+        // Immediately reveal anything already visible in viewport
+        setTimeout(() => {
+          inkElements.forEach(el => {
+            const r = el.getBoundingClientRect();
+            if (r.top < window.innerHeight * 0.95) {
+              el.classList.add('in-view');
+            }
+          });
+        }, 80);
+      }
+
+      setLanguage(currentLang);
+
+      // MANUSCRIPT ACTIVE TAB CONTROLLER
+      const tabs = document.querySelectorAll('.registry-tab');
+      const chapters = document.querySelectorAll('.manuscript-chapter');
+
+      if ('IntersectionObserver' in window && chapters.length > 0) {
+        const chapterObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const idx = entry.target.getAttribute('data-index');
+              tabs.forEach(tab => {
+                if (tab.getAttribute('data-index') === idx) {
+                  tab.classList.add('active');
+                } else {
+                  tab.classList.remove('active');
+                }
+              });
+            }
+          });
+        }, {
+          threshold: 0.35,
+          rootMargin: '-10% 0px -40% 0px'
+        });
+
+        chapters.forEach(chap => chapterObserver.observe(chap));
+      }
+
+      // Smooth scroll on registry ribbon tabs
+      tabs.forEach(tab => {
+        tab.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetId = tab.getAttribute('href');
+          const targetEl = document.querySelector(targetId);
+          if (targetEl) {
+            targetEl.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+    });
+
+  </script>
+<script>
+  // MOBILE FOOTER CONTROLLER
+  function toggleMobileFooter(barEl) {
+    if (!barEl) return;
+    barEl.classList.toggle('open');
+    const content = barEl.parentElement.querySelector('.footer-collapsible-content');
+    if (content) {
+      content.classList.toggle('open');
+    }
+  }
+</script>
+</body>
+</html>

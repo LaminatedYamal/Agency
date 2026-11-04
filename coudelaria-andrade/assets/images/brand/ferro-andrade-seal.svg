@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="100%" height="100%">
+  <defs>
+    <clipPath id="circle-clip">
+      <circle cx="120" cy="120" r="110" />
+    </clipPath>
+  </defs>
+
+  <!-- Outer Ring -->
+  <circle cx="120" cy="120" r="116" fill="none" stroke="#295226" stroke-width="2" />
+  <circle cx="120" cy="120" r="112" fill="none" stroke="#ed9807" stroke-width="3" />
+
+  <!-- Clipped Background (Diagonal split) -->
+  <g clip-path="url(#circle-clip)">
+    <polygon points="0,0 226,0 30,240 0,240" fill="#295226" />
+    <polygon points="226,0 240,0 240,240 30,240" fill="#ed9807" />
+    
+    <!-- Monogram scaled & centered -->
+    <g transform="translate(20, 10) scale(1)">
+      <!-- Letter A -->
+      <path fill="none" stroke="#161c14" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" d="
+        M 20,212 C 24,208 28,202 32,192 L 32,76 C 32,42 60,26 100,26 C 140,26 168,42 168,76 L 168,192 C 172,202 176,208 180,212
+      " />
+      <path fill="none" stroke="#161c14" stroke-width="4" stroke-linecap="round" d="M 18,206 L 20,214" />
+      <path fill="none" stroke="#161c14" stroke-width="4" stroke-linecap="round" d="M 182,206 L 180,214" />
+      <line x1="30" y1="120" x2="170" y2="120" stroke="#161c14" stroke-width="7" stroke-linecap="round" />
+
+      <!-- Letter S -->
+      <path fill="none" stroke="#161c14" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" d="
+        M 132,68 C 132,62 134,56 130,52 C 124,44 114,40 100,40 C 82,40 68,52 68,70 C 68,90 82,104 100,120 C 118,136 132,150 132,170 C 132,188 118,200 100,200 C 82,200 68,188 68,172 L 68,162
+      " />
+      <path fill="none" stroke="#161c14" stroke-width="5" stroke-linecap="round" d="M 132,68 L 136,74" />
+      <polygon fill="#161c14" points="68,154 63,166 73,166" />
+      <path fill="none" stroke="#161c14" stroke-width="3" stroke-linecap="round" d="M 63,166 C 60,162 61,156 68,154" />
+    </g>
+  </g>
+</svg>
