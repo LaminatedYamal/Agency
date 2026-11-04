@@ -96,6 +96,7 @@ export default defineConfig({
         linkedinAds: path.resolve(__dirname, 'linkedin-ads/index.html'),
         tiktokAds: path.resolve(__dirname, 'tiktok-ads/index.html'),
         redditAds: path.resolve(__dirname, 'reddit-ads/index.html'),
+        astro: path.resolve(__dirname, 'astro/index.html'),
         tecipa: path.resolve(__dirname, 'Tecipa/index.html'),
       }
     }

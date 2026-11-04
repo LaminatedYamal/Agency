@@ -1,0 +1,52 @@
+---
+interface Props {
+  isSubpage?: boolean;
+}
+
+const { isSubpage = false } = Astro.props;
+---
+
+<header class="site-header">
+  <div class="header-brand">
+    <a href="/" class="brand-logo" style="text-decoration:none; color:inherit;">BRUTO</a>
+    <span class="brand-tag" data-i18n="header_est">EST. 2026</span>
+  </div>
+
+  <nav class="header-nav">
+    {isSubpage ? (
+      <>
+        <a href="/" class="header-link back-to-home" data-i18n="nav_back_monolith"><span>←</span> BACK TO MONOLITH</a>
+        <a href="#deliverables" class="header-link" data-i18n="nav_deliverables">DELIVERABLES</a>
+        <a href="#contact" class="header-link" data-i18n="nav_commission">COMMISSION</a>
+      </>
+    ) : (
+      <>
+        <a href="#manifesto" class="header-link" data-i18n="nav_process"><span>01</span> PROCESS</a>
+        <a href="#capabilities" class="header-link" data-i18n="nav_capabilities"><span>02</span> CAPABILITIES</a>
+        <a href="#expertise" class="header-link" data-i18n="nav_expertise"><span>03</span> EXPERTISE</a>
+        <a href="#about" class="header-link" data-i18n="nav_about"><span>04</span> ABOUT</a>
+      </>
+    )}
+  </nav>
+
+  <div class="header-actions">
+    <!-- Language Switcher: Hover Reveal -->
+    <div class="lang-selector-wrap" id="lang-selector" role="group" aria-label="Language selection">
+      <button type="button" class="lang-current" aria-haspopup="true" aria-expanded="false">
+        <span class="lang-current-label">EN</span>
+        <span class="lang-caret">▾</span>
+      </button>
+      <div class="lang-options">
+        <button type="button" class="lang-btn active" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="pt">PT</button>
+      </div>
+    </div>
+
+    <div class="live-clock">
+      <span class="clock-dot"></span>
+      <span id="header-time">16:49</span>
+      <span class="clock-tz">PORTUGAL</span>
+    </div>
+    <a href="#contact" class="inquire-btn" data-i18n="nav_initiate">START PROJECT</a>
+  </div>
+</header>

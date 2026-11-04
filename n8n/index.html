@@ -208,26 +208,32 @@
               </div>
               <div class="detail-item">
                 <span class="detail-label" data-i18n="contact_email_label">DIRECT INQUIRIES</span>
-                <span class="detail-val" data-i18n="contact_email_val">agencia@bruto.pt</span>
+                <a href="mailto:bruto.agenciamarketing@gmail.com" class="detail-val" style="color:inherit; text-decoration:none;" data-i18n="contact_email_val">bruto.agenciamarketing@gmail.com</a>
               </div>
             </div>
           </div>
 
-          <form class="contact-form" id="inquiry-form">
+          <form class="contact-form" id="inquiry-form" action="https://formsubmit.co/bruto.agenciamarketing@gmail.com" method="POST">
+            <!-- FormSubmit Anti-Spam & Routing -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="[BRUTO DOSSIER: N8N] Nova Submissão">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="_honey" style="display:none">
             <div class="form-group">
               <label for="name-input" data-i18n="form_name_label">FULL NAME OR ORGANIZATION</label>
-              <input type="text" id="name-input" required placeholder="e.g. David Daniel / Vanguard Ltd" data-i18n-ph="form_name_ph">
+              <input type="text" id="name-input" name="name" required placeholder="e.g. David Daniel / Vanguard Ltd" data-i18n-ph="form_name_ph">
             </div>
 
             <div class="form-group">
               <label for="email-input" data-i18n="form_contact_label">EMAIL OR WHATSAPP NUMBER</label>
-              <input type="text" id="email-input" required placeholder="contact@domain.com or +351 912 345 678" data-i18n-ph="form_contact_ph">
+              <input type="text" id="email-input" name="contact" required placeholder="contact@domain.com or +351 912 345 678" data-i18n-ph="form_contact_ph">
             </div>
 
             <div class="form-group">
               <label for="scope-input" data-i18n="form_service_label">SERVICE NEEDED</label>
-              <select id="scope-input">
+              <select id="scope-input" name="service">
                 <option value="automation" selected data-i18n="n8n_hero_title">n8n Automation Engine</option>
+                <option value="astro" data-i18n="form_opt_astro">Custom Made Astro Website (Ultra-Fast / Cloudflare Pages)</option>
                 <option value="website" data-i18n="form_opt_web">Custom Website or Online Store (WordPress / Shopify)</option>
                 <option value="automation" data-i18n="form_opt_auto">Workflow Automations (n8n / Integrations)</option>
                 <option value="growth" data-i18n="form_opt_growth">Search &amp; Paid Acquisition (SEO / Google &amp; Meta Ads)</option>
@@ -238,7 +244,7 @@
 
             <div class="form-group">
               <label for="message-input" data-i18n="form_msg_label">THE PROBLEM TO SOLVE</label>
-              <textarea id="message-input" rows="3" placeholder="Describe your current situation, what is causing friction, or what you want to achieve..." data-i18n-ph="form_msg_ph"></textarea>
+              <textarea id="message-input" name="message" rows="3" placeholder="Describe your current situation, what is causing friction, or what you want to achieve..." data-i18n-ph="form_msg_ph"></textarea>
             </div>
 
             <button type="submit" class="submit-btn">

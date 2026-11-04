@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title data-i18n="page_title_astro">BRUTO — Custom Made Astro Websites // Heavy-Duty Dossier</title>
+  
+  <!-- Primary Font: Avenor (Self-Hosted WOFF2) -->
+  <link rel="preload" href="/fonts/avenor/at-avenor.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- Premium Typography: Syne, Space Mono, Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Favicon System -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body class="bg-studio subpage-body">
+  <!-- Minimalist Architectural Header -->
+  <header class="site-header">
+    <div class="header-brand">
+      <a href="../" class="brand-logo" style="text-decoration:none; color:inherit;">BRUTO</a>
+      <span class="brand-tag" data-i18n="header_est">EST. 2026</span>
+    </div>
+
+    <nav class="header-nav">
+      <a href="../" class="header-link back-to-home" data-i18n="nav_back_monolith"><span>←</span> BACK TO MONOLITH</a>
+      <a href="#deliverables" class="header-link" data-i18n="nav_deliverables">DELIVERABLES</a>
+      <a href="#contact" class="header-link" data-i18n="nav_commission">COMMISSION</a>
+    </nav>
+
+    <div class="header-actions">
+      <!-- Language Switcher: Hover Reveal -->
+      <div class="lang-selector-wrap" id="lang-selector" role="group" aria-label="Language selection">
+        <button type="button" class="lang-current" aria-haspopup="true" aria-expanded="false">
+          <span class="lang-current-label">EN</span>
+          <span class="lang-caret">▾</span>
+        </button>
+        <div class="lang-options">
+          <button type="button" class="lang-btn active" data-lang="en">EN</button>
+          <button type="button" class="lang-btn" data-lang="pt">PT</button>
+        </div>
+      </div>
+
+      <div class="live-clock">
+        <span class="clock-dot"></span>
+        <span id="header-time">16:49</span>
+        <span class="clock-tz">PORTUGAL</span>
+      </div>
+      <a href="#contact" class="inquire-btn" data-i18n="nav_initiate">START PROJECT</a>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main class="page-main subpage-main">
+    
+    <!-- Hero Dossier Stage -->
+    <section class="subpage-hero">
+      <div class="content-container">
+        <nav class="dossier-breadcrumb" aria-label="Breadcrumb">
+          <a href="../" class="breadcrumb-link"><span data-i18n="breadcrumb_home">BRUTO</span></a>
+          <span class="breadcrumb-sep">/</span>
+          <a href="../#expertise" class="breadcrumb-link" data-i18n="breadcrumb_dossiers">DOSSIERS</a>
+          <span class="breadcrumb-sep">/</span>
+          <span class="breadcrumb-current" data-i18n="astro_hero_title">Custom Made Astro Websites</span>
+          <span class="breadcrumb-sep">•</span>
+          <span class="service-badge" data-i18n="astro_badge">STATIC / ISLAND ARCHITECTURE</span>
+        </nav>
+
+        <h1 class="subpage-title"><svg class="tech-icon tech-icon-astro" viewBox="0 0 24 24" width="72" height="72" fill="#FF5D01" xmlns="http://www.w3.org/2000/svg" aria-label="Astro"><path d="M8.358 20.162c-1.186-1.07-1.532-3.316-1.038-4.944.856 1.026 2.043 1.352 3.272 1.535 1.897.283 3.76.177 5.522-.678.202-.098.388-.229.608-.36.166.473.209.95.151 1.437-.14 1.185-.738 2.1-1.688 2.794-.38.277-.782.525-1.175.787-1.205.804-1.531 1.747-1.078 3.119l.044.148a3.158 3.158 0 0 1-1.407-1.188 3.31 3.31 0 0 1-.544-1.815c-.004-.32-.004-.642-.048-.958-.106-.769-.472-1.113-1.161-1.133-.707-.02-1.267.411-1.415 1.09-.012.053-.028.104-.045.165h.002zm-5.961-4.445s3.24-1.575 6.49-1.575l2.451-7.565c.092-.366.36-.614.662-.614.302 0 .57.248.662.614l2.45 7.565c3.85 0 6.491 1.575 6.491 1.575L16.088.727C15.93.285 15.663 0 15.303 0H8.697c-.36 0-.615.285-.784.727l-5.516 14.99z"/></svg> <span data-i18n="astro_hero_title">Custom Made Astro Websites</span></h1>
+        <p class="subpage-tagline" data-i18n="astro_hero_tagline">Zero-JavaScript by default, sub-second delivery, and heavy-duty static architecture.</p>
+
+        <!-- Technical Specification Monolith Bar -->
+        <div class="dossier-specs-bar">
+          <div class="spec-col">
+            <span class="spec-k" data-i18n="astro_spec1_k">ENGINE</span>
+            <span class="spec-v" data-i18n="astro_spec1_v">Astro 4 / 5, TypeScript, Tailwind CSS, Island Architecture</span>
+          </div>
+          <div class="spec-col">
+            <span class="spec-k" data-i18n="astro_spec2_k">PERFORMANCE</span>
+            <span class="spec-v" data-i18n="astro_spec2_v">100/100 Core Web Vitals, &lt; 0.2s TTFB, Zero JS Default</span>
+          </div>
+          <div class="spec-col">
+            <span class="spec-k" data-i18n="astro_spec3_k">CONTENT & CMS</span>
+            <span class="spec-v" data-i18n="astro_spec3_v">Type-Safe Content Collections, Markdown, Decoupled CMS</span>
+          </div>
+          <div class="spec-col">
+            <span class="spec-k" data-i18n="astro_spec4_k">INFRASTRUCTURE</span>
+            <span class="spec-v" data-i18n="astro_spec4_v">Cloudflare Pages, Edge Functions, Global CDN</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Problem vs. The BRUTO Standard -->
+    <section class="section-philosophy">
+      <div class="content-container">
+        <div class="about-grid">
+          <div class="about-column problem-column">
+            <div class="about-badge" data-i18n="dossier_trap_badge">THE INDUSTRY TRAP</div>
+            <h3 class="about-col-title" data-i18n="astro_prob_title">The JavaScript Bloat Trap: Heavy SPAs & Sluggish Mobile Load</h3>
+            <p class="about-col-text" data-i18n="astro_prob_text">Most modern web agencies build websites on bloated JavaScript frameworks that download megabytes of unnecessary code to the user's browser. The result is sluggish mobile performance, terrible Google Core Web Vitals, high server compute bills, and lost conversion opportunities.</p>
+          </div>
+
+          <div class="about-column solution-column">
+            <div class="about-badge" data-i18n="dossier_standard_badge">THE BRUTO STANDARD</div>
+            <h3 class="about-col-title" data-i18n="astro_sol_title">The BRUTO Standard: Pure Static HTML & Interactive Islands</h3>
+            <p class="about-col-text" data-i18n="astro_sol_text">We engineer custom Astro websites that render 100% pure, lightweight HTML by default. Interactive components only hydrate as isolated 'islands' when scrolled into view. Your site loads instantly, scores perfect 100s on Google PageSpeed, and delivers uncompromising security deployed directly to Cloudflare's global edge network.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Specific Architectural Deliverables (Direct Match to Cards) -->
+    <section id="deliverables" class="section-deliverables">
+      <div class="content-container">
+        <div class="section-header">
+          <span class="section-num" data-i18n="dossier_deliv_num">ARCHITECTURAL DELIVERABLES</span>
+          <h2 class="section-title" data-i18n="dossier_deliv_title">Engineered to match what we promise.</h2>
+        </div>
+
+        <div class="services-grid subpage-deliverables-grid">
+          <div class="service-item">
+            <h4 class="service-name"><span data-i18n="astro_d1_t">Islands Architecture & Zero JS Default</span></h4>
+            <p class="service-desc" data-i18n="astro_d1_d">Every page compiles to raw, lightning-fast HTML and CSS. Dynamic widgets (calculators, configurators, carts) only hydrate when needed, saving over 80% mobile data.</p>
+            <div class="service-tech-icons service-tech-icons-interactive">
+              <div class="tech-icon-wrapper tech-icon-wrapper-astro">
+                <svg class="tech-icon tech-icon-astro" viewBox="0 0 24 24" width="32" height="32" fill="#FF5D01" xmlns="http://www.w3.org/2000/svg" aria-label="Astro"><path d="M8.358 20.162c-1.186-1.07-1.532-3.316-1.038-4.944.856 1.026 2.043 1.352 3.272 1.535 1.897.283 3.76.177 5.522-.678.202-.098.388-.229.608-.36.166.473.209.95.151 1.437-.14 1.185-.738 2.1-1.688 2.794-.38.277-.782.525-1.175.787-1.205.804-1.531 1.747-1.078 3.119l.044.148a3.158 3.158 0 0 1-1.407-1.188 3.31 3.31 0 0 1-.544-1.815c-.004-.32-.004-.642-.048-.958-.106-.769-.472-1.113-1.161-1.133-.707-.02-1.267.411-1.415 1.09-.012.053-.028.104-.045.165h.002zm-5.961-4.445s3.24-1.575 6.49-1.575l2.451-7.565c.092-.366.36-.614.662-.614.302 0 .57.248.662.614l2.45 7.565c3.85 0 6.491 1.575 6.491 1.575L16.088.727C15.93.285 15.663 0 15.303 0H8.697c-.36 0-.615.285-.784.727l-5.516 14.99z"/></svg>
+                <span class="tech-icon-tooltip">Astro</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <h4 class="service-name"><span data-i18n="astro_d2_t">Type-Safe Content Collections & Headless CMS</span></h4>
+            <p class="service-desc" data-i18n="astro_d2_d">Strict schema validation for your content and blogs. Seamlessly decoupled from WordPress, Sanity, or Git-based markdown without exposing any database to attacks.</p>
+            <div class="service-tech-icons service-tech-icons-interactive">
+              <div class="tech-icon-wrapper tech-icon-wrapper-typescript">
+                <svg class="tech-icon tech-icon-typescript" viewBox="0 0 24 24" width="32" height="32" fill="#3178C6" xmlns="http://www.w3.org/2000/svg" aria-label="TypeScript"><path d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z"/></svg>
+                <span class="tech-icon-tooltip">TypeScript</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <h4 class="service-name"><span data-i18n="astro_d3_t">Cloudflare Pages & Global Edge Delivery</span></h4>
+            <p class="service-desc" data-i18n="astro_d3_d">Deployed directly across 300+ edge data centers worldwide. Sub-second global latency, instant CDN caching, automatic DDoS protection, and 99.99% uptime.</p>
+            <div class="service-tech-icons service-tech-icons-interactive">
+              <div class="tech-icon-wrapper tech-icon-wrapper-cloudflare">
+                <svg class="tech-icon tech-icon-cloudflare" viewBox="0 0 24 24" width="32" height="32" fill="#F38020" xmlns="http://www.w3.org/2000/svg" aria-label="Cloudflare"><path d="M16.5088 16.8447c.1475-.5068.0908-.9707-.1553-1.3154-.2246-.3164-.6045-.499-1.0615-.5205l-8.6592-.1123a.1559.1559 0 0 1-.1333-.0713c-.0283-.042-.0351-.0986-.021-.1553.0278-.084.1123-.1484.2036-.1562l8.7359-.1123c1.0351-.0489 2.1601-.8868 2.5537-1.9136l.499-1.3013c.0215-.0561.0293-.1128.0147-.168-.5625-2.5463-2.835-4.4453-5.5499-4.4453-2.5039 0-4.6284 1.6177-5.3876 3.8614-.4927-.3658-1.1187-.5625-1.794-.499-1.2026.119-2.1665 1.083-2.2861 2.2856-.0283.31-.0069.6128.0635.894C1.5683 13.171 0 14.7754 0 16.752c0 .1748.0142.3515.0352.5273.0141.083.0844.1475.1689.1475h15.9814c.0909 0 .1758-.0645.2032-.1553l.12-.4268zm2.7568-5.5634c-.0771 0-.1611 0-.2383.0112-.0566 0-.1054.0415-.127.0976l-.3378 1.1744c-.1475.5068-.0918.9707.1543 1.3164.2256.3164.6055.498 1.0625.5195l1.8437.1133c.0557 0 .1055.0263.1329.0703.0283.043.0351.1074.0214.1562-.0283.084-.1132.1485-.204.1553l-1.921.1123c-1.041.0488-2.1582.8867-2.5527 1.914l-.1406.3585c-.0283.0713.0215.1416.0986.1416h6.5977c.0771 0 .1474-.0489.169-.126.1122-.4082.1757-.837.1757-1.2803 0-2.6025-2.125-4.727-4.7344-4.727"/></svg>
+                <span class="tech-icon-tooltip">Cloudflare Pages</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <h4 class="service-name"><span data-i18n="astro_d4_t">100/100 Core Web Vitals & Organic Search Moat</span></h4>
+            <p class="service-desc" data-i18n="astro_d4_d">Zero Cumulative Layout Shift (CLS: 0), instantaneous First Contentful Paint (&lt;0.3s), and semantic structured schema that dominates organic search rankings.</p>
+            <div class="service-tech-icons service-tech-icons-interactive">
+              <div class="tech-icon-wrapper tech-icon-wrapper-tailwindcss">
+                <svg class="tech-icon tech-icon-tailwindcss" viewBox="0 0 24 24" width="32" height="32" fill="#06B6D4" xmlns="http://www.w3.org/2000/svg" aria-label="Tailwind CSS"><path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"/></svg>
+                <span class="tech-icon-tooltip">Tailwind CSS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 05: Inquiry Form -->
+    <section id="contact" class="section-contact">
+      <div class="content-container">
+        <div class="contact-card">
+          <div class="contact-info">
+            <span class="section-num" data-i18n="sec5_num">05 // START PROJECT</span>
+            <h2 class="contact-headline" data-i18n="sec5_title">Let us solve your problem definitively.</h2>
+            <p class="contact-sub" data-i18n="sec5_subtitle">
+              Tell us what is broken, slow, or manual in your business. We will analyze your case and propose a tailored, no-fluff solution.
+            </p>
+
+            <div class="contact-details">
+              <div class="detail-item">
+                <span class="detail-label" data-i18n="contact_loc_label">LOCATION</span>
+                <span class="detail-val" data-i18n="contact_loc_val">Lisbon / Porto, Portugal</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label" data-i18n="contact_time_label">LOCAL TIME</span>
+                <span id="footer-time" class="detail-val">16:49 PORTUGAL (GMT+0)</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label" data-i18n="contact_email_label">DIRECT INQUIRIES</span>
+                <a href="mailto:bruto.agenciamarketing@gmail.com" class="detail-val" style="color:inherit; text-decoration:none;" data-i18n="contact_email_val">bruto.agenciamarketing@gmail.com</a>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" id="inquiry-form" action="https://formsubmit.co/bruto.agenciamarketing@gmail.com" method="POST">
+            <!-- FormSubmit Anti-Spam & Configuration -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="[BRUTO DOSSIER] Novo Contacto - Websites Astro">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="_honey" style="display:none">
+
+            <div class="form-group">
+              <label for="name-input" data-i18n="form_name_label">FULL NAME OR ORGANIZATION</label>
+              <input type="text" id="name-input" name="name" required placeholder="e.g. David Daniel / Vanguard Ltd" data-i18n-ph="form_name_ph">
+            </div>
+
+            <div class="form-group">
+              <label for="email-input" data-i18n="form_contact_label">EMAIL OR WHATSAPP NUMBER</label>
+              <input type="text" id="email-input" name="contact" required placeholder="contact@domain.com or +351 912 345 678" data-i18n-ph="form_contact_ph">
+            </div>
+
+            <div class="form-group">
+              <label for="scope-input" data-i18n="form_service_label">SERVICE NEEDED</label>
+              <select id="scope-input" name="service">
+                <option value="astro" selected data-i18n="form_opt_astro">Custom Made Astro Website (Ultra-Fast / Cloudflare Pages)</option>
+                <option value="wordpress" data-i18n="form_opt_web">Custom Website or Online Store (WordPress / Shopify)</option>
+                <option value="automation" data-i18n="form_opt_auto">Workflow Automations (n8n / Integrations)</option>
+                <option value="growth" data-i18n="form_opt_growth">Search &amp; Paid Acquisition (Google, Meta, LinkedIn, TikTok &amp; Reddit)</option>
+                <option value="social" data-i18n="form_opt_social">Brand Presence &amp; Social Media</option>
+                <option value="full-system" data-i18n="form_opt_full">Full Digital Overhaul (Web + Automations + Growth)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message-input" data-i18n="form_msg_label">THE PROBLEM TO SOLVE</label>
+              <textarea id="message-input" name="message" rows="3" placeholder="Describe your current situation, what is causing friction, or what you want to achieve..." data-i18n-ph="form_msg_ph"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              <span data-i18n="form_submit">INITIATE TRANSMISSION →</span>
+            </button>
+            <div id="form-feedback" class="form-feedback"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Industrial Monolith Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="footer-brand">
+          <a href="../" class="brand-logo" style="text-decoration:none; color:inherit;">BRUTO</a>
+          <span class="brand-tag" data-i18n="header_est">EST. 2026</span>
+        </div>
+        <span class="footer-copy" data-i18n="footer_copy">© 2026 BRUTO. HEAVY-DUTY DIGITAL. BASED IN PORTUGAL. ALL RIGHTS RESERVED.</span>
+      </div>
+      <div class="footer-right">
+        <a href="../" class="back-to-top" data-i18n="footer_back_monolith">← RETURN TO MONOLITH</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

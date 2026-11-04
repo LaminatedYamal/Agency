@@ -1010,6 +1010,30 @@ body.bg-studio {
   box-shadow: 0 0 8px rgba(8, 102, 255, 0.25);
 }
 
+.tech-icon-wrapper-astro:hover .tech-icon-tooltip {
+  color: #ff5d01;
+  border-color: rgba(255, 93, 1, 0.6);
+  box-shadow: 0 0 8px rgba(255, 93, 1, 0.25);
+}
+
+.tech-icon-wrapper-typescript:hover .tech-icon-tooltip {
+  color: #3178c6;
+  border-color: rgba(49, 120, 198, 0.6);
+  box-shadow: 0 0 8px rgba(49, 120, 198, 0.25);
+}
+
+.tech-icon-wrapper-tailwindcss:hover .tech-icon-tooltip {
+  color: #06b6d4;
+  border-color: rgba(6, 182, 212, 0.6);
+  box-shadow: 0 0 8px rgba(6, 182, 212, 0.25);
+}
+
+.tech-icon-wrapper-cloudflare:hover .tech-icon-tooltip {
+  color: #f38020;
+  border-color: rgba(243, 128, 32, 0.6);
+  box-shadow: 0 0 8px rgba(243, 128, 32, 0.25);
+}
+
 
 /* ==========================================================================
    SECTION 03: AREAS OF EXPERTISE (PLATFORM CAROUSEL)
@@ -1425,96 +1449,148 @@ body.bg-studio {
   box-shadow: 0 0 25px rgba(122, 181, 92, 0.6), 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* Card 03: n8n Automation Engine (#EA4B71) */
-.expertise-card[data-index="2"]::before {
+/* Card 03: Astro Ultra-Fast Front-Ends (#FF5D01 / #BC52EE) */
+.expertise-card[data-index="2"]::before,
+#card-astro::before {
+  background: linear-gradient(90deg, transparent, #FF5D01, #BC52EE, transparent);
+}
+.expertise-card[data-index="2"]:hover,
+#card-astro:hover {
+  background: radial-gradient(circle at 50% 50%, rgba(255, 93, 1, 0.15) 0%, rgba(188, 82, 238, 0.08) 50%, var(--color-surface-hover) 75%);
+  border-color: rgba(255, 93, 1, 0.55);
+  box-shadow: 
+    0 20px 45px rgba(0, 0, 0, 0.7),
+    0 0 35px rgba(255, 93, 1, 0.28);
+}
+.expertise-card[data-index="2"] .card-action,
+#card-astro .card-action {
+  color: #ff8c42;
+  border-color: rgba(255, 93, 1, 0.5);
+  background: rgba(255, 93, 1, 0.08);
+}
+.expertise-card[data-index="2"] .card-action-fill,
+#card-astro .card-action-fill {
+  background: linear-gradient(135deg, #FF5D01 0%, #BC52EE 100%);
+}
+.expertise-card[data-index="2"] .card-action-bg-svg path,
+#card-astro .card-action-bg-svg path {
+  fill: #ffffff;
+}
+.expertise-card[data-index="2"] .card-action:hover,
+#card-astro .card-action:hover {
+  color: #ffffff;
+  border-color: #FF5D01;
+  box-shadow: 0 0 25px rgba(255, 93, 1, 0.65), 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Card 04: n8n Automation Engine (#EA4B71) */
+.expertise-card[data-index="3"]::before,
+#card-n8n::before {
   background: linear-gradient(90deg, transparent, #EA4B71, transparent);
 }
-.expertise-card[data-index="2"]:hover {
+.expertise-card[data-index="3"]:hover,
+#card-n8n:hover {
   background: radial-gradient(circle at 50% 50%, rgba(234, 75, 113, 0.14) 0%, var(--color-surface-hover) 75%);
   border-color: rgba(234, 75, 113, 0.45);
   box-shadow: 
     0 20px 45px rgba(0, 0, 0, 0.7),
     0 0 30px rgba(234, 75, 113, 0.22);
 }
-.expertise-card[data-index="2"] .card-action {
+.expertise-card[data-index="3"] .card-action,
+#card-n8n .card-action {
   color: #f06a8a;
   border-color: rgba(234, 75, 113, 0.45);
   background: rgba(234, 75, 113, 0.08);
 }
-.expertise-card[data-index="2"] .card-action-fill {
+.expertise-card[data-index="3"] .card-action-fill,
+#card-n8n .card-action-fill {
   background: #EA4B71;
 }
-.expertise-card[data-index="2"] .card-action-bg-svg path {
+.expertise-card[data-index="3"] .card-action-bg-svg path,
+#card-n8n .card-action-bg-svg path {
   fill: #ffffff;
 }
-.expertise-card[data-index="2"] .card-action:hover {
+.expertise-card[data-index="3"] .card-action:hover,
+#card-n8n .card-action:hover {
   color: #ffffff;
   border-color: #EA4B71;
   box-shadow: 0 0 25px rgba(234, 75, 113, 0.6), 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* Card 04: Google Ads Search & Intent (Multi-Color / #4285F4) */
-.expertise-card[data-index="3"]::before {
+/* Card 05: Google Ads Search & Intent (Multi-Color / #4285F4) */
+.expertise-card[data-index="4"]::before,
+#card-googleads::before {
   background: linear-gradient(90deg, transparent, #4285F4, #FBBC04, #34A853, transparent);
 }
-.expertise-card[data-index="3"]:hover {
+.expertise-card[data-index="4"]:hover,
+#card-googleads:hover {
   background: radial-gradient(circle at 50% 50%, rgba(66, 133, 244, 0.14) 0%, var(--color-surface-hover) 75%);
   border-color: rgba(66, 133, 244, 0.45);
   box-shadow: 
     0 20px 45px rgba(0, 0, 0, 0.7),
     0 0 30px rgba(66, 133, 244, 0.22);
 }
-.expertise-card[data-index="3"] .card-action {
+.expertise-card[data-index="4"] .card-action,
+#card-googleads .card-action {
   color: #6ba4f8;
   border-color: rgba(66, 133, 244, 0.45);
   background: rgba(66, 133, 244, 0.08);
 }
-.expertise-card[data-index="3"] .card-action-fill {
+.expertise-card[data-index="4"] .card-action-fill,
+#card-googleads .card-action-fill {
   background: #4285F4;
 }
-.expertise-card[data-index="3"] .card-action-bg-svg path {
+.expertise-card[data-index="4"] .card-action-bg-svg path,
+#card-googleads .card-action-bg-svg path {
   fill: #ffffff;
 }
-.expertise-card[data-index="3"] .card-action:hover {
+.expertise-card[data-index="4"] .card-action:hover,
+#card-googleads .card-action:hover {
   color: #ffffff;
   border-color: #4285F4;
   box-shadow: 0 0 25px rgba(66, 133, 244, 0.6), 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* Card 05: Meta Ads Paid Social (#0467DF) */
-.expertise-card[data-index="4"]::before {
+/* Card 06: Meta Ads Paid Social (#0467DF) */
+.expertise-card[data-index="5"]::before,
+#card-meta::before {
   background: linear-gradient(90deg, transparent, #0467DF, transparent);
 }
-.expertise-card[data-index="4"]:hover {
+.expertise-card[data-index="5"]:hover,
+#card-meta:hover {
   background: radial-gradient(circle at 50% 50%, rgba(4, 103, 223, 0.14) 0%, var(--color-surface-hover) 75%);
   border-color: rgba(4, 103, 223, 0.45);
   box-shadow: 
     0 20px 45px rgba(0, 0, 0, 0.7),
     0 0 30px rgba(4, 103, 223, 0.22);
 }
-.expertise-card[data-index="4"] .card-action {
+.expertise-card[data-index="5"] .card-action,
+#card-meta .card-action {
   color: #3b8ff7;
   border-color: rgba(4, 103, 223, 0.45);
   background: rgba(4, 103, 223, 0.08);
 }
-.expertise-card[data-index="4"] .card-action-fill {
+.expertise-card[data-index="5"] .card-action-fill,
+#card-meta .card-action-fill {
   background: #0467DF;
 }
-.expertise-card[data-index="4"] .card-action-bg-svg path {
+.expertise-card[data-index="5"] .card-action-bg-svg path,
+#card-meta .card-action-bg-svg path {
   fill: #ffffff;
 }
-.expertise-card[data-index="4"] .card-action:hover {
+.expertise-card[data-index="5"] .card-action:hover,
+#card-meta .card-action:hover {
   color: #ffffff;
   border-color: #0467DF;
   box-shadow: 0 0 25px rgba(4, 103, 223, 0.6), 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* Card 06: LinkedIn Ads (#0A66C2) */
-.expertise-card[data-index="5"]::before,
+/* Card 07: LinkedIn Ads (#0A66C2) */
+.expertise-card[data-index="6"]::before,
 #card-linkedin::before {
   background: linear-gradient(90deg, transparent, #0A66C2, transparent);
 }
-.expertise-card[data-index="5"]:hover,
+.expertise-card[data-index="6"]:hover,
 #card-linkedin:hover {
   background: radial-gradient(circle at 50% 50%, rgba(10, 102, 194, 0.14) 0%, var(--color-surface-hover) 75%);
   border-color: rgba(10, 102, 194, 0.45);
@@ -1522,33 +1598,33 @@ body.bg-studio {
     0 20px 45px rgba(0, 0, 0, 0.7),
     0 0 30px rgba(10, 102, 194, 0.22);
 }
-.expertise-card[data-index="5"] .card-action,
+.expertise-card[data-index="6"] .card-action,
 #card-linkedin .card-action {
   color: #3b96f5;
   border-color: rgba(10, 102, 194, 0.45);
   background: rgba(10, 102, 194, 0.08);
 }
-.expertise-card[data-index="5"] .card-action-fill,
+.expertise-card[data-index="6"] .card-action-fill,
 #card-linkedin .card-action-fill {
   background: #0A66C2;
 }
-.expertise-card[data-index="5"] .card-action-bg-svg path,
+.expertise-card[data-index="6"] .card-action-bg-svg path,
 #card-linkedin .card-action-bg-svg path {
   fill: #ffffff;
 }
-.expertise-card[data-index="5"] .card-action:hover,
+.expertise-card[data-index="6"] .card-action:hover,
 #card-linkedin .card-action:hover {
   color: #ffffff;
   border-color: #0A66C2;
   box-shadow: 0 0 25px rgba(10, 102, 194, 0.6), 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* Card 07: TikTok Ads (#FE2C55) */
-.expertise-card[data-index="6"]::before,
+/* Card 08: TikTok Ads (#FE2C55) */
+.expertise-card[data-index="7"]::before,
 #card-tiktok::before {
   background: linear-gradient(90deg, transparent, #FE2C55, transparent);
 }
-.expertise-card[data-index="6"]:hover,
+.expertise-card[data-index="7"]:hover,
 #card-tiktok:hover {
   background: radial-gradient(circle at 50% 50%, rgba(254, 44, 85, 0.14) 0%, var(--color-surface-hover) 75%);
   border-color: rgba(254, 44, 85, 0.45);
@@ -1556,33 +1632,33 @@ body.bg-studio {
     0 20px 45px rgba(0, 0, 0, 0.7),
     0 0 30px rgba(254, 44, 85, 0.22);
 }
-.expertise-card[data-index="6"] .card-action,
+.expertise-card[data-index="7"] .card-action,
 #card-tiktok .card-action {
   color: #ff5e7e;
   border-color: rgba(254, 44, 85, 0.45);
   background: rgba(254, 44, 85, 0.08);
 }
-.expertise-card[data-index="6"] .card-action-fill,
+.expertise-card[data-index="7"] .card-action-fill,
 #card-tiktok .card-action-fill {
   background: #FE2C55;
 }
-.expertise-card[data-index="6"] .card-action-bg-svg path,
+.expertise-card[data-index="7"] .card-action-bg-svg path,
 #card-tiktok .card-action-bg-svg path {
   fill: #ffffff;
 }
-.expertise-card[data-index="6"] .card-action:hover,
+.expertise-card[data-index="7"] .card-action:hover,
 #card-tiktok .card-action:hover {
   color: #ffffff;
   border-color: #FE2C55;
   box-shadow: 0 0 25px rgba(254, 44, 85, 0.6), 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* Card 08: Reddit Ads (#FF4500) */
-.expertise-card[data-index="7"]::before,
+/* Card 09: Reddit Ads (#FF4500) */
+.expertise-card[data-index="8"]::before,
 #card-reddit::before {
   background: linear-gradient(90deg, transparent, #FF4500, transparent);
 }
-.expertise-card[data-index="7"]:hover,
+.expertise-card[data-index="8"]:hover,
 #card-reddit:hover {
   background: radial-gradient(circle at 50% 50%, rgba(255, 69, 0, 0.14) 0%, var(--color-surface-hover) 75%);
   border-color: rgba(255, 69, 0, 0.45);
@@ -1590,21 +1666,21 @@ body.bg-studio {
     0 20px 45px rgba(0, 0, 0, 0.7),
     0 0 30px rgba(255, 69, 0, 0.22);
 }
-.expertise-card[data-index="7"] .card-action,
+.expertise-card[data-index="8"] .card-action,
 #card-reddit .card-action {
   color: #ff6a33;
   border-color: rgba(255, 69, 0, 0.45);
   background: rgba(255, 69, 0, 0.08);
 }
-.expertise-card[data-index="7"] .card-action-fill,
+.expertise-card[data-index="8"] .card-action-fill,
 #card-reddit .card-action-fill {
   background: #FF4500;
 }
-.expertise-card[data-index="7"] .card-action-bg-svg path,
+.expertise-card[data-index="8"] .card-action-bg-svg path,
 #card-reddit .card-action-bg-svg path {
   fill: #ffffff;
 }
-.expertise-card[data-index="7"] .card-action:hover,
+.expertise-card[data-index="8"] .card-action:hover,
 #card-reddit .card-action:hover {
   color: #ffffff;
   border-color: #FF4500;
@@ -3630,4 +3706,18 @@ body.bg-studio {
 }
 .service-item:hover .tech-icon-facebook {
   filter: drop-shadow(0 0 8px rgba(24, 119, 242, 0.8));
+}
+.expertise-card:hover .tech-icon-astro,
+.subpage-hero:hover .tech-icon-astro,
+.service-item:hover .tech-icon-astro {
+  filter: drop-shadow(0 0 10px rgba(255, 93, 1, 0.85));
+}
+.service-item:hover .tech-icon-typescript {
+  filter: drop-shadow(0 0 8px rgba(49, 120, 198, 0.8));
+}
+.service-item:hover .tech-icon-tailwindcss {
+  filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.8));
+}
+.service-item:hover .tech-icon-cloudflare {
+  filter: drop-shadow(0 0 8px rgba(243, 128, 32, 0.8));
 }

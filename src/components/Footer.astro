@@ -1,0 +1,26 @@
+---
+interface Props {
+  isSubpage?: boolean;
+}
+
+const { isSubpage = false } = Astro.props;
+---
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <div class="footer-brand">
+        <a href="/" class="brand-logo" style="text-decoration:none; color:inherit;">BRUTO</a>
+        <span class="brand-tag" data-i18n="header_est">EST. 2026</span>
+      </div>
+      <span class="footer-copy" data-i18n="footer_copy">© 2026 BRUTO. HEAVY-DUTY DIGITAL. BASED IN PORTUGAL. ALL RIGHTS RESERVED.</span>
+    </div>
+    <div class="footer-right">
+      {isSubpage ? (
+        <a href="/" class="back-to-top" data-i18n="footer_back_monolith">← RETURN TO MONOLITH</a>
+      ) : (
+        <a href="#hero" class="back-to-top" data-i18n="back_to_top">RETURN TO APEX ↑</a>
+      )}
+    </div>
+  </div>
+</footer>

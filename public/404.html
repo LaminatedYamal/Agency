@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BRUTO — 404 // ROUTE NOT FOUND</title>
+  <link rel="stylesheet" href="/src/style.css">
+  <style>
+    body {
+      background: #080A0F;
+      color: #F0F2F5;
+      font-family: 'Space Mono', monospace;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 24px;
+      margin: 0;
+      text-align: center;
+    }
+    .err-box {
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(14, 18, 27, 0.85);
+      padding: 48px;
+      max-width: 580px;
+      width: 100%;
+    }
+    .err-code {
+      font-size: clamp(64px, 12vw, 110px);
+      font-weight: 900;
+      letter-spacing: -0.05em;
+      color: #e5a83b;
+      line-height: 1;
+      margin-bottom: 12px;
+      font-family: 'Syne', sans-serif;
+    }
+    .err-title {
+      font-size: 14px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 24px;
+    }
+    .err-desc {
+      font-size: 13px;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.5);
+      margin-bottom: 32px;
+    }
+    .err-btn {
+      display: inline-block;
+      background: #e5a83b;
+      color: #080A0F;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 14px 28px;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+    .err-btn:hover {
+      background: #f5c842;
+    }
+  </style>
+</head>
+<body>
+  <div class="err-box">
+    <div class="err-code">404</div>
+    <div class="err-title">COGNITIVE / ROUTE BREACH</div>
+    <p class="err-desc">The requested architectural sector does not exist or has been permanently re-routed. Return to the core monolith.</p>
+    <a href="/" class="err-btn">← RETURN TO MONOLITH</a>
+  </div>
+</body>
+</html>
