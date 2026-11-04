@@ -7,6 +7,7 @@
     "dev": "astro dev --host --port 3000",
     "start": "astro dev",
     "build": "astro build",
+    "deploy": "astro build && wrangler pages deploy dist --project-name bruto-digital",
     "preview": "astro preview",
     "vite:dev": "vite",
     "vite:build": "vite build"
