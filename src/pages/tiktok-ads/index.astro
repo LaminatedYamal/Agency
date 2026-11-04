@@ -156,12 +156,12 @@ import Footer from '../../components/Footer.astro';
             </div>
           </div>
 
-          <form class="contact-form" id="inquiry-form" action="https://formsubmit.co/bruto.agenciamarketing@gmail.com" method="POST">
-            <!-- FormSubmit Anti-Spam & Routing -->
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_subject" value="[BRUTO DOSSIER: TIKTOK-ADS] Nova Submissão">
-            <input type="hidden" name="_template" value="table">
-            <input type="text" name="_honey" style="display:none">
+          <form class="contact-form" id="inquiry-form" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Web3Forms Configuration -->
+            <input type="hidden" name="access_key" value="34bc38b0-ba2c-420c-af82-210153dd58d6" />
+            <input type="hidden" name="subject" value="[BRUTO DOSSIER] Nova Submissão" />
+            <input type="hidden" name="from_name" value="BRUTO Monolith Dispatch" />
+            <input type="checkbox" name="botcheck" style="display:none;" />
             <div class="form-group">
               <label for="name-input" data-i18n="form_name_label">FULL NAME OR ORGANIZATION</label>
               <input type="text" id="name-input" name="name" required placeholder="e.g. David Daniel / Vanguard Ltd" data-i18n-ph="form_name_ph">

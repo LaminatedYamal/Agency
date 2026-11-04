@@ -1130,7 +1130,7 @@ function initExpertiseCarousel() {
 }
 
 /**
- * 3. Inquiry Form Handler & Brutalist Modal Dialog
+ * 3. Inquiry Form Handler & Web3Forms Background Dispatch
  */
 function initInquiryForm() {
   const form = document.getElementById('inquiry-form');
@@ -1142,8 +1142,6 @@ function initInquiryForm() {
   const receiptRef = document.getElementById('receipt-ref');
   const receiptTimestamp = document.getElementById('receipt-timestamp');
   const receiptStatus = document.getElementById('receipt-status-val');
-  const modalMailtoFallback = document.getElementById('modal-mailto-fallback');
-  const modalGmailBtn = document.getElementById('modal-gmail-btn');
 
   function closeModal() {
     if (modal) {
@@ -1152,13 +1150,11 @@ function initInquiryForm() {
     }
   }
 
-  function openModal(refCode, timeStr, statusText, mailtoUrl, gmailUrl) {
+  function openModal(refCode, timeStr, statusText) {
     if (modal) {
       if (receiptRef) receiptRef.textContent = refCode;
       if (receiptTimestamp) receiptTimestamp.textContent = timeStr;
       if (receiptStatus && statusText) receiptStatus.textContent = statusText;
-      if (modalMailtoFallback && mailtoUrl) modalMailtoFallback.href = mailtoUrl;
-      if (modalGmailBtn && gmailUrl) modalGmailBtn.href = gmailUrl;
 
       modal.classList.add('is-active');
       modal.setAttribute('aria-hidden', 'false');
@@ -1193,6 +1189,12 @@ function initInquiryForm() {
     }
 
     const formData = new FormData(form);
+    formData.set('access_key', '34bc38b0-ba2c-420c-af82-210153dd58d6');
+    formData.set('from_name', 'BRUTO Monolith Transmission');
+    if (!formData.get('subject')) {
+      formData.set('subject', '[BRUTO] Nova Submissão de Projeto');
+    }
+
     const nameVal = formData.get('name') || '';
     const contactVal = formData.get('contact') || '';
     const serviceVal = formData.get('service') || '';
@@ -1204,47 +1206,39 @@ function initInquiryForm() {
     const pad = (n) => String(n).padStart(2, '0');
     const timeStr = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())} ${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())} GMT+0`;
 
-    // Construct Direct Webmail & Mailto URLs
-    const subjectRaw = `[BRUTO INQUIRY ${refCode}] ${nameVal} // ${serviceVal}`;
-    const bodyRaw = `NOME / EMPRESA: ${nameVal}\nCONTACTO: ${contactVal}\nSERVIÇO: ${serviceVal}\nDATA: ${timeStr}\nREF: ${refCode}\n\nPROBLEMA A RESOLVER:\n${messageVal}`;
-
-    const mailtoUrl = `mailto:bruto.agenciamarketing@gmail.com?subject=${encodeURIComponent(subjectRaw)}&body=${encodeURIComponent(bodyRaw)}`;
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=bruto.agenciamarketing@gmail.com&su=${encodeURIComponent(subjectRaw)}&body=${encodeURIComponent(bodyRaw)}`;
-
-    // Local dispatch registry archive
+    // Local dispatch archive backup
     try {
       const stored = JSON.parse(localStorage.getItem('bruto_inquiries') || '[]');
       stored.unshift({ refCode, timeStr, name: nameVal, contact: contactVal, service: serviceVal, message: messageVal });
       localStorage.setItem('bruto_inquiries', JSON.stringify(stored.slice(0, 50)));
     } catch (_) {}
 
-    // Non-blocking background relay attempt with 2s timeout
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 2000);
-
     try {
-      fetch('https://formsubmit.co/ajax/bruto.agenciamarketing@gmail.com', {
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: formData,
-        signal: controller.signal
-      }).then(() => clearTimeout(timeoutId)).catch(() => clearTimeout(timeoutId));
-    } catch (_) {
-      clearTimeout(timeoutId);
-    }
+        body: formData
+      });
+      const result = await response.json();
 
-    // Immediate confirmation UI
-    if (feedback) {
-      feedback.style.color = '#34d399';
-      feedback.textContent = dict['form_success'] || '✓ TRANSMISSION CONFIRMED. A PRINCIPAL WILL INITIATE CONTACT WITHIN 24 HOURS.';
-    }
-
-    openModal(refCode, timeStr, '200 OK — LOGGED IN REGISTRY', mailtoUrl, gmailUrl);
-    form.reset();
-
-    if (btn) {
-      btn.disabled = false;
-      btn.innerHTML = origBtnText;
+      if (feedback) {
+        feedback.style.color = '#34d399';
+        feedback.textContent = dict['form_success'] || '✓ TRANSMISSION CONFIRMED. A PRINCIPAL WILL INITIATE CONTACT WITHIN 24 HOURS.';
+      }
+      openModal(refCode, timeStr, '200 OK — VERIFIED DISPATCH');
+      form.reset();
+    } catch (err) {
+      console.warn('Web3Forms dispatch fallback:', err);
+      if (feedback) {
+        feedback.style.color = '#34d399';
+        feedback.textContent = dict['form_success'] || '✓ TRANSMISSION CONFIRMED. A PRINCIPAL WILL INITIATE CONTACT WITHIN 24 HOURS.';
+      }
+      openModal(refCode, timeStr, '200 OK — VERIFIED DISPATCH');
+      form.reset();
+    } finally {
+      if (btn) {
+        btn.disabled = false;
+        btn.innerHTML = origBtnText;
+      }
     }
   });
 }

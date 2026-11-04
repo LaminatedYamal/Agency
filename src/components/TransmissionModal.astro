@@ -22,7 +22,7 @@
       </div>
 
       <p class="modal-narrative" data-i18n="modal_lead">
-        Your transmission parameters have been securely archived in the BRUTO dispatch registry. A senior technical partner will review your operational requirements and initiate contact within 24 hours.
+        Your transmission has been securely dispatched to a BRUTO principal. We do not use account managers or generic ticketing queues. A senior technical partner will review your operational requirements and initiate contact within 24 hours.
       </p>
 
       <!-- Technical Receipt Dossier Grid -->
@@ -41,22 +41,19 @@
         </div>
         <div class="receipt-row receipt-row-last">
           <span class="receipt-label" data-i18n="modal_receipt_status">ENGINE STATUS:</span>
-          <span class="receipt-value receipt-success" id="receipt-status-val">200 OK — VERIFIED DISPATCH</span>
+          <span class="receipt-value receipt-success" id="receipt-status-val" data-i18n="modal_receipt_status_val">200 OK — VERIFIED DISPATCH</span>
         </div>
       </div>
     </div>
 
     <!-- Actions Bar -->
-    <div class="modal-action-bar" style="flex-wrap: wrap;">
-      <a id="modal-gmail-btn" href="#" target="_blank" rel="noopener noreferrer" class="modal-primary-action" style="text-decoration: none;" data-i18n="modal_btn_gmail">
-        SEND VIA GMAIL WEB ✉
-      </a>
-      <a id="modal-mailto-fallback" href="mailto:bruto.agenciamarketing@gmail.com" class="modal-secondary-action" style="border-color: #F5C842; color: #F5C842; text-decoration: none;" data-i18n="modal_btn_email">
-        DEFAULT EMAIL APP ↗
-      </a>
-      <button type="button" class="modal-secondary-action" id="modal-ack-btn" data-i18n="modal_btn_ack">
-        CLOSE
+    <div class="modal-action-bar">
+      <button type="button" class="modal-primary-action" id="modal-ack-btn" data-i18n="modal_btn_ack">
+        ACKNOWLEDGE &amp; CLOSE
       </button>
+      <a href="/thank-you/" class="modal-secondary-action" data-i18n="modal_btn_receipt">
+        VIEW FULL RECEIPT DOSSIER →
+      </a>
     </div>
   </div>
 </div>
