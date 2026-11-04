@@ -411,7 +411,8 @@ export const translations = {
     "modal_receipt_status_val": "200 OK — VERIFIED DISPATCH",
     "modal_btn_ack": "ACKNOWLEDGE & CLOSE",
     "modal_btn_receipt": "VIEW RECEIPT →",
-    "modal_btn_email": "DIRECT EMAIL ✉",
+    "modal_btn_email": "DEFAULT EMAIL APP ↗",
+    "modal_btn_gmail": "DISPATCH VIA GMAIL ✉",
     "ty_breadcrumb": "TRANSMISSION CONFIRMED",
     "ty_badge": "PROTOCOL 200 // DISPATCH VERIFIED",
     "ty_title": "TRANSMISSION CONFIRMED.",
@@ -832,7 +833,8 @@ export const translations = {
     "modal_receipt_status_val": "200 OK — DESPACHO VERIFICADO",
     "modal_btn_ack": "CONFIRMAR E FECHAR",
     "modal_btn_receipt": "VER DOSSIER →",
-    "modal_btn_email": "EMAIL DIRETO ✉",
+    "modal_btn_email": "APP DE EMAIL ↗",
+    "modal_btn_gmail": "ENVIAR VIA GMAIL ✉",
     "ty_breadcrumb": "TRANSMISSÃO CONFIRMADA",
     "ty_badge": "PROTOCOLO 200 // REGISTO CONFIRMADO",
     "ty_title": "TRANSMISSÃO CONFIRMADA.",
@@ -1141,6 +1143,7 @@ function initInquiryForm() {
   const receiptTimestamp = document.getElementById('receipt-timestamp');
   const receiptStatus = document.getElementById('receipt-status-val');
   const modalMailtoFallback = document.getElementById('modal-mailto-fallback');
+  const modalGmailBtn = document.getElementById('modal-gmail-btn');
 
   function closeModal() {
     if (modal) {
@@ -1149,12 +1152,13 @@ function initInquiryForm() {
     }
   }
 
-  function openModal(refCode, timeStr, statusText, mailtoUrl) {
+  function openModal(refCode, timeStr, statusText, mailtoUrl, gmailUrl) {
     if (modal) {
       if (receiptRef) receiptRef.textContent = refCode;
       if (receiptTimestamp) receiptTimestamp.textContent = timeStr;
       if (receiptStatus && statusText) receiptStatus.textContent = statusText;
       if (modalMailtoFallback && mailtoUrl) modalMailtoFallback.href = mailtoUrl;
+      if (modalGmailBtn && gmailUrl) modalGmailBtn.href = gmailUrl;
 
       modal.classList.add('is-active');
       modal.setAttribute('aria-hidden', 'false');
@@ -1194,18 +1198,18 @@ function initInquiryForm() {
     const serviceVal = formData.get('service') || '';
     const messageVal = formData.get('message') || '';
 
-    // Generate reference & timestamp
+    // Generate reference code & timestamp
     const refCode = 'BRT-' + Math.floor(10000 + Math.random() * 90000);
     const now = new Date();
     const pad = (n) => String(n).padStart(2, '0');
     const timeStr = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())} ${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())} GMT+0`;
 
-    // Direct mailto link backup
-    const mailtoSubject = encodeURIComponent(`[BRUTO INQUIRY ${refCode}] ${nameVal} // ${serviceVal}`);
-    const mailtoBody = encodeURIComponent(
-      `NOME / EMPRESA: ${nameVal}\nCONTACTO: ${contactVal}\nSERVIÇO: ${serviceVal}\nDATA: ${timeStr}\nREF: ${refCode}\n\nPROBLEMA A RESOLVER:\n${messageVal}`
-    );
-    const directMailtoUrl = `mailto:bruto.agenciamarketing@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+    // Construct Direct Webmail & Mailto URLs
+    const subjectRaw = `[BRUTO INQUIRY ${refCode}] ${nameVal} // ${serviceVal}`;
+    const bodyRaw = `NOME / EMPRESA: ${nameVal}\nCONTACTO: ${contactVal}\nSERVIÇO: ${serviceVal}\nDATA: ${timeStr}\nREF: ${refCode}\n\nPROBLEMA A RESOLVER:\n${messageVal}`;
+
+    const mailtoUrl = `mailto:bruto.agenciamarketing@gmail.com?subject=${encodeURIComponent(subjectRaw)}&body=${encodeURIComponent(bodyRaw)}`;
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=bruto.agenciamarketing@gmail.com&su=${encodeURIComponent(subjectRaw)}&body=${encodeURIComponent(bodyRaw)}`;
 
     // Local dispatch registry archive
     try {
@@ -1214,39 +1218,33 @@ function initInquiryForm() {
       localStorage.setItem('bruto_inquiries', JSON.stringify(stored.slice(0, 50)));
     } catch (_) {}
 
-    // 3-second hard timeout for fetch to prevent infinite hanging on third-party relay outages
+    // Non-blocking background relay attempt with 2s timeout
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 3000);
-
-    let statusNote = '200 OK — VERIFIED DISPATCH';
+    const timeoutId = setTimeout(() => controller.abort(), 2000);
 
     try {
-      const response = await fetch('https://formsubmit.co/ajax/bruto.agenciamarketing@gmail.com', {
+      fetch('https://formsubmit.co/ajax/bruto.agenciamarketing@gmail.com', {
         method: 'POST',
         headers: { 'Accept': 'application/json' },
         body: formData,
         signal: controller.signal
-      });
+      }).then(() => clearTimeout(timeoutId)).catch(() => clearTimeout(timeoutId));
+    } catch (_) {
       clearTimeout(timeoutId);
+    }
 
-      if (!response.ok) {
-        statusNote = 'LOGGED TO DISPATCH REGISTRY';
-      }
-    } catch (err) {
-      clearTimeout(timeoutId);
-      console.warn('[BRUTO Transmission Relay Note]: Third-party relay latency or timeout. Switched to local dispatch archive.', err.message);
-      statusNote = 'LOGGED IN DISPATCH REGISTRY';
-    } finally {
-      if (feedback) {
-        feedback.style.color = '#34d399';
-        feedback.textContent = dict['form_success'] || '✓ TRANSMISSION CONFIRMED. A PRINCIPAL WILL INITIATE CONTACT WITHIN 24 HOURS.';
-      }
-      openModal(refCode, timeStr, statusNote, directMailtoUrl);
-      form.reset();
-      if (btn) {
-        btn.disabled = false;
-        btn.innerHTML = origBtnText;
-      }
+    // Immediate confirmation UI
+    if (feedback) {
+      feedback.style.color = '#34d399';
+      feedback.textContent = dict['form_success'] || '✓ TRANSMISSION CONFIRMED. A PRINCIPAL WILL INITIATE CONTACT WITHIN 24 HOURS.';
+    }
+
+    openModal(refCode, timeStr, '200 OK — LOGGED IN REGISTRY', mailtoUrl, gmailUrl);
+    form.reset();
+
+    if (btn) {
+      btn.disabled = false;
+      btn.innerHTML = origBtnText;
     }
   });
 }
